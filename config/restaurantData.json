@@ -1,0 +1,605 @@
+[
+    {
+        "_id": {
+            "$oid": "5f6a26511378005dc6589207"
+        },
+        "ingredients": [
+            "2/3 C Sugar",
+            "1 1/2 T Yeast",
+            "1 1/2 t Salt",
+            "1/4 C Melted Butter",
+            "6 C Flour",
+            "2 C Warm Water"
+        ],
+        "imgs": [
+            "https://i.pinimg.com/originals/ee/f6/e4/eef6e416cd8d63b814312e03e5181f34.jpg",
+            "https://www.manusmenu.com/wp-content/uploads/2018/08/White-Sandwich-Bread-4-1-of-1.jpg"
+        ],
+        "youTubeId": [
+            "R1iclVhiyMI"
+        ],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927ba8c6e42c1776e7fecc"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            },
+            {
+                "_id": {
+                    "$oid": "5ef528a1ccb0510017355c06"
+                },
+                "comment": "not the best.",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GgwqaZzuSj2tpxoDEek_Qj15t5igOF7ZRKown8usA=s96-c",
+                "commenterEmail": "aaronrs2002@gmail.com",
+                "commenterId": "101380000475593513417",
+                "commentTimeStamp": "1593125024313"
+            }
+        ],
+        "message": "<ol><li>Add Sugar &amp; Yeast into warm water, stir and let it sit for 5 minutes.</li><li>Put into mixing bowl and add butter and salt</li><li>Add 1 cup of flour at a time</li><li>Sprinkle flour onto a flat surface and put bread mixture onto it</li><li>Sprinkle four on top of bread mixture and knead with a spatula until it is not sticky to touch</li><li>Knead with hands until smooth and elastic</li><li>Butter a bowl and put bread mixture in and turn it over so that it is coated on all sides</li><li>Cover bowl with a damp towel and put in a warm place for an hour until doubled in size</li><li>Deflate and put on floured surface</li><li>Cut in half &amp; roll each half until about 1/4 inch thick</li><li>Roll and pinch the ends then fold the ends under</li><li>Place in buttered Bread Pan</li><li>Cover with damp towel for 20 minutes</li><li>Put in oven at 350 for 30 minutes</li></ol>",
+        "id": {
+            "$numberInt": "8"
+        },
+        "category": "bread",
+        "title": "White Sandwich Bread",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mCV_954eRVLrXskSTsIilkBV1T5zzoIxJXubbO6kA=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron Smith"
+    },
+    {
+        "_id": {
+            "$oid": "626deccb939a26001751ad0d"
+        },
+        "ingredients": [
+            "1 lb. boneless skinless chicken breasts",
+            "1 (15-oz.) can black beans, rinsed",
+            "1 c. frozen corn",
+            "2 bell peppers, chopped",
+            "1 white onion, chopped",
+            "1 (15-oz.) can fire-roasted tomatoes",
+            "1/4 c. freshly chopped cilantro, plus more for garnish",
+            "3 cloves garlic, minced",
+            "1 tbsp. ground cumin",
+            "1 tbsp. chili powder",
+            "1 tsp. kosher salt",
+            "2 c. low-sodium chicken broth",
+            "1 c. shredded Monterey jack",
+            "1 tbsp. extra-virgin olive oil",
+            "3 small corn tortillas, cut into strips",
+            "Sliced avocado, for serving",
+            "Sour cream, for serving",
+            "Lime wedges, for serving"
+        ],
+        "imgs": [
+            "https://www.cookingclassy.com/wp-content/uploads/2014/12/slow-cooker-chicken-tortilla-soup5-edit-srgb..jpg"
+        ],
+        "youTubeId": [],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927ba8c6e42c1776e7fecc"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            }
+        ],
+        "message": "<ol><li>In a large slow cooker, combine chicken, black beans, corn, peppers, onion, fire-roasted tomatoes, cilantro, garlic, cumin, chili powder, salt, and chicken broth.</li><li>Cover and cook on low until chicken is cooked and falling apart, 5 to 6 hours.</li><li>Shred chicken with a fork, then top soup with Monterey Jack and cover to let melt, 5 minutes more.</li><li>Meanwhile, make tortilla crisps: In a large skillet over medium heat, heat oil. Add tortilla strips and cook until crispy and golden, 3 minutes. Transfer to a paper towel-lined plate and season with salt.</li><li>Serve soup topped with tortilla crisps, avocado, sour cream, cilantro, and lime.</li></ol><p><br></p><p>Calories: 420 per serving</p><p>Yields: 6 servings</p><p>Total cook time: 5 hours</p>",
+        "id": {
+            "$numberInt": "12"
+        },
+        "category": "soup",
+        "title": "Slow-Cooker Chicken Tortilla Soup",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GhANy26PPKKMc9fbXeGNISP14XjAd8jB2XMZAWhXZo=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron S",
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1651371211278"
+            }
+        },
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1651421969266"
+            }
+        },
+        "__v": {
+            "$numberInt": "0"
+        },
+        "allowComments": true
+    },
+    {
+        "_id": {
+            "$oid": "5f6a25b31378005dc6589204"
+        },
+        "ingredients": [
+            "8 pieces of bacon or 4 pieces of Canadian bacon",
+            "2 tablespoons chopped parsley, for garnish",
+            "4 eggs",
+            "2 teaspoons white or rice vinegar",
+            "2 English muffins",
+            "Butter",
+            "Hollandaise - 10 tablespoons unsalted butter",
+            "Hollandaise - 3 egg yolks",
+            "Hollandaise - 1 tablespoon lemon juice",
+            "Hollandaise - 1/2 teaspoon salt",
+            "Hollandaise - Dash of cayenne or tabasco"
+        ],
+        "imgs": [
+            "https://images.unsplash.com/photo-1566751165329-bbc073c156de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+        ],
+        "youTubeId": [
+            "gBJjRYk0yC0"
+        ],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927c71c6e42c1776e7fece"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            }
+        ],
+        "message": "<p>Eggs benedict is also great made with slices of smoked salmon in place of the bacon. If you are in or around New Jersey, try it with Taylor ham.</p><ol><li>Cook the bacon: Heat a large skillet on medium low heat. Add the strips of bacon or the slices of Canadian bacon. Slowly fry, turning occasionally, until the bacon is browned on both sides, and if using strip bacon, much of the fat is rendered out (about 10 minutes).Use tongs or a fork to remove the bacon from the pan, set on a paper towel to absorb the excess fat. Don't pour the bacon fat left in the pan down the drain! Either sop it up with paper towels when it has cooled a bit, or pour it into a jar to be used later (see rendering bacon fat).</li><li>Bring poaching water to a simmer: While the bacon is cooking, bring a large saucepan two-thirds-filled with water to a boil, then add the vinegar. Bring the water to a boil again, then lower the heat to a bare simmer.</li><li>Make Hollandaise sauce in blender: To make blender hollandaise, melt 10 Tbsp unsalted butter.Put 3 egg yolks, a tablespoon of lemon juice, 1/2 teaspoon salt in a blender, blend on medium to medium high speed for 20-30 seconds, until eggs lighten in color. Turn blender down to lowest setting, slowly dribble in the hot melted butter, while continuing to blend. Taste for salt and acidity and add more salt or lemon juice to taste. Transfer it to a container you can use for pouring and set it on a warm—but not hot—place on or near the stovetop.</li><li>Poach the eggs: Here is an easy method for poaching eggs. Essentially, working one egg at a time you crack an egg into a small bowl and slip it into the barely simmering water. Once it begins to solidify, you can slip in another egg, until you have all four cooking. Turn off the heat, cover the pan, and let sit for 4 minutes. (Remember which egg went in first, you'll want to take it out first.) When it comes time to remove the eggs, gently lift out with a slotted spoon. Note that the timing is a little variable on the eggs, depending on the size of your pan, how much water, how many eggs, and how runny you like them. You might have to experiment a little with your set-up to figure out what you need to do to get the eggs exactly the way you like them.</li><li>Toast English muffins: As soon as all the eggs are in the poaching water, begin toasting your English muffins. If you can’t get all the muffins toasted by the time the eggs are ready, gently remove the eggs from the poaching water and set in a bowl.</li><li>Assemble your Eggs Benedict: To assemble, butter one side of an English muffin. Top with two slices of bacon or 1 slice of Canadian bacon. You can trim the bacon to fit the muffin if you’d like.</li></ol><p><br></p><p>Put a poached egg on top of the bacon, then pour some hollandaise over. Sprinkle some parsley over it all and serve at once.</p>",
+        "id": {
+            "$numberInt": "5"
+        },
+        "category": "breakfast",
+        "title": "Eggs Benedict  ",
+        "googleId": "106996680788438752656",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+        "email": "aaron@web-presence.biz",
+        "user": "web - presence"
+    },
+    {
+        "_id": {
+            "$oid": "5f6a24ed1378005dc6589200"
+        },
+        "ingredients": [
+            "1 1/2 Quarts of water",
+            "1 1/2  teaspoon salt",
+            "1 cup uncooked elbow macaroni",
+            "1 teaspoon margarine",
+            "2 cups milk",
+            "1/8 teaspoon pepper",
+            "1/2 grated cheddar cheese (about 6 ounces)",
+            "1 Cup of chopped spinach"
+        ],
+        "imgs": [
+            "https://images.media-allrecipes.com/userphotos/560x315/4786631.jpg",
+            "https://images.media-allrecipes.com/userphotos/720x405/6473249.jpg",
+            "https://images.media-allrecipes.com/userphotos/720x405/6439974.jpg"
+        ],
+        "youTubeId": [],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "645251b7e00608001588bec1"
+                },
+                "comment": "Just like Mom used to make.",
+                "imageUrl": "https://lh3.googleusercontent.com/a/AGNmyxaMvY1QfWQA_AXUrQnB3yC33XXDWmvIHDTPwqQZ8D4=s96-c",
+                "commenterEmail": "aaronrs2002@gmail.com",
+                "commenterId": "101380000475593513417",
+                "commentTimeStamp": "1683116471158"
+            }
+        ],
+        "allowComments": true,
+        "message": "<p>Yield: 6 Servings </p><p><br></p><ol><li>Bring salted water to a boil. Add macaroni and cook, stirring occasionally, 10 minutes or until tender. (Follow package directions.)</li><li>Preheat oven to 325 degrees.</li><li>Drain macaroni and return to saucepan. Add margarine, stir to coat macaroni.</li><li>Add remaining ingredients; mix well. </li><li>Pour into baking dish. Bake in oven 1 hour. Let stand 10 minutes before serving. </li></ol>",
+        "id": {
+            "$numberInt": "4"
+        },
+        "category": "soup",
+        "title": "Spinach Mac and Cheese",
+        "googleId": "106996680788438752656",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GhMGbNLu5Hp-G8bKjvxYBmeqloGpQqN0QGy6XaSOtw=s96-c",
+        "email": "aaron@web-presence.biz",
+        "user": "web - presence",
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1569533512175"
+            }
+        },
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1683116471360"
+            }
+        }
+    },
+    {
+        "_id": {
+            "$oid": "5f6a1b81eec4ebb01d05ba0d"
+        },
+        "ingredients": [
+            "2 pounds baby back ribs",
+            "1/4 teaspoon cayenne pepper",
+            "1 teaspoon ground cumin",
+            "2 teaspoon paprika",
+            "1 teaspoon dry oregano",
+            "1 teaspoon sugar",
+            "1 teaspoon salt",
+            "25 grinds fresh black pepper",
+            "3 tablespoons vegetable oil"
+        ],
+        "imgs": [],
+        "youTubeId": [],
+        "message": "<ol><li>Preheat over to 300 degrees F.</li><li>Mix the rub ingredients together well in a small bowl.</li><li>Remove the membrane from the bone side of the ribs, then rub the vegetable oil onto the ribs. Pour the rub over the ribs and work the rub fully and evenly into the ribs. Spread the ribs out evenly on a foil-lined baking sheet.</li><li>Bake until tender and juicy on the inside and crispy on the outside, about 2 to 2 1/2 hours.</li></ol>",
+        "id": {
+            "$numberInt": "0"
+        },
+        "category": "pork",
+        "title": "Dry Rub Ribs- Memphis (Dave's Dinners)",
+        "googleId": "104443188126337151466",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mBTEZ1YkHXpFI6JZoOcYFmKJV7hcam6qjmvIZII=s96-c",
+        "email": "kimmilina77@gmail.com",
+        "user": "Kim Smith",
+        "comments": [],
+        "allowComments": true
+    },
+    {
+        "_id": {
+            "$oid": "5f6a266c1378005dc6589208"
+        },
+        "ingredients": [
+            "1 Medium salmon fillet",
+            "As Needed Traeger Fin & Feather Rub or Salt & Pepper, etc",
+            "1/2 Cup balsamic vinegar",
+            "1 Tablespoon minced garlic",
+            "2 Tablespoon honey"
+        ],
+        "imgs": [
+            "https://i8.amplience.net/i/traeger/WR_0116_Honey_Balsamic_Salmon_RE_HE?w=620&sm=aspect&aspect=5:3&scaleFit=poi&$poi2$&fmt=webp"
+        ],
+        "youTubeId": [],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927ba8c6e42c1776e7fecc"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            }
+        ],
+        "message": "<p>Wood-fired fresh salmon grills to a sweet and flaky perfection. This salmon recipe will keep your family coming back for more.</p><p><br></p><ol><li>Season the fillet with the Traeger Fin &amp; Feather Rub.</li><li>Make the glaze: Combine the vinegar, garlic and honey in a small saucepan. Simmer over medium heat until reduced by half. Usually 10 to 15 minutes. The glaze will be properly reduced when it coats the back of a spoon. Using a basting brush, coat the fillet with the glaze.</li><li>When ready to cook, set Traeger temperature to 350℉ and preheat, lid closed for 15 minutes.</li><li>Arrange the salmon fillet on the grill grate. Grill for 25 to 30 minutes, or until the salmon is opaque and flakes easily with a fork.</li><li>Transfer to a platter or plates and serve immediately. If desired, heat any remaining glaze to a boil and drizzle over top of the salmon. Enjoy!</li></ol>",
+        "id": {
+            "$numberInt": "9"
+        },
+        "category": "seafood",
+        "title": "HONEY BALSAMIC SALMON",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GhANy26PPKKMc9fbXeGNISP14XjAd8jB2XMZAWhXZo=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron S"
+    },
+    {
+        "_id": {
+            "$oid": "5f6a26201378005dc6589206"
+        },
+        "ingredients": [
+            "2 skinless and boneless chicken breasts, butterflied and then cut in half",
+            "Sea salt and freshly ground black pepper",
+            "All-purpose flour, for dredging",
+            "6 tablespoons unsalted butter",
+            "5 tablespoons extra-virgin olive oil",
+            "1/3 cup fresh lemon juice",
+            "1/2 cup chicken stock",
+            "1/4 cup brined capers, rinsed",
+            "1/3 cup fresh parsley, chopped"
+        ],
+        "imgs": [
+            "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/6/11/0/EI1A09_22307_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382538921946.jpeg",
+            "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2007/10/8/0/IG0910_Chicken_Piccata.jpg.rend.hgtvcom.826.620.suffix/1449692536814.jpeg",
+            "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/11/8/0/FN_Chicken-Piccata-008_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539775761.jpeg",
+            "https://images.scrippsnetworks.com/up/tp/Scripps_-_Food_Category_Prod/122/55/0105041_854x480.jpg",
+            "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/7/11/0/FNK_the-best-chicken-piccata_H_s4x3.jpg.rend.hgtvcom.826.620.suffix/1562853876582.jpeg"
+        ],
+        "youTubeId": [
+            "g7cYmQpqxME"
+        ],
+        "comments": [],
+        "message": "<ol><li>Season chicken with salt and pepper. Dredge chicken in flour and shake off excess.</li><li>In a large skillet over medium high heat, melt 2 tablespoons of butter with 3 tablespoons olive oil. When butter and oil start to sizzle, add 2 pieces of chicken and cook for 3 minutes. When chicken is browned, flip and cook other side for 3 minutes. Remove and transfer to plate. Melt 2 more tablespoons butter and add another 2 tablespoons olive oil. When butter and oil start to sizzle, add the other 2 pieces of chicken and brown both sides in same manner. Remove pan from heat and add chicken to the plate.</li><li>Into the pan add the lemon juice, stock and capers. Return to stove and bring to boil, scraping up brown bits from the pan for extra flavor. Check for seasoning. Return all the chicken to the pan and simmer for 5 minutes. Remove chicken to platter. Add remaining 2 tablespoons butter to sauce and whisk vigorously. Pour sauce over chicken and garnish with parsley.</li></ol>",
+        "id": {
+            "$numberInt": "7"
+        },
+        "category": "chicken",
+        "title": "Chicken Piccata",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mCV_954eRVLrXskSTsIilkBV1T5zzoIxJXubbO6kA=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron Smith"
+    },
+    {
+        "_id": {
+            "$oid": "6016fe9138baaf001780c58d"
+        },
+        "ingredients": [
+            "4 medium boneless skinless chicken breasts",
+            "1 Tablespoon oil of choice",
+            "1/4 cup finely chopped onion",
+            "2 cloves garlic crushed or minced",
+            "1 cup chicken broth water can also be used",
+            "Juice of 1 lime or 2 tablespoons",
+            "2 tablespoons cilantro chopped cilantro",
+            "1/2 teaspoon red pepper flakes",
+            "salt and pepper to taste",
+            "1/2 cup heavy cream or half and half or sour-cream or greek yogurt"
+        ],
+        "imgs": [
+            "https://i2.wp.com/gimmedelicious.com/wp-content/uploads/2016/09/creamy-skillet-cilantro-lime-chicken-4-of-12.jpg",
+            "https://i2.wp.com/gimmedelicious.com/wp-content/uploads/2016/09/creamy-skillet-cilantro-lime-chicken-5-of-12.jpg"
+        ],
+        "youTubeId": [],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927ba8c6e42c1776e7fecc"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            }
+        ],
+        "message": "<ul><li>In a large heavy-duty skillet, heat the oil over medium-high heat. Season chicken generously with salt and pepper then add the chicken and cook for 7-8 minutes, turning once or until chicken is cooked through. Remove chicken from skillet and cover with foil on a separate plate, set aside.</li><li>Add onions to the same skillet (without washing it) and cook onion for 1 minute. Add garlic and cook for just 30 seconds. Add chicken broth, lime juice, cilantro, red peppers flaked, and salt and pepper to taste. Bring to a gentle boil for 8-10 minutes or until liquid is reduced by 1/4 cup.</li><li>Whisk in cream during the last minute. Turn off heat and return chicken to the sauce. Garnish with more cilantro. Serve with aside of steamed veggies or rice. Enjoy!</li></ul><p><br></p><p><a href=\"https://gimmedelicious.com/easy-one-skillet-creamy-cilantro-lime-chicken/\" rel=\"noopener noreferrer\" target=\"_blank\">https://gimmedelicious.com/easy-one-skillet-creamy-cilantro-lime-chicken/</a></p><p><br></p>",
+        "id": {
+            "$numberInt": "10"
+        },
+        "category": "chicken",
+        "title": "Cilantro Lime Chicken",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GhANy26PPKKMc9fbXeGNISP14XjAd8jB2XMZAWhXZo=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron S",
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1612119697333"
+            }
+        },
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1612119697333"
+            }
+        },
+        "__v": {
+            "$numberInt": "0"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "61c7f81526d2df0017567159"
+        },
+        "ingredients": [
+            "I lb ground Beef",
+            "One chopped onion",
+            "One chopped green pepper",
+            "One chopped red pepper",
+            "Two beef cubes",
+            "Two cups water",
+            "One cup uncooked rice",
+            "Salt Pepper Seasons up to you..."
+        ],
+        "imgs": [
+            "data:image/jpeg;base64,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",
+            "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFhYYGRgaHCQdHBocHB4cHhweHhoaHh8eHB4cIS4lHh4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzQrJSw2NDQ0ND00NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDRANP/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQIDBgABBwj/xAA5EAACAQIFAwIEBQMEAgMBAQABAhEAAwQSITFBBVFhInEGEzKBkaGx0fBCweEUI1LxFXIWYoIzB//EABkBAAMBAQEAAAAAAAAAAAAAAAIDBAEABf/EACoRAAICAgICAwEAAQMFAAAAAAECABEDIRIxBEETIlEyYRSBkTNCcaHB/9oADAMBAAIRAxEAPwBF1T4kdFltzsCdzWJxuKe45dzLH8B4FDtcJ3JPuZ/WvRQ9QpIVMV4oq1LZOwJrCROEiNq8y1bFXYO0GuIG2J1rOtzezUoC0Tg7BdlQbsQB961NzoFsxkXXsTVf/wAfKwyGHnTsPbzSjmWiB3KP9Mw2ZfjPhRUtF87FogDu3ai+idARE+ZeX1TKjcjjan+DwL5V+a2cqZA/emWKT0gwfOleT/qnCspNmO+EEioss9PR2BIBXYDj3jg1DqGBhCQJYH0gbxtRz4hQV7zA8T3q6/iQpPpkhZhROaO1IXIXprrccE4mhM4HfLkIhz9XgcTRmGRVUox3qu5ft4hwUuKjxDKwIJHnzS7H4hkIUkEkgCBOk71dd9yhMROiNy/FZnYBASFHbSf3ih8SrFkR1CDTmSf/AG8k0zsl09AGp1k9+9CdIutcNxbmVnVgQoEbHeaA8v8AaIcaqPcHYYD1HcbdtNqo6ZgVzXImM0ifNMLdx2IVlCjuDXLbCSM0Zjv3NTZ1ZlpYtaXcqsWEViNT/bxUkQNmBEb6dvNUo4ViJ15Ne/6oVOqBCC2zHE8p5cJREWcx1knjtXJYETyeKrKBjqYJqfzAsDUx5iRVrZQFFCBxAEpxOCXNniNIPYiucOFVF0QaiNNO1MVcGAw34qONcKjdh24ouRYbgbJgC4ljIgRtrVhtqU09RjfhaTYfqJMfM2/vRV17L2yM/wBWvp0P3pBwI2+o1uai5K7jURUUaZxpm39zXzjGYH5d1xiJjUgpyTt9q+iNhwzo5TNlAC+AKTY6z827lZNAZ9yKr8V0xkhTJmQu32mKxHSbgQOFJUz7gdyKX2TvO3NfVTbCiSNB32r5t1S8huuUELJ+5nevSxuW7isuIIbUyoYYz6SCOKqdCNxr2rrN8qZG3Ipyl9CwiDpvWuxU9aigA24hzV1PbnTWJJyCurPkWZ8bRGFqxRUAKa4DpFy6hdIMH6Z1+1MJA7ggSnAWVd1VmhSdT4rZtZW6r2sNlhU1eNz/AMR5OutY1MG4fI3pbsf71q/hi3esvlIGQ/VSMrAdGEq7ozLPaZSVYQRv3q7CW2LoFEnMIr6Bjei276wzAuNcyiCJ/WjLHSURAiKAw2JGs9zSMnmBV67jVwm5Zb6ecuZRIQAtrtS5yxMKMzTP5603uq6yJEFYJjnke1DdPQI+fNPDBu3ipWe1JWWLkocTGdskMCQZj7RVnzxnEk6jT/NVliX39B47DvNcwGYx/P8AFeYDyyah+pO6yKrSFjvH4V5YfN69iduPwqmxjkcEq4bLIgRqfJqi+xcqCYgz9vFbkwla/CZuNgYFdw9t7+cLlyj1NwxrsX0hHJcL2hp/TtTRCirAABJ3q24mRcqieTrTFyOeuhGNmNijEWDBG5JPkzXnSbLC7iSFgECG8idBRWJthYInX8veKj0h3yOdwGMHg1aH+sBzYsS21iipyrrr9XANdjFLj/ccIoM7du1Usj3Cc3oQaqo0nzNH28OHQKwJHncRXBbFydlNRZgLd0qWGqkws/UQKOsouUZpB81dicRk+nccePFJL+JZsQqxKMDP/wBY1n8qEY7N1DUmozuiDlJnUajcV5jkAGcCSoOh7UFaBd3KvCRqANRG2vmux9xnXIjgEatOpI8VtKzcZmzKLfVHDqXRyvOhOhp1cvK6HWZEa+aDUKFWf5pzS+/jELraVgXJnQ7Ad/wprY6X6w0StmE4z4fDJ6XIGkzr+FTGETKFWJXsOw5rzG9dtfQXjuRwaE6X1JM5UNmzdv8APNR4xl4nnDylyABHOAvKQTp6dD70mxnUlVS7CGBIjueI8UQigM6kxOoA00PJ8171TpIuqpGhA0XuO9HhQL9oli1TMXviB2VgUGu3is7dwZufSPV2A3rc4v4VDoAhyMNTPNLvhnBEXtRoOfarkzLVqY/DhVsR5CZjqvw9esW0uPGVtNOD2NKrNzKwPY1teuXXvtdts+ZLYzrAgDuPMVi2WrMTMy/fueVlUI31jr/zS+a6keWurPhSd8pl6rWn+CsKHxAmYUSffiswzV9A+DOm/LT5zllZhovGXg0Hlf8ASP8AxMxH7CT+KsCpZHRf9zNso3HmmeAwhCSSJIlvHj3o3DXVMt20nmjg0iY18c15a5SuMB5XxDNYidsFEsjsD+R96lZxrWyFueksYB4NMjiUAaSFIE/b96S9Rw4uIHV5AMmdtP0owweGSvUYNj4GhBHLcfes/f6iTdVlbKoMMOCOaPwSKwMCdZidKV3+nuM7tlCAFp8do3mj47oQMooArNWLodJMENpHik/WbjpYdbehAAB3ME6xVHQGe3be7dUhCAy6zApP1v4pLtFhSSRBlf0pGHE/ymqI/Zxa1H7+TSfD3RPk2fWwZm9RAO0gaTRn+pUEhVg7HWgOlYq4yKt5crcxsNP1plhcGI4gHX95ql6Ym41F4iedPbPOYTBI14pomURv770k+JHC4c5NMrATydaqw+LcWg3JjT9qTwAnFbFxlitG5JNXYZhlyEbil2GxJTO7gtJ0nZfejbCO4nQA6g9/bxWBGvfU0jUEwN5T8wKmskKSdJFdh71wHI7KjRIB2P8AmisJgCQxQhlY6A8HnXmg8V0O4X9Z9BGpB+k9qI36ina+p17EsMwKgkQDHP8Aii3wavaIBVTGjLuDU+mdFA/rJ10/yaD+JItZAs5naQB25NbyYahILIEUYXp7Wr0B8wOrCCBHfzT25gVIY2wodlIHbXmjMEMygsuUj85ofF4V8jAPkZXlSP6ln6WrgSDcY5INGZ7C9HugsL17MI2XT70hv9NdMT8q3IVhObmOSSea+jXMKpUOAAT9VA9QwZJV1+8D+aU0ZCO4KsS0y3/xv/7+/JovAdHS24aSxgwDzTSzhHdoB23nvRKdJdWVnYEjYDY1Nl8hQOIO5TzsVBMro2Y6yONZHj2pulw5Jb8fHmrg6A6jXvvpQ+ITVhqV7UhspVAL7iSQxhNq4jqG8fj7UtxiqiEqoJnbSQD3qy2CF09Kjal+GuKLhDAwTo384oMH1Y1sTmYqInw3Qbrm4xaA4IUcAE1O38IYcKFYEn/kCQZpp1rqhw4UoM8tBTt7UtN6/iTmKm1bGpg6n71ar+QzXdLFnGrCzBbnwXhwT/uOK9pp/onP03CRxNdVXyP+xHwCfPbXQ77BWKFVbk/3G9bTCW2ZURdGVYLCYIHimeMuhwIAgbRViOqfYcD8qzK7ONw18cKtyt2fIh/qU+oAfUNtfwq9MUbYaZybg8Ce/wB6OwDgpOktrrvNdjOmyhXkgyahytiBCtCRCDAcT09nTPrDcj9fIofDYYMvy3EKNFKmJ8kVTgXxSr8hGMDWW7dgabWrEKQfqXg80KqRoEf4mGm9RWuE+U5bOCgGpPAow4U37ZUHID9wwqWIyD6lUoRBk/27VZh8QhIVBCx7CB2FMJKk3NKmpLEWR8s2h9JGUsOPah+jdJt2VICgx/VEk0yR0BH5CiLKkag6dopaZQlgHuEU9wV+lo5BUsDG45H70ZhraoGEn3P5VUmLgHiDtVWLxKlGmQWUxGw96YzUNQSx6MF6zhg6Mh0M8ckDeglxNkpkb0uCBr3jcVf8M4V2ctcaYByrMx5NXfEHw7nYXUIA2YDc6xIo+XHcwFq1A8Ldc5l0Mgg8/ejMMGCBM86QCeBRGG6CiGUduxk7/wCa8+IXSwi6CSYB5gbmsx5xkBqOVj/JEva8loqPUWIhVH06bmirvUUQAtALbeazdzGWnKFS8gbTyd6YJadx8xwCq6J4A3/OtLKtEzjj/Zbgkdna6NCPSE4ykiT70R1NQzgwJUEaaxUsPKJm77CqrChjnbaZPegzUDvqZRs1L7SuE59zUXw7up2kGR/micZiV9AXZth3rz58EAdvwNKWl1dwWMUul3OMsDlhPpPjWmC3Qi5QNeB+9QgljpMbNXMNCG3/ADB96byoQNkxNi+o3bbhkQesweQNfypyRnUMGEgfTrv3rxbQAgqNdp796UY/FC0hEw7aKBtqYk0p8fIggR/JWAAFQzp2IDhg31KxB7farHvH1IDr+cUnw+EeyuYOpJ1MGZJ8Ud024HZmj1BY9/ahfCGYAwTkUEqINjuolCltFLHQRO5JpgbZzZSIULr4PvQmCtqXDMgDzudwaJ6tLDKCQPHNUqmuMJyGoASb4SBqREcgGfNLLeFKzaVi8+oAiB7bVbgLTKRLkqOG1gUXmAJfLoOwoSCgomAdGpclpgNWQeMu1dQ3/kU/4tXlMqZYiz5RR1Ekg7xrFMUtIDIMq28/zSh+mYgi0pdDMb11qbrSfpJEfahDuzlSNCELKwoYQIMyjQmRr/arsF1AujDsSPairtlVXuT+VCYdAiwqiJPqJ7nmkZ8YYjVwkYcTcn0qxpmkyNI/vXYvDO2qgkcfzmhcffMkWG9Qy5tdN9aalncCBAjjvU2UNjYMTMAoVUWDAhklwRlPOn5c1Z8lAkgaDUAbn2rruHNxyHYiD30NH2sOFIWZkaTxFPPkKxo+5nFquK7dzMUhfVMknSKIv4oxoCPfT8Kvu4JAzTIJggz+lJrtplvJnY/L1YHyODXDApa4zGC0Z4bDkkg6neqsXh7hOjLljVTtXIt4284ygGXTeQD381G1de4FzIA4OUxzI3injUmdTyqXdCtOgMAak6+PFHY52CqFknONJia7DNkUA6kA6DvQ4cWj8y99RMgdu2lTBsj5N9QyABQhzYTUmSrT9XE+BWe+J8K1x5ALBV34BG8U/sMXGckhSdJ7UWtpNFIidP8AJqlUC9TUYqbny3D2LjOERTn4H9zWq6fj3tW2tXQCeI5phgLGR7sgSGjNtpVrYVXnQDmRvNLysrUpFyhspbsSDFyobRdIyk7VKwmVNTBJn/qrHwjSWzbx+VF27QWGYFm7cKO9dkAer6ERzMDcFyMsAjSTxS/HWntMHLTJ3800ZfXmzQZ27ivXHzJRl2M+48VC2RvlpdiaVBEQPiLrnKz/AC5+kxo3vR+BR0WHOY/zmmV2wkfT9PFcAmXaF3Pg+aauU5DxAIgheIuL3c6cHydDSPqvqcLoSO3Pin+K+U/0sJH4VRg8JZ+pSCw1neKoZ+NAbixuZwq4YyjQOOQKc4FFkFd94Mg/5ppg8Ql1nA17GN/8TXr2xOp2Hb9KWM450YXxVsQVLBLyw0JoTF3QrZSdJ0PemLXABpPvSPH9Md5YMWnbgiasx5QTCU0dz1MUztlQiAfV3PYU4OIVECPIZuY0NZVsA1hkhwWMkrO3k+9HdQ+JPQoCerue3NT58bO4/J3yLDf9KfH4V1VWOrjKP9tz7CvaD7/kHkIt6djnJCOvpDa+KY4dEFyUneY1C12Cweb1aQTEjWrMThPluhEkTBHFVsjcuU0HisKxmLOaBoQNiNNex5qq/iHKkaeYFX9QWUED0g669u1LrbMg1BA80xSIWMj3EljFNaxLZQWzbxvHM1rcPcYoMhlff9aU2+nZ7ysynIV0IpuMKEOgj9PvUvkKr0Ix2Fw1HlTI+3M0F/5qyrZGcBjpqNp4q/GNEAagrtSLF9Jth1dy2WBEcNPNcmFQBBXezHmMxARBmOYzAHJnalVy2E9V0swO4bUKTtTe/h0cLIlhB/Krr1tch9Igbz/NeKnPkffiohqAouU2MUHQZToNI9ufak3Q8QxxNxeACZq/CZjDZQsnXePeKKxD27RzZRmbn371SriwGmAKLv8A2hONhnX1ZPA3b3PAoTD4UM+dkJ1IDMZAjgCqihaHb2ppatgIE2nUfzimlRVxXGW/6k5cyqMo013B9qtTGBoEwdx5pb0y4pcrrBGn23BqxLNu25bUkj0rwPP50CupbhRv/wBTSBU8vYr/AHHzIwDgANGk/wANG4fBrGra8VG5ilMEtljg/TVFzF5HUsFZddu/FCcIDFpn2IhzrByckfyKi8n0zDRKn964DPDZjIpU2NK3iBLEjKs7Enz2/aoRlL5SAaAhhdbja46ZZc6xqfJqjLlGms8io4XBZBJOZ21Y9/A7AcUSyrGUNBj8PenY2VzY/wCYLa1FeJzZXyMQ3nYnSp/LlChJlhE+e9F3LAJ9J+5G/tVWMwSOw9TAgaFTBqv4taMwG9RJi+iOFZs4AGw5btXvR+l3AczMFBH0jc1T1Ho7EFheuAjU5mkaUT8MreKk3XDD+kf3omwhTAbFQ5Axp/o0SWkg80nvYkkyZIB0prjbzpqrLtou8+9KenOjyziMp41B8Eb1PkxcmFQVcxnhriOrFhoREd65kKCQRljQcgeaGZ3YkKAifn/iqLtq4ARnJB77femN47lRxNRqj2ZUcGl+4GyyANTtJ4HkV5ewKJdUKgJIkKdh5q3D4oxlIyNspGx9ux96b4fDqYJk6bnelBiGAYEGYyAC4mZn9vaup41g9/yr2qaMDUynS8e6E5kIQ9v6T4rRi+OIKnTvSbGoJW2vA17+9SsYS6wiSF4A0prMKowhJ38XBZAJWYnsdzULCMwiST5M1celAAuxKgcTpMak0RgcMikMHkVP8iK3E3/8hqoIuMMFYIAAYE8qeJoq7ZGUk+0RvSvF2H9VxZU6R30/tV/SsebgIP1eKDKQGgmpXjkhRLHMBCgDbyazfV+puGS0nqJjzvWvxa3FzFAjGRIPI5jzS/AYey7m+Eyt9Jn+k+BRfJxS6uNRwO5fav8Ay1UXFCsQBpqJqy1fzo5CMMjQZ5PceKXdWuMWyzsd6twPUTla2RtJzfvUvjIoJZhswXyA6ll93zaqDAnTQeKi9sPbLMkE8b+1W2sUGTKpBYbk1HC3wWKkj2FWZFsAiZy1E+Fw90NIeEGpzazTuxiTcIClY5O//VKuqv8ALR51H60t+FurojBGH1n6jsD2rlJIjVxlkJm1slAxgCe9A4/rCI0FMxHNE3EXPESSNpjTv+RoBOgl7js5IQHYiS3t4rG5A6kxG9mLeodZL7IANuabYBECIzbkaT39q9sdAUmWJjhf3phb6SqahmMagHWPArPt7jCFUdwQ4ZFbZxJ7mGJ304qvqCKmRFABzZvIp2qDLt513pVi8KhKtsZka767UpwDoCorkfUkjssktzzuDVjvnBbTTWe/irXsE5gYy8fvQF+4tqJkg6USqFAHqFyuTfFywUAg+35CrrrhSCNDyPNQw95XM5YgSJ3NC9aW4ywh9Y1oj5HF/iqMCjuRuWA7EtOUAaD+o+aBwrXWJCKqKpKgRJMcntUhjnRLXzvTJgnYT2PvR7YpSrNayuwjMAYPvTWYkwWutRH1bCNbh87FifsP8V70fGoVKkwSSSTTTFsX9JUZMuoOsk9qW4/CgBcigRoQBXcCR3UFMV7MPs4hSSCYPH/2qzOpjNt+EnsKV4a8Aussy/Sp/Wu/0xdWzkz9UDjWdKchZVo7jB+QnE2g2jAASMoB1GvNMGBGgeNKFS4jlI/T9arxajMrZp8RUlnLZMFtGod/qHHJ/CurxX817Q8G/YHITOHqKplzzmYST2p9g8UgUEkZYmf5zWf/APEm9fzPKoTtOpAB00onHqiMLTMQDsQeOB/mqWGrlJxJYCnZ7/xG2NbOAsSjiOZ+9MMBhlylSoECfwpNgsbDAQNAAJ4p4iFpLaDSIrz8ivkbQ1F6AoGTw7B1kbbUJgcALb5gTM6CiLbA7TlGk7CfarwoJBG67GnBSauKJBMiLZLfWD4gd6ncwwPIEn8TVS2EV2cn1DfxRCvIBBkHUGumkxfi8EhHq0J2NJMQ5I+VaBE/W1Pb1liZZ519PceKjZshXBk688AUJYIpPuaACYsw/R8mp3O+tGWcKBOoU9xuaNxN4RprXlt1KzAB7GlYfIZxRhstbgPU+j5reVmJWZaN2HvVXSfh7DIQ6S511JncRBq7reKcoGBIXYZe9K/hxryMzhM6HRgxiNd6fh5LYb3AOZqoTSdP6O6OXzliREN/T7dqPTMDE6VNcUpWQZ7aVMD8d6YSCdRdn3B7if1L9XPn/NC3OqZdxV2NxJT6VLnsN6AZPmIWZGVmlIMTHJrDkUdxigexBbnWiC0MxJ1AiR7UwwrMyguqho4qdjo1hVACcaHmfeoixkhS8zsDvl/vUvlOxQMuoYZToCDW8M/1ZyCWIHt7Unxd9hcBLTkYfwij+pF7UMrEg9+Pappg7Tor87kzueZoP9QOIIiih5RVj+sW0vFRGVgCrA+kE7gnimmExSH6WDcGDNLsbhy6kqoa3tlI+qOZpdhenpZYPbGR/wAoPEV6SFXXlW44fzUd45UYFWOg1jsY0jzQ/RBZTOpLSe/j9aExuJcPLoMg+qOfNe4K0mITPGU65CNxHJ965VYtN4sFv1Hyyw9Cwg+5P7VVftaAwZpW3W0wwCuWd9iBuOZI7UnxfxlJ0RonTUD8acV9TFDd+oxx4VGV50B/GeKc27VuQ43yjXwePekmDdXIdyGO4HA8DzRuJx6qpkiBqRSMiMWB/IJN6EJICi5GsaikWPxL5rYEAu39Wxiqr3xbYUbNMbATPvWT6p1XEXHXEBGVEPp00HvVOPGe+oL2vc0N7AdRzHLeSOP5lrqy7fFuKP8AWPwryqPhf8Ej5z6pasf7qurzGoB00ggj86o+JMNZy53EGIBA2bgVSt0AgkGG57T+lW9VwgdFQOSAdO5J7+1eacwaXYfqwLGIMJiDII3rcdLvegmdYms7g8EiESAY010M07S1KiB/atRdTnC8jUv1czniDEdvND2sVkuFTMQNePxorC4cKPUNTvQ/U7bhfREztHFTriZWLE2IJI6EOV1OpEzv5qeZQDkEE99vtQiAkDvzHtXL6VgyfbtXAnZE6gYZdSdRA7mlt9ySQJEHfv4q/FY8IolZXaRP40PjLpGXIswdZ89qTlLGlUXcNQB3JnMoneN/AoPE9Wtpqpzk7jsK9S0zBs7nKBqo5nuaAv4PDt6EnOdjMgE1g8UIQT3ByZD0Id0rGoUyrLbsZH0knbWm2FuAI7uRvqYjSg+mYUIoSBpufPmlXW7Vy83y0JCTmYjQGKrUMT1oQFS/cKPxOA0ZIA0BB37GKcYbr1oqozancnikWG6UjoLTwLijR/8AlPfzQD4Jkf5ZHqmAeD5rHtNxTWrcY/vNcVzcy5g+i9gopjg7wuDkMOOPtQ/TrLlCC2g0FWXbaWyG1EDepFONsn7HHl6h1pmEByD5pZ1bC53Rw2XJ6R23oO71BycoObX6oy0xvJnQoXiRuNx5HnzVjYyQB6nBTFnUjcchXAVBzqc3tTXDYNAkAaEfrzVCXMnoZ5AEDNufc1at1ydMoXgzUPkYGUAJCA9mK7DNbf1H0KckcAHtUsSigysGDINMMe6FQv8AyMDyaVAf08ivS8c/QAmGtdwDEZs2aJDHWh8JiVw7uGJCXNvB4XxT1rHo10NZzq7SrJlze2sdjTuVHUIsCtXBur4W5dcXWQJIgAneOT7ihcD0lMw+Z6l5VeB3rRYBs6FHDDKBMjkDf2o3D2beUZUGn9Rj9KX8oLEDud8xC8SNRK+AR8P/ALbFVtvox0IE71LDdJR/W0kZY9/J96Z4vpQe2VQBCTJA2Md6ssj0AKQWAgrPPkU1W5bilP5F69Aw+kIJOtQ6v1K3h7RV1D5hlVI39+wHejMSrsoUNlZTP7ikfxt05WTOqsXWJPZeZruAyOAeoGd9XPnV1EJPHjtXVb8s11ehILn252UkaCBpttXhRQZgTxS2/iDIVGmBER/Jq6w8Kc2pP4A14DeOyg8f/M9IWRZlXV7YRS+WSTGhgydqu6YxyBCx9+33qPVn9KydZGleYR3BkdtRxT8Af4/t3NoERzh309T5giyzd44qi3jJEiYOw30qKEFCNMrbx+dLHfKxC/SNvArQCT3r3NVLMIS2yhmUwOxP71RcvXACQ8gjVT/Y0L/quW+kcmprauOuxA39xXF1o0JrEL3G2Hv50Bn0kbHavb9s5lE6HX/qgkRktPMkgaD965FLWUU52dRrl0Mb0CFQb6gAWOUqxTFrgQsVUjXiTVGB6a63k0kKwYnxRfRETMWeWeT6XP0qI7800xHVERWIif6Y19hPaiZkY8rk7C2lmOwpLBgPTu0GPvUroAUsoEbe1BdPxT3UOcR6ie2+w9qDvY51Jw4T1tyeF4I800OK/wAR+M3J4Zi90qNNYJ9t6aX3Blo9NvTuT5qWCtMEXKv06knSe/vNW410tozhCZ+oA/vUvyl/UDJtrnmFx6MmZdRMab/hSvqXUC7G2g1JEzwBrXuBxDXXbIiooH09yeTVT4VluNcLAgiNBr96DF42MPzjMbb3LVTTUfzxUvlxBHP41TavgkjT8f1pg5GWV1Ox8V6LFa1GsagD2ZYAgzPNNreHhGB0MTpQONvKQBpI5kURhsWHR4nRYnzU7soH29xbEmWYa2pBLCY8/nXlzCpnBH1HjgQN6SWuvo7i0mpAlm4JG4Him6By0mMxHHalsRjUsdATCrCWYnCK+u58n9KD/wDHmWhBlYQeNe9H2rsHKftVlu45dw4AQLmBnU+CKXhzlyQJzAqIoGFZANZZhDewr27hFCZhIPv/AGot2BOWCJG/vwKpvXCnpIntP70tnT5KujOAPGK+p9bS2pVg4Yr6dNCY71nundHe4q3bd715vWG4M9+a0XXsO1xESEhiJMarzING9PwKKEULoP5Jq5HBW1hUoW/cvFgBDMFo9R8jms31Ppl264VXKIynOONI5rQ4jqSZjaB9cafzmlWJxCYa2zXrrvnGi6CPA7USFi31kz9bmcv9PwSsVz7eP811Zu7ipJhSB5rqu+N5PyWPuhdQV1zZiHUcfpWrwV5WGp0b8jXyXCX2tsHXccd61/SPiS2wIZWDcwCRNBkw1sSrFmBHEzWvhWZHUksx2Pt9NT6ewYBDodm7/eqvh/F3LiEn6JhdIam4wAKlRuRqdifvUDuRaiMVgsmcOmXIRAiP31pfgsGuqlpUHT28mrb/AEe7khb7DSNQDXuB6f8ALTKv1cmdK884sqqSGu4wZBFnW+npmUj6f+M6T3qOAxRLhM/EAeaLx2GcwzySDCgbH3pbb6KkjPmdwPoTYT3NWYFYYxyhEow2ZpUtuVIfkSSOavwJV0BVWE7kiDI7Uv6bfdECOsZZgzOnE1bhMYhQrJlTtB9xRsgYb6k11oQXrXTGdgyiTtvH3pWnTbklcp0nXj7VqUvE5WXUHtxRqarrG1J4LVLBK/szmJS8UVUGqxt/VHeoi3eDq7oA2xMzp2p4rqjydZqvEYlcrOSJ4FT5Mjj6ruMRaMMW6sbgx+VK8a/zwyBsqLo0cmluHcXGyXPTmEgo0HTvTPA9Pe3PqV1G06NHng07x8DBbYw24jUFsYN8PdV19SHRtJI8x2pjb6laZ8qssjWORRYMieIkUrf5YJZyqtsTp/3Tci2pVfc5aPqA4yyDcOQAfvU8DhBm9TEk8z/NKhiGTNKkMO6nQ0TZAG/fjeqcCcVCtGGqg2PtAMIUHcD3I3ojp5dLOUiWYbnv5/GvMTYzqNYCmfJqpMY7GI9A0zDSCBE1L5WMswA6uKLrcyHSHa1izIBMlfae34VvDfyHP4hv3HYVl7XTLi3C8LJJOaZ0n8jWnPTldQC7eYO/g0bhcilDuMdgQDI3cUqj5mpnaK8bEfM9QaJ0A5jzQXVcPcZ1QAC2vY6xU7OLtLcVE+o6ERsaQUZKQDUQSW2YyxDKqjMY21obEXkeVziYEdzTC/ZUgBhMcVnuoYhhcERCjQAbTRvjW7YQeZnX8ZkzKwkRFC/D2Kv+pWKsDseVEneoXmLjXUg7fqfeljYtMO6uzsFmCBz9qbiUlaWM/wC3kY/6gPlI7qhZ9SWO8/tWB6v1G5iHGcgsBEDQewp11v4iNxSEkJ+bHz4rMpfyNnOpiR4Y1d4uDjuSZclwz/xyD6mAPOtdRWH+E8XdUXMp9QnU11W8jJ6EzJSdBX0z4PsYYWstshz/AFZgM08/asBhgMun3orBtfTP8h8hYQ3c/fikZBYrqMWgbE+vWkTKOParrgy/UQBHB/WsX8EC88m65lNACdT58itVjLDOCGI30Pb3715mVePWzKFN9z1cerzkzSnEaEVFL7MDIgnYc/ep4bBhNdZiD2Ne3oG31f2qYDITuOseoqxS3TmVTxoD+orIrisQhKq7glpHk8zW6xLAiZAKif3pLbsLccOiNB1JP9qrVqFRmI8QSRPbD4l0bMF+nYjWI3qzp/UASWIg5MqjgkcnzT7DIFEzJAiOw80hxvT3SWTVVObX3mBQOx6EQx5NqMMVi7hhEXLI9T8DwB3oxLzwELDKRB01HkGaW9E6iLuclSACCB2otMRq0pEHTzTPiASh7jlGty/Mn0pqQNWmgbzjNrtuZ20olMQw3QiZygc+alewqspZ1OXLqsx+Y5pGPHw63MJ3FXSsVbd2LowzH0GCFyjaDFPLl0KYQcak7ewoRMUyhVRVCAQAddKFxnUnDbDQSY/5cAVSRy6gBGY3Gd3GqFBdsnjb8KwvX8SrszKxJnvwKs6tirlxobk7DQCNqGs9OdhMQO559qnXCUbkxuejhRUFtqM/gu4Lma05hlM+4/7rTkqj+ogADf2rP9K6d8hjcB1IiI70/a3Cl3XNIHpjUz2rfv8ALY6qS5WWzxg2Jz3lzIPST6e5HevcLhchhnJ11UbD3q58BcXKLJCox9QP9Ok+kcVG5gWCBEbK3LRObvvRsN2RJK3cIYL/AExrvXB8p9LDTelt18sJJzD6oB7eKovYp1YHKxA8b03EFWzKFWxUZYvqSW0LNFJfhpWu4h77rodVB09q8wuDfE3M9xSEUwEPPvWlFhVChABA44FK8rPxWzC+oHGSxTwrSTqeOKTXemk+pCGBE70yuXTqIkeaRdU6iMMnqJCE8DRZ4mpmD5QCkRSiwZVjw6Wy6J6j9Kz2G5r5ziL128/rOimD2Hf3rUdZ6380D5ZKpEGfqb9hWauvwP8AuvW8ZCq03cQ7muIkiwMAbCrun4U3cQlscsJoZnyL5/vW4/8A8u6Czu2JcaDRSeTzVigdCTMTPpOFUKiqBsK6mHyxXlN4iBZn5mwO49qcdO+s17XVJmj0mv6EfWnuK277D+cV1dXnN7j/AMkRz7Utb6zXtdSvUYvcXYn6bntVnQfpPv8A3rq6tEeP4MFxrkXWgka03x//APD/APH9jXtdSx2ZOv8AQme6BsfYfpTzDfV9/wC9dXVaP4lZhl/6hQGNY5TrzXV1Tr/RiT3PV4pLjz6z/wC1dXU9eo9O4sv/AEL/AO4rVXh6E9q6uocvUZl6l4H003Oy/wA4rq6gXqQt7k7m/wBxQeLO/vXV1c3UFZG99KnnKNaDB/3K8rq0ShIyvKMjac/2oXD7V1dUPnfxBT+jKbn0f/s1kfiVj8m4J0kafeurqs8T+FiM3ZmTxewoWx/VXtdXqp1JTKL25+1foT4QQDCW4AGnGnaurqasAx1XV1dTIE//2Q=="
+        ],
+        "youTubeId": [
+            "lYFDGVIOKJA"
+        ],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927ba8c6e42c1776e7fecc"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            }
+        ],
+        "message": "<p>Heat a large skillet over medium-high heat and stir in the ground beef, onion, green and red peppers, beef bullion, salt, seasoned salt, and pepper. Cook and stir until the beef is crumbly, evenly browned, and no longer pink. Drain and discard any excess grease. Stir in the water and rice. Bring to a boil over high heat, then reduce heat to medium-low, cover, and simmer until the rice is tender, and the liquid has been absorbed, 20 to 25 minutes.</p><p><br></p>",
+        "id": {
+            "$numberInt": "11"
+        },
+        "category": "suate",
+        "title": "Dirty Rice",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GhANy26PPKKMc9fbXeGNISP14XjAd8jB2XMZAWhXZo=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron S",
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1640495125923"
+            }
+        },
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1640495125923"
+            }
+        },
+        "__v": {
+            "$numberInt": "0"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "5f6a255a1378005dc6589202"
+        },
+        "ingredients": [
+            "1 cup vegetable oil",
+            "1 cup all-purpose flour",
+            "1 large onion, chopped",
+            "1 large green bell pepper, chopped",
+            "2 celery stalks, chopped",
+            "1 pound andouille or smoked sausage, sliced 1/4 inch thick",
+            "4 cloves garlic, minced",
+            "salt and pepper to taste",
+            "Creole seasoning to taste",
+            "6 cups chicken broth",
+            "1 bay leaf",
+            "1 rotisserie chicken, boned and shredded\""
+        ],
+        "imgs": [
+            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6970269.jpg&w=596&h=596&c=sc&poi=face&q=85",
+            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6894250.jpg&w=596&h=596&c=sc&poi=face&q=85",
+            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F6949834.jpg&w=596&h=596&c=sc&poi=face&q=85"
+        ],
+        "youTubeId": [
+            "wn3I60XxBzc",
+            "QmsTK6ATVdI"
+        ],
+        "message": "<p>Heat the oil in a Dutch oven over medium heat. When hot, whisk in flour. Continue whisking until the roux has cooked to the color of chocolate milk, 8 to 10 minutes. Be careful not to burn the roux. If you see black specks in the mixture, start over.</p> <p>Stir onion, bell pepper, celery, and sausage into the roux; cook 5 minutes. Stir in the garlic and cook another 5 minutes. Season with salt, pepper, and Creole seasoning; blend thoroughly. Pour in the chicken broth and add the bay leaf. Bring to a boil over high heat, then reduce heat to medium-low, and simmer, uncovered, for 1 hour, stirring occasionally. Stir in the chicken, and simmer 1 hour more. Skim off any foam that floats to the top during the last hour.</p>",
+        "id": {
+            "$numberInt": "3"
+        },
+        "category": "soup",
+        "title": "Cajun Chicken and Sausage Gumbo",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mCV_954eRVLrXskSTsIilkBV1T5zzoIxJXubbO6kA=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron Smith",
+        "comments": [],
+        "allowComments": true,
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1660595097812"
+            }
+        }
+    },
+    {
+        "_id": {
+            "$oid": "5f6a25811378005dc6589203"
+        },
+        "ingredients": [
+            "10 chicken thighs or drumsticks",
+            "1 cup chopped fresh flat leaf parsley, firmly packed",
+            "1 1/2 cups chopped fresh cilantro, firmly packed",
+            "1/2 cup extra virgin olive oil",
+            "3 garlic cloves (pressed or finely chopped)",
+            "1/4 cup vinegar (red wine or distilled white)",
+            "1 tsp cumin",
+            "1/2 tsp ground black pepper",
+            "1 tsp salt",
+            "1/2 tsp red pepper flakes"
+        ],
+        "imgs": [
+            "https://grainfreecomfortfood.com/wp-content/uploads/2019/08/ChimChicken2-700x500.jpg",
+            "https://grainfreecomfortfood.com/wp-content/uploads/2019/08/ChimChicken3-700x500.jpg",
+            "https://grainfreecomfortfood.com/wp-content/uploads/2019/08/ChimChicken1-700x500.jpg",
+            "https://grainfreecomfortfood.com/wp-content/uploads/2019/08/ChimChicken4-700x500.jpg"
+        ],
+        "youTubeId": [],
+        "message": "<ol><li>Preheat oven to 425 degrees</li><li>Finely chop parsley and cilantro (if you're not using a food processor, in which case you can dump all the ingredients in together.</li><li>Transfer to mixing bowl and add all other ingredients (or transfer to a mortar bowl if you're using a pestle and mortar).</li><li>Stir vigorously with a whisk or fork, making sure all ingredients are mix and herbs are coated.</li><li>Pour half into another bowl and set aside.</li><li>Pat chicken dry with a paper towel and place across a wire rack over an oven pan (or place directly in a pan if no rack).</li><li>Brush chimichurri onto both sides of the chicken (do NOT use any leftover sauce from this bowl as it has now been contaminated with raw chicken - I'd suggest throwing it away once it is brushed on to avoid mixing up your bowls!)</li><li>Place in oven for 45-55 minutes. (If you're using drumsticks, flip with tongs halfway through. Chicken temp should cook to 165).</li><li>Move pan to the broiler for a nice crispy top, flipping pan 180 degrees halfway through so broil is even. (Check often - every 30 seconds or so to avoid burnt chicken.)</li><li>Use reserve chimichurri to drizzle over chicken or plate on the side so people can dip!</li></ol>",
+        "id": {
+            "$numberInt": "2"
+        },
+        "category": "chicken",
+        "title": "Chimichurri Chicken",
+        "googleId": "106996680788438752656",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+        "email": "aaron@web-presence.biz",
+        "user": "web - presence",
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d8d1f60985b690017dc983b"
+                },
+                "comment": "This was on Gina Grad's website.",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mCV_954eRVLrXskSTsIilkBV1T5zzoIxJXubbO6kA=s96-c",
+                "commenterEmail": "aaronrs2002@gmail.com",
+                "commenterId": "101380000475593513417",
+                "commentTimeStamp": "1569529694975"
+            }
+        ],
+        "allowComments": true
+    },
+    {
+        "_id": {
+            "$oid": "5f6a25391378005dc6589201"
+        },
+        "ingredients": [
+            "2-2 1/3 cups all-purpose flour OR bread flour* divided (250-295g)",
+            "1 packet instant yeast (2 1/4 teaspoon)",
+            "1 1/2 teaspoons sugar",
+            "3/4 teaspoon salt",
+            "1/8-1/4 teaspoon garlic powder and/or dried basil leaves optional",
+            "2 Tablespoons olive oil + additional",
+            "3/4 cup warm water**"
+        ],
+        "imgs": [
+            "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/3/2/0/HT_pizza-dough-step-2_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371595283801.jpeg"
+        ],
+        "youTubeId": [
+            "sv3TXMSv6Lw",
+            "u-KDRmOYSb0",
+            "IAOH2YjPoV0"
+        ],
+        "message": "<ul ><li >Combine 1 cup (125g) of flour, instant yeast, sugar, and salt in a large bowl. If desired, add garlic powder and dried basil at this point as well.</li><li >Add olive oil and warm water and use a wooden spoon to stir well very well.</li><li >Gradually add another 1 cup (125g) of flour. Add any additional flour as needed (I've found that sometimes I need as much as an additional 1/3 cup), stirring until the dough is forming into a cohesive, elastic ball and is beginning to pull away from the sides of the bowl (see video above recipe for visual cue). The dough will still be slightly sticky but still should be manageable with your hands.</li><li >Drizzle a separate, large, clean bowl generously with olive oil and use a pastry brush to brush up the sides of the bowl.</li><li >Lightly dust your hands with flour and form your pizza dough into a round ball and transfer to your olive oil-brushed bowl. Use your hands to roll the pizza dough along the inside of the bowl until it is coated in olive oil, then cover the bowl tightly with plastic wrap and place it in a warm place.</li><li >Allow dough to rise for 30 minutes or until doubled in size. If you intend to bake this dough into a pizza, I also recommend preheating your oven to 425F (215C) at this point so that it will have reached temperature once your pizza is ready to bake.</li><li >Once the dough has risen, use your hands to gently deflate it and transfer to a lightly floured surface and knead briefly until smooth (about 3-5 times).&nbsp;</li><li >Use either your hands or a rolling pin to work the dough into 12\\\" circle.</li><li >Transfer dough to a parchment paper lined pizza pan and either pinch the edges or fold them over to form a crust.</li><li >Drizzle additional olive oil (about a Tablespoon) over the top of the pizza and use your pastry brush to brush the entire surface of the pizza (including the crust) with olive oil.&nbsp;</li><li >Use a fork to poke holes all over the center of the pizza to keep the dough from bubbling up in the oven.</li><li >Add desired toppings and bake in a 425F (215C) preheated oven for 13-15 minutes or until toppings are golden brown. Slice and serve.</li></ul>",
+        "id": {
+            "$numberInt": "1"
+        },
+        "category": "soup",
+        "title": "Pizza Dough",
+        "googleId": "106996680788438752656",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+        "email": "aaron@web-presence.biz",
+        "user": "web - presence",
+        "comments": [],
+        "allowComments": true,
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1569016789755"
+            }
+        }
+    },
+    {
+        "_id": {
+            "$oid": "5f6a25dc1378005dc6589205"
+        },
+        "ingredients": [
+            "1/2 Cup Flour",
+            "1/2 Cup Milk",
+            "2 Eggs"
+        ],
+        "imgs": [
+            "https://tastykitchen.com/recipes/wp-content/uploads/sites/2/2009/07/gp.jpg"
+        ],
+        "youTubeId": [],
+        "comments": [
+            {
+                "_id": {
+                    "$oid": "5d927ba8c6e42c1776e7fecc"
+                },
+                "comment": "One of my favorites!",
+                "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
+                "commenterEmail": "aaron@web-presence.biz",
+                "commenterId": "106996680788438752656",
+                "commentTimeStamp": "1569881000668"
+            }
+        ],
+        "message": "<p>Preheat oven to 425. melt 1 tbsp of butter in pie pan.</p><p><br></p><p>Mix together until smooth. Don't over beat.</p><p><br></p><p>Put batter over butter in pan and sprinkle a little salt and cinnamon on top and bake for 12 minutes.</p>",
+        "id": {
+            "$numberInt": "6"
+        },
+        "category": "breakfast",
+        "title": "German Pancakes",
+        "googleId": "101380000475593513417",
+        "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mCV_954eRVLrXskSTsIilkBV1T5zzoIxJXubbO6kA=s96-c",
+        "email": "aaronrs2002@gmail.com",
+        "user": "Aaron Smith"
+    }
+]
