@@ -68,7 +68,7 @@ let categories = [];
 let categoryList = [];
 
 async function start() {
-    const urlStart = "../config/" + config[0].apiAddress;
+    const urlStart = config[0].apiAddress;
 
     try {
         const menu = await getMenu(urlStart);

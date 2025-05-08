@@ -1,5 +1,5 @@
 let config = [{
-    apiAddress: "restaurantData.json",
+    apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
     navLinks: ["home", "about", "menu", "contact"],
     banners: [{ img: "img/banner.jpg", bannerHTML: "<h3>Welcome, We have food!</h3>" }, { img: "img/banner2.jpg", bannerHTML: "<h3>We Eat food!</h3>" }, { img: "img/banner3.jpg", bannerHTML: "<h3>Clean Your Plate here!!</h3>" },],
     about: "We make the best food. Here is our story of three generations.",
