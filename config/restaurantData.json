@@ -199,7 +199,7 @@
         "id": {
             "$numberInt": "4"
         },
-        "category": "soup",
+        "category": "bread",
         "title": "Spinach Mac and Cheese",
         "googleId": "106996680788438752656",
         "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GhMGbNLu5Hp-G8bKjvxYBmeqloGpQqN0QGy6XaSOtw=s96-c",
@@ -552,7 +552,7 @@
         "id": {
             "$numberInt": "1"
         },
-        "category": "soup",
+        "category": "bread",
         "title": "Pizza Dough",
         "googleId": "106996680788438752656",
         "imageUrl": "https://lh3.googleusercontent.com/a-/AAuE7mALfk8-iWIzDDbYJ6TWunDMzyYV7TFcfhMxklMl9Fo=s96-c",
