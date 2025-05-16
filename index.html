@@ -13,7 +13,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://bootswatch.com/5/spacelab/bootstrap.css" rel="stylesheet" id="themedStyle">
     <link href="https://aaronrs2002.github.io/black-jack/css/animate.min.css" rel="stylesheet">
-    <link href="https://aaronrs2002.github.io/black-jack/css/shared.css" rel="stylesheet" />
+    <!--  <link href="https://aaronrs2002.github.io/black-jack/css/shared.css" rel="stylesheet" />-->
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Restaurant</title>
@@ -34,10 +34,13 @@
     </script>-->
 </head>
 
-<body>
+<body data-restaurant="0">
 
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+
+
+
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <nav>
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"></use>
@@ -52,10 +55,11 @@
                 <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>-->
             </ul>
-        </header>
-    </div>
+        </nav>
+    </header>
 
-    <div class="container">
+
+    <main class="container">
         <section data-section="0">
             <h1>Home Section</h1>
         </section>
@@ -83,7 +87,7 @@
         <section data-section="3" class="hide">
             <h1>Contact Section</h1>
         </section>
-    </div>
+    </main>
 
     <div class="hide alert fadeInUp" role="alert" id="globalAlert"></div>
     <footer class="footer mt-auto py-3 animated fadeInUp">

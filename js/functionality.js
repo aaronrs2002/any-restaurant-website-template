@@ -14,6 +14,12 @@ let config = [{
 }]
 
 */
+let bgImg = config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img;
+console.group("bgImage: " + bgImg)
+
+document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
+
+
 
 let navHTML = "";
 for (let i = 0; i < config[0].navLinks.length; i++) {
