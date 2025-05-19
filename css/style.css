@@ -18,9 +18,18 @@ body {
     border-radius: 0px;
     min-height: 250px;
     margin-bottom: 0rem;
-    background-size: 100% auto;
+
     background-position: center center;
 
 
+
+}
+
+@media (max-width:1400px) {
+
+    body {
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
 
 }
