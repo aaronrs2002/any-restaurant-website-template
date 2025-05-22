@@ -218,3 +218,78 @@ function selectCategory(selected) {
     },
 
 */
+
+/*DSTART EVENTS 
+
+
+ <div className="row eventModule" >
+                    <div className="col-md-12"><h2 className="my-3 capitalize txtCenter">Events</h2>
+                        <hr /></div>
+
+
+                    <div className="col-md-4">
+                        <div class="list-group">
+                            {categoryEvents.length > 0 ? categoryEvents.map((event, i) => {
+                                return <button type="button" class={activeEvent === i ? "list-group-item list-group-item-action active" : "list-group-item list-group-item-action"} key={i} onClick={() => setActiveEvent((activeEvent) => i)}>{event.eventTitle}</button>
+                            }) : null}
+                        </div>
+
+                    </div>
+
+
+
+                    <div className="col-md-4">
+                        <ul className="list-unstyled">
+                            <li><h3>{categoryEvents[activeEvent].eventTitle}</h3></li>
+                            <li>{categoryEvents[activeEvent].eventDate}</li>
+                            <li>{categoryEvents[activeEvent].eventTime}</li>
+                            <li>{categoryEvents[activeEvent].eventAddress}</li>
+                            <li> {ReactHtmlParser(categoryEvents[activeEvent].eventDescription)}</li>
+                        </ul>
+                    </div>
+                    <div className="col-md-4">
+
+                        <iframe class="map" src={'=' + categoryEvents[activeEvent].eventAddress + ''} allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                 "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
+                "contact": "<a href='https://azbassetrescue.org/contact/' target='_blank'>azbassetrescue.org</a>",
+                "dateTime": "December 19 @ 11:00 am - 2:00 pm",
+                "details": "<p>Tired of wrapping present after present? Come join the Azbhr Volunteers from 11am-2pm on Saturday the 19th and then again from 1pm-4pm on Sunday the 20th. You make the tax deductible donation to help the Hounds, we’ll wrap your presents! Please note, this is a 2 day event!</p>",
+                "title": "Gift Wrap – East Valley, Day 1!"
+                */
+
+function setActiveEvent(activeEvent) {
+    console.log("config[0].events[activeEvent].title: " + config[0].events[activeEvent].title)
+    document.querySelector("h3[data-eventtitle]").innerHTML = config[0].events[activeEvent].title;
+    document.querySelector("li[data-eventdate]").innerHTML = config[0].events[activeEvent].dateTime;
+    document.querySelector("li[data-eventaddress]").innerHTML = config[0].events[activeEvent].address;
+    document.querySelector("li[data-eventdescription]").innerHTML = config[0].events[activeEvent].details;
+    document.querySelector("li[data-eventcontact]").innerHTML = config[0].events[activeEvent].contact;
+
+
+
+    document.querySelector(".map").src = config[0].googleMapsKey + config[0].events[activeEvent].address;
+
+
+
+
+    let titlesStr = "";
+    for (let i = 0; i < config[0].events.length; i++) {
+        let active = "";
+        if (i === activeEvent) {
+            active = " active";
+        }
+
+        titlesStr = titlesStr + `<button type="button" class=list-group-item list-group-item-action ${active}" onClick="setActiveEvent(${i})"> ${config[0].events[i].title}</button>`;
+
+
+
+
+    }
+    document.getElementById("eventTitlesTarget").innerHTML = titlesStr;
+
+
+
+}
+setActiveEvent(0); 

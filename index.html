@@ -62,6 +62,47 @@
     <main class="container">
         <section data-section="0">
             <h1>Home Section</h1>
+            <div id="aboutTarget"></div>
+            <div>
+
+                <div class="row eventModule">
+                    <div class="col-md-12">
+                        <h2 class="my-3 capitalize txtCenter">Events</h2>
+                        <hr />
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="list-group" id="eventTitlesTarget">
+                            <!--{categoryEvents.length > 0 ? categoryEvents.map((event, i) => {
+                            return <button type="button" class={activeEvent===i ? "list-group-item list-group-item-action active"
+                                : "list-group-item list-group-item-action" } key={i} onClick={()=> setActiveEvent((activeEvent) =>
+                                i)}>{event.eventTitle}</button>
+                            }) : null}-->
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li>
+                                <h3 data-eventtitle></h3>
+                            </li>
+                            <li data-eventdate></li>
+                            <li data-eventaddress></li>
+                            <li data-eventdescription> </li>
+                            <li data-eventcontact> </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <iframe class="map" src="" allowfullscreen=""></iframe>
+                    </div>
+
+                </div>
+                <div id="mediaTarget"></div>
+
         </section>
 
         <section data-section="1" class="hide">

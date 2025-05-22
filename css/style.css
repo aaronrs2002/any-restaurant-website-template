@@ -24,3 +24,25 @@ body {
 
 
 }
+
+
+
+/*START EVENTS CSS*/
+
+.eventModule {
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+
+}
+
+.map {
+    border: 0px;
+    width: 100%;
+    min-height: 315px;
+}
+
+.col-md-12 iframe.mediaComponent {
+    width: 100%;
+    min-height: 600px;
+}
