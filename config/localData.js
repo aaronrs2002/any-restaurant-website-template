@@ -1,7 +1,7 @@
 let config = [
 
     {
-        googleMapsKey: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I&q=",
+        googleMapsKey: "https://www.google.com/maps/embed/v1/place?key=",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
         banners: [{

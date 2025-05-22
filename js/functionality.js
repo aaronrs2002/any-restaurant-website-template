@@ -269,7 +269,7 @@ function setActiveEvent(activeEvent) {
 
 
 
-    document.querySelector(".map").src = config[0].googleMapsKey + config[0].events[activeEvent].address;
+    document.querySelector(".map").src = config[0].googleMapsKey + config[0].events[activeEvent].address + idNum + "&q=";
 
 
 
