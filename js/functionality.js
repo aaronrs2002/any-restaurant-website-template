@@ -170,7 +170,7 @@ function setActiveEvent(activeEvent) {
             active = " active";
         }
 
-        titlesStr = titlesStr + `<button type="button" class=list-group-item list-group-item-action ${active}" onClick="setActiveEvent(${i})"> ${config[0].events[i].title}</button>`;
+        titlesStr = titlesStr + `<button type="button" class="list-group-item list-group-item-action ${active}" onClick="setActiveEvent(${i})"> ${config[0].events[i].title}</button>`;
 
 
 
