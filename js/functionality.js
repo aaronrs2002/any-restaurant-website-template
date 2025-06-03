@@ -3,7 +3,11 @@ let bgImg = config[0].banners[Math.floor(Math.random() * config[0].banners.lengt
 console.group("bgImage: " + bgImg)
 
 document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
+let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
+document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + contactMapAddress;
 
+
+let activePost = 0;
 
 
 let navHTML = "";
@@ -38,7 +42,8 @@ function linkSelected(whichLink) {
 
 }
 
-async function getMenu(url) {
+
+async function getBlog(url) {
     try {
         const response = await fetch(url);
 
@@ -54,12 +59,49 @@ async function getMenu(url) {
     }
 }
 
+
+
+
+
+
+async function getMenu(url) {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`error: ${response.status}`);
+        }
+        const data = await response.json();
+
+        return data;
+
+
+    } catch (error) {
+        console.log("Error: " + error);
+        throw error;
+    }
+}
+
 let menu;
 let categories = [];
 let categoryList = [];
 
 async function start() {
     const urlStart = config[0].apiAddress;
+    let phpRelayAddress = "https://mechanized-aesthetics.net/php-relays/any-restaurant-blog-address.php?q=";
+
+
+    try {
+
+        const blog = await getBlog(phpRelayAddress + config[0].blogAddress);
+
+        document.querySelector("[data-blog]").innerHTML = blog;
+
+    } catch (error) {
+        console.log("Error: " + error)
+    }
+
+
 
     try {
         const menu = await getMenu(urlStart);
@@ -163,6 +205,7 @@ function setActiveEvent(activeEvent) {
 
 
 
+
     let titlesStr = "";
     for (let i = 0; i < config[0].events.length; i++) {
         let active = "";
@@ -181,4 +224,57 @@ function setActiveEvent(activeEvent) {
 
 
 }
-setActiveEvent(0); 
+setActiveEvent(0);
+
+
+
+function viewPosts(direction) {
+    /*   [].forEach.call(document.querySelectorAll(".post[data-num]"), function (e) {
+         e.classList.add("hide");
+       });
+       if (document.querySelector(".fadeIn")) {
+         [].forEach.call(document.querySelectorAll(".fadein"), function (e) {
+           e.classList.remove("fadeIn");
+         });
+       }
+   */
+    const cardLength = blog.length;
+
+    //let visibleCards = activePost / cardLength;
+
+    if (direction === "next") {
+        activePost = activePost + 1;
+        if (activePost >= cardLength) {
+            activePost = 0;
+        }
+        this.setState({
+            activePost,
+        });
+    } else {
+        activePost = activePost - 1;
+        if (activePost < 0) {
+            activePost = cardLength - 1;
+        }
+
+        document.getElementById("activeBlogTitle").innerHTML = blog[activePost].title;
+        document.getElementById("activeBlogPubDate").innerHTML = blog[activePost].pubDate;
+        document.getElementById("activeBlogDescription").innerHTML = blog[activePost].description;
+        /*this.setState({
+            activePost,
+        });*/
+    }
+
+    if (document.querySelector(".post[data-num='" + activePost + "']")) {
+        document
+            .querySelector(".post[data-num='" + activePost + "']")
+            .classList.remove("hide");
+        document
+            .querySelector(".post[data-num='" + activePost + "']")
+            .classList.add("fadeIn");
+    }
+}
+
+/*
+                                    <h1 id="activeBlogTitle">Active Blog Title</h1>
+                                    <hr /><i id="activeBlogPubDate">pubDate</i>
+                                    <div id="activeBlogDescription"></div>*/

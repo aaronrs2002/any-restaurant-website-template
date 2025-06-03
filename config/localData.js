@@ -41,7 +41,7 @@ let config = [
                 "title": "Main Event – Playtime for our January Angel!"
             }
         ],
-        blogAddress: "https://blogspot.com",
+        blogAddress: "https://our-basset-hounds.blogspot.com/feeds/posts/default?alt=rss",
         address: "1060 W. Addison Ave. Chicago Il",
         phone: "555-222-3434",
         email: "info@eat.com"
@@ -52,3 +52,7 @@ let config = [
 /*[].forEach.call(document.querySelectorAll(".map"), (e) => {
     e.src = config[0].googleMapsKey
 });*/
+
+
+
+let blogData = "Default blog data";

@@ -60,7 +60,7 @@
 
 
     <main class="container">
-        <section data-section="0">
+        <section data-section="0" class="card p-4">
             <h1>Home Section</h1>
             <div id="aboutTarget"></div>
             <div>
@@ -101,6 +101,62 @@
                     </div>
 
                 </div>
+
+                <div class="row">
+                    <div class="album py-5" data-section="blogSection">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1 id="activeAndTotal"> </h1>
+                                    <div class="btn-group btn-block">
+                                        <button type="button" class="btn btn-secondary" onClick="viewPosts('Previous')">
+                                            Previous Post
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary" onClick="viewPosts('Next')">
+                                            Next Post
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <h1 id="activeBlogTitle">Active Blog Title</h1>
+                                    <hr /><i id="activeBlogPubDate">pubDate</i>
+                                    <div id="activeBlogDescription"></div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-12" data-target="contact">
+                        <h2 class="txtCenter" data-target="Give us a shout!">Give us a shout!</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row animated fadeIn" data-contact="1">
+                    <div class="col-md-3 txtCenter"><label>Basset Hounds: </label></div>
+                    <div class="col-md-3 txtCenter"><label><i class="fas fa-home"></i> Scottsdale, AZ
+                            85260</label></div>
+                    <div class="col-md-3 txtCenter"><label><a href="tel:555-555-5555"><i class="fas fa-phone"></i>
+                                555-555-5555</a></label></div>
+                    <div class="col-md-3 txtCenter"><label><a href="mailto:aaron@web-presence.biz"><i
+                                    class="fas fa-envelope"></i> aaron@web-presence.biz</a></label></div>
+                </div>
+                <div class="row animated fadeIn" data-contact="2">
+                    <div class="col-md-12"></div>
+                    <hr><iframe class="contactMap" src="&amp;q=Scottsdale, AZ 85260" allowfullscreen=""></iframe>
+                </div>
+
+
+
                 <div id="mediaTarget"></div>
 
         </section>
