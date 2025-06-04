@@ -390,7 +390,7 @@ function selectCategory(selected) {
                     }
 
 
-                    itemsHTML = itemsHTML + "<div class='card'><div class='card-title' ><h3>" + categories[i].items[j].title + "</h3></div><div class='card-body'><p>" +
+                    itemsHTML = itemsHTML + "<div><h3>" + categories[i].items[j].title + "</h3>div class='p-2'><p>" +
                         categories[i].items[j].message + "</p><ul  class='list-group'>" + tempIngredients + "</ul></div></div >";
 
                     tempList.push(categories[i].items[j].title);
