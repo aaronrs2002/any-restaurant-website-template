@@ -4,7 +4,7 @@ console.group("bgImage: " + bgImg)
 
 document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
 let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
-document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + address;
+document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + config[0].address;
 
 document.getElementById("aboutTarget").innerHTML = config[0].about;
 document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
@@ -381,16 +381,16 @@ function selectCategory(selected) {
             for (j = 0; j < categories[i].items.length; j++) {
 
                 if (tempList.indexOf(categories[i].items[j].title) === -1) {
+                    //document.querySelector("[data-category]").innerHTML=
 
-
-
+                    console.log("JSON.stringify(categories): " + JSON.stringify(categories))
                     let tempIngredients = "";
                     for (let h = 0; h < categories[i].items[j].ingredients.length; h++) {
                         tempIngredients = tempIngredients + "<li class='list-group-item'>" + categories[i].items[j].ingredients[h] + "</li>";
                     }
 
 
-                    itemsHTML = itemsHTML + "<div><h3>" + categories[i].items[j].title + "</h3>div class='p-2'><p>" +
+                    itemsHTML = itemsHTML + "<div><h3>" + categories[i].items[j].title + "</h3><div class='p-2'><p>" +
                         categories[i].items[j].message + "</p><ul  class='list-group'>" + tempIngredients + "</ul></div></div >";
 
                     tempList.push(categories[i].items[j].title);
