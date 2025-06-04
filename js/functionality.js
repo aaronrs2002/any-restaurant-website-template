@@ -171,6 +171,7 @@ function viewPosts(direction) {
 
     if (blog.length === 0) {
         document.querySelector("[data-section='blogSection']").classList.add("hide");
+        return false;
     }
     /*   [].forEach.call(document.querySelectorAll(".post[data-num]"), function (e) {
          e.classList.add("hide");
