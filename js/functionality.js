@@ -279,6 +279,8 @@ async function start() {
 
         console.log("(typeof blog): " + (typeof blog));
 
+        viewPosts(0);
+
 
     } catch (error) {
         console.log("Error: " + error)
@@ -410,4 +412,3 @@ function setActiveEvent(activeEvent) {
 setActiveEvent(0);
 
 
-viewPosts(0)
