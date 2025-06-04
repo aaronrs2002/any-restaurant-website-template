@@ -4,20 +4,20 @@ console.group("bgImage: " + bgImg)
 
 document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
 let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
-document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + config[0].address;
+document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + "&q=" + config[0].address;
 
 document.getElementById("aboutTarget").innerHTML = config[0].about;
 document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
 
 [].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
-    e.innerHTML = "<i class='fas fa-home'></i> <a target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'>" + config[0].address + "</a>";
+    e.innerHTML = "<a target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'><i class='fas fa-home'></i> " + config[0].address + "</a>";
 });
 [].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
-    e.innerHTML = "<i class='fas fa-phone'></i> <a href='phone:" + config[0].phone + "'>" + config[0].phone + "</a>";
+    e.innerHTML = " <a href='phone:" + config[0].phone + "'><i class='fas fa-phone'></i>  " + config[0].phone + "</a>";
 });
 
 [].forEach.call(document.querySelectorAll("[data-email]"), (e) => {
-    e.innerHTML = "<i class='fas fa-envelope' ></i> <a href='mailto:" + config[0].email + "' >" + config[0].email + "</a>";
+    e.innerHTML = "<a href='mailto:" + config[0].email + "' ><i class='fas fa-envelope' ></i> " + config[0].email + "</a>";
 });
 
 /* <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>*/
@@ -368,7 +368,7 @@ function selectCategory(selected) {
     console.log("selected: " + selected)
 
 
-    let itemsHTML = "<h3>" + selected + "</h3>";
+    let itemsHTML = "<h1>" + selected + "</h1>";
 
     let tempList = [];
     for (let i = 0; i < categories.length; i++) {
@@ -383,7 +383,7 @@ function selectCategory(selected) {
                 if (tempList.indexOf(categories[i].items[j].title) === -1) {
                     //document.querySelector("[data-category]").innerHTML=
 
-                    console.log("JSON.stringify(categories): " + JSON.stringify(categories))
+
                     let tempIngredients = "";
                     for (let h = 0; h < categories[i].items[j].ingredients.length; h++) {
                         tempIngredients = tempIngredients + "<li class='list-group-item'>" + categories[i].items[j].ingredients[h] + "</li>";
