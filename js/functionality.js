@@ -6,6 +6,43 @@ document.querySelector("body").style.backgroundImage = "url(" + config[0].banner
 let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
 document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + contactMapAddress;
 
+document.getElementById("aboutTarget").innerHTML = config[0].about;
+document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
+
+[].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
+    e.innerHTML = "<a target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'>" + config[0].address + "</a>";
+});
+[].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
+    e.innerHTML = "<a href='phone:" + config[0].phone + "'>" + config[0].phone + "</a>";
+});
+
+[].forEach.call(document.querySelectorAll("[data-email]"), (e) => {
+    e.innerHTML = "<a href='mailto:" + config[0].email + "' >" + config[0].email + "</a>";
+});
+
+/* <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>*/
+let imageAddresses = [];
+let ytVideos = [];
+let HTMLcontent = [];
+let mapAddressses = [];
+
+
+for (let i = 0; i < config[0].media.length; i++) {
+    if (config[0].media[i].type === "img") {
+        imageAddresses = [...imageAddresses, config[0].media[i].address];
+    }
+    if (config[0].media[i].type === "ytVideo") {
+        ytVideos = [...ytVideos, config[0].media[i].address];
+    }
+    if (config[0].media[i].type === "html") {
+        HTMLcontent = [...HTMLcontent, config[0].media[i].address];
+    }
+
+    if (config[0].media[i].type === "map") {
+        mapAddressses = [...mapAddressses, config[0].media[i].address];
+    }
+}
+
 
 let activePost = 0;
 let blog = [];/*[
@@ -286,7 +323,6 @@ async function start() {
     } catch (error) {
         console.log("Error: " + error)
     }
-
 
 
     try {

@@ -61,93 +61,103 @@
 
     <main class="container">
         <section data-section="0" class="card p-4">
-            <h1>Home Section</h1>
-            <div id="aboutTarget"></div>
-            <div>
 
-                <div class="row eventModule">
-                    <div class="col-md-12">
-                        <h2 class="my-3 capitalize txtCenter">Events</h2>
-                        <hr />
-                    </div>
+            <div class="card-title text-center">
+                <h1 id="restaurantNameTarget">Restaurant name</h1>
+            </div>
 
+            <div class="card-body text-center">
+                <h3 id="aboutTarget">about</h3>
+            </div>
 
-                    <div class="col-md-4">
-                        <div class="list-group" id="eventTitlesTarget">
-                            <!--{categoryEvents.length > 0 ? categoryEvents.map((event, i) => {
-                            return <button type="button" class={activeEvent===i ? "list-group-item list-group-item-action active"
-                                : "list-group-item list-group-item-action" } key={i} onClick={()=> setActiveEvent((activeEvent) =>
-                                i)}>{event.eventTitle}</button>
-                            }) : null}-->
-                        </div>
+            <div class="card-footer text-center">
+                <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>
+            </div>
 
-                    </div>
-
-                    <div class="col-md-4">
-                        <ul class="list-unstyled">
-                            <li>
-                                <h3 data-eventtitle></h3>
-                            </li>
-                            <li data-eventdate></li>
-                            <li data-eventaddress></li>
-                            <li data-eventdescription> </li>
-                            <li data-eventcontact> </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <iframe class="map" src="" allowfullscreen=""></iframe>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="album py-5" data-section="blogSection">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2 class="my-3 capitalize txtCenter">Blog Posts</h2>
-                                    <hr />
-                                </div>
-                                <div class="col-md-12">
-                                    <h1 id="activeAndTotal"> </h1>
-                                    <div class="btn-group btn-block">
-                                        <button type="button" class="btn btn-secondary" onClick="viewPosts('Previous')">
-                                            Previous Post
-                                        </button>
-
-                                        <button type="button" class="btn btn-secondary" onClick="viewPosts('Next')">
-                                            Next Post
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <h1 id="activeBlogTitle">Active Blog Title</h1>
-                                    <hr /><i id="activeBlogPubDate">pubDate</i>
-                                    <div id="activeBlogDescription"></div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-                <div id="mediaTarget"></div>
 
         </section>
 
         <section data-section="1" class="hide">
             <h1>About Section</h1>
+
+            <div class="row eventModule">
+                <div class="col-md-12">
+                    <h2 class="my-3 capitalize txtCenter">Events</h2>
+                    <hr />
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="list-group" id="eventTitlesTarget">
+                        <!--{categoryEvents.length > 0 ? categoryEvents.map((event, i) => {
+                                    return <button type="button" class={activeEvent===i ? "list-group-item list-group-item-action active"
+                                        : "list-group-item list-group-item-action" } key={i} onClick={()=> setActiveEvent((activeEvent) =>
+                                        i)}>{event.eventTitle}</button>
+                                    }) : null}-->
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h3 data-eventtitle></h3>
+                        </li>
+                        <li data-eventdate></li>
+                        <li data-eventaddress></li>
+                        <li data-eventdescription> </li>
+                        <li data-eventcontact> </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+
+                    <iframe class="map" src="" allowfullscreen=""></iframe>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="album py-5" data-section="blogSection">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="my-3 capitalize txtCenter">Blog Posts</h2>
+                                <hr />
+                            </div>
+                            <div class="col-md-12">
+                                <h1 id="activeAndTotal"> </h1>
+                                <div class="btn-group btn-block">
+                                    <button type="button" class="btn btn-secondary" onClick="viewPosts('Previous')">
+                                        Previous Post
+                                    </button>
+
+                                    <button type="button" class="btn btn-secondary" onClick="viewPosts('Next')">
+                                        Next Post
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <h1 id="activeBlogTitle">Active Blog Title</h1>
+                                <hr /><i id="activeBlogPubDate">pubDate</i>
+                                <div id="activeBlogDescription"></div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div id="mediaTarget"></div>
         </section>
 
         <section data-section="2" class="hide">

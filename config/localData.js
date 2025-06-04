@@ -1,6 +1,7 @@
 let config = [
 
     {
+        restaurantName: "Best Food In Town",
         googleMapsKey: "https://www.google.com/maps/embed/v1/place?key=",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
