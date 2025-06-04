@@ -46,3 +46,11 @@ body {
     width: 100%;
     min-height: 600px;
 }
+
+.contactMap {
+
+    min-height: 315px;
+    width: 100%;
+    height: auto;
+
+}

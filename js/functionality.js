@@ -4,20 +4,20 @@ console.group("bgImage: " + bgImg)
 
 document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
 let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
-document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + contactMapAddress;
+document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + address;
 
 document.getElementById("aboutTarget").innerHTML = config[0].about;
 document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
 
 [].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
-    e.innerHTML = "<a target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'>" + config[0].address + "</a>";
+    e.innerHTML = "<i class='fas fa-home'></i> <a target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'>" + config[0].address + "</a>";
 });
 [].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
-    e.innerHTML = "<a href='phone:" + config[0].phone + "'>" + config[0].phone + "</a>";
+    e.innerHTML = "<i class='fas fa-phone'></i> <a href='phone:" + config[0].phone + "'>" + config[0].phone + "</a>";
 });
 
 [].forEach.call(document.querySelectorAll("[data-email]"), (e) => {
-    e.innerHTML = "<a href='mailto:" + config[0].email + "' >" + config[0].email + "</a>";
+    e.innerHTML = "<i class='fas fa-envelope' ></i> <a href='mailto:" + config[0].email + "' >" + config[0].email + "</a>";
 });
 
 /* <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>*/
