@@ -18,7 +18,42 @@ let config = [
         { img: "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0", bannerHTML: "<h3>Clean Your Plate here!!</h3>" },],
 
         about: "We make the best food. Here is our story of three generations.",
-        media: [{ type: "img", address: "https://imageurl.com" }, { type: "ytVideo", address: "MrsOwvHgW48" }, { type: "html", address: "anyHTML here" }, { type: "map", address: "1060 W. Addison Chicago, IL" }],
+        media:
+
+            [{
+                type: "img", address: "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0"
+            },
+            {
+                type: "img", address: "https://lh3.googleusercontent.com/pw/AP1GczM691Hs3g0LF4M8gElkgHUsSuBI50TVvn-qugARj_BSRuYJt1zgiTag9xyMXivDV8KzPnq-1OW5cznEmeuyZO9mphD0qfAkLUv7YiXalw8hJofAs2Ib0d8cH_j4YgjiXWgWiAXgFK0YZJvR0-RZf4BuVQ=w1437-h967-s-no-gm?authuser=0"
+            },
+            {
+                type: "img", address: "https://lh3.googleusercontent.com/pw/AP1GczN68rRrz0QzpdsLqa9x1P-9ztHm2pgzsRqnwaGeqwTrMDKaMRbp1ORK3xBE-Ju7GrdycZCj76CKZABz8T-BtHGn-oHae-gmsyvg5pkLFM4DdKtjMeLyXW2pd3aFvayTRvBUX8dVKLn2QaAjW7khOh3q9w=w1428-h967-s-no-gm?authuser=0"
+            },
+
+
+            { type: "ytVideo", address: "MrsOwvHgW48" },
+            { type: "ytVideo", address: "1Lw8QvlMfBY" },
+            { type: "ytVideo", address: "P6W8kwmwcno" },
+
+
+
+
+            {
+                type: "html", address: "<div><label>First Name: <input type='text' class='form-control' name='fname' placehodler='First Name' /></label><label>Last Name: <input type='text' class='form-control' name='lname' placehodler='Last Name' /></label><button type='button' class='btn btn-success form-control' >Submit</button></div>"
+            },
+
+
+            { type: "html", address: "<div class='col-md-12'><h3>Rich Text Available</h3><p>As long as you do not break your javascript \"string\", you can type whatever HTML you would like. Forms incluided, like I demonstrated above.</div>" },
+
+            { type: "map", address: "1060 W. Addison Chicago, IL" },
+
+            { type: "map", address: "4025 E Chandler Blvd unit 46 Phoenix AZ 85048" }],
+
+
+
+
+
+
         events: [
             {
                 "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",

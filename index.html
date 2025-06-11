@@ -122,7 +122,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="my-3 capitalize txtCenter">Blog Posts</h2>
+                                <h2 class="my-3 capitalize txtCenter">Blog Posts
+                                    <span data-activepost></span>/
+                                    <span data-blogmax></span>
+                                </h2>
                                 <hr />
                             </div>
                             <div class="col-md-12">
@@ -157,7 +160,63 @@
 
 
 
-            <div id="mediaTarget"></div>
+            <div class="row text-center " id="mediaTarget">
+
+
+                <div class="col-md-12 section">
+                    <h2 class="text-center">Media</h2>
+                    <hr />
+                </div>
+                <div class="col-md-6">
+                    <label class="sliderIndexCounter  text-center">Video:<span id="videoCounter">
+                            1</span></label>
+
+                    <ul class="inline txtCenter block">
+                        <li>
+                            <button type="button" class="btn btn-secondary mr-2 "
+                                onClick="carouselMove('previous','video')">
+                                <i class="fas fa-arrow-circle-left"></i> Video</button>
+
+                            <button type="button" class="btn btn-secondary ml-2 "
+                                onClick="carouselMove('next','video')">Video <i class="fas fa-arrow-circle-right"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+                    <ul class="carouselIndexParent txtCenter" data-carousel="video"></ul>
+                    <div><iframe src="" title="YouTube video player" id="mediaYt" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen=""></iframe></div>
+                </div>
+                <div class='col-md-6'>
+                    <label class="sliderIndexCounter ">Image:<span id="imageCounter"></span></label>
+                    <ul class="inline txtCenter block">
+                        <li>
+                            <button type="button" class="btn btn-secondary mr-2 "
+                                onClick="carouselMove('previous','image')">
+                                <i class="fas fa-arrow-circle-left"></i> Image</button>
+
+                            <button type="button" class="btn btn-secondary ml-2 "
+                                onClick="carouselMove('next','image')">Image <i class="fas fa-arrow-circle-right"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <ul class="carouselIndexParent txtCenter" data-carousel="image"></ul>
+
+                    <div><img src="" class="img-fluid" id="imageCarouselTarget" /></div>
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="row" id="HTMLcontentTarget"></div>
+
+            <div class="row" id="mapAddresssesTarget"></div>
         </section>
 
         <section data-section="2" class="hide card p-4">

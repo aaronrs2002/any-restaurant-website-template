@@ -54,3 +54,88 @@ body {
     height: auto;
 
 }
+
+/*start loader animation*/
+.loader {
+    margin: auto;
+    border: 16px solid #fff;
+    border-radius: 50%;
+    border-top: 16px solid #333;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*end loader animation*/
+.center {
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe[src*="youtu.be"],
+iframe[src*="youtube"] {
+    min-height: 250px;
+    width: 100%;
+}
+
+/*CAROUSEL STYLES*/
+
+
+ul.carouselIndexParent {
+
+    list-style-type: none;
+    height: 40px;
+}
+
+li.sliderIndex {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: .5px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+li.sliderIndex.active {
+    background-color: #333 !important;
+    border: 1px solid #f8f8f8 !important;
+}
+
+li.sliderIndexCounter {
+    display: inline-block;
+    width: 30px;
+
+}
+
+ul.inline li {
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+ul.inline {
+
+    margin: auto;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*END CAROUSEL STYLE*/
