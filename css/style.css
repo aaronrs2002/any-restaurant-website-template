@@ -139,3 +139,17 @@ ul.inline {
 
 
 /*END CAROUSEL STYLE*/
+
+#mediaYt {
+    min-height: 413.75px;
+    width: 100%;
+
+}
+
+@media (max-width: 1024px) {
+    #mediaYt {
+        min-height: 250px;
+
+    }
+
+}
