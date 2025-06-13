@@ -338,7 +338,8 @@ async function start() {
         for (let i = 0; i < menu.length; i++) {
             categories.push({ category: menu[i].category, items: [] });
             if (categoryList.indexOf(menu[i].category) === -1) {
-                categoriesHTML = categoriesHTML + `<button class='list-group-item list-group-item-action' onClick='selectCategory("${menu[i].category}")'>${menu[i].category}</button>`;
+                // categoriesHTML = categoriesHTML + `<button class='list-group-item list-group-item-action' onClick='selectCategory("${menu[i].category}")'>${menu[i].category}</button>`;
+                categoriesHTML = categoriesHTML + ` <a class="nav-link"  onClick='selectCategory("${menu[i].category}")' data-category='${menu[i].category}' href="#itemsTarget">${menu[i].category}</a>`
                 categoryList.push(menu[i].category);
             }
 
@@ -370,7 +371,12 @@ start()
 
 function selectCategory(selected) {
 
-    console.log("selected: " + selected)
+    console.log("selected: " + selected);
+
+    [].forEach.call(document.querySelectorAll("[data-category]"), (e) => {
+        e.classList.remove("active");
+    });
+    document.querySelector("[data-category='" + selected + "']").classList.add("active");
 
 
     let itemsHTML = "<h1>" + selected + "</h1>";
@@ -593,7 +599,21 @@ if (mapAddressses.length === 0) {
 }
 
 
+function showCategoryMenu() {
+    try {
 
+        if (document.querySelector("#menuNavbar.show")) {
+            document.querySelector("#menuNavbar").classList.remove("show");
+        } else {
+            document.querySelector("#menuNavbar").classList.add("show");
+        }
+
+    } catch (error) {
+
+        console.log("error: " + error);
+
+    }
+}
 
 
 
