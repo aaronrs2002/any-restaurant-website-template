@@ -39,16 +39,16 @@
 
 
 
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light">
         <nav>
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <span class="fs-4">Simple header</span>
+
             </a>
 
-            <ul class="nav nav-pills">
+            <ul class="nav">
                 <!--<li class="nav-item"><a href="#" class="nav-link " aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
@@ -67,11 +67,11 @@
             </div>
 
             <div class="card-body text-center">
-                <h3 id="aboutTarget">about</h3>
+                <div id="aboutTarget">about</div>
             </div>
 
             <div class="card-footer text-center">
-                <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>
+                <i data-address>address</i> <i data-phone>phone</i> <i data-email>email</i>
             </div>
 
 
@@ -266,9 +266,7 @@
     <footer class="footer mt-auto py-3 animated fadeInUp">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="btn-group block my-2" role="group" id="gameLinks"></div>
-                </div>
+
                 <div class="col-md-2 my-2"> <select class="form-control" onChange="changeTheme()" id="themes"></select>
                 </div>
                 <div class="col-md-4" id="socialList">

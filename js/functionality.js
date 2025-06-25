@@ -10,14 +10,14 @@ document.getElementById("aboutTarget").innerHTML = config[0].about;
 document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
 
 [].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
-    e.innerHTML = "<a target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'><i class='fas fa-home'></i> " + config[0].address + "</a>";
+    e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'><i class='fas fa-home'></i> " + config[0].address + "</a>";
 });
 [].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
-    e.innerHTML = " <a href='phone:" + config[0].phone + "'><i class='fas fa-phone'></i>  " + config[0].phone + "</a>";
+    e.innerHTML = " <a class='px-4'href='phone:" + config[0].phone + "'><i class='fas fa-phone'></i>  " + config[0].phone + "</a>";
 });
 
 [].forEach.call(document.querySelectorAll("[data-email]"), (e) => {
-    e.innerHTML = "<a href='mailto:" + config[0].email + "' ><i class='fas fa-envelope' ></i> " + config[0].email + "</a>";
+    e.innerHTML = "<a class='px-4' href='mailto:" + config[0].email + "' ><i class='fas fa-envelope' ></i> " + config[0].email + "</a>";
 });
 
 /* <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>*/
@@ -423,6 +423,10 @@ function selectCategory(selected) {
 }
 
 
+
+
+
+
 function setActiveEvent(activeEvent) {
     if (config[0].events.length === 0) {
         document.querySelector(".eventModule").classList.add("hide");
@@ -618,6 +622,9 @@ function showCategoryMenu() {
 
 
 setActiveEvent(0);
+if (categoryList[0]) {
+    selectCategory(categoryList[0]);
+}
 
 
 
