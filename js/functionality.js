@@ -362,12 +362,16 @@ async function start() {
 
         document.getElementById("categories").innerHTML = categoriesHTML;
 
-        if (categoryList[0]) {
-            console.log("sucess categoryList[0]: " + categoryList[0])
-            selectCategory(categoryList[0]);
-        } else {
-            console.log("fail categoryList[0]: " + categoryList[0])
+        try {
+            if (categoryList[0]) {
+                selectCategory(categoryList[0]);
+            } else {
+                console.log("fail categoryList[0]: " + categoryList[0])
+            }
+        } catch (error) {
+            console.log("error: " + error)
         }
+
 
         //    console.log("categories: " + JSON.stringify(categories));
     } catch (error) {

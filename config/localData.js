@@ -5,6 +5,7 @@ let config = [
         googleMapsKey: "https://www.google.com/maps/embed/v1/place?key=",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
+        theme: "cyborg",
         banners: [{
             img: "https://lh3.googleusercontent.com/pw/AP1GczPe94dFwMQfmde5grW-Q4ococo5GGLOSTnw6dSZ-rkj6S3yniZZZLb-tXJO_-Mz2hPzatxbZuMAMZo8wSycW2fBXwiCG8GXca8l7jHz5Sj1ZwJACpVInobVPE1dw0Z7I4ExNXrmxS7yo9RcypFN_BA2jQ=w1289-h967-s-no-gm?authuser=0",
             bannerHTML: "<h3>Welcome, We have food!</h3>"
@@ -83,6 +84,12 @@ let config = [
         email: "info@eat.com"
 
     }];
+
+let activeRestaurant = 0;
+
+
+
+localStorage.setItem("theme", config[activeRestaurant].theme);
 
 
 /*[].forEach.call(document.querySelectorAll(".map"), (e) => {
