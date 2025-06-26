@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Content Management System</title>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <h1>Any Restaurant Template - Content Management System (CMS)</h1>
+                <ul class="list-group">
+
+                    <li class="list-group-item"><label>Restaurant name: </label>
+                        <input type="text" class="form-control" placeholder="Restaurant name" name="restaurantName" />
+                    </li>
+                    <li class="list-group-item"><label>Where is your menu located (JSON format): </label>
+                        <input type="text" class="form-control" placeholder="Where is your menu located (JSON format)"
+                            name="apiAddress" />
+                    </li>
+                    <li class="list-group-item">
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="navLinks" onClick="submitToLocal('navLinks')"
+                                placeholder="Main Navigation Links">
+                            <button class="btn btn-secondary" type="button">Add nav Link to list</button>
+                        </div>
+                        <label>Main Navigation Links:</label>
+                        <span id="mainNavLinksTarget"></span>
+
+
+                    </li>
+                    <li class="list-group-item"><label>Theme: </label>
+                        <select class="form-control" onChange="changeTheme()" id="themes" name="theme"></select>
+                    </li>
+
+
+                    <li class="list-group-item">
+                        <label>Banners:</label>
+                        <input type="text" class="form-control" name="bannersImg" placeholder="Banner Image" />
+
+                        <input type="text" class="form-control" name="bannersHTML" placeholder="Banner HTML" />
+                        <button class="btn btn-success btn-block" onClick="submitToLocal('banner')">Submit
+                            Banner to list</button>
+                    </li>
+                    <li class="list-group-item"><label>About Restaurant: </label>
+                        <textarea class="form-control" placeholder="About Restaurant" rows="5" name="about"></textarea>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/footer.js"></script>
+
+</html>
