@@ -6,7 +6,7 @@ let config = [
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
         theme: "cyborg",
-        banners: [{
+        banners: [/* {
             img: "https://lh3.googleusercontent.com/pw/AP1GczPe94dFwMQfmde5grW-Q4ococo5GGLOSTnw6dSZ-rkj6S3yniZZZLb-tXJO_-Mz2hPzatxbZuMAMZo8wSycW2fBXwiCG8GXca8l7jHz5Sj1ZwJACpVInobVPE1dw0Z7I4ExNXrmxS7yo9RcypFN_BA2jQ=w1289-h967-s-no-gm?authuser=0",
             bannerHTML: "<h3>Welcome, We have food!</h3>"
         },
@@ -16,7 +16,18 @@ let config = [
             bannerHTML: "<h3>We Eat food!</h3>"
         },
 
-        { img: "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0", bannerHTML: "<h3>Clean Your Plate here!!</h3>" },],
+        { img: "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0", bannerHTML: "<h3>Clean Your Plate here!!</h3>" },
+         */
+
+            //https://lh3.googleusercontent.com/pw/AP1GczM691Hs3g0LF4M8gElkgHUsSuBI50TVvn-qugARj_BSRuYJt1zgiTag9xyMXivDV8KzPnq-1OW5cznEmeuyZO9mphD0qfAkLUv7YiXalw8hJofAs2Ib0d8cH_j4YgjiXWgWiAXgFK0YZJvR0-RZf4BuVQ=w1437-h967-s-no-gm?authuser=0
+
+
+            {
+                img: "https://lh3.googleusercontent.com/pw/AP1GczM691Hs3g0LF4M8gElkgHUsSuBI50TVvn-qugARj_BSRuYJt1zgiTag9xyMXivDV8KzPnq-1OW5cznEmeuyZO9mphD0qfAkLUv7YiXalw8hJofAs2Ib0d8cH_j4YgjiXWgWiAXgFK0YZJvR0-RZf4BuVQ=w1437-h967-s-no-gm?authuser=0",
+                bannerHTML: "<h3>We Eat food!</h3>"
+            },],
+
+
 
         about: "<h3>We make the best food. Here is our story of three generations.</h3><p>That's why we put the sign up. Our Great Grandfather won these recipes in a poker hand. So enjoy...</p>",
         media:
@@ -89,9 +100,10 @@ let activeRestaurant = 0;
 
 
 
+
 localStorage.setItem("theme", config[activeRestaurant].theme);
 
-
+let tempTheme = config[activeRestaurant].theme;
 /*[].forEach.call(document.querySelectorAll(".map"), (e) => {
     e.src = config[0].googleMapsKey
 });*/
