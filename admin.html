@@ -63,7 +63,92 @@
                         <textarea class="form-control" placeholder="About Restaurant" rows="5" name="about"></textarea>
                     </li>
 
+                    <li class="list-group-item">
+                        <label>Media Type:</label>
+                        <select class="form-control" name="mediaType">
+                            <option value="img">Image</option>
+                            <option value="ytVideo">YouTube Video ID</option>
+                            <option value="html">HTML</option>
+                            <option value="map">Address for Google Maps</option>
+                        </select>
+                        <input type="text" class="form-control" />
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="mediaAddress"
+                                placeholder="Submit ID or address for media." onClick="submitToLocal('media')">
+                            <button class="btn btn-secondary" type="button">Add Media</button>
+                        </div>
+                        <div> <label>images:</label>
+                            <span id="mediaImagesTarget"></span>
+                        </div>
+                        <hr />
+                        <div> <label>youTube IDs:</label>
+                            <span id="mediaytIdsTarget"></span>
+                        </div>
+                        <hr />
+                        <div> <label>HTML Content:</label>
+                            <span id="mediaHtmlTarget"></span>
+                        </div>
+                        <hr />
+                        <div> <label>Address for Google Maps:</label>
+                            <span id="mediaMapsTarget"></span>
+                        </div>
+                        <hr />
+                    </li>
+
+                    <li class="list-group-item">
+                        <label>Events Section:</label>
+
+                        <!--
+                        
+                                        "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
+                "contact": "<a href='https://azbassetrescue.org/contact/' target='_blank'>azbassetrescue.org</a>",
+                "dateTime": "December 19 @ 11:00 am - 2:00 pm",
+                "details": "<p>Tired of wrapping present after present? Come join the Azbhr Volunteers from 11am-2pm on Saturday the 19th and then again from 1pm-4pm on Sunday the 20th. You make the tax deductible donation to help the Hounds, we’ll wrap your presents! Please note, this is a 2 day event!</p>",
+                "title": "Gift Wrap – East Valley, Day 1!"-->
+
+                        <input ttype="text" class="form-control" name="eventsContact"
+                            placeholder="Contact info for event" />
+                        <input ttype="text" class="form-control" name="eventsDateTime"
+                            placeholder="Date and Time for event" />
+                        <input ttype="text" class="form-control" name="eventsTitle" placeholder="Title for event" />
+                        <textarea class="form-control" name="eventsDetails" placeholder="Event details"
+                            rows="5"></textarea>
+                        <button class="form-conrol btn btn-success" onClick="submitToLocal('events')">Submit
+                            Event</button>
+
+                        <div class="py-3"> <label>Events submitted:</label>
+                            <ul id="eventTarget">
+
+                            </ul>
+                        </div>
+
+
+                        <hr />
+
+                    </li>
+
+                    <li class="list-group-item">
+                        <input type="text" name="blogAddress" class="form-control" placeholder="Blog Address" />
+                    </li>
+
+                    <li class="list-group-item">
+                        <input type="text" name="address" class="form-control" placeholder="Restaurant Address" />
+                    </li>
+
+                    <li class="list-group-item">
+                        <input type="text" name="phone" class="form-control" placeholder="Restaurant Phone" />
+                    </li>
+
+                    <li class="list-group-item">
+                        <input type="text" name="email" class="form-control" placeholder="Restaurant Email" />
+                    </li>
+
                 </ul>
+                <div class="d-grid gap-2 mb-5 pt-2">
+                    <button class="btn btn-block btn-success" onClick="submitRestaurant()">Submit Restaurant
+                        Data</button>
+                </div>
             </div>
         </div>
     </div>
