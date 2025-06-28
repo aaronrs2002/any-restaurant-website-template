@@ -23,7 +23,7 @@ let config = [
 
 
             {
-                img: "https://lh3.googleusercontent.com/pw/AP1GczM691Hs3g0LF4M8gElkgHUsSuBI50TVvn-qugARj_BSRuYJt1zgiTag9xyMXivDV8KzPnq-1OW5cznEmeuyZO9mphD0qfAkLUv7YiXalw8hJofAs2Ib0d8cH_j4YgjiXWgWiAXgFK0YZJvR0-RZf4BuVQ=w1437-h967-s-no-gm?authuser=0",
+                img: "https://lh3.googleusercontent.com/pw/AP1GczO_2Hh4_yQLYVcDGv9vP69cL_iujb7SH0C0sfgymSW7GgDjwZGdHrOfS00AvNTz-Rn2d1Ef_alGOVSbBnVe0Y-xxHKO4YZfbYknsn6cL5v1lYpbQCNhlzne3IAOks2ekLXDrq0-PTdwHA5WjZUGPH6P5g=w1385-h932-s-no-gm?authuser=0",
                 bannerHTML: "<h3>We Eat food!</h3>"
             },],
 
