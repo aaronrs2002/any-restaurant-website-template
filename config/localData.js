@@ -2,7 +2,7 @@ let config = [
 
     {
         restaurantName: "Best Food In Town",
-        googleMapsKey: "https://www.google.com/maps/embed/v1/place?key=",
+        googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
         theme: "cyborg",
@@ -92,7 +92,18 @@ let config = [
         blogAddress: "https://our-basset-hounds.blogspot.com/feeds/posts/default?alt=rss",
         address: "1060 W. Addison Ave. Chicago Il",
         phone: "555-222-3434",
-        email: "info@eat.com"
+        email: "info@eat.com",
+        socialMedia: [
+            { link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },
+            { link: "https://github.com/aaronrs2002", theClass: "fab fa-github", title: "My Open Source Library" },
+            { link: "https://www.youtube.com/@web-presence-developer", theClass: "fab fa-youtube", title: "Learn how to write web applications!" },
+            { link: "https://www.instagram.com/aaronrs2002/", theClass: "fab fa-instagram", title: "Payoff from a multimedia degree." },
+            { link: "https://aaronrs2002.github.io/task-master/?", theClass: "fas fa-network-wired", title: "Networked serverless web apps for Workflow Management and Accounting" },
+            { link: "    https://aaronrs2002.github.io/rss-aggregator/?", theClass: "fas fa-rss-square", title: "Free News Aggregator. Grab any public RSS feed and display it here without advertising and without your boss tracking you." },
+
+            //{ link: "mailto:aaron@web-presence.biz", theClass: "far fa-paper-plane" }
+            //    { title: "ticket management and accounting software by: Aaron Smith ", target: "_blank", url: "https://aaronrs2002.github.io/task-master/", iconClass: "fas fa-network-wired" },
+        ]
 
     }];
 

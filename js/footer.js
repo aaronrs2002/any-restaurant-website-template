@@ -3,7 +3,6 @@
 /*START THEMES*/
 const themesList = ["Spacelab", "United", "Slate", "Cerulean", "Darkly", "Litera", "Materia", "Sandstone", "Superhero", "Cosmo", "Flatly", "Lumen", "Minty", "Simplex", "Solar", "Cyborg", "Journal", "Lux", "Pulse", "Sketchy", "Yeti", "Morph", "Quartz", "Vapor", "Zephyr"];
 let chosenTheme;
-const idNum = "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I";
 let url = window.location;
 let themeVal = {};
 let themeOptions = "<option value='default'>Select Theme</option>";
@@ -20,9 +19,9 @@ document.getElementById("themes").innerHTML = themeOptions;
 
 function changeTheme() {
     let gaParam = "";
-    if (url.toString().indexOf("exclude") !== -1) {
-        gaParam = "exclude=true";
-    }
+    /* if (url.toString().indexOf("exclude") !== -1) {
+         gaParam = "exclude=true";
+     }*/
     let whichTheme = document.getElementById("themes").value;
     if (whichTheme === "default") {
         return false;
@@ -31,7 +30,7 @@ function changeTheme() {
         chosenTheme = whichTheme.replace("https://bootswatch.com/5/", "").replace("/bootstrap.css");
         localStorage.setItem("theme", chosenTheme);
         //setGameLinks(chosenTheme);
-        window.location = "?" + gaParam + "&theme=" + chosenTheme + "&balance=" + localStorage.getItem("balance") + "&";
+        window.location = "?" + gaParam + "&theme=" + chosenTheme + "&";
     }
 
 }
@@ -43,17 +42,17 @@ function changeTheme() {
         pair = (pair + "=").split("=").map(decodeURIComponent);
         if (pair[0].length) {
             themeVal[pair[0]] = pair[1];
-            /*   if (pair[0] === "theme") {
-   
-                   const themeFromUrl = "https://bootswatch.com/5/" + pair[1] + "/bootstrap.css";
-   
-                   document.getElementById("themedStyle").setAttribute("href", themeFromUrl);
-                   localStorage.setItem("theme", pair[1]);
-               }
-               if (pair[0] === "balance") {
-                   localStorage.setItem("balance", pair[1].replace("#", ""));
-   
-               }*/
+            if (pair[0] === "theme") {
+
+                const themeFromUrl = "https://bootswatch.com/5/" + pair[1] + "/bootstrap.css";
+
+                document.getElementById("themedStyle").setAttribute("href", themeFromUrl);
+                localStorage.setItem("theme", pair[1]);
+            }
+            /*   if (pair[0] === "balance") {
+                 localStorage.setItem("balance", pair[1].replace("#", ""));
+ 
+             }*/
         }
     });
 
@@ -94,7 +93,7 @@ function tadaRollout(element) {
 
 
 //START SOCIAL MEDIA
-const socialMedia = [
+/*const config[activeRestaurant].socialMedia = [
     { link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },
     { link: "https://github.com/aaronrs2002", theClass: "fab fa-github", title: "My Open Source Library" },
     { link: "https://www.youtube.com/@web-presence-developer", theClass: "fab fa-youtube", title: "Learn how to write web applications!" },
@@ -104,15 +103,15 @@ const socialMedia = [
 
     //{ link: "mailto:aaron@web-presence.biz", theClass: "far fa-paper-plane" }
     //    { title: "ticket management and accounting software by: Aaron Smith ", target: "_blank", url: "https://aaronrs2002.github.io/task-master/", iconClass: "fas fa-network-wired" },
-];
+];*/
 
 let socialHTML = "";
-for (let i = 0; i < socialMedia.length; i++) {
-    socialHTML = socialHTML + `<a class="p-2 text-primary"  href="${socialMedia[i].link + (socialMedia[i].link.indexOf("?") !== -1 ? gaParam : "")
-        }" target="_blank" title="${socialMedia[i].title}" ><i class="${socialMedia[i].theClass
-        } animated"  onmouseover="javascript:tadaRollover('${socialMedia[i].theClass
-        }')" onmouseout="javascript:tadaRollout('${socialMedia[i].theClass
-        }')" data-tada="${socialMedia[i].theClass
+for (let i = 0; i < config[activeRestaurant].socialMedia.length; i++) {
+    socialHTML = socialHTML + `<a class="p-2 text-primary"  href="${config[activeRestaurant].socialMedia[i].link + (config[activeRestaurant].socialMedia[i].link.indexOf("?") !== -1 ? gaParam : "")
+        }" target="_blank" title="${config[activeRestaurant].socialMedia[i].title}" ><i class="${config[activeRestaurant].socialMedia[i].theClass
+        } animated"  onmouseover="javascript:tadaRollover('${config[activeRestaurant].socialMedia[i].theClass
+        }')" onmouseout="javascript:tadaRollout('${config[activeRestaurant].socialMedia[i].theClass
+        }')" data-tada="${config[activeRestaurant].socialMedia[i].theClass
         }"></i></a>`;
 }
 document.querySelector("#socialList").innerHTML = socialHTML;

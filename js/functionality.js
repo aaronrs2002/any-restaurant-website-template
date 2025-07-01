@@ -4,7 +4,7 @@ console.group("bgImage: " + bgImg)
 
 document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
 let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
-document.querySelector(".contactMap").src = config[0].googleMapsKey + idNum + "&q=" + config[0].address;
+document.querySelector(".contactMap").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].address;
 
 document.getElementById("aboutTarget").innerHTML = config[0].about;
 document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
@@ -454,7 +454,7 @@ function setActiveEvent(activeEvent) {
 
 
 
-    document.querySelector(".map").src = config[0].googleMapsKey + idNum + "&q=" + config[0].events[activeEvent].address;
+    document.querySelector(".map").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].events[activeEvent].address;
 
 
 
@@ -608,7 +608,7 @@ if (mapAddressses.length === 0) {
 
     let mapAddresssesStr = "";
     for (let i = 0; i < mapAddressses.length; i++) {
-        mapAddresssesStr = mapAddresssesStr + "<div class='col-md-12'><h3>" + mapAddressses[i] + "</h3><iframe class='map' src=" + config[0].googleMapsKey + idNum + "&q=" + encodeURIComponent(mapAddressses[i]) + " allowfullscreen='true'></iframe></div>";
+        mapAddresssesStr = mapAddresssesStr + "<div class='col-md-12'><h3>" + mapAddressses[i] + "</h3><iframe class='map' src='https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + encodeURIComponent(mapAddressses[i]) + " allowfullscreen='true'></iframe></div>";
     }
     document.getElementById("mapAddresssesTarget").innerHTML = mapAddresssesStr;
 
