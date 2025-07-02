@@ -18,6 +18,7 @@ for (let i = 0; i < themesList.length; i++) {
 document.getElementById("themes").innerHTML = themeOptions;
 
 function changeTheme() {
+
     let gaParam = "";
     /* if (url.toString().indexOf("exclude") !== -1) {
          gaParam = "exclude=true";
@@ -27,7 +28,7 @@ function changeTheme() {
         return false;
     } else {
         // document.getElementById("themedStyle").setAttribute("href", "https://bootswatch.com/5/" + whichTheme + "/bootstrap.css");
-        chosenTheme = whichTheme.replace("https://bootswatch.com/5/", "").replace("/bootstrap.css");
+        let chosenTheme = whichTheme.replace("https://bootswatch.com/5/", "").replace("/bootstrap.css");
         localStorage.setItem("theme", chosenTheme);
         //setGameLinks(chosenTheme);
         window.location = "?" + gaParam + "&theme=" + chosenTheme + "&";

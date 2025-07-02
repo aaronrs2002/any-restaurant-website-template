@@ -144,6 +144,29 @@
                         <input type="text" name="email" class="form-control" placeholder="Restaurant Email" />
                     </li>
 
+                    <li class="list-group-item">
+                        <label>Restaurant Social Media Accounts</label>
+                        <div><i><a href="https://fontawesome.com/v5/search"
+                                    target="_blank">https://fontawesome.com/v5/search</a></i></div>
+                        <input ttype="text" class="form-control" name="socialLink"
+                            placeholder="Social media account address" />
+
+                        <input ttype="text" class="form-control" name="socialTheClass"
+                            placeholder="Fount Awesome class" />
+                        <input ttype="text" class="form-control" name="socialTitle"
+                            placeholder="Socialmedia Account Title" />
+                        <button class="form-conrol btn btn-success" onClick="submitToLocal('socialMedia')">Submit
+                            Social Media Acount</button>
+
+                        <div class="py-3"> <label>Social media accounts submitted:</label>
+                            <ul id="socialMediaTarget">
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!--{ link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },-->
+
                 </ul>
                 <div class="d-grid gap-2 mb-5 pt-2">
                     <button class="btn btn-block btn-success" onClick="submitRestaurant()">Submit Restaurant
@@ -155,6 +178,9 @@
 
 
 </body>
+<script src="config/localData.js"></script>
 <script src="js/footer.js"></script>
+
+<script src="js/functionality.js"></script>
 
 </html>

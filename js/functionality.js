@@ -2,7 +2,7 @@
 let bgImg = config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img;
 console.group("bgImage: " + bgImg)
 
-document.querySelector("body").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
+document.querySelector("body[data-restaurant]").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
 let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
 document.querySelector(".contactMap").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].address;
 
@@ -630,6 +630,11 @@ function showCategoryMenu() {
 
     }
 }
+
+
+function submitRestaurant() {
+    Validate(["restaurantName", "apiAddress", "bannersImg"])
+};
 
 
 

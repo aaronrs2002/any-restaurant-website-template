@@ -112,9 +112,6 @@ let activeRestaurant = 0;
 
 
 
-localStorage.setItem("theme", config[activeRestaurant].theme);
-
-let tempTheme = config[activeRestaurant].theme;
 /*[].forEach.call(document.querySelectorAll(".map"), (e) => {
     e.src = config[0].googleMapsKey
 });*/
