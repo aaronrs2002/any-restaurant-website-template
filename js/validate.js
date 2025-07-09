@@ -1,10 +1,11 @@
 function Validate(fieldArr) {
 
-    [].forEach.call(document.querySelector(".error"), (e) => {
+    [].forEach.call(document.querySelectorAll(".error"), (e) => {
         e.classList.remove("error");
     });
 
-    fieldValue = "";
+    fieldValue = "default";
+    console.log("field value: " + document.querySelector("[name='" + fieldArr + "']").value)
 
     for (let i = 0; i < fieldArr.length; i++) {
 

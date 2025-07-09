@@ -3,6 +3,7 @@
 /*START THEMES*/
 const themesList = ["Spacelab", "United", "Slate", "Cerulean", "Darkly", "Litera", "Materia", "Sandstone", "Superhero", "Cosmo", "Flatly", "Lumen", "Minty", "Simplex", "Solar", "Cyborg", "Journal", "Lux", "Pulse", "Sketchy", "Yeti", "Morph", "Quartz", "Vapor", "Zephyr"];
 let chosenTheme;
+let tempTheme = config[activeRestaurant].theme;
 let url = window.location;
 let themeVal = {};
 let themeOptions = "<option value='default'>Select Theme</option>";

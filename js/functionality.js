@@ -3,11 +3,23 @@ let bgImg = config[0].banners[Math.floor(Math.random() * config[0].banners.lengt
 console.group("bgImage: " + bgImg)
 
 document.querySelector("body[data-restaurant]").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
-let contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
-document.querySelector(".contactMap").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].address;
+let contactMapAddress;
+if (document.querySelector(".contactMap")) {
+    contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
+    document.querySelector(".contactMap").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].address;
+}
 
-document.getElementById("aboutTarget").innerHTML = config[0].about;
-document.getElementById("restaurantNameTarget").innerHTML = config[0].restaurantName;
+[].forEach.call(document.querySelectorAll(".aboutTarget"), (e) => {
+    e.innerHTML = config[0].about;
+});
+
+
+[].forEach.call(document.querySelectorAll(".restaurantNameTarget"), (e) => {
+    e.innerHTML = config[0].restaurantName;
+});
+
+
+
 
 [].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
     e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'><i class='fas fa-home'></i> " + config[0].address + "</a>";
@@ -181,7 +193,10 @@ for (let i = 0; i < config[0].navLinks.length; i++) {
     navHTML = navHTML + "<li class='nav-item'><a href='#' data-id='" + i + "' class='nav-link " + active + "' onClick='linkSelected(" + i + ")'>" + config[0].navLinks[i] + "</a></li>";
 }
 
-document.querySelector("ul.nav").innerHTML = navHTML;
+if (document.querySelector("ul.nav")) {
+    document.querySelector("ul.nav").innerHTML = navHTML;
+}
+
 
 function linkSelected(whichLink) {
     [].forEach.call(document.querySelectorAll(".nav-link[data-id]"), (e) => {
@@ -483,7 +498,10 @@ function setActiveEvent(activeEvent) {
 //START VIDEO CAROUSEL
 let activeVideo = 0;
 let videoIndexStr = ""
-document.getElementById("videoCounter").innerHTML = activeVideo + 1 + "/" + parseInt(ytVideos.length);
+if (document.getElementById("videoCounter")) {
+    document.getElementById("videoCounter").innerHTML = activeVideo + 1 + "/" + parseInt(ytVideos.length);
+}
+
 for (let i = 0; i < ytVideos.length; i++) {
     let standardClass = 'sliderIndex';
     if (i === 0) {
@@ -491,7 +509,10 @@ for (let i = 0; i < ytVideos.length; i++) {
     }
     videoIndexStr = videoIndexStr + "<li class='" + standardClass + "' data-video='" + i + "' onClick='setVideoActive(" + i + ")' ></li>";
 }
-document.querySelector("[data-carousel='video']").innerHTML = videoIndexStr;
+if (document.querySelector("[data-carousel='video']")) {
+    document.querySelector("[data-carousel='video']").innerHTML = videoIndexStr;
+}
+
 function setVideoActive(num) {
     activeVideo = num;
     [].forEach.call(document.querySelectorAll(".sliderIndex[data-video]"), (e) => {
@@ -503,8 +524,11 @@ function setVideoActive(num) {
 }
 ///START IMAGE CAROUSEL
 let activeImage = 0;
-let imageIndexStr = ""
-document.getElementById("imageCounter").innerHTML = activeImage + 1 + "/" + parseInt(imageAddresses.length) + " - " + imageAddresses[activeImage].substring(imageAddresses[activeImage].lastIndexOf("/"), imageAddresses[0].indexOf("."));
+let imageIndexStr = "";
+if (document.getElementById("imageCounter")) {
+    document.getElementById("imageCounter").innerHTML = activeImage + 1 + "/" + parseInt(imageAddresses.length) + " - " + imageAddresses[activeImage].substring(imageAddresses[activeImage].lastIndexOf("/"), imageAddresses[0].indexOf("."));
+}
+
 for (let i = 0; i < imageAddresses.length; i++) {
     let standardClass = 'sliderIndex';
     if (i === 0) {
@@ -512,7 +536,11 @@ for (let i = 0; i < imageAddresses.length; i++) {
     }
     imageIndexStr = imageIndexStr + "<li class='" + standardClass + "' data-image='" + i + "' onClick='setImageActive(" + i + ")' ></li>";
 }
-document.querySelector("[data-carousel='image']").innerHTML = imageIndexStr;
+
+if (document.querySelector("[data-carousel='image']")) {
+    document.querySelector("[data-carousel='image']").innerHTML = imageIndexStr;
+}
+
 
 function setImageActive(num) {
     activeImage = num;
@@ -524,7 +552,6 @@ function setImageActive(num) {
     document.getElementById("imageCarouselTarget").setAttribute("src", imageAddresses[num]);
 }
 
-setImageActive(0);
 try {
     document.querySelector("#mediaYt").setAttribute("src", "https://www.youtube.com/embed/" + ytVideos[0])
 } catch (error) {
@@ -584,33 +611,42 @@ let HTMLcontent = [];
 let mapAddressses = [];
 */
 
+if (document.querySelector("[data-admin='true']")) {
 
-
-if (HTMLcontent.length === 0) {
-    document.getElementById("HTMLcontentTarget").classList.add("hide");
-} else {
-
-    let HTMLcontentStr = "";
-    for (let i = 0; i < HTMLcontent.length; i++) {
-        HTMLcontentStr = "<hr/>" + HTMLcontentStr + HTMLcontent[i] + "<hr/>";
-    }
-    document.getElementById("HTMLcontentTarget").innerHTML = HTMLcontentStr;
-
-}
-
-
-
-
-if (mapAddressses.length === 0) {
-    document.getElementById("mapAddresssesTarget").classList.add("hide");
+    console.log("We are in admin mode.")
 
 } else {
 
-    let mapAddresssesStr = "";
-    for (let i = 0; i < mapAddressses.length; i++) {
-        mapAddresssesStr = mapAddresssesStr + "<div class='col-md-12'><h3>" + mapAddressses[i] + "</h3><iframe class='map' src='https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + encodeURIComponent(mapAddressses[i]) + " allowfullscreen='true'></iframe></div>";
+    setImageActive(0);
+    setActiveEvent(0);
+
+    if (HTMLcontent.length === 0) {
+        document.getElementById("HTMLcontentTarget").classList.add("hide");
+    } else {
+
+        let HTMLcontentStr = "";
+        for (let i = 0; i < HTMLcontent.length; i++) {
+            HTMLcontentStr = "<hr/>" + HTMLcontentStr + HTMLcontent[i] + "<hr/>";
+        }
+        document.getElementById("HTMLcontentTarget").innerHTML = HTMLcontentStr;
+
     }
-    document.getElementById("mapAddresssesTarget").innerHTML = mapAddresssesStr;
+
+
+
+
+    if (mapAddressses.length === 0) {
+        document.getElementById("mapAddresssesTarget").classList.add("hide");
+
+    } else {
+
+        let mapAddresssesStr = "";
+        for (let i = 0; i < mapAddressses.length; i++) {
+            mapAddresssesStr = mapAddresssesStr + "<div class='col-md-12'><h3>" + mapAddressses[i] + "</h3><iframe class='map' src='https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + encodeURIComponent(mapAddressses[i]) + " allowfullscreen='true'></iframe></div>";
+        }
+        document.getElementById("mapAddresssesTarget").innerHTML = mapAddresssesStr;
+
+    }
 
 }
 
@@ -638,7 +674,7 @@ function submitRestaurant() {
 
 
 
-setActiveEvent(0);
+
 
 
 
