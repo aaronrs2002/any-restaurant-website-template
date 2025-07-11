@@ -5,16 +5,16 @@ function Validate(fieldArr) {
     });
 
     fieldValue = "default";
-    console.log("field value: " + document.querySelector("[name='" + fieldArr + "']").value)
+
 
     for (let i = 0; i < fieldArr.length; i++) {
-
+        console.log("field value: " + document.querySelector("[name='" + fieldArr[i] + "']").value)
         try {
 
-            if (document.querySelector("[name='" + fieldArr + "']").value !== "") {
-                fieldValue = document.querySelector("[name = '" + fieldArr + "']").value;
+            if (document.querySelector("[name='" + fieldArr[i] + "']").value !== "") {
+                fieldValue = document.querySelector("[name = '" + fieldArr[i] + "']").value;
             } else {
-                document.querySelector("[name='" + fieldArr + "']").classList.add("error");
+                document.querySelector("[name='" + fieldArr[i] + "']").classList.add("error");
                 globalAlert("alert-danger", "Field: " + fieldArr[i] + " is empty.");
                 return false;
             }

@@ -110,7 +110,9 @@ let config = [
 let activeRestaurant = 0;
 
 
+document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css")
 
+//   <link href="https://bootswatch.com/5/spacelab/bootstrap.css" rel="stylesheet" id="themedStyle">
 
 /*[].forEach.call(document.querySelectorAll(".map"), (e) => {
     e.src = config[0].googleMapsKey

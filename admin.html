@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/solid.css" rel="stylesheet" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://bootswatch.com/5/spacelab/bootstrap.css" rel="stylesheet" id="themedStyle">
+    <link href="" rel="stylesheet" id="themedStyle">
     <link href="https://aaronrs2002.github.io/black-jack/css/animate.min.css" rel="stylesheet">
     <link href="https://aaronrs2002.github.io/black-jack/css/shared.css" rel="stylesheet" /> <!-- -->
     <link rel="stylesheet" href="css/style.css" />
@@ -139,10 +139,12 @@
 
                                 <li class="list-group-item">
                                     <label>Events Section:</label>
-
+                                    <input type="text" class="form-control" name="eventsAddress"
+                                        placeholder="Address info for event" />
 
                                     <input type="text" class="form-control" name="eventsContact"
                                         placeholder="Contact info for event" />
+
                                     <input type="text" class="form-control" name="eventsDateTime"
                                         placeholder="Date and Time for event" />
                                     <input type="text" class="form-control" name="eventsTitle"
@@ -153,7 +155,7 @@
                                         Event</button>
 
                                     <div class="py-3"> <label>Events submitted:</label>
-                                        <ul id="eventTarget">
+                                        <ul class="list-group" id="eventsTarget">
 
                                         </ul>
                                     </div>

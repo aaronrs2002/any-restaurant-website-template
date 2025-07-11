@@ -30,9 +30,13 @@ function changeTheme() {
     } else {
         // document.getElementById("themedStyle").setAttribute("href", "https://bootswatch.com/5/" + whichTheme + "/bootstrap.css");
         let chosenTheme = whichTheme.replace("https://bootswatch.com/5/", "").replace("/bootstrap.css");
+        config[activeRestaurant].theme = chosenTheme;
+        document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css")
+
         localStorage.setItem("theme", chosenTheme);
+
         //setGameLinks(chosenTheme);
-        window.location = "?" + gaParam + "&theme=" + chosenTheme + "&";
+        // window.location = "?" + gaParam + "&theme=" + chosenTheme + "&";
     }
 
 }

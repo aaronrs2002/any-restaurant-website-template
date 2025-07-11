@@ -178,6 +178,74 @@ function submitToLocal(whichArr) {
             break;
 
 
+        case "events":
+
+
+            Validate(["eventsAddress", "eventsContact", "eventsDateTime", "eventsTitle", "eventsDetails"]);
+            if (document.querySelector(".error")) {
+
+                globalAlert("alert-warning", "Theres an \"events\" field missing.");
+                return false;
+
+            } else {
+                tempRestaurant[0].events.push({
+                    address: document.querySelector("[name='eventsAddress']").value,
+                    contact: document.querySelector("[name='eventsContact']").value,
+                    dateTime: document.querySelector("[name='eventsDateTime']").value,
+                    details: document.querySelector("textarea[name='eventsDetails']").value,
+                    title: document.querySelector("[name='eventsTitle']").value,
+
+                })
+            }
+
+
+            console.log("JSON.stringify(tempRestaurant[0].events); " + JSON.stringify(tempRestaurant[0].events))
+            let eventsArrHTML = "";
+
+            for (let i = 0; i < tempRestaurant[0].events.length; i++) {
+
+                eventsArrHTML = eventsArrHTML + "<li class='list-group-item'><ul><li>" + tempRestaurant[0].events[i].title + "</li><li>" + tempRestaurant[0].events[i].contact + "</li><li>" + tempRestaurant[0].events[i].dateTime + "</li>" +
+                    "<li>" + tempRestaurant[0].events[i].details + "</li><li>" + tempRestaurant[0].events[i].address + "</li></ul></li>";
+
+            }
+
+            document.getElementById("eventsTarget").innerHTML = eventsArrHTML;
+
+            document.querySelector("[name='eventsAddress']").value = "";
+            document.querySelector("[name='eventsContact']").value = "";
+            document.querySelector("[name='eventsDateTime']").value = "";
+            document.querySelector("textarea[name='eventsDetails']").value = "";
+            document.querySelector("[name='eventsTitle']").value = "";
+
+
+
+
+            break;
+
+
+        /*
+
+                    {
+            "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
+            "contact": "<a href='https://azbassetrescue.org/contact/' target='_blank'>azbassetrescue.org</a>",
+            "dateTime": "December 19 @ 11:00 am - 2:00 pm",
+            "details": "<p>Tired of wrapping present after present? Come join the Azbhr Volunteers from 11am-2pm on Saturday the 19th and then again from 1pm-4pm on Sunday the 20th. You make the tax deductible donation to help the Hounds, we’ll wrap your presents! Please note, this is a 2 day event!</p>",
+            "title": "Gift Wrap – East Valley, Day 1!"
+        },
+
+
+
+                                <input type="text" class="form-control" name="eventsContact"
+                                    placeholder="Contact info for event" />
+                                <input type="text" class="form-control" name="eventsDateTime"
+                                    placeholder="Date and Time for event" />
+                                <input type="text" class="form-control" name="eventsTitle"
+                                    placeholder="Title for event" />
+                                <textarea class="form-control" name="eventsDetails" placeholder="Event details"
+                                    rows="5"></textarea>
+                                <button class="form-conrol btn btn-success" onClick="submitToLocal('events')">Submit
+        */
+
 
 
 
