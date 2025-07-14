@@ -2,6 +2,7 @@ let config = [
 
     {
         restaurantName: "Best Food In Town",
+        logoHTML: `<h3><a href='#' onClick='linkSelected(0)' class="text-dark text-decoration-none"><i class="fas fa-fish"></i></a></h3>`,
         googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
@@ -108,9 +109,18 @@ let config = [
     }];
 
 let activeRestaurant = 0;
+document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
+[].forEach.call(document.querySelectorAll(".logoHTML"), (e) => {
+    let logoCurrentHTML = e.innerHTML;
+    e.innerHTML = config[activeRestaurant].logoHTML + logoCurrentHTML;
+
+});
 
 
-document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css")
+[].forEach.call(document.querySelectorAll("[data-navlink]"), (e) => {
+    e.innerHTML = config[activeRestaurant].navLinks[e.dataset.navlink]
+
+});
 
 //   <link href="https://bootswatch.com/5/spacelab/bootstrap.css" rel="stylesheet" id="themedStyle">
 
