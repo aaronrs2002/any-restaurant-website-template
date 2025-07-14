@@ -4,3 +4,8 @@ This is a serverless app, which can host unlimited restaurant websites. The webs
 
 Live site:
 https://aaronrs2002.github.io/any-restaurant-website-template/
+
+
+
+Youtube tutorial playlist:
+https://www.youtube.com/playlist?list=PLxaq32Ptw4plI2sFj95e-tl0lHnFnwimf
