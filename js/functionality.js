@@ -225,7 +225,7 @@ function linkSelected(whichLink) {
 function viewPosts(direction) {
     console.log("viePosts: drection: " + direction);
 
-    if (blog.length === 0) {
+    if (config[activeRestaurant].blogAddress.length === 0) {
         document.getElementById("blogSection").classList.add("hide");
         return false;
     }
