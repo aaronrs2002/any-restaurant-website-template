@@ -330,19 +330,24 @@ async function start() {
     const urlStart = config[0].apiAddress;
     let phpRelayAddress = "https://mechanized-aesthetics.net/php-relays/any-restaurant-blog-address.php?q=";
 
+    if (config[activeRestaurant].blogAddress.length === 0) {
+        document.getElementById("blogSection").classList.add("hide");
 
-    try {
+    } else {
+        try {
 
-        blog = await getBlog(phpRelayAddress + config[0].blogAddress);
+            blog = await getBlog(phpRelayAddress + config[0].blogAddress);
 
-        console.log("(typeof blog): " + (typeof blog));
+            console.log("(typeof blog): " + (typeof blog));
 
-        viewPosts(0);
+            viewPosts(0);
 
 
-    } catch (error) {
-        console.log("Error: " + error)
+        } catch (error) {
+            console.log("Error: " + error)
+        }
     }
+
 
 
     try {
