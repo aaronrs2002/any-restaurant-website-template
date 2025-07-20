@@ -226,7 +226,7 @@ function viewPosts(direction) {
     console.log("viePosts: drection: " + direction);
 
     if (blog.length === 0) {
-        document.querySelector("[data-section='blogSection']").classList.add("hide");
+        document.getElementById("blogSection").classList.add("hide");
         return false;
     }
     /*   [].forEach.call(document.querySelectorAll(".post[data-num]"), function (e) {
