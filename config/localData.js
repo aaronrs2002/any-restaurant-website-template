@@ -108,7 +108,7 @@ let config = [
 
     }, {
         "restaurantName": "Winery Luxury",
-        "googleID": "something",
+        "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         "navLinks": ["One", "Two", "Three", "Four"],
         "theme": "sandstone",
