@@ -134,7 +134,7 @@ let config = [
             "details": "Bring sauce", "title": "BBQ"
         }],
         "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
-        "address": "1 AT&T Way, Arlington, TX 76011", "phone": "555-999-0909",
+        "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
         "email": "ieat@food.com",
         "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
     }];
