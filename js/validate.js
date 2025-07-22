@@ -11,7 +11,7 @@ function Validate(fieldArr) {
         console.log("field value: " + document.querySelector("[name='" + fieldArr[i] + "']").value)
         try {
 
-            if (document.querySelector("[name='" + fieldArr[i] + "']").value !== "") {
+            if (document.querySelector("[name='" + fieldArr[i] + "']").value !== "" || document.querySelector("[name='" + fieldArr[i] + "']").value !== "default") {
                 fieldValue = document.querySelector("[name = '" + fieldArr[i] + "']").value;
             } else {
                 document.querySelector("[name='" + fieldArr[i] + "']").classList.add("error");

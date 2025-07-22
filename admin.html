@@ -59,6 +59,10 @@
                                     <input type="text" class="form-control" placeholder="Restaurant name"
                                         name="restaurantName" />
                                 </li>
+                                <li class="list-group-item"><label>Ypiur registered Google Maps Credintials: </label>
+                                    <input type="text" class="form-control" placeholder="Google Maps Credintials"
+                                        name="googleID" />
+                                </li>
                                 <li class="list-group-item"><label>Where is your menu located (JSON format): </label>
                                     <input type="text" class="form-control"
                                         placeholder="Where is your menu located (JSON format)" name="apiAddress" />
@@ -109,6 +113,13 @@
                                     <textarea class="form-control" placeholder="About Restaurant" rows="5"
                                         name="about"></textarea>
                                 </li>
+
+                                <li class="list-group-item"><label>Logo HTML: </label>
+                                    <textarea class="form-control" placeholder="HTML representing Logo" rows="5"
+                                        name="logoHTML"></textarea>
+                                </li>
+
+
 
                                 <li class="list-group-item">
                                     <label>Media Type:</label>
@@ -244,7 +255,9 @@
                                     Restaurant
                                     Data</button>
                             </div>
+
                         </div>
+                        <div id="JSON_Target"></div>
                     </div>
                 </div>
             </div>

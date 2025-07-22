@@ -9,6 +9,7 @@ let tempRestaurant = [
         banners: [],
 
         about: "",
+        logoHTML: "",
         media: [],
         events: [],
         blogAddress: "",
@@ -47,7 +48,7 @@ function deleteItem(whichNum, whichObj) {
 
             tempRestaurant[0].navLinks = tempObj;
             for (let i = 0; i < tempRestaurant[0].navLinks.length; i++) {
-                navLinkArrHTML = navLinkArrHTML + "<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick=\"deleteItem('" + i + "','navLinks')\"></i> - " + tempRestaurant[0].navLinks[i] + "</span>";
+                navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant[0].navLinks[i]}</span>`;
             }
             document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
 
@@ -149,7 +150,7 @@ function deleteItem(whichNum, whichObj) {
 
             let eventsArrHTML = "";
             document.getElementById("eventsTarget").innerHTML = "";
-            console.log("tempObj: " + JSON.stringify(tempObj));
+
             for (let i = 0; i < tempObj.length; i++) {
 
                 eventsArrHTML = eventsArrHTML + "<li class='list-group-item'><ul><li>" + tempObj[i].title + "</li><li>" + tempObj[i].contact + "</li><li>" + tempObj[i].dateTime + "</li>" +
@@ -157,8 +158,36 @@ function deleteItem(whichNum, whichObj) {
 
             }
             tempRestaurant[0].events = tempObj;
-            console.log("eventsArrHTML: " + eventsArrHTML);
+
             document.getElementById("eventsTarget").innerHTML = eventsArrHTML;
+            break;
+
+
+
+        case "socialMedia":
+
+            for (let i = 0; i < tempRestaurant[0].socialMedia.length; i++) {
+                if (i !== Number(whichNum)) {
+                    tempObj.push(tempRestaurant[0].socialMedia[i])
+                }
+            }
+
+
+            console.log("tempObj: " + JSON.stringify(tempObj));
+            document.querySelector("#socialMediaTarget").innerHTML = "";
+            tempRestaurant[0].socialMedia = tempObj;
+            let tempSocialMediaHTML = "";
+            for (let i = 0; i < tempObj.length; i++) {
+                tempSocialMediaHTML = tempSocialMediaHTML + `<li class="list-group-item"><a class="p-2 text-primary"  href="${tempObj[i].link}" target="_blank" title="${tempObj[i].title}" ><i class="${tempObj[i].theClass
+                    } animated"  onmouseover="javascript:tadaRollover('${tempObj[i].theClass
+                    }')" onmouseout="javascript:tadaRollout('${tempObj[i].theClass
+                    }')" data-tada="${tempObj[i].theClass
+                    }"></i></a><button class='btn btn-danger' onClick=\"deleteItem(${i},'socialMedia')\" ><i class='fas fa-trash' ></i></button></li>`;
+            }
+            console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
+            document.querySelector("#socialMediaTarget").innerHTML = tempSocialMediaHTML;
+
+
             break;
 
     }
@@ -168,7 +197,7 @@ function deleteItem(whichNum, whichObj) {
 }
 
 
-////END DELETE FUNCTION */
+//////////////////////////////////////////////////////////////////////////////END DELETE FUNCTION */
 
 
 
@@ -197,7 +226,7 @@ function submitToLocal(whichArr) {
                 console.log("tempRestaurant[0].navLinks: " + tempRestaurant[0].navLinks);
                 let navLinkArrHTML = "";
                 for (let i = 0; i < tempRestaurant[0].navLinks.length; i++) {
-                    navLinkArrHTML = navLinkArrHTML + "<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick='deleteItem('" + i + "','navLinks')'></i> - " + tempRestaurant[0].navLinks[i] + "</span>";
+                    navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant[0].navLinks[i]}</span>`;
                 }
                 document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
                 document.querySelector("[name='navLinks']").value = "";
@@ -435,7 +464,7 @@ function submitToLocal(whichArr) {
                         } animated"  onmouseover="javascript:tadaRollover('${tempRestaurant[activeRestaurant].socialMedia[i].theClass
                         }')" onmouseout="javascript:tadaRollout('${tempRestaurant[activeRestaurant].socialMedia[i].theClass
                         }')" data-tada="${tempRestaurant[activeRestaurant].socialMedia[i].theClass
-                        }"></i></a><button class='btn btn-danger' onClick=\"deleteItem('${i}','banners')\" ><i class='fas fa-trash' ></i></button></li>`;
+                        }"></i></a><button class='btn btn-danger' onClick=\"deleteItem('${i}','socialMedia')\" ><i class='fas fa-trash' ></i></button></li>`;
                 }
                 console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
                 document.querySelector("#socialMediaTarget").innerHTML = tempSocialMediaHTML;
@@ -451,3 +480,59 @@ function submitToLocal(whichArr) {
 
 }
 
+//////END ADD ////////////////
+
+
+
+
+function submitRestaurant() {
+
+    /*
+    let tempRestaurant = [
+    
+        {
+            restaurantName: "",
+            googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+            apiAddress: "",
+            navLinks: [],
+            theme: "",
+            banners: [],
+    
+            about: "",
+            media: [],
+            events: [],
+            blogAddress: "",
+            address: "",
+            phone: "",
+            email: "",
+            socialMedia: []
+    
+        }];
+    
+    */
+    Validate(["restaurantName", "googleID", "apiAddress", "theme", "about", "blogAddress", "address", "phone", "email"]);
+
+    //about is a textarea
+
+    if (document.querySelector(".error")) {
+
+        globalAlert("alert-danger", "There are field with no information.");
+        return false;
+    } else {
+        tempRestaurant[0].restaurantName = document.querySelector("[name='restaurantName']").value;
+        tempRestaurant[0].googleID = document.querySelector("[name='googleID']").value;
+        tempRestaurant[0].apiAddress = document.querySelector("[name='apiAddress']").value;
+        tempRestaurant[0].theme = document.querySelector("select[name='theme']").value;
+        tempRestaurant[0].about = document.querySelector("textarea[name='about']").value;
+        tempRestaurant[0].logoHTML = document.querySelector("textarea[name='logoHTML']").value;
+        tempRestaurant[0].blogAddress = document.querySelector("[name='blogAddress']").value;
+        tempRestaurant[0].address = document.querySelector("[name='address']").value;
+        tempRestaurant[0].phone = document.querySelector("[name='phone']").value;
+        tempRestaurant[0].email = document.querySelector("[name='email']").value;
+    }
+
+
+
+    globalAlert("alert-success", "We built a JSON object!");
+    document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant)
+}

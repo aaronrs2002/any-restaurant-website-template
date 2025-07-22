@@ -2,7 +2,6 @@ let config = [
 
     {
         restaurantName: "Best Food In Town",
-        logoHTML: `<h3><a href='#' onClick='linkSelected(0)' class="text-dark text-decoration-none"><i class="fas fa-fish"></i></a></h3>`,
         googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
@@ -31,6 +30,7 @@ let config = [
 
 
         about: "<h3>We make the best food. Here is our story of three generations.</h3><p>That's why we put the sign up. Our Great Grandfather won these recipes in a poker hand. So enjoy...</p>",
+        logoHTML: `<h3><a href='#' onClick='linkSelected(0)' class="text-dark text-decoration-none"><i class="fas fa-fish"></i></a></h3>`,
         media:
 
             [{
@@ -106,9 +106,40 @@ let config = [
             //    { title: "ticket management and accounting software by: Aaron Smith ", target: "_blank", url: "https://aaronrs2002.github.io/task-master/", iconClass: "fas fa-network-wired" },
         ]
 
+    }, {
+        "restaurantName": "Winery Luxury",
+        "googleID": "something",
+        "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
+        "navLinks": ["One", "Two", "Three", "Four"],
+        "theme": "sandstone",
+        "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
+        "about": "This is the finest restaurant winery in the area. Your are lucky to be here.",
+        "logoHTML": "<i class='fas fa- wine - glass'></i>",
+        "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" }, { "type": "ytVideo", "address": "9l8TJwfHbdE" }, { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
+            "type": "html",
+            "address": "Welcome one and all"
+        },
+        { "type": "map", "address": "1060 W Addison Chicago, IL" }],
+        "events": [{
+            "address": "123 Main St",
+            "contact": "654 - 669 -0092",
+            "dateTime": "Tuesday August 7th at Noon",
+            "details": "Bring scissors",
+            "title": "Free Haircuts"
+        },
+        {
+            "address": "123 Elm",
+            "contact": "559 - 887 - 8978",
+            "dateTime": "November 7th 3:00pm",
+            "details": "Bring sauce", "title": "BBQ"
+        }],
+        "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
+        "address": "1 AT&T Way, Arlington, TX 76011", "phone": "555-999-0909",
+        "email": "ieat@food.com",
+        "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
     }];
 
-let activeRestaurant = 0;
+let activeRestaurant = 1;
 document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
 [].forEach.call(document.querySelectorAll(".logoHTML"), (e) => {
     let logoCurrentHTML = e.innerHTML;

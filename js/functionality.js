@@ -1,35 +1,35 @@
 
-let bgImg = config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img;
+let bgImg = config[activeRestaurant].banners[Math.floor(Math.random() * config[activeRestaurant].banners.length)].img;
 console.group("bgImage: " + bgImg)
 
-document.querySelector("body[data-restaurant]").style.backgroundImage = "url(" + config[0].banners[Math.floor(Math.random() * config[0].banners.length)].img + ")";
+document.querySelector("body[data-restaurant]").style.backgroundImage = "url(" + config[activeRestaurant].banners[Math.floor(Math.random() * config[activeRestaurant].banners.length)].img + ")";
 let contactMapAddress;
 if (document.querySelector(".contactMap")) {
     contactMapAddress = document.querySelector(".contactMap").getAttribute("src");
-    document.querySelector(".contactMap").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].address;
+    document.querySelector(".contactMap").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[activeRestaurant].address;
 }
 
 [].forEach.call(document.querySelectorAll(".aboutTarget"), (e) => {
-    e.innerHTML = config[0].about;
+    e.innerHTML = config[activeRestaurant].about;
 });
 
 
 [].forEach.call(document.querySelectorAll(".restaurantNameTarget"), (e) => {
-    e.innerHTML = config[0].restaurantName;
+    e.innerHTML = config[activeRestaurant].restaurantName;
 });
 
 
 
 
 [].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
-    e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'><i class='fas fa-home'></i> " + config[0].address + "</a>";
+    e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[activeRestaurant].address) + "/'><i class='fas fa-home'></i> " + config[activeRestaurant].address + "</a>";
 });
 [].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
-    e.innerHTML = " <a class='px-4'href='tel:" + config[0].phone + "'><i class='fas fa-phone'></i>  " + config[0].phone + "</a>";
+    e.innerHTML = " <a class='px-4'href='tel:" + config[activeRestaurant].phone + "'><i class='fas fa-phone'></i>  " + config[activeRestaurant].phone + "</a>";
 });
 
 [].forEach.call(document.querySelectorAll("[data-email]"), (e) => {
-    e.innerHTML = "<a class='px-4' href='mailto:" + config[0].email + "' ><i class='fas fa-envelope' ></i> " + config[0].email + "</a>";
+    e.innerHTML = "<a class='px-4' href='mailto:" + config[activeRestaurant].email + "' ><i class='fas fa-envelope' ></i> " + config[activeRestaurant].email + "</a>";
 });
 
 /* <i data-address>address</i> | <i data-phone>phone</i> | <i data-email>email</i>*/
@@ -39,19 +39,19 @@ let HTMLcontent = [];
 let mapAddressses = [];
 
 
-for (let i = 0; i < config[0].media.length; i++) {
-    if (config[0].media[i].type === "img") {
-        imageAddresses = [...imageAddresses, config[0].media[i].address];
+for (let i = 0; i < config[activeRestaurant].media.length; i++) {
+    if (config[activeRestaurant].media[i].type === "img") {
+        imageAddresses = [...imageAddresses, config[activeRestaurant].media[i].address];
     }
-    if (config[0].media[i].type === "ytVideo") {
-        ytVideos = [...ytVideos, config[0].media[i].address];
+    if (config[activeRestaurant].media[i].type === "ytVideo") {
+        ytVideos = [...ytVideos, config[activeRestaurant].media[i].address];
     }
-    if (config[0].media[i].type === "html") {
-        HTMLcontent = [...HTMLcontent, config[0].media[i].address];
+    if (config[activeRestaurant].media[i].type === "html") {
+        HTMLcontent = [...HTMLcontent, config[activeRestaurant].media[i].address];
     }
 
-    if (config[0].media[i].type === "map") {
-        mapAddressses = [...mapAddressses, config[0].media[i].address];
+    if (config[activeRestaurant].media[i].type === "map") {
+        mapAddressses = [...mapAddressses, config[activeRestaurant].media[i].address];
     }
 }
 
@@ -185,12 +185,12 @@ let blog = [];
 
 
 let navHTML = "";
-for (let i = 0; i < config[0].navLinks.length; i++) {
+for (let i = 0; i < config[activeRestaurant].navLinks.length; i++) {
     let active = "";
     if (i === 0) {
         active = "active";
     }
-    navHTML = navHTML + "<li class='nav-item'><a href='#' data-id='" + i + "' class='nav-link " + active + "' onClick='linkSelected(" + i + ")'>" + config[0].navLinks[i] + "</a></li>";
+    navHTML = navHTML + "<li class='nav-item'><a href='#' data-id='" + i + "' class='nav-link " + active + "' onClick='linkSelected(" + i + ")'>" + config[activeRestaurant].navLinks[i] + "</a></li>";
 }
 
 if (document.querySelector("ul.nav")) {
@@ -213,7 +213,7 @@ function linkSelected(whichLink) {
 
 
     document.querySelector(".nav-link[data-id='" + whichLink + "']").classList.add("active");
-    document.querySelector("title").innerHTML = config[0].navLinks[whichLink];
+    document.querySelector("title").innerHTML = config[activeRestaurant].navLinks[whichLink];
 
 
 
@@ -327,7 +327,7 @@ let categories = [];
 let categoryList = [];
 
 async function start() {
-    const urlStart = config[0].apiAddress;
+    const urlStart = config[activeRestaurant].apiAddress;
     let phpRelayAddress = "https://mechanized-aesthetics.net/php-relays/any-restaurant-blog-address.php?q=";
 
     if (config[activeRestaurant].blogAddress.length === 0) {
@@ -336,7 +336,7 @@ async function start() {
     } else {
         try {
 
-            blog = await getBlog(phpRelayAddress + config[0].blogAddress);
+            blog = await getBlog(phpRelayAddress + config[activeRestaurant].blogAddress);
 
             console.log("(typeof blog): " + (typeof blog));
 
@@ -460,33 +460,33 @@ function selectCategory(selected) {
 
 
 function setActiveEvent(activeEvent) {
-    if (config[0].events.length === 0) {
+    if (config[activeRestaurant].events.length === 0) {
         document.querySelector(".eventModule").classList.add("hide");
-        globalAlert("alert-warning", "You have this many events: " + config[0].events.length);
+        globalAlert("alert-warning", "You have this many events: " + config[activeRestaurant].events.length);
         return false;
     }
-    console.log("config[0].events[activeEvent].title: " + config[0].events[activeEvent].title)
-    document.querySelector("h3[data-eventtitle]").innerHTML = config[0].events[activeEvent].title;
-    document.querySelector("li[data-eventdate]").innerHTML = config[0].events[activeEvent].dateTime;
-    document.querySelector("li[data-eventaddress]").innerHTML = config[0].events[activeEvent].address;
-    document.querySelector("li[data-eventdescription]").innerHTML = config[0].events[activeEvent].details;
-    document.querySelector("li[data-eventcontact]").innerHTML = config[0].events[activeEvent].contact;
+    console.log("config[activeRestaurant].events[activeEvent].title: " + config[activeRestaurant].events[activeEvent].title)
+    document.querySelector("h3[data-eventtitle]").innerHTML = config[activeRestaurant].events[activeEvent].title;
+    document.querySelector("li[data-eventdate]").innerHTML = config[activeRestaurant].events[activeEvent].dateTime;
+    document.querySelector("li[data-eventaddress]").innerHTML = config[activeRestaurant].events[activeEvent].address;
+    document.querySelector("li[data-eventdescription]").innerHTML = config[activeRestaurant].events[activeEvent].details;
+    document.querySelector("li[data-eventcontact]").innerHTML = config[activeRestaurant].events[activeEvent].contact;
 
 
 
-    document.querySelector(".map").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[0].events[activeEvent].address;
+    document.querySelector(".map").src = "https://www.google.com/maps/embed/v1/place?key=" + config[activeRestaurant].googleID + "&q=" + config[activeRestaurant].events[activeEvent].address;
 
 
 
 
     let titlesStr = "";
-    for (let i = 0; i < config[0].events.length; i++) {
+    for (let i = 0; i < config[activeRestaurant].events.length; i++) {
         let active = "";
         if (i === activeEvent) {
             active = " active";
         }
 
-        titlesStr = titlesStr + `<button type="button" class="list-group-item list-group-item-action ${active}" onClick="setActiveEvent(${i})"> ${config[0].events[i].title}</button>`;
+        titlesStr = titlesStr + `<button type="button" class="list-group-item list-group-item-action ${active}" onClick="setActiveEvent(${i})"> ${config[activeRestaurant].events[i].title}</button>`;
 
 
 
