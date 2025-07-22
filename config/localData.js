@@ -114,7 +114,7 @@ let config = [
         "theme": "sandstone",
         "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
         "about": "This is the finest restaurant winery in the area. Your are lucky to be here.",
-        "logoHTML": "<i class='fas fa- wine - glass'></i>",
+        "logoHTML": "<i class='fas fa-wine-glass'></i>",
         "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" }, { "type": "ytVideo", "address": "9l8TJwfHbdE" }, { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
             "type": "html",
             "address": "Welcome one and all"
