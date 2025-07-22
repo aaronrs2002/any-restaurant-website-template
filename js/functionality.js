@@ -25,7 +25,7 @@ if (document.querySelector(".contactMap")) {
     e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[0].address) + "/'><i class='fas fa-home'></i> " + config[0].address + "</a>";
 });
 [].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
-    e.innerHTML = " <a class='px-4'href='phone:" + config[0].phone + "'><i class='fas fa-phone'></i>  " + config[0].phone + "</a>";
+    e.innerHTML = " <a class='px-4'href='tel:" + config[0].phone + "'><i class='fas fa-phone'></i>  " + config[0].phone + "</a>";
 });
 
 [].forEach.call(document.querySelectorAll("[data-email]"), (e) => {
