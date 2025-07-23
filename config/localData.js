@@ -113,9 +113,15 @@ let config = [
         "navLinks": ["One", "Two", "Three", "Four"],
         "theme": "sandstone",
         "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
-        "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><div style='width:100%; max-height:250px; overflow:hidden;'><img src='https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0' /></div></div>",
+        "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczOv-3_zcJj2jOCZ3IwgS8GSqWjmri7AXK4DwjQSKlpPGBVznp6wH1_7Lm2nfHZ4v5gJwA795BziygBDfIauAGEXDC44iVd-6Tco6-d-NYb_wipXKN8FXzTb1QsIsKpzVbzZYE7_zivZatUvZ17XCr0dwg=w1556-h878-s-no-gm?authuser=0' style='width:100%; height:auto;' /></div>",
         "logoHTML": "<i class='text-dark fas fa-wine-glass'></i>",
-        "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" }, { "type": "ytVideo", "address": "9l8TJwfHbdE" }, { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
+        "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" },
+
+        //uBk87-QdBCY
+        { "type": "ytVideo", "address": "uBk87-QdBCY" },
+        { "type": "ytVideo", "address": "9l8TJwfHbdE" },
+
+        { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
             "type": "html",
             "address": "Welcome one and all"
         },
