@@ -39,27 +39,51 @@
 
 
 
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light">
-        <nav class="text-center logoHTML">
+
+    <!--<nav class="text-center logoHTML">
             <ul class="nav"></ul>
-        </nav>
-    </header>
+        </nav>-->
 
 
-    <main class="container">
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logoHTML" href="http://web-presence.biz/?src=itWebApp" target="_blank"></a>
+            <button class="navbar-toggler collapsed" onclick="toggleMobileNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="topNav">
+                <ul class="navbar-nav me-auto mb-2 ml-5 mb-sm-0" id="navLinkTarget">
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <main class="container mt-3">
         <section data-section="0" class="card p-4">
 
             <div class="card-title text-center">
-                <h1 class="restaurantNameTarget">Restaurant name</h1>
-                <div class="card-body">
-                    <div class="aboutTarget">about</div>
+                <div id="homeImgTarget">
+                    <h1 class="restaurantNameTarget">Restaurant name</h1>
+                    <div class="card-body">
+                        <!--<div class="aboutTarget">about</div>-->
+                        <h3 data-address></h3>
+                        <h4 data-phone></h4>
+                        <h4 data-email></h4>
+
+                    </div>
                 </div>
 
             </div>
 
 
 
-            <div class="card-footer text-center">
+            <!--<div class="card-footer text-center">
                 <div class="row">
                     <div class="col-md-4"><i data-address>address</i></div>
 
@@ -68,7 +92,7 @@
                     <div class="col-md-4"><i data-email>email</i></div>
                 </div>
 
-            </div>
+            </div>-->
 
 
         </section>

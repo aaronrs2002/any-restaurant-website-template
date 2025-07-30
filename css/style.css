@@ -26,6 +26,9 @@ body {
 }
 
 
+.nav {
+    padding-bottom: 5rem;
+}
 
 /*START EVENTS CSS*/
 
@@ -153,6 +156,21 @@ ul.inline {
     padding-bottom: 2rem;
 }
 
+
+#homeImgTarget {
+
+    min-height: 300px;
+    width: 100%;
+    color: #ffffff !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#homeImgTarget a,
+#homeImgTarget a {
+    color: #ffffff !important;
+}
 
 
 

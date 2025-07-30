@@ -523,6 +523,8 @@ function submitRestaurant() {
         tempRestaurant[0].googleID = document.querySelector("[name='googleID']").value;
         tempRestaurant[0].apiAddress = document.querySelector("[name='apiAddress']").value;
         tempRestaurant[0].theme = document.querySelector("select[name='theme']").value;
+        tempRestaurant[0].homeImg = document.querySelector("[name='homeImg']").value;
+
         tempRestaurant[0].about = document.querySelector("textarea[name='about']").value;
         tempRestaurant[0].logoHTML = document.querySelector("textarea[name='logoHTML']").value;
         tempRestaurant[0].blogAddress = document.querySelector("[name='blogAddress']").value;

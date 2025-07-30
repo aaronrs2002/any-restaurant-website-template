@@ -193,8 +193,8 @@ for (let i = 0; i < config[activeRestaurant].navLinks.length; i++) {
     navHTML = navHTML + "<li class='nav-item'><a href='#' data-id='" + i + "' class='nav-link " + active + "' onClick='linkSelected(" + i + ")'>" + config[activeRestaurant].navLinks[i] + "</a></li>";
 }
 
-if (document.querySelector("ul.nav")) {
-    document.querySelector("ul.nav").innerHTML = navHTML;
+if (document.querySelector("#navLinkTarget")) {
+    document.querySelector("#navLinkTarget").innerHTML = navHTML;
 }
 
 
@@ -637,6 +637,8 @@ if (document.querySelector("[data-admin='true']")) {
 
     }
 
+    //document.getElementById("homeImgTarget").innerHTML = "<img src='" + config[activeRestaurant].homeImg + "' class='img-fluid' />";
+    document.getElementById("homeImgTarget").style.backgroundImage = " linear-gradient(rgba(1, 71, 71, 0.5), rgba(71, 71, 71, 0.5)), url(" + config[activeRestaurant].homeImg + ")";
 
 
 
@@ -679,7 +681,22 @@ function submitRestaurant() {
 
 
 
+const toggleMobileNav = () => {
 
+    if (document.querySelector("#topNav.show")) {
+        console.log("remove show")
+        document.querySelector("#topNav").classList.add("collapse");
+        document.querySelector("#topNav").classList.remove("show");
+    } else {
+        console.log("Add show")
+        document.querySelector("#topNav").classList.add("show");
+        document.querySelector("#topNav").classList.remove("collapse");
+    }
+
+
+
+
+}
 
 
 

@@ -6,6 +6,7 @@ let config = [
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
         theme: "cyborg",
+        homeImg: "https://lh3.googleusercontent.com/pw/AP1GczO_2Hh4_yQLYVcDGv9vP69cL_iujb7SH0C0sfgymSW7GgDjwZGdHrOfS00AvNTz-Rn2d1Ef_alGOVSbBnVe0Y-xxHKO4YZfbYknsn6cL5v1lYpbQCNhlzne3IAOks2ekLXDrq0-PTdwHA5WjZUGPH6P5g=w1385-h932-s-no-gm?authuser=0",
         banners: [/* {
             img: "https://lh3.googleusercontent.com/pw/AP1GczPe94dFwMQfmde5grW-Q4ococo5GGLOSTnw6dSZ-rkj6S3yniZZZLb-tXJO_-Mz2hPzatxbZuMAMZo8wSycW2fBXwiCG8GXca8l7jHz5Sj1ZwJACpVInobVPE1dw0Z7I4ExNXrmxS7yo9RcypFN_BA2jQ=w1289-h967-s-no-gm?authuser=0",
             bannerHTML: "<h3>Welcome, We have food!</h3>"
@@ -107,11 +108,12 @@ let config = [
         ]
 
     }, {
-        "restaurantName": "Winery Luxury",
+        "restaurantName": "Wine Luxury",
         "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         "navLinks": ["One", "Two", "Three", "Four"],
         "theme": "sandstone",
+        "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
         "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
         "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
         "logoHTML": "<i class='text-dark fas fa-wine-glass'></i>",
