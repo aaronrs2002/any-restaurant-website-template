@@ -184,6 +184,22 @@ let blog = [];
 ];*/
 
 
+const toggleMobileNav = () => {
+
+    if (document.querySelector("#topNav.show")) {
+        console.log("remove show")
+        document.querySelector("#topNav").classList.add("collapse");
+        document.querySelector("#topNav").classList.remove("show");
+    } else {
+        console.log("Add show")
+        document.querySelector("#topNav").classList.add("show");
+        document.querySelector("#topNav").classList.remove("collapse");
+    }
+
+}
+
+
+
 let navHTML = "";
 for (let i = 0; i < config[activeRestaurant].navLinks.length; i++) {
     let active = "";
@@ -214,6 +230,8 @@ function linkSelected(whichLink) {
 
     document.querySelector(".nav-link[data-id='" + whichLink + "']").classList.add("active");
     document.querySelector("title").innerHTML = config[activeRestaurant].navLinks[whichLink];
+
+    toggleMobileNav();
 
 
 
@@ -680,23 +698,6 @@ function submitRestaurant() {
 };
 
 
-
-const toggleMobileNav = () => {
-
-    if (document.querySelector("#topNav.show")) {
-        console.log("remove show")
-        document.querySelector("#topNav").classList.add("collapse");
-        document.querySelector("#topNav").classList.remove("show");
-    } else {
-        console.log("Add show")
-        document.querySelector("#topNav").classList.add("show");
-        document.querySelector("#topNav").classList.remove("collapse");
-    }
-
-
-
-
-}
 
 
 
