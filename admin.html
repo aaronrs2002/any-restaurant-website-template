@@ -39,233 +39,294 @@
 
 
     <div class="container">
-
-
         <div class="row">
+            <div class="col-md-12 py-1">
+                <div class="btn-group block" role="group">
+                    <button type="button" class="btn btn-primary active"
+                        onclick="javascript:chooseRole('admin')">Website Admin</button>
+                    <button type="button" class="btn btn-primary" onclick="javascript:chooseRole('menu')">Menu
+                        Management</button>
 
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12">
-
-                            <div class="card-title p-3">
-                                <h1>Any Restaurant Template - Content Management System (CMS)</h1>
-                            </div>
-
-
-                            <ul class="list-group">
-
-                                <li class="list-group-item"><label>Restaurant name: </label>
-                                    <input type="text" class="form-control" placeholder="Restaurant name"
-                                        name="restaurantName" />
-                                </li>
-                                <li class="list-group-item"><label>Ypiur registered Google Maps Credintials: </label>
-                                    <input type="text" class="form-control" placeholder="Google Maps Credintials"
-                                        name="googleID" />
-                                </li>
-                                <li class="list-group-item"><label>Where is your menu located (JSON format): </label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Where is your menu located (JSON format)" name="apiAddress" />
-                                </li>
-                                <li class="list-group-item">
-
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="navLinks"
-                                            placeholder="Main Navigation Links">
-                                        <button class="btn btn-secondary" type="button"
-                                            onClick="submitToLocal('navLinks')">Add nav Link to list</button>
-                                    </div>
-                                    <label>Main Navigation Links:</label>
-
-
-
-                                    <ul id="navLinksTarget"></ul>
-
-
-
-                                </li>
-                                <li class="list-group-item"><label>Theme: </label>
-                                    <select class="form-control" onChange="changeTheme()" id="themes"
-                                        name="theme"></select>
-                                </li>
-
-
-                                <li class="list-group-item">
-                                    <label>Banners:</label>
-                                    <input type="text" class="form-control" name="bannersImg"
-                                        placeholder="Banner Image" />
-                                </li>
-                                <li class="list-group-item">
-
-                                    <input type="text" class="form-control" name="bannersHTML"
-                                        placeholder="Banner HTML" />
-                                </li>
-                                <li class="list-group-item">
-                                    <button class="btn btn-success btn-block py-2"
-                                        onClick="submitToLocal('banners')">Submit
-                                        Banner to list</button>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row" id="bannersTarget"></div>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="text" class="form-control" name="homeImg"
-                                        placeholder="Home Page image address" />
-                                </li>
-                                </li>
-                                <li class="list-group-item"><label>About Restaurant: </label>
-                                    <textarea class="form-control" placeholder="About Restaurant" rows="5"
-                                        name="about"></textarea>
-                                </li>
-
-                                <li class="list-group-item"><label>Logo HTML: </label>
-                                    <textarea class="form-control" placeholder="HTML representing Logo" rows="5"
-                                        name="logoHTML"></textarea>
-                                </li>
-
-
-
-                                <li class="list-group-item">
-                                    <label>Media Type:</label>
-                                    <select class="form-control" name="mediaType">
-                                        <option value="img">Image</option>
-                                        <option value="ytVideo">YouTube Video ID</option>
-                                        <option value="html">HTML</option>
-                                        <option value="map">Address for Google Maps</option>
-                                    </select>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="mediaAddress"
-                                            placeholder="Submit ID or address for media." />
-                                        <button class="btn btn-secondary" type="button"
-                                            onClick="submitToLocal('media')">Add Media</button>
-                                    </div>
-                                <li class="list-group-item">
-                                    <div> <label>images:</label>
-                                        <div class="row" id="mediaImagesTarget"></div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <hr />
-                                    <div> <label>youTube IDs:</label>
-                                        <div class="row" id="mediaytIdsTarget"></div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <hr />
-                                    <div> <label>HTML Content:</label>
-                                        <ul class="list-group" id="mediaHtmlTarget"></ul>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <hr />
-                                    <div> <label>Address for Google Maps:</label>
-                                        <ul class="list-group" id="mediaMapsTarget"></ul>
-                                    </div>
-                                    <hr />
-                                </li>
-
-                                <li class="list-group-item">
-                                    <label>Events Section:</label>
-                                    <input type="text" class="form-control" name="eventsAddress"
-                                        placeholder="Address info for event" />
-                                </li>
-                                <li class="list-group-item">
-
-                                    <input type="text" class="form-control" name="eventsContact"
-                                        placeholder="Contact info for event" />
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="text" class="form-control" name="eventsDateTime"
-                                        placeholder="Date and Time for event" />
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="text" class="form-control" name="eventsTitle"
-                                        placeholder="Title for event" />
-                                <li class="list-group-item">
-                                    <textarea class="form-control" name="eventsDetails" placeholder="Event details"
-                                        rows="5"></textarea>
-                                <li class="list-group-item">
-                                    <button class="form-conrol btn btn-success" onClick="submitToLocal('events')">Submit
-                                        Event</button>
-                                </li>
-                                <div class="py-3"> <label>Events submitted:</label>
-                                    <ul class="list-group" id="eventsTarget">
-
-                                    </ul>
-                                </div>
-
-
-                                <hr />
-
-                                </li>
-
-                                <li class="list-group-item">
-                                    <input type="text" name="blogAddress" class="form-control"
-                                        placeholder="Blog Address" />
-                                </li>
-
-                                <li class="list-group-item">
-                                    <input type="text" name="address" class="form-control"
-                                        placeholder="Restaurant Address" />
-                                </li>
-
-                                <li class="list-group-item">
-                                    <input type="text" name="phone" class="form-control"
-                                        placeholder="Restaurant Phone" />
-                                </li>
-
-                                <li class="list-group-item">
-                                    <input type="text" name="email" class="form-control"
-                                        placeholder="Restaurant Email" />
-                                </li>
-
-                                <li class="list-group-item">
-                                    <label>Restaurant Social Media Accounts</label>
-                                    <div><i><a href="https://fontawesome.com/v5/search"
-                                                target="_blank">https://fontawesome.com/v5/search</a></i></div>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="text" class="form-control" name="socialLink"
-                                        placeholder="Social media account address" />
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="text" class="form-control" name="socialTheClass"
-                                        placeholder="Fount Awesome class" />
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="text" class="form-control" name="socialTitle"
-                                        placeholder="Socialmedia Account Title" />
-                                </li>
-                                <li class="list-group-item">
-                                    <button class="form-conrol btn btn-success"
-                                        onClick="submitToLocal('socialMedia')">Submit
-                                        Social Media Acount</button>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="py-3"> <label>Social media accounts submitted:</label>
-                                        <ul id="socialMediaTarget">
-
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <!--{ link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },-->
-
-                            </ul>
-                            <div class="d-grid gap-2 mb-5 pt-2">
-                                <button class="btn btn-block btn-success py-2" onClick="submitRestaurant()">Submit
-                                    Restaurant
-                                    Data</button>
-                            </div>
-
-                        </div>
-                        <div id="JSON_Target"></div>
-                    </div>
                 </div>
             </div>
         </div>
+
+
+        <section data-section="admin" class="hide">
+
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="card-title p-3">
+                            <h1>Any Restaurant Template - Content Management System (CMS)</h1>
+                        </div>
+
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item"><label>Restaurant name: </label>
+                                <input type="text" class="form-control" placeholder="Restaurant name"
+                                    name="restaurantName" />
+                            </li>
+                            <li class="list-group-item"><label>Ypiur registered Google Maps Credintials:
+                                </label>
+                                <input type="text" class="form-control" placeholder="Google Maps Credintials"
+                                    name="googleID" />
+                            </li>
+                            <li class="list-group-item"><label>Where is your menu located (JSON format):
+                                </label>
+                                <input type="text" class="form-control"
+                                    placeholder="Where is your menu located (JSON format)" name="apiAddress" />
+                            </li>
+                            <li class="list-group-item">
+
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="navLinks"
+                                        placeholder="Main Navigation Links">
+                                    <button class="btn btn-secondary" type="button"
+                                        onClick="submitToLocal('navLinks')">Add nav Link to list</button>
+                                </div>
+                                <label>Main Navigation Links:</label>
+
+
+
+                                <ul id="navLinksTarget"></ul>
+
+
+
+                            </li>
+                            <li class="list-group-item"><label>Theme: </label>
+                                <select class="form-control" onChange="changeTheme()" id="themes" name="theme"></select>
+                            </li>
+
+
+                            <li class="list-group-item">
+                                <label>Banners:</label>
+                                <input type="text" class="form-control" name="bannersImg" placeholder="Banner Image" />
+                            </li>
+                            <li class="list-group-item">
+
+                                <input type="text" class="form-control" name="bannersHTML" placeholder="Banner HTML" />
+                            </li>
+                            <li class="list-group-item">
+                                <button class="btn btn-success btn-block py-2" onClick="submitToLocal('banners')">Submit
+                                    Banner to list</button>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row" id="bannersTarget"></div>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" class="form-control" name="homeImg"
+                                    placeholder="Home Page image address" />
+                            </li>
+                            </li>
+                            <li class="list-group-item"><label>About Restaurant: </label>
+                                <textarea class="form-control" placeholder="About Restaurant" rows="5"
+                                    name="about"></textarea>
+                            </li>
+
+                            <li class="list-group-item"><label>Logo HTML: </label>
+                                <textarea class="form-control" placeholder="HTML representing Logo" rows="5"
+                                    name="logoHTML"></textarea>
+                            </li>
+
+
+
+                            <li class="list-group-item">
+                                <label>Media Type:</label>
+                                <select class="form-control" name="mediaType">
+                                    <option value="img">Image</option>
+                                    <option value="ytVideo">YouTube Video ID</option>
+                                    <option value="html">HTML</option>
+                                    <option value="map">Address for Google Maps</option>
+                                </select>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="mediaAddress"
+                                        placeholder="Submit ID or address for media." />
+                                    <button class="btn btn-secondary" type="button" onClick="submitToLocal('media')">Add
+                                        Media</button>
+                                </div>
+                            <li class="list-group-item">
+                                <div> <label>images:</label>
+                                    <div class="row" id="mediaImagesTarget"></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <hr />
+                                <div> <label>youTube IDs:</label>
+                                    <div class="row" id="mediaytIdsTarget"></div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <hr />
+                                <div> <label>HTML Content:</label>
+                                    <ul class="list-group" id="mediaHtmlTarget"></ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <hr />
+                                <div> <label>Address for Google Maps:</label>
+                                    <ul class="list-group" id="mediaMapsTarget"></ul>
+                                </div>
+                                <hr />
+                            </li>
+
+                            <li class="list-group-item">
+                                <label>Events Section:</label>
+                                <input type="text" class="form-control" name="eventsAddress"
+                                    placeholder="Address info for event" />
+                            </li>
+                            <li class="list-group-item">
+
+                                <input type="text" class="form-control" name="eventsContact"
+                                    placeholder="Contact info for event" />
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" class="form-control" name="eventsDateTime"
+                                    placeholder="Date and Time for event" />
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" class="form-control" name="eventsTitle"
+                                    placeholder="Title for event" />
+                            <li class="list-group-item">
+                                <textarea class="form-control" name="eventsDetails" placeholder="Event details"
+                                    rows="5"></textarea>
+                            <li class="list-group-item">
+                                <button class="form-conrol btn btn-success" onClick="submitToLocal('events')">Submit
+                                    Event</button>
+                            </li>
+                            <div class="py-3"> <label>Events submitted:</label>
+                                <ul class="list-group" id="eventsTarget">
+
+                                </ul>
+                            </div>
+
+
+                            <hr />
+
+                            </li>
+
+                            <li class="list-group-item">
+                                <input type="text" name="blogAddress" class="form-control" placeholder="Blog Address" />
+                            </li>
+
+                            <li class="list-group-item">
+                                <input type="text" name="address" class="form-control"
+                                    placeholder="Restaurant Address" />
+                            </li>
+
+                            <li class="list-group-item">
+                                <input type="text" name="phone" class="form-control" placeholder="Restaurant Phone" />
+                            </li>
+
+                            <li class="list-group-item">
+                                <input type="text" name="email" class="form-control" placeholder="Restaurant Email" />
+                            </li>
+
+                            <li class="list-group-item">
+                                <label>Restaurant Social Media Accounts</label>
+                                <div><i><a href="https://fontawesome.com/v5/search"
+                                            target="_blank">https://fontawesome.com/v5/search</a></i></div>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" class="form-control" name="socialLink"
+                                    placeholder="Social media account address" />
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" class="form-control" name="socialTheClass"
+                                    placeholder="Fount Awesome class" />
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" class="form-control" name="socialTitle"
+                                    placeholder="Socialmedia Account Title" />
+                            </li>
+                            <li class="list-group-item">
+                                <button class="form-conrol btn btn-success"
+                                    onClick="submitToLocal('socialMedia')">Submit
+                                    Social Media Acount</button>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="py-3"> <label>Social media accounts submitted:</label>
+                                    <ul id="socialMediaTarget">
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!--{ link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },-->
+
+                        </ul>
+                        <div class="d-grid gap-2 mb-5 pt-2">
+                            <button class="btn btn-block btn-success py-2" onClick="submitRestaurant()">Submit
+                                Restaurant
+                                Data</button>
+                        </div>
+
+                    </div>
+                    <div id="JSON_Target"></div>
+                </div>
+
+            </div>
+        </section>
+        <section data-section="menu">
+
+            <div class="card">
+                <div class="row">
+                    <!-- {title:"", ingredients:[], category:"", price:00.00}*/-->
+                    <div class="col-md-12">
+                        <div class="card-title p-3">
+                            <h1>Menu Content Management</h1>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <input type="text" name="foodTitle" placeholder="Food item title"
+                                    class="form-control" />
+                            </li>
+                            <li class="list-group-item">
+
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="ingredient"
+                                        placeholder="Add ingredient">
+                                    <button class="btn btn-secondary" type="button" onClick="submitIngredient()">Add
+                                        ingredient</button>
+                                </div>
+                                <label>Ingredients:</label>
+
+
+
+                                <ul id="ingredientsTarget"></ul>
+
+
+
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" name="category" placeholder="Food category" class="form-control" />
+                            </li>
+                            <li class="list-group-item">
+                                <input type="text" name="price" placeholder="Food item price" class="form-control" />
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-grid gap-2 mb-5 pt-2">
+                                    <button class="btn btn-block btn-success py-2" onClick="submitMenuItem()">Sumbmit
+                                        Menu
+                                        Item</button>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div id="menuTarget"></div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
     </div>
     <div class="hide alert fadeInUp" role="alert" id="globalAlert"></div>
     <footer class="footer mt-auto py-3 animated fadeInUp">

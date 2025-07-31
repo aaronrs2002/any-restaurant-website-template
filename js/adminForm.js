@@ -538,3 +538,96 @@ function submitRestaurant() {
     globalAlert("alert-success", "We built a JSON object!");
     document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant)
 }
+
+
+
+const chooseRole = (role) => {
+    [].forEach.call(document.querySelectorAll("section"), (e) => {
+        e.classList.add("hide");
+    });
+    document.querySelector("section[data-section='" + role + "']").classList.remove("hide");
+
+
+}
+
+
+
+/*START FOOD FORM. 
+let recipeObj = {title:"", ingredients:[], category:"", price:00.00}*/
+
+let tempIngredients = [];
+
+let tempMenuItems = [];
+const submitMenuItem = () => {
+
+    console.log("tempIngredients.length: " + tempIngredients.length)
+
+    let tempIngredientsStr = "";
+    for (let i = 0; i < tempIngredients.length; i++) {
+        tempIngredientsStr = tempIngredientsStr + "<span class='badge bg-secondary'>" + tempIngredients[i] + "</span>";
+    }
+
+    console.log("tempIngredientsStr: " + tempIngredientsStr)
+
+    Validate(["foodTitle", "category", "price"]);
+
+    if (document.querySelector(".error")) {
+
+        globalAlert("alert-danger", "You're missing some input fields.");
+        return false;
+    } else {
+
+        tempMenuItems.push({
+            title: document.querySelector("[name='foodTitle']").value,
+            ingredients: tempIngredients,
+            category: document.querySelector("[name='category']").value,
+            price: document.querySelector("[name='price']").value
+        })
+
+    }
+
+    let menuStr = "";
+    for (let i = 0; i < tempMenuItems.length; i++) {
+
+
+        menuStr = menuStr + "<li class='list-group-item'><ul><li>" + tempMenuItems[i].title + "</li><li>" + tempMenuItems[i].category + "</li><li>" + tempMenuItems[i].price + "</li><li>" + tempIngredientsStr + "</li></ul></li>";
+    }
+
+    document.getElementById("menuTarget").innerHTML = menuStr;
+
+    tempIngredients = [];
+    document.querySelector("[name='foodTitle']").value = "";
+    document.getElementById("ingredientsTarget").innerHTML = "";
+    document.querySelector("[name='category']").value = "";
+    document.querySelector("[name='price']").value = "";
+
+}
+
+
+
+
+
+
+const submitIngredient = () => {
+
+    Validate(["ingredient"]);
+    if (document.querySelector(".error")) {
+
+        globalAlert("alert-danger", "You're missing some input fields.");
+        return false;
+    } else {
+
+        tempIngredients.push(document.querySelector("[name='ingredient']").value);
+        let ingredientStr = "";
+        for (let i = 0; i < tempIngredients.length; i++) {
+            ingredientStr = ingredientStr + "<span class='badge bg-secondary'>" + tempIngredients[i] + "</span>";
+        }
+        document.querySelector("[name='ingredient']").value = "";
+
+        document.getElementById("ingredientsTarget").innerHTML = ingredientStr;
+
+
+    }
+
+
+}
