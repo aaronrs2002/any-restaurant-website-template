@@ -42,9 +42,10 @@
         <div class="row">
             <div class="col-md-12 py-1">
                 <div class="btn-group block" role="group">
-                    <button type="button" class="btn btn-primary active"
+                    <button type="button" class="btn btn-primary" data-func="admin"
                         onclick="javascript:chooseRole('admin')">Website Admin</button>
-                    <button type="button" class="btn btn-primary" onclick="javascript:chooseRole('menu')">Menu
+                    <button type="button" class="btn btn-primary active" data-func="menu"
+                        onclick="javascript:chooseRole('menu')">Menu
                         Management</button>
 
                 </div>
@@ -237,7 +238,7 @@
                             </li>
                             <li class="list-group-item">
                                 <input type="text" class="form-control" name="socialTheClass"
-                                    placeholder="Fount Awesome class" />
+                                    placeholder="Font Awesome class" />
                             </li>
                             <li class="list-group-item">
                                 <input type="text" class="form-control" name="socialTitle"
@@ -310,7 +311,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="d-grid gap-2 mb-5 pt-2">
-                                    <button class="btn btn-block btn-success py-2" onClick="submitMenuItem()">Sumbmit
+                                    <button class="btn btn-block btn-success py-2"
+                                        onClick="updateMenuItem('add')">Sumbmit
                                         Menu
                                         Item</button>
                                 </div>

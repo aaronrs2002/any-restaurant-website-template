@@ -548,6 +548,11 @@ const chooseRole = (role) => {
     document.querySelector("section[data-section='" + role + "']").classList.remove("hide");
 
 
+    [].forEach.call(document.querySelectorAll("[data-func]"), (e) => {
+        e.classList.remove("active")
+    });
+    document.querySelector("[data-func='" + role + "']").classList.add("active");
+
 }
 
 
@@ -558,39 +563,59 @@ let recipeObj = {title:"", ingredients:[], category:"", price:00.00}*/
 let tempIngredients = [];
 
 let tempMenuItems = [];
-const submitMenuItem = () => {
+
+
+
+
+
+
+const updateMenuItem = (addBuld) => {
 
     console.log("tempIngredients.length: " + tempIngredients.length)
 
-    let tempIngredientsStr = "";
-    for (let i = 0; i < tempIngredients.length; i++) {
-        tempIngredientsStr = tempIngredientsStr + "<span class='badge bg-secondary'>" + tempIngredients[i] + "</span>";
+
+
+
+    if (addBuld === "add") {
+        Validate(["foodTitle", "category", "price"]);
+
+        if (document.querySelector(".error")) {
+
+            globalAlert("alert-danger", "You're missing some input fields.");
+            return false;
+        } else {
+
+            tempMenuItems.push({
+                title: document.querySelector("[name='foodTitle']").value,
+                ingredients: tempIngredients,
+                category: document.querySelector("[name='category']").value,
+                price: document.querySelector("[name='price']").value
+            })
+
+        }
     }
 
-    console.log("tempIngredientsStr: " + tempIngredientsStr)
 
-    Validate(["foodTitle", "category", "price"]);
 
-    if (document.querySelector(".error")) {
 
-        globalAlert("alert-danger", "You're missing some input fields.");
-        return false;
-    } else {
 
-        tempMenuItems.push({
-            title: document.querySelector("[name='foodTitle']").value,
-            ingredients: tempIngredients,
-            category: document.querySelector("[name='category']").value,
-            price: document.querySelector("[name='price']").value
-        })
 
-    }
+
+
+
 
     let menuStr = "";
     for (let i = 0; i < tempMenuItems.length; i++) {
 
+        let tempIngredientsStr = "";
+        for (let j = 0; j < tempMenuItems[i].ingredients.length; j++) {
+            tempIngredientsStr = tempIngredientsStr + "<span class='badge bg-secondary'>" + tempMenuItems[i].ingredients[j] + "</span>";
+        }
 
-        menuStr = menuStr + "<li class='list-group-item'><ul><li>" + tempMenuItems[i].title + "</li><li>" + tempMenuItems[i].category + "</li><li>" + tempMenuItems[i].price + "</li><li>" + tempIngredientsStr + "</li></ul></li>";
+        console.log("tempIngredientsStr: " + tempIngredientsStr);
+
+
+        menuStr = menuStr + "<li class='list-group-item'><ul><li>" + tempMenuItems[i].title + "</li><li>" + tempMenuItems[i].category + "</li><li>" + tempMenuItems[i].price + "</li><li>" + tempIngredientsStr + "</li><li><button class='btn btn-danger py-2' onClick='deleteFoodItem(" + i + ")'> <i class='fas fa-trash'></i> Delete Menu Item:  " + (1 + i) + "</button></li></ul></li>";
     }
 
     document.getElementById("menuTarget").innerHTML = menuStr;
@@ -602,7 +627,6 @@ const submitMenuItem = () => {
     document.querySelector("[name='price']").value = "";
 
 }
-
 
 
 
@@ -630,4 +654,18 @@ const submitIngredient = () => {
     }
 
 
+}
+
+
+const deleteFoodItem = (whichItem) => {
+
+    let tempObj = [];
+    for (let i = 0; i < tempMenuItems.length; i++) {
+        if (i !== Number(whichItem)) {
+            tempObj.push(tempMenuItems[i])
+        }
+    }
+
+    tempMenuItems = tempObj;
+    updateMenuItem("build");
 }
