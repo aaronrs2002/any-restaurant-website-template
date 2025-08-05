@@ -38,6 +38,60 @@ body {
     color: #000;
 
 }*/
+/*START RESTAURANT NUMBER 1*/
+body[data-restaurant="1"] .restaurantNameTarget {
+    /* font-family: "Imperial Script", cursive;*/
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7rem;
+}
+
+body[data-restaurant="1"] .card-body h3,
+body[data-restaurant="1"] .card-body h4,
+h1,
+h2,
+h3,
+h4 h5,
+h6 {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+/*START RESTAURANT NUMBER 0*/
+body[data-restaurant="0"] .restaurantNameTarget {
+    /* font-family: "Imperial Script", cursive;*/
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body[data-restaurant="0"] .card-body h3,
+body[data-restaurant="0"] .card-body h4,
+h1,
+h2,
+h3,
+h4 h5,
+h6 {
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body[data-restaurant="0"] .navbar-nav .nav-link,
+body[data-restaurant="0"] .navbar-nav .nav-link.active,
+body[data-restaurant="0"] .navbar-nav .nav-link.show {
+    color: #fff;
+}
+
+
+
 
 .map {
     border: 0px;
@@ -180,4 +234,11 @@ ul.inline {
 
     }
 
+}
+
+@media (max-width:768px) {
+
+    .restaurantNameTarget {
+        font-size: 5rem;
+    }
 }

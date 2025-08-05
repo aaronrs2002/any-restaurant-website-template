@@ -1,7 +1,7 @@
 let config = [
 
     {
-        restaurantName: "Best Food In Town",
+        restaurantName: "Seafood Wholesale",
         googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
@@ -111,7 +111,7 @@ let config = [
         "restaurantName": "Wine Luxury",
         "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
-        "navLinks": ["One", "Two", "Three", "Four"],
+        "navLinks": ["Home", "About", "Menu", "Contact"],
         "theme": "sandstone",
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
         "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
@@ -147,7 +147,38 @@ let config = [
         "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
     }];
 
-let activeRestaurant = 1;
+let activeRestaurant = 0;
+
+/*SPLIT PARAMS*/
+(window.location + "?")
+    .split("?")[1]
+    .split("&")
+    .forEach(function (pair) {
+        pair = (pair + "=").split("=").map(decodeURIComponent);
+        if (pair[0].length) {
+
+            // paramvals[pair[0]] = pair[1];
+            if (pair[0] === "activeRestaurant") {
+                activeRestaurant = pair[1];
+                console.log("which activeRestaurant: " + activeRestaurant);
+            }
+            /* themeVal[pair[0]] = pair[1];
+             if (pair[0] === "theme") {
+ 
+                 const themeFromUrl = "https://bootswatch.com/5/" + pair[1] + "/bootstrap.css";
+ 
+                 document.getElementById("themedStyle").setAttribute("href", themeFromUrl);
+                 localStorage.setItem("theme", pair[1]);
+             }
+             if (pair[0] === "balance") {
+                 localStorage.setItem("balance", pair[1].replace("#", ""));
+ 
+             }*/
+        }
+    });
+
+
+document.querySelector("body[data-restaurant]").dataset.restaurant = activeRestaurant;
 document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
 [].forEach.call(document.querySelectorAll(".logoHTML"), (e) => {
     let logoCurrentHTML = e.innerHTML;
