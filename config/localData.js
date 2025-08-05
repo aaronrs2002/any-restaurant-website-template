@@ -3,7 +3,7 @@ let config = [
     {
         restaurantName: "Seafood Wholesale",
         sundayHours: "Closed",
-        mondayHours: "8:00 AM - 10:00 PM",
+        mondayHours: "8:00AM - 10:00PM",
         tuesdayHours: "8:00AM - 10:00PM",
         wednesdayHours: "8:00AM - 10:00PM",
         thursdayHours: "8:00AM - 10:00PM",
@@ -117,7 +117,7 @@ let config = [
     }, {
         "restaurantName": "Wine Luxury",
         "sundayHours": "Closed",
-        "mondayHours": "8:00 AM - 10:00 PM",
+        "mondayHours": "9:00AM - 10:00PM",
         "tuesdayHours": "8:00AM - 10:00PM",
         "wednesdayHours": "8:00AM - 10:00PM",
         "thursdayHours": "8:00AM - 10:00PM",

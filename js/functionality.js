@@ -79,10 +79,7 @@ for (let i = 0; i < config[activeRestaurant].media.length; i++) {
     }
 }
 
-console.log("imageAddresses: " + imageAddresses);
-console.log("ytVideos: " + ytVideos);
-console.log("HTMLcontent: " + HTMLcontent);
-console.log("mapAddressses: " + mapAddressses);
+
 
 let activePost = 0;
 let blog = [];
@@ -445,7 +442,6 @@ start()
 
 function selectCategory(selected) {
 
-    console.log("selected: " + selected);
 
     [].forEach.call(document.querySelectorAll("[data-category]"), (e) => {
         e.classList.remove("active");
@@ -479,7 +475,7 @@ function selectCategory(selected) {
                         categories[i].items[j].message + "</p><ul  class='list-group'>" + tempIngredients + "</ul></div></div >";
 
                     tempList.push(categories[i].items[j].title);
-                    console.log("tempList: " + tempList);
+
                 }
 
             }
@@ -488,7 +484,7 @@ function selectCategory(selected) {
         }
 
     }
-    console.log("itemsHTML: " + itemsHTML);
+
     document.getElementById("itemsTarget").innerHTML = itemsHTML;
 
 
@@ -507,7 +503,7 @@ function setActiveEvent(activeEvent) {
         globalAlert("alert-warning", "You have this many events: " + config[activeRestaurant].events.length);
         return false;
     }
-    console.log("config[activeRestaurant].events[activeEvent].title: " + config[activeRestaurant].events[activeEvent].title)
+
     document.querySelector("h3[data-eventtitle]").innerHTML = config[activeRestaurant].events[activeEvent].title;
     document.querySelector("li[data-eventdate]").innerHTML = config[activeRestaurant].events[activeEvent].dateTime;
     document.querySelector("li[data-eventaddress]").innerHTML = config[activeRestaurant].events[activeEvent].address;
