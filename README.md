@@ -3,7 +3,11 @@ This is a serverless app, which can host unlimited restaurant websites. The webs
 
 
 Live site:
+Restaurant number 1:
 https://aaronrs2002.github.io/any-restaurant-website-template/
+
+Restaurant number 2:
+https://aaronrs2002.github.io/any-restaurant-website-template/?activeRestaurant=1&
 
 
 
