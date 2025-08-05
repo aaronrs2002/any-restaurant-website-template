@@ -49,11 +49,12 @@ body[data-restaurant="1"] .restaurantNameTarget {
 
 body[data-restaurant="1"] .card-body h3,
 body[data-restaurant="1"] .card-body h4,
-h1,
-h2,
-h3,
-h4 h5,
-h6 {
+body[data-restaurant="1"] h1,
+body[data-restaurant="1"] h2,
+body[data-restaurant="1"] h3,
+body[data-restaurant="1"] h4,
+body[data-restaurant="1"] h5,
+body[data-restaurant="1"] h6 {
     font-family: "Fredericka the Great", serif;
     font-weight: 400;
     font-style: normal;
@@ -71,11 +72,12 @@ body[data-restaurant="0"] .restaurantNameTarget {
 
 body[data-restaurant="0"] .card-body h3,
 body[data-restaurant="0"] .card-body h4,
-h1,
-h2,
-h3,
-h4 h5,
-h6 {
+body[data-restaurant="0"] h1,
+body[data-restaurant="0"] h2,
+body[data-restaurant="0"] h3,
+body[data-restaurant="0"] h4,
+body[data-restaurant="0"] h5,
+body[data-restaurant="0"] h6 {
     font-family: "Megrim", system-ui;
     font-weight: 400;
     font-style: normal;
