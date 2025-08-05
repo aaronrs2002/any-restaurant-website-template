@@ -2,6 +2,13 @@ let tempRestaurant = [
 
     {
         restaurantName: "",
+        sundayHours: "",
+        mondayHours: "",
+        tuesdayHours: "",
+        wednesdayHours: "",
+        thursdayHours: "",
+        fridayHours: "",
+        saturdayHours: "",
         googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         apiAddress: "",
         navLinks: [],
@@ -487,11 +494,18 @@ function submitToLocal(whichArr) {
 
 function submitRestaurant() {
 
+
     /*
     let tempRestaurant = [
     
         {
             restaurantName: "",
+                    sundayHours:"",
+        mondayHours:"",
+        tuesdayHours:"",
+        wednesdayHours:"",
+        thursdayHours:"",
+        fridayHours:"",
             googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
             apiAddress: "",
             navLinks: [],
@@ -520,6 +534,43 @@ function submitRestaurant() {
         return false;
     } else {
         tempRestaurant[0].restaurantName = document.querySelector("[name='restaurantName']").value;
+
+        /*
+        
+                            sundayHours:"",
+                mondayHours:"",
+                tuesdayHours:"",
+                wednesdayHours:"",
+                thursdayHours:"",
+                fridayHours:"",
+        
+        */
+
+        tempRestaurant[0].sundayHours = document.querySelector("input[name='sundayOpenHr']").value + ":" + document.querySelector("input[name='sundayOpenMin']").value + document.querySelector("input[name='sundayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='sundayCloseHr']").value + ":" + document.querySelector("input[name='sundayCloseMin']").value + document.querySelector("input[name='sundayClosedAmPm']").value;
+
+        tempRestaurant[0].mondayHours = document.querySelector("input[name='mondayOpenHr']").value + ":" + document.querySelector("input[name='mondayOpenMin']").value + document.querySelector("input[name='mondayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='mondayCloseHr']").value + ":" + document.querySelector("input[name='mondayCloseMin']").value + document.querySelector("input[name='mondayCloseAmPm']").value;
+
+        tempRestaurant[0].tuesdayHours = document.querySelector("input[name='tuesdayOpenHr']").value + ":" + document.querySelector("input[name='tuesdayOpenMin']").value + document.querySelector("input[name='tuesdayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='tuesdayCloseHr']").value + ":" + document.querySelector("input[name='tuesdayCloseMin']").value + document.querySelector("input[name='tuesdayCloseAmPm']").value;
+
+        tempRestaurant[0].wednesdayHours = document.querySelector("input[name='wednesdayOpenHr']").value + ":" + document.querySelector("input[name='wednesdayOpenMin']").value + document.querySelector("input[name='wednesdayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='wednesdayCloseHr']").value + ":" + document.querySelector("input[name='wednesdayCloseMin']").value + document.querySelector("input[name='wednesdayCloseAmPm']").value;
+
+        tempRestaurant[0].thursdayHours = document.querySelector("input[name='thursdayOpenHr']").value + ":" + document.querySelector("input[name='thursdayOpenMin']").value + document.querySelector("input[name='thursdayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='thursdayCloseHr']").value + ":" + document.querySelector("input[name='thursdayCloseMin']").value + document.querySelector("input[name='thursdayCloseAmPm']").value;
+
+        tempRestaurant[0].fridayHours = document.querySelector("input[name='fridayOpenHr']").value + ":" + document.querySelector("input[name='fridayOpenMin']").value + document.querySelector("input[name='fridayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='fridayCloseHr']").value + ":" + document.querySelector("input[name='fridayCloseMin']").value + document.querySelector("input[name='fridayCloseAmPm']").value;
+
+
+
+        tempRestaurant[0].saturdayHours = document.querySelector("input[name='saturdayOpenHr']").value + ":" + document.querySelector("input[name='saturdayOpenMin']").value + document.querySelector("input[name='saturdayOpenAmPm']").value + " - " +
+            document.querySelector("input[name='saturdayCloseHr']").value + ":" + document.querySelector("input[name='saturdayCloseMin']").value + document.querySelector("input[name='saturdayCloseAmPm']").value;
+
+
+
         tempRestaurant[0].googleID = document.querySelector("[name='googleID']").value;
         tempRestaurant[0].apiAddress = document.querySelector("[name='apiAddress']").value;
         tempRestaurant[0].theme = document.querySelector("select[name='theme']").value;

@@ -1,6 +1,30 @@
 
 let bgImg = config[activeRestaurant].banners[Math.floor(Math.random() * config[activeRestaurant].banners.length)].img;
-console.group("bgImage: " + bgImg)
+console.group("bgImage: " + bgImg);
+let hoursStr = "<option value='closed'>Closed</option>";
+for (let i = 1; i < 13; i++) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    hoursStr = hoursStr + "<option value='" + i + "'>" + i + "</option>";
+}
+
+[].forEach.call(document.querySelectorAll("select.hours"), (e) => {
+    e.innerHTML = hoursStr;
+});
+
+
+let minutesStr = "<option value='closed'>Closed</option>";
+for (let i = 1; i < 60; i++) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    minutesStr = minutesStr + "<option value='" + i + "'>" + i + "</option>";
+}
+
+[].forEach.call(document.querySelectorAll("select.minutes"), (e) => {
+    e.innerHTML = minutesStr;
+});
 
 document.querySelector("body[data-restaurant]").style.backgroundImage = "url(" + config[activeRestaurant].banners[Math.floor(Math.random() * config[activeRestaurant].banners.length)].img + ")";
 let contactMapAddress;

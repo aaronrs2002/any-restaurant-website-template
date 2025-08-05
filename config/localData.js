@@ -2,6 +2,13 @@ let config = [
 
     {
         restaurantName: "Seafood Wholesale",
+        sundayHours: "Closed",
+        mondayHours: "8:00 AM - 10:00 PM",
+        tuesdayHours: "8:00AM - 10:00PM",
+        wednesdayHours: "8:00AM - 10:00PM",
+        thursdayHours: "8:00AM - 10:00PM",
+        fridayHours: "8:00AM - 10:00PM",
+        saturdayHours: "8:00AM - 10:00PM",
         googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         apiAddress: "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         navLinks: ["home", "about", "menu", "contact"],
@@ -109,6 +116,13 @@ let config = [
 
     }, {
         "restaurantName": "Wine Luxury",
+        "sundayHours": "Closed",
+        "mondayHours": "8:00 AM - 10:00 PM",
+        "tuesdayHours": "8:00AM - 10:00PM",
+        "wednesdayHours": "8:00AM - 10:00PM",
+        "thursdayHours": "8:00AM - 10:00PM",
+        "fridayHours": "8:00AM - 10:00PM",
+        "saturdayHours": "8:00AM - 10:00PM",
         "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
         "navLinks": ["Home", "About", "Menu", "Contact"],
@@ -190,6 +204,47 @@ document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.
 [].forEach.call(document.querySelectorAll("[data-navlink]"), (e) => {
     e.innerHTML = config[activeRestaurant].navLinks[e.dataset.navlink]
 
+});
+
+
+/*
+
+        "sundayHours": "Sun: Closed",
+        "mondayHours": "Mon: 8:00 AM - 10:00 PM",
+        "tuesdayHours": "Tues: 8:00AM - 10:00PM",
+        "wednesdayHours": "Wed: 8:00AM - 10:00PM",
+        "thursdayHours": "Thur: 8:00AM - 10:00PM",
+        "fridayHours": "Fri: 8:00AM - 10:00PM",
+        "saturdayHours": "Fri: 8:00AM - 10:00PM",
+
+
+*/
+
+
+
+[].forEach.call(document.querySelectorAll("[data-sunday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].sundayHours;
+});
+[].forEach.call(document.querySelectorAll("[data-monday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].mondayHours;
+});
+[].forEach.call(document.querySelectorAll("[data-tuesday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].tuesdayHours;
+});
+[].forEach.call(document.querySelectorAll("[data-wednesday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].wednesdayHours;
+});
+
+[].forEach.call(document.querySelectorAll("[data-thursday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].thursdayHours;
+});
+
+[].forEach.call(document.querySelectorAll("[data-friday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].fridayHours;
+});
+
+[].forEach.call(document.querySelectorAll("[data-saturday]"), (e) => {
+    e.innerHTML = config[activeRestaurant].saturdayHours;
 });
 
 //   <link href="https://bootswatch.com/5/spacelab/bootstrap.css" rel="stylesheet" id="themedStyle">
