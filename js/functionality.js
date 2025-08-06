@@ -15,7 +15,7 @@ for (let i = 1; i < 13; i++) {
 
 
 let minutesStr = "<option value='closed'>Closed</option>";
-for (let i = 1; i < 60; i++) {
+for (let i = 0; i < 60; i++) {
     if (i < 10) {
         i = "0" + i;
     }
