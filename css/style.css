@@ -241,7 +241,7 @@ ul.inline {
 @media (max-width:768px) {
 
     [data-restaurant] .restaurantNameTarget {
-        font-size: 4rem !important
+        font-size: 3.5rem !important
     }
 
 
