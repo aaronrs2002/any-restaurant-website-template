@@ -492,7 +492,7 @@ function submitToLocal(whichArr) {
 
 
 
-function submitRestaurant() {
+function submitRestaurant(role) {
 
 
     /*
@@ -534,20 +534,6 @@ function submitRestaurant() {
         return false;
     } else {
         tempRestaurant[0].restaurantName = document.querySelector("[name='restaurantName']").value;
-
-        /*
-        
-                            sundayHours:"",
-                mondayHours:"",
-                tuesdayHours:"",
-                wednesdayHours:"",
-                thursdayHours:"",
-                fridayHours:"",
-        
-        */
-
-
-
 
 
         tempRestaurant[0].googleID = document.querySelector("[name='googleID']").value;
@@ -953,6 +939,49 @@ if (tempRestaurant[0].saturdayHours) {
 
     }
 
+
+
+}
+
+
+
+const updateCRUD = (role) => {
+
+
+    [].forEach.call(document.querySelectorAll("[data-crudbt]"), (e) => {
+        if (e.dataset.crudbt !== role) {
+            e.classList.remove("active");
+        } else {
+            e.classList.add("active");
+        }
+    });
+
+
+    [].forEach.call(document.querySelectorAll("[data-crud]"), (e) => {
+
+        if (e.dataset.crud !== role) {
+
+            console.log("e.dataset: " + e.dataset);
+            e.classList.add("hide");
+        } else {
+            e.classList.remove("hide");
+        }
+
+    });
+
+    //  document.querySelector("[data-crud='" + role + "']").classList.remove("hide");
+
+}
+
+
+const populateFields = () => {
+
+    let whichRestaurant = document.querySelector("[name='editRestaurant']").value;
+
+    if (whichRestaurant === "default") {
+        globalAlert("alert-warning", "Select a restaurant please.");
+        return false;
+    }
 
 
 }

@@ -36,20 +36,45 @@
 
 <body data-restaurant="0" data-admin="true">
 
+    <div class="row">
+        <div class="col-md-12 py-1">
+            <div class="btn-group block" role="group">
+                <button type="button" class="btn btn-primary active" data-crudbt="add"
+                    onclick="javascript:updateCRUD('add')">Add</button>
 
+                <button type="button" class="btn btn-primary" data-crudbt="edit"
+                    onclick="javascript:updateCRUD('edit')">Edit</button>
+
+                <button type="button" class="btn btn-primary" data-crudbt="delete"
+                    onclick="javascript:updateCRUD('delete')">Delete</button>
+
+
+            </div>
+        </div>
+
+
+    </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 py-1">
-                <div class="btn-group block" role="group">
-                    <button type="button" class="btn btn-primary" data-func="admin"
-                        onclick="javascript:chooseRole('admin')">Website Admin</button>
-                    <button type="button" class="btn btn-primary active" data-func="menu"
-                        onclick="javascript:chooseRole('menu')">Menu
-                        Management</button>
-                    <button type="button" class="btn btn-primary active" data-func="hours"
-                        onclick="javascript:chooseRole('hours')">Hours of Operation</button>
 
+        <div class="card">
+            <div class="row">
+                <div class="col-md-12 hide" data-crud="edit">
+
+                    <select class="form-control" name="editRestaurant" onChange="populateFields()"></select>
+                </div>
+                <div class="col-md-12  py-1">
+                    <h2 data-crud="edit" class="hide">Active Restaurant: <span class="restaurantNameTarget"></span></h2>
+                    <div class="btn-group block" role="group">
+                        <button type="button" class="btn btn-secondary" data-func="admin"
+                            onclick="javascript:chooseRole('admin')">Website Admin</button>
+                        <button type="button" class="btn btn-secondary active" data-func="menu"
+                            onclick="javascript:chooseRole('menu')">Menu
+                            Management</button>
+                        <button type="button" class="btn btn-secondary" data-func="hours"
+                            onclick="javascript:chooseRole('hours')">Hours of Operation</button>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -263,8 +288,20 @@
                             <!--{ link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },-->
 
                         </ul>
-                        <div class="d-grid gap-2 mb-5 pt-2">
-                            <button class="btn btn-block btn-success py-2" onClick="submitRestaurant()">Submit
+                        <div class="d-grid gap-2 mb-5 pt-2" data-crud="add">
+                            <button class="btn btn-block btn-success py-2" onClick="submitRestaurant('add')">Submit
+                                Restaurant
+                                Data</button>
+                        </div>
+
+                        <div class="d-grid gap-2 mb-5 pt-2 hide" data-crud="edit">
+                            <button class="btn btn-block btn-success py-2" onClick="submitRestaurant('edit')">Edit
+                                Restaurant
+                                Data</button>
+                        </div>
+
+                        <div class="d-grid gap-2 mb-5 pt-2 hide" data-crud="delete">
+                            <button class="btn btn-block btn-success py-2" onClick="submitRestaurant('delete')">Delete
                                 Restaurant
                                 Data</button>
                         </div>
@@ -279,7 +316,8 @@
 
             <ul class="list-group">
                 <li class="list-group-item">
-                    <label>Hours of operation</label>
+                    <h1>Hours of operation</h1>
+
 
                     <div class="row">
                         <div class="col-2">
@@ -570,7 +608,11 @@
                     <div class="col-md-12">
                         <div class="card-title p-3">
                             <h1>Menu Content Management</h1>
+
                         </div>
+
+
+
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <input type="text" name="foodTitle" placeholder="Food item title"

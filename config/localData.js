@@ -191,6 +191,12 @@ let activeRestaurant = 0;
         }
     });
 
+let editRestaurantStr = "<option value='default'>Select Restaurant to edit</option>";
+for (let i = 0; i < config.length; i++) {
+    editRestaurantStr = editRestaurantStr + "<option value='" + config[i].restaurantName + "'>" + config[i].restaurantName + "</option>"
+}
+
+document.querySelector("[name='editRestaurant']").innerHTML = editRestaurantStr;
 
 document.querySelector("body[data-restaurant]").dataset.restaurant = activeRestaurant;
 document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
