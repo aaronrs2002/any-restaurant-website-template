@@ -28,6 +28,12 @@ let tempRestaurant = [
     }];
 
 
+let editRestaurantStr = "<option value='default'>Select Restaurant to edit</option>";
+for (let i = 0; i < config.length; i++) {
+    editRestaurantStr = editRestaurantStr + "<option value='" + config[i].restaurantName + "'>" + config[i].restaurantName + "</option>"
+}
+
+document.querySelector("[name='editRestaurant']").innerHTML = editRestaurantStr;
 
 function deleteItem(whichNum, whichObj) {
 
@@ -960,8 +966,6 @@ const updateCRUD = (role) => {
     [].forEach.call(document.querySelectorAll("[data-crud]"), (e) => {
 
         if (e.dataset.crud !== role) {
-
-            console.log("e.dataset: " + e.dataset);
             e.classList.add("hide");
         } else {
             e.classList.remove("hide");
