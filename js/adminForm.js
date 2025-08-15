@@ -28,7 +28,7 @@ let tempRestaurant = [
     }];
 
 
-let editRestaurantStr = "<option value='default'>Select Restaurant to edit</option>";
+let editRestaurantStr = "";
 for (let i = 0; i < config.length; i++) {
     editRestaurantStr = editRestaurantStr + "<option value='" + config[i].restaurantName + "'>" + config[i].restaurantName + "</option>"
 }
@@ -950,6 +950,56 @@ if (tempRestaurant[0].saturdayHours) {
 }
 
 
+const populateFields = () => {
+
+    activeRestaurant = document.querySelector("[name='editRestaurant']").value;
+    for (let i = 0; i < config.length; i++) {
+        if (activeRestaurant === config[i].restaurantName) {
+            tempRestaurant = config[i];
+        }
+    }
+
+    if (activeRestaurant === "default") {
+        globalAlert("alert-warning", "Select a restaurant please.");
+        return false;
+    } else {
+        [].forEach.call(document.querySelectorAll(".restaurantNameTarget"), (e) => {
+            e.innerHTML = tempRestaurant.restaurantName;
+        });
+
+
+        document.querySelector("[name='restaurantName']").value = tempRestaurant.restaurantName;
+        document.querySelector("[name='googleID']").value = tempRestaurant.googleID;
+        document.querySelector("[name='apiAddress']").value = tempRestaurant.apiAddress;
+        document.querySelector("select[name='theme']").value = tempRestaurant.theme;
+        document.querySelector("[name='homeImg']").value = tempRestaurant.homeImg;
+        document.querySelector("textarea[name='about']").value = tempRestaurant.about;
+        document.querySelector("textarea[name='logoHTML']").value = tempRestaurant.logoHTML;
+        document.querySelector("[name='blogAddress']").value = tempRestaurant.blogAddress;
+        document.querySelector("[name='address']").value = tempRestaurant.address;
+        document.querySelector("[name='phone']").value = tempRestaurant.phone;
+        document.querySelector("[name='email']").value = tempRestaurant.email;
+
+
+
+
+        document.querySelector("#navLinksTarget").innerHTML = "";
+
+        let navLinkArrHTML = "";
+
+
+        for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
+            navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
+        }
+        document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
+
+
+
+    }
+
+
+}
+
 
 const updateCRUD = (role) => {
 
@@ -973,19 +1023,18 @@ const updateCRUD = (role) => {
 
     });
 
+
+    if (role === "edit") {
+
+        populateFields();
+
+
+
+
+
+    }
+
     //  document.querySelector("[data-crud='" + role + "']").classList.remove("hide");
 
 }
 
-
-const populateFields = () => {
-
-    let whichRestaurant = document.querySelector("[name='editRestaurant']").value;
-
-    if (whichRestaurant === "default") {
-        globalAlert("alert-warning", "Select a restaurant please.");
-        return false;
-    }
-
-
-}
