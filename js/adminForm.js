@@ -1,31 +1,31 @@
-let tempRestaurant = [
+let tempRestaurant =
 
-    {
-        restaurantName: "",
-        sundayHours: "08:00AM - 10:00PM",
-        mondayHours: "08:00AM - 10:00PM",
-        tuesdayHours: "08:00AM - 10:00PM",
-        wednesdayHours: "08:00AM - 10:00PM",
-        thursdayHours: "08:00AM - 10:00PM",
-        fridayHours: "08:00AM - 10:00PM",
-        saturdayHours: "08:00AM - 11:30PM",
-        googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
-        apiAddress: "",
-        navLinks: [],
-        theme: "",
-        banners: [],
+{
+    restaurantName: "",
+    sundayHours: "08:00AM - 10:00PM",
+    mondayHours: "08:00AM - 10:00PM",
+    tuesdayHours: "08:00AM - 10:00PM",
+    wednesdayHours: "08:00AM - 10:00PM",
+    thursdayHours: "08:00AM - 10:00PM",
+    fridayHours: "08:00AM - 10:00PM",
+    saturdayHours: "08:00AM - 11:30PM",
+    googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+    apiAddress: "",
+    navLinks: [],
+    theme: "",
+    banners: [],
 
-        about: "",
-        logoHTML: "",
-        media: [],
-        events: [],
-        blogAddress: "",
-        address: "",
-        phone: "",
-        email: "",
-        socialMedia: []
+    about: "",
+    logoHTML: "",
+    media: [],
+    events: [],
+    blogAddress: "",
+    address: "",
+    phone: "",
+    email: "",
+    socialMedia: []
 
-    }];
+};
 
 
 let editRestaurantStr = "";
@@ -48,10 +48,10 @@ function deleteItem(whichNum, whichObj) {
 
 
 
-            for (let i = 0; i < tempRestaurant[0].navLinks.length; i++) {
+            for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
 
                 if (i !== whichNum) {
-                    tempObj.push(tempRestaurant[0].navLinks[i]);
+                    tempObj.push(tempRestaurant.navLinks[i]);
                 }
 
             }
@@ -59,9 +59,9 @@ function deleteItem(whichNum, whichObj) {
 
             let navLinkArrHTML = "";
 
-            tempRestaurant[0].navLinks = tempObj;
-            for (let i = 0; i < tempRestaurant[0].navLinks.length; i++) {
-                navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant[0].navLinks[i]}</span>`;
+            tempRestaurant.navLinks = tempObj;
+            for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
+                navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
             }
             document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
 
@@ -73,10 +73,10 @@ function deleteItem(whichNum, whichObj) {
 
         case "banners":
 
-            for (let i = 0; i < tempRestaurant[0].banners.length; i++) {
+            for (let i = 0; i < tempRestaurant.banners.length; i++) {
 
                 if (i !== whichNum) {
-                    tempObj.push(tempRestaurant[0].banners[i]);
+                    tempObj.push(tempRestaurant.banners[i]);
                 }
 
             }
@@ -84,9 +84,9 @@ function deleteItem(whichNum, whichObj) {
             document.getElementById("bannersTarget").innerHTML = "";
 
             let bannersArrHTML = "";
-            tempRestaurant[0].banners = tempObj;
-            for (let i = 0; i < tempRestaurant[0].banners.length; i++) {
-                bannersArrHTML = bannersArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant[0].banners[i].img + "' class='img-thumbnail' alt='" + tempRestaurant[0].banners[i].bannerHTML
+            tempRestaurant.banners = tempObj;
+            for (let i = 0; i < tempRestaurant.banners.length; i++) {
+                bannersArrHTML = bannersArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant.banners[i].img + "' class='img-thumbnail' alt='" + tempRestaurant.banners[i].bannerHTML
                     + "' ><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','banners')\">Delete <i class='fas fa-trash'></i></button></div > ";
             }
 
@@ -100,10 +100,10 @@ function deleteItem(whichNum, whichObj) {
         case "media":
 
 
-            for (let i = 0; i < tempRestaurant[0].media.length; i++) {
+            for (let i = 0; i < tempRestaurant.media.length; i++) {
 
                 if (i !== whichNum) {
-                    tempObj.push(tempRestaurant[0].media[i]);
+                    tempObj.push(tempRestaurant.media[i]);
                 }
 
             }
@@ -134,7 +134,7 @@ function deleteItem(whichNum, whichObj) {
 
 
             }
-            tempRestaurant[0].media = tempObj;
+            tempRestaurant.media = tempObj;
 
 
             document.getElementById("mediaImagesTarget").innerHTML = mediaImagesArrHTML;
@@ -155,9 +155,9 @@ function deleteItem(whichNum, whichObj) {
 
         case "events":
 
-            for (let i = 0; i < tempRestaurant[0].events.length; i++) {
+            for (let i = 0; i < tempRestaurant.events.length; i++) {
                 if (i !== whichNum) {
-                    tempObj.push(tempRestaurant[0].events[i])
+                    tempObj.push(tempRestaurant.events[i])
                 }
             }
 
@@ -170,7 +170,7 @@ function deleteItem(whichNum, whichObj) {
                     "<li>" + tempObj[i].details + "</li><li>" + tempObj[i].address + "</li><li><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','events')\" ><i class='fas fa-trash' ></i></button></li></ul></li>";
 
             }
-            tempRestaurant[0].events = tempObj;
+            tempRestaurant.events = tempObj;
 
             document.getElementById("eventsTarget").innerHTML = eventsArrHTML;
             break;
@@ -179,16 +179,16 @@ function deleteItem(whichNum, whichObj) {
 
         case "socialMedia":
 
-            for (let i = 0; i < tempRestaurant[0].socialMedia.length; i++) {
+            for (let i = 0; i < tempRestaurant.socialMedia.length; i++) {
                 if (i !== Number(whichNum)) {
-                    tempObj.push(tempRestaurant[0].socialMedia[i])
+                    tempObj.push(tempRestaurant.socialMedia[i])
                 }
             }
 
 
             console.log("tempObj: " + JSON.stringify(tempObj));
             document.querySelector("#socialMediaTarget").innerHTML = "";
-            tempRestaurant[0].socialMedia = tempObj;
+            tempRestaurant.socialMedia = tempObj;
             let tempSocialMediaHTML = "";
             for (let i = 0; i < tempObj.length; i++) {
                 tempSocialMediaHTML = tempSocialMediaHTML + `<li class="list-group-item"><a class="p-2 text-primary"  href="${tempObj[i].link}" target="_blank" title="${tempObj[i].title}" ><i class="${tempObj[i].theClass
@@ -235,11 +235,11 @@ function submitToLocal(whichArr) {
             if (document.querySelector(".error") === null) {
                 console.log("field value: " + document.querySelector("[name='navLinks']").value);
                 document.querySelector("#navLinksTarget").innerHTML = "";
-                tempRestaurant[0].navLinks.push(document.querySelector("[name='navLinks']").value);
-                console.log("tempRestaurant[0].navLinks: " + tempRestaurant[0].navLinks);
+                tempRestaurant.navLinks.push(document.querySelector("[name='navLinks']").value);
+                console.log("tempRestaurant.navLinks: " + tempRestaurant.navLinks);
                 let navLinkArrHTML = "";
-                for (let i = 0; i < tempRestaurant[0].navLinks.length; i++) {
-                    navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant[0].navLinks[i]}</span>`;
+                for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
+                    navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
                 }
                 document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
                 document.querySelector("[name='navLinks']").value = "";
@@ -261,7 +261,7 @@ function submitToLocal(whichArr) {
                 console.log("field value img: " + document.querySelector("[name='bannersImg']").value);
                 console.log("field value: " + document.querySelector("[name='bannersHTML']").value);
                 document.querySelector("#bannersTarget").innerHTML = "";
-                tempRestaurant[0].banners.push(
+                tempRestaurant.banners.push(
 
                     {
                         img: document.querySelector("[name='bannersImg']").value,
@@ -270,10 +270,10 @@ function submitToLocal(whichArr) {
 
 
                 );
-                console.log("JSON.stringify(empRestaurant[0].banners): " + JSON.stringify(tempRestaurant[0].banners));
+                console.log("JSON.stringify(empRestaurant[0].banners): " + JSON.stringify(tempRestaurant.banners));
                 let bannersArrHTML = "";
-                for (let i = 0; i < tempRestaurant[0].banners.length; i++) {
-                    bannersArrHTML = bannersArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant[0].banners[i].img + "' class='img-thumbnail' alt='" + tempRestaurant[0].banners[i].bannerHTML
+                for (let i = 0; i < tempRestaurant.banners.length; i++) {
+                    bannersArrHTML = bannersArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant.banners[i].img + "' class='img-thumbnail' alt='" + tempRestaurant.banners[i].bannerHTML
                         + "' ><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','banners')\">Delete <i class='fas fa-trash'></i></button></div > ";
                 }
                 document.querySelector("[name='bannersImg']").value = "";
@@ -299,7 +299,7 @@ function submitToLocal(whichArr) {
                 console.log("media Address: " + document.querySelector("[name='mediaAddress']").value);
                 console.log("field type: " + document.querySelector("[name='mediaType']").value);
 
-                tempRestaurant[0].media.push(
+                tempRestaurant.media.push(
 
                     {
                         type: document.querySelector("[name='mediaType']").value,
@@ -308,7 +308,7 @@ function submitToLocal(whichArr) {
 
 
                 );
-                console.log("JSON.stringify(tempRestaurant[0].media): " + JSON.stringify(tempRestaurant[0].media));
+                console.log("JSON.stringify(tempRestaurant.media): " + JSON.stringify(tempRestaurant.media));
 
                 /*
                 
@@ -332,22 +332,22 @@ function submitToLocal(whichArr) {
                 let mediaYtVideoArrHTML = "";
                 let mediaHTMLArrHTML = "";
                 let mediaMapsArrHTML = "";
-                for (let i = 0; i < tempRestaurant[0].media.length; i++) {
+                for (let i = 0; i < tempRestaurant.media.length; i++) {
 
-                    if (tempRestaurant[0].media[i].type === "img") {
-                        mediaImagesArrHTML = mediaImagesArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant[0].media[i].address + "'  class='img-thumbnail' /><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\">Delete <i class='fas fa-trash'></i></button></div>"
+                    if (tempRestaurant.media[i].type === "img") {
+                        mediaImagesArrHTML = mediaImagesArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant.media[i].address + "'  class='img-thumbnail' /><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\">Delete <i class='fas fa-trash'></i></button></div>"
                     }
 
-                    if (tempRestaurant[0].media[i].type === "ytVideo") {
-                        mediaYtVideoArrHTML = mediaYtVideoArrHTML + "<div class='col-md-1'><img src='https://i.ytimg.com/vi/" + tempRestaurant[0].media[i].address + "/hqdefault.jpg' class='img-thumbnail' /><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\">Delete <i class='fas fa-trash'></i></button></div>"
+                    if (tempRestaurant.media[i].type === "ytVideo") {
+                        mediaYtVideoArrHTML = mediaYtVideoArrHTML + "<div class='col-md-1'><img src='https://i.ytimg.com/vi/" + tempRestaurant.media[i].address + "/hqdefault.jpg' class='img-thumbnail' /><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\">Delete <i class='fas fa-trash'></i></button></div>"
                     }
-                    if (tempRestaurant[0].media[i].type === "html") {
-                        mediaHTMLArrHTML = mediaHTMLArrHTML + "<li class='list-group-item'><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\" ><i class='fas fa-trash' ></i></button> " + tempRestaurant[0].media[i].address + "</li>";
+                    if (tempRestaurant.media[i].type === "html") {
+                        mediaHTMLArrHTML = mediaHTMLArrHTML + "<li class='list-group-item'><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\" ><i class='fas fa-trash' ></i></button> " + tempRestaurant.media[i].address + "</li>";
                     }
 
-                    if (tempRestaurant[0].media[i].type === "map") {
+                    if (tempRestaurant.media[i].type === "map") {
 
-                        mediaMapsArrHTML = mediaMapsArrHTML + "<li class='list-group-item'><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\" ><i class='fas fa-trash' ></i></button> " + tempRestaurant[0].media[i].address + "</li>";
+                        mediaMapsArrHTML = mediaMapsArrHTML + "<li class='list-group-item'><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\" ><i class='fas fa-trash' ></i></button> " + tempRestaurant.media[i].address + "</li>";
                     }
 
 
@@ -389,7 +389,7 @@ function submitToLocal(whichArr) {
                 return false;
 
             } else {
-                tempRestaurant[0].events.push({
+                tempRestaurant.events.push({
                     address: document.querySelector("[name='eventsAddress']").value,
                     contact: document.querySelector("[name='eventsContact']").value,
                     dateTime: document.querySelector("[name='eventsDateTime']").value,
@@ -401,10 +401,10 @@ function submitToLocal(whichArr) {
 
 
             let eventsArrHTML = "";
-            for (let i = 0; i < tempRestaurant[0].events.length; i++) {
+            for (let i = 0; i < tempRestaurant.events.length; i++) {
 
-                eventsArrHTML = eventsArrHTML + "<li class='list-group-item'><ul><li>" + tempRestaurant[0].events[i].title + "</li><li>" + tempRestaurant[0].events[i].contact + "</li><li>" + tempRestaurant[0].events[i].dateTime + "</li>" +
-                    "<li>" + tempRestaurant[0].events[i].details + "</li><li>" + tempRestaurant[0].events[i].address + "</li><li><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','events')\" ><i class='fas fa-trash' ></i></button></li></ul></li>";
+                eventsArrHTML = eventsArrHTML + "<li class='list-group-item'><ul><li>" + tempRestaurant.events[i].title + "</li><li>" + tempRestaurant.events[i].contact + "</li><li>" + tempRestaurant.events[i].dateTime + "</li>" +
+                    "<li>" + tempRestaurant.events[i].details + "</li><li>" + tempRestaurant.events[i].address + "</li><li><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','events')\" ><i class='fas fa-trash' ></i></button></li></ul></li>";
 
             }
 
@@ -463,7 +463,7 @@ function submitToLocal(whichArr) {
 
             } else {
                 document.querySelector("#socialMediaTarget").innerHTML = "";
-                tempRestaurant[0].socialMedia.push({
+                tempRestaurant.socialMedia.push({
                     link: document.querySelector("[name='socialLink']").value,
                     theClass: document.querySelector("[name='socialTheClass']").value,
                     title: document.querySelector("[name='socialTitle']").value,
@@ -539,20 +539,20 @@ function submitRestaurant(role) {
         globalAlert("alert-danger", "There are field with no information.");
         return false;
     } else {
-        tempRestaurant[0].restaurantName = document.querySelector("[name='restaurantName']").value;
+        tempRestaurant.restaurantName = document.querySelector("[name='restaurantName']").value;
 
 
-        tempRestaurant[0].googleID = document.querySelector("[name='googleID']").value;
-        tempRestaurant[0].apiAddress = document.querySelector("[name='apiAddress']").value;
-        tempRestaurant[0].theme = document.querySelector("select[name='theme']").value;
-        tempRestaurant[0].homeImg = document.querySelector("[name='homeImg']").value;
+        tempRestaurant.googleID = document.querySelector("[name='googleID']").value;
+        tempRestaurant.apiAddress = document.querySelector("[name='apiAddress']").value;
+        tempRestaurant.theme = document.querySelector("select[name='theme']").value;
+        tempRestaurant.homeImg = document.querySelector("[name='homeImg']").value;
 
-        tempRestaurant[0].about = document.querySelector("textarea[name='about']").value;
-        tempRestaurant[0].logoHTML = document.querySelector("textarea[name='logoHTML']").value;
-        tempRestaurant[0].blogAddress = document.querySelector("[name='blogAddress']").value;
-        tempRestaurant[0].address = document.querySelector("[name='address']").value;
-        tempRestaurant[0].phone = document.querySelector("[name='phone']").value;
-        tempRestaurant[0].email = document.querySelector("[name='email']").value;
+        tempRestaurant.about = document.querySelector("textarea[name='about']").value;
+        tempRestaurant.logoHTML = document.querySelector("textarea[name='logoHTML']").value;
+        tempRestaurant.blogAddress = document.querySelector("[name='blogAddress']").value;
+        tempRestaurant.address = document.querySelector("[name='address']").value;
+        tempRestaurant.phone = document.querySelector("[name='phone']").value;
+        tempRestaurant.email = document.querySelector("[name='email']").value;
     }
 
 
@@ -695,49 +695,49 @@ const deleteFoodItem = (whichItem) => {
 const submitHours = () => {
 
 
-    tempRestaurant[0].sundayHours = document.querySelector("select[name='sundayOpenHr']").value + ":" + document.querySelector("select[name='sundayOpenMin']").value + document.querySelector("select[name='sundayOpenAmPm']").value + " - " +
+    tempRestaurant.sundayHours = document.querySelector("select[name='sundayOpenHr']").value + ":" + document.querySelector("select[name='sundayOpenMin']").value + document.querySelector("select[name='sundayOpenAmPm']").value + " - " +
         document.querySelector("select[name='sundayCloseHr']").value + ":" + document.querySelector("select[name='sundayCloseMin']").value + document.querySelector("select[name='sundayCloseAmPm']").value;
 
-    tempRestaurant[0].mondayHours = document.querySelector("select[name='mondayOpenHr']").value + ":" + document.querySelector("select[name='mondayOpenMin']").value + document.querySelector("select[name='mondayOpenAmPm']").value + " - " +
+    tempRestaurant.mondayHours = document.querySelector("select[name='mondayOpenHr']").value + ":" + document.querySelector("select[name='mondayOpenMin']").value + document.querySelector("select[name='mondayOpenAmPm']").value + " - " +
         document.querySelector("select[name='mondayCloseHr']").value + ":" + document.querySelector("select[name='mondayCloseMin']").value + document.querySelector("select[name='mondayCloseAmPm']").value;
 
-    tempRestaurant[0].tuesdayHours = document.querySelector("select[name='tuesdayOpenHr']").value + ":" + document.querySelector("select[name='tuesdayOpenMin']").value + document.querySelector("select[name='tuesdayOpenAmPm']").value + " - " +
+    tempRestaurant.tuesdayHours = document.querySelector("select[name='tuesdayOpenHr']").value + ":" + document.querySelector("select[name='tuesdayOpenMin']").value + document.querySelector("select[name='tuesdayOpenAmPm']").value + " - " +
         document.querySelector("select[name='tuesdayCloseHr']").value + ":" + document.querySelector("select[name='tuesdayCloseMin']").value + document.querySelector("select[name='tuesdayCloseAmPm']").value;
 
-    tempRestaurant[0].wednesdayHours = document.querySelector("select[name='wednesdayOpenHr']").value + ":" + document.querySelector("select[name='wednesdayOpenMin']").value + document.querySelector("select[name='wednesdayOpenAmPm']").value + " - " +
+    tempRestaurant.wednesdayHours = document.querySelector("select[name='wednesdayOpenHr']").value + ":" + document.querySelector("select[name='wednesdayOpenMin']").value + document.querySelector("select[name='wednesdayOpenAmPm']").value + " - " +
         document.querySelector("select[name='wednesdayCloseHr']").value + ":" + document.querySelector("select[name='wednesdayCloseMin']").value + document.querySelector("select[name='wednesdayCloseAmPm']").value;
 
-    tempRestaurant[0].thursdayHours = document.querySelector("select[name='thursdayOpenHr']").value + ":" + document.querySelector("select[name='thursdayOpenMin']").value + document.querySelector("select[name='thursdayOpenAmPm']").value + " - " +
+    tempRestaurant.thursdayHours = document.querySelector("select[name='thursdayOpenHr']").value + ":" + document.querySelector("select[name='thursdayOpenMin']").value + document.querySelector("select[name='thursdayOpenAmPm']").value + " - " +
         document.querySelector("select[name='thursdayCloseHr']").value + ":" + document.querySelector("select[name='thursdayCloseMin']").value + document.querySelector("select[name='thursdayCloseAmPm']").value;
 
-    tempRestaurant[0].fridayHours = document.querySelector("select[name='fridayOpenHr']").value + ":" + document.querySelector("select[name='fridayOpenMin']").value + document.querySelector("select[name='fridayOpenAmPm']").value + " - " +
+    tempRestaurant.fridayHours = document.querySelector("select[name='fridayOpenHr']").value + ":" + document.querySelector("select[name='fridayOpenMin']").value + document.querySelector("select[name='fridayOpenAmPm']").value + " - " +
         document.querySelector("select[name='fridayCloseHr']").value + ":" + document.querySelector("select[name='fridayCloseMin']").value + document.querySelector("select[name='fridayCloseAmPm']").value;
 
 
 
-    tempRestaurant[0].saturdayHours = document.querySelector("select[name='saturdayOpenHr']").value + ":" + document.querySelector("select[name='saturdayOpenMin']").value + document.querySelector("select[name='saturdayOpenAmPm']").value + " - " +
+    tempRestaurant.saturdayHours = document.querySelector("select[name='saturdayOpenHr']").value + ":" + document.querySelector("select[name='saturdayOpenMin']").value + document.querySelector("select[name='saturdayOpenAmPm']").value + " - " +
         document.querySelector("select[name='saturdayCloseHr']").value + ":" + document.querySelector("select[name='saturdayCloseMin']").value + document.querySelector("select[name='saturdayCloseAmPm']").value;
 
-    console.log(" tempRestaurant[0].sundayHours: " + tempRestaurant[0].sundayHours);
-    console.log(" tempRestaurant[0].mondayHours: " + tempRestaurant[0].mondayHours);
-    console.log(" tempRestaurant[0].tuesdayHours: " + tempRestaurant[0].tuesdayHours);
-    console.log(" tempRestaurant[0].wednesdayHours: " + tempRestaurant[0].wednesdayHours);
-    console.log(" tempRestaurant[0].thursdayHours: " + tempRestaurant[0].thursdayHours);
-    console.log(" tempRestaurant[0].fridayHours: " + tempRestaurant[0].fridayHours);
-    console.log(" tempRestaurant[0].saturdayHours: " + tempRestaurant[0].saturdayHours);
+    console.log(" tempRestaurant.sundayHours: " + tempRestaurant.sundayHours);
+    console.log(" tempRestaurant.mondayHours: " + tempRestaurant.mondayHours);
+    console.log(" tempRestaurant.tuesdayHours: " + tempRestaurant.tuesdayHours);
+    console.log(" tempRestaurant.wednesdayHours: " + tempRestaurant.wednesdayHours);
+    console.log(" tempRestaurant.thursdayHours: " + tempRestaurant.thursdayHours);
+    console.log(" tempRestaurant.fridayHours: " + tempRestaurant.fridayHours);
+    console.log(" tempRestaurant.saturdayHours: " + tempRestaurant.saturdayHours);
 
 }
 
 /*onl load we need to set all the time select manes "08:00AM - 10:00PM"*/
-if (tempRestaurant[0].sundayHours) {
+if (tempRestaurant.sundayHours) {
 
-    let tempOpenHr = tempRestaurant[0].sundayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].sundayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].sundayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.sundayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.sundayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.sundayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].sundayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].sundayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].sundayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.sundayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.sundayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.sundayHours.substring(15, 17);
 
 
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -759,15 +759,15 @@ if (tempRestaurant[0].sundayHours) {
 
 }
 
-if (tempRestaurant[0].mondayHours) {
+if (tempRestaurant.mondayHours) {
 
-    let tempOpenHr = tempRestaurant[0].mondayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].mondayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].mondayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.mondayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.mondayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.mondayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].mondayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].mondayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].mondayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.mondayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.mondayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.mondayHours.substring(15, 17);
 
 
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -790,15 +790,15 @@ if (tempRestaurant[0].mondayHours) {
 }
 
 
-if (tempRestaurant[0].tuesdayHours) {
+if (tempRestaurant.tuesdayHours) {
 
-    let tempOpenHr = tempRestaurant[0].tuesdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].tuesdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].tuesdayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.tuesdayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.tuesdayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.tuesdayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].tuesdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].tuesdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].tuesdayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.tuesdayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.tuesdayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.tuesdayHours.substring(15, 17);
 
 
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -822,15 +822,15 @@ if (tempRestaurant[0].tuesdayHours) {
 }
 
 
-if (tempRestaurant[0].wednesdayHours) {
+if (tempRestaurant.wednesdayHours) {
 
-    let tempOpenHr = tempRestaurant[0].wednesdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].wednesdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].wednesdayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.wednesdayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.wednesdayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.wednesdayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].wednesdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].wednesdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].wednesdayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.wednesdayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.wednesdayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.wednesdayHours.substring(15, 17);
 
 
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -854,15 +854,15 @@ if (tempRestaurant[0].wednesdayHours) {
 }
 
 
-if (tempRestaurant[0].thursdayHours) {
+if (tempRestaurant.thursdayHours) {
 
-    let tempOpenHr = tempRestaurant[0].thursdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].thursdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].thursdayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.thursdayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.thursdayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.thursdayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].thursdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].thursdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].thursdayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.thursdayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.thursdayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.thursdayHours.substring(15, 17);
 
 
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -886,15 +886,15 @@ if (tempRestaurant[0].thursdayHours) {
 }
 
 
-if (tempRestaurant[0].fridayHours) {
+if (tempRestaurant.fridayHours) {
 
-    let tempOpenHr = tempRestaurant[0].fridayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].fridayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].fridayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.fridayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.fridayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.fridayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].fridayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].fridayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].fridayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.fridayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.fridayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.fridayHours.substring(15, 17);
 
 
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -917,15 +917,15 @@ if (tempRestaurant[0].fridayHours) {
 
 }
 
-if (tempRestaurant[0].saturdayHours) {
+if (tempRestaurant.saturdayHours) {
 
-    let tempOpenHr = tempRestaurant[0].saturdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant[0].saturdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant[0].saturdayHours.substring(5, 7);
+    let tempOpenHr = tempRestaurant.saturdayHours.substring(0, 2);
+    let tempOpenMin = tempRestaurant.saturdayHours.substring(3, 5);
+    let tempOpenAmPm = tempRestaurant.saturdayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant[0].saturdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant[0].saturdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant[0].saturdayHours.substring(15, 17);
+    let tempCloseHr = tempRestaurant.saturdayHours.substring(10, 12);
+    let tempCloseMin = tempRestaurant.saturdayHours.substring(13, 15);
+    let tempCloseAmPm = tempRestaurant.saturdayHours.substring(15, 17);
 
     console.log("(tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm): " + (tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm))
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
@@ -1058,14 +1058,14 @@ const populateFields = () => {
                 "<li>" + tempRestaurant.events[i].details + "</li><li>" + tempRestaurant.events[i].address + "</li><li><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','events')\" ><i class='fas fa-trash' ></i></button></li></ul></li>";
 
         }
-        //  tempRestaurant[0].events = tempObj;
+        //  tempRestaurant.events = tempObj;
 
         document.getElementById("eventsTarget").innerHTML = eventsArrHTML;
 
         /*start socialmedia */
 
         document.querySelector("#socialMediaTarget").innerHTML = "";
-        // tempRestaurant[0].socialMedia = tempObj;
+        // tempRestaurant.socialMedia = tempObj;
         let tempSocialMediaHTML = "";
         for (let i = 0; i < tempRestaurant.socialMedia.length; i++) {
             tempSocialMediaHTML = tempSocialMediaHTML + `<li class="list-group-item"><a class="p-2 text-primary"  href="${tempRestaurant.socialMedia[i].link}" target="_blank" title="${tempRestaurant.socialMedia[i].title}" ><i class="${tempRestaurant.socialMedia[i].theClass
