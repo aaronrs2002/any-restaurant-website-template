@@ -981,7 +981,7 @@ const populateFields = () => {
         document.querySelector("[name='email']").value = tempRestaurant.email;
 
 
-
+        /*start navlinks*/
 
         document.querySelector("#navLinksTarget").innerHTML = "";
 
@@ -993,7 +993,89 @@ const populateFields = () => {
         }
         document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
 
+        /*start banners*/
 
+        console.log("tempRestaurant.banners: " + JSON.stringify(tempRestaurant.banners));
+        document.getElementById("bannersTarget").innerHTML = "";
+
+        let bannersArrHTML = "";
+
+        for (let i = 0; i < tempRestaurant.banners.length; i++) {
+            bannersArrHTML = bannersArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant.banners[i].img + "' class='img-thumbnail' alt='" + tempRestaurant.banners[i].bannerHTML
+                + "' ><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','banners')\">Delete <i class='fas fa-trash'></i></button></div > ";
+        }
+
+        document.getElementById("bannersTarget").innerHTML = bannersArrHTML;
+
+
+        /*start media*/
+        let mediaImagesArrHTML = "";
+        let mediaYtVideoArrHTML = "";
+        let mediaHTMLArrHTML = "";
+        let mediaMapsArrHTML = "";
+        for (let i = 0; i < tempRestaurant.media.length; i++) {
+
+            if (tempRestaurant.media[i].type === "img") {
+                mediaImagesArrHTML = mediaImagesArrHTML + "<div class='col-md-1'><img src='" + tempRestaurant.media[i].address + "'  class='img-thumbnail' /><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\">Delete <i class='fas fa-trash'></i></button></div>"
+            }
+
+            if (tempRestaurant.media[i].type === "ytVideo") {
+                mediaYtVideoArrHTML = mediaYtVideoArrHTML + "<div class='col-md-1'><img src='https://i.ytimg.com/vi/" + tempRestaurant.media[i].address + "/hqdefault.jpg' class='img-thumbnail' /><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\">Delete <i class='fas fa-trash'></i></button></div>"
+            }
+            if (tempRestaurant.media[i].type === "html") {
+                mediaHTMLArrHTML = mediaHTMLArrHTML + "<li class='list-group-item'><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\" ><i class='fas fa-trash' ></i></button> " + tempRestaurant.media[i].address + "</li>";
+            }
+
+            if (tempRestaurant.media[i].type === "map") {
+
+                mediaMapsArrHTML = mediaMapsArrHTML + "<li class='list-group-item'><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','media')\" ><i class='fas fa-trash' ></i></button> " + tempRestaurant.media[i].address + "</li>";
+            }
+
+
+
+
+        }
+
+
+
+        document.getElementById("mediaImagesTarget").innerHTML = mediaImagesArrHTML;
+
+        document.getElementById("mediaytIdsTarget").innerHTML = mediaYtVideoArrHTML;
+
+        document.getElementById("mediaHtmlTarget").innerHTML = mediaHTMLArrHTML;
+
+
+        document.getElementById("mediaMapsTarget").innerHTML = mediaMapsArrHTML;
+
+        /*start events*/
+
+        let eventsArrHTML = "";
+        document.getElementById("eventsTarget").innerHTML = "";
+
+        for (let i = 0; i < tempRestaurant.events.length; i++) {
+
+            eventsArrHTML = eventsArrHTML + "<li class='list-group-item'><ul><li>" + tempRestaurant.events[i].title + "</li><li>" + tempRestaurant.events[i].contact + "</li><li>" + tempRestaurant.events[i].dateTime + "</li>" +
+                "<li>" + tempRestaurant.events[i].details + "</li><li>" + tempRestaurant.events[i].address + "</li><li><button class='btn btn-danger' onClick=\"deleteItem('" + i + "','events')\" ><i class='fas fa-trash' ></i></button></li></ul></li>";
+
+        }
+        //  tempRestaurant[0].events = tempObj;
+
+        document.getElementById("eventsTarget").innerHTML = eventsArrHTML;
+
+        /*start socialmedia */
+
+        document.querySelector("#socialMediaTarget").innerHTML = "";
+        // tempRestaurant[0].socialMedia = tempObj;
+        let tempSocialMediaHTML = "";
+        for (let i = 0; i < tempRestaurant.socialMedia.length; i++) {
+            tempSocialMediaHTML = tempSocialMediaHTML + `<li class="list-group-item"><a class="p-2 text-primary"  href="${tempRestaurant.socialMedia[i].link}" target="_blank" title="${tempRestaurant.socialMedia[i].title}" ><i class="${tempRestaurant.socialMedia[i].theClass
+                } animated"  onmouseover="javascript:tadaRollover('${tempRestaurant.socialMedia[i].theClass
+                }')" onmouseout="javascript:tadaRollout('${tempRestaurant.socialMedia[i].theClass
+                }')" data-tada="${tempRestaurant.socialMedia[i].theClass
+                }"></i></a><button class='btn btn-danger' onClick=\"deleteItem(${i},'socialMedia')\" ><i class='fas fa-trash' ></i></button></li>`;
+        }
+        console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
+        document.querySelector("#socialMediaTarget").innerHTML = tempSocialMediaHTML;
 
     }
 
