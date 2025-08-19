@@ -557,8 +557,9 @@ function submitRestaurant(role) {
 
 
 
-    globalAlert("alert-success", "We built a JSON object!");
-    document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant)
+    globalAlert("alert-success", role + " complete.");
+    document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant);
+    console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant));
 }
 
 
@@ -638,9 +639,16 @@ const updateMenuItem = (addBuld) => {
 
 
         menuStr = menuStr + "<li class='list-group-item'><ul><li>" + tempMenuItems[i].title + "</li><li>" + tempMenuItems[i].category + "</li><li>" + tempMenuItems[i].price + "</li><li>" + tempIngredientsStr + "</li><li><button class='btn btn-danger py-2' onClick='deleteFoodItem(" + i + ")'> <i class='fas fa-trash'></i> Delete Menu Item:  " + (1 + i) + "</button></li></ul></li>";
+
+
+
     }
 
+
+
     document.getElementById("menuTarget").innerHTML = menuStr;
+
+    console.log("JSON.stringify(tempMenuItems): " + JSON.stringify(tempMenuItems));
 
     tempIngredients = [];
     document.querySelector("[name='foodTitle']").value = "";
@@ -666,7 +674,12 @@ const submitIngredient = () => {
         tempIngredients.push(document.querySelector("[name='ingredient']").value);
         let ingredientStr = "";
         for (let i = 0; i < tempIngredients.length; i++) {
-            ingredientStr = ingredientStr + "<span class='badge bg-secondary'>" + tempIngredients[i] + "</span>";
+            ingredientStr = ingredientStr + `<span class='badge bg-secondary'><i class='fas fa-trash pointer' onClick="deleteIngredient(${i})"></i> - ${tempIngredients[i]}</span>`;
+
+
+            //
+            // `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
+
         }
         document.querySelector("[name='ingredient']").value = "";
 
@@ -676,6 +689,19 @@ const submitIngredient = () => {
     }
 
 
+}
+
+const deleteIngredient = (num) => {
+    let = tempObj = [];
+    let ingredientStr = "";
+    for (let i = 0; i < tempIngredients.length; i++) {
+        if (num !== i) {
+            tempObj.push(tempIngredients[i]);
+            ingredientStr = ingredientStr + `<span class='badge bg-secondary'><i class='fas fa-trash pointer' onClick="deleteIngredient(${i})"></i> - ${tempIngredients[i]}</span>`;
+        }
+    }
+    tempIngredients = tempObj;
+    document.getElementById("ingredientsTarget").innerHTML = ingredientStr;
 }
 
 
@@ -995,7 +1021,7 @@ const populateFields = () => {
 
         /*start banners*/
 
-        console.log("tempRestaurant.banners: " + JSON.stringify(tempRestaurant.banners));
+        // console.log("tempRestaurant.banners: " + JSON.stringify(tempRestaurant.banners));
         document.getElementById("bannersTarget").innerHTML = "";
 
         let bannersArrHTML = "";
@@ -1074,7 +1100,7 @@ const populateFields = () => {
                 }')" data-tada="${tempRestaurant.socialMedia[i].theClass
                 }"></i></a><button class='btn btn-danger' onClick=\"deleteItem(${i},'socialMedia')\" ><i class='fas fa-trash' ></i></button></li>`;
         }
-        console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
+        // console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
         document.querySelector("#socialMediaTarget").innerHTML = tempSocialMediaHTML;
 
     }
