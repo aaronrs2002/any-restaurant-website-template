@@ -619,14 +619,6 @@ const updateMenuItem = (addBuld) => {
     }
 
 
-
-
-
-
-
-
-
-
     let menuStr = "";
     for (let i = 0; i < tempMenuItems.length; i++) {
 
@@ -649,6 +641,8 @@ const updateMenuItem = (addBuld) => {
     document.getElementById("menuTarget").innerHTML = menuStr;
 
     console.log("JSON.stringify(tempMenuItems): " + JSON.stringify(tempMenuItems));
+
+    localStorage.setItem("cmsMenu", JSON.stringify(tempMenuItems));
 
     tempIngredients = [];
     document.querySelector("[name='foodTitle']").value = "";
@@ -687,6 +681,7 @@ const submitIngredient = () => {
 
 
     }
+
 
 
 }
