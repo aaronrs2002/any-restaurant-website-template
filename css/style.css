@@ -93,7 +93,9 @@ body[data-restaurant="0"] .navbar-nav .nav-link.show {
 }
 
 
-
+#categories li {
+    text-transform: capitalize;
+}
 
 .map {
     border: 0px;

@@ -1,0 +1,283 @@
+[
+    {
+        "title": "Classic Charcuterie Board",
+        "ingredients": [
+            "prosciutto",
+            "soppressata",
+            "aged cheddar",
+            "brie",
+            "grapes",
+            "crackers"
+        ],
+        "category": "charcuterie",
+        "price": "18.99"
+    },
+    {
+        "title": "Mediterranean Charcuterie",
+        "ingredients": [
+            "hummus",
+            "feta",
+            "kalamata olives",
+            "pita bread",
+            "cured meats"
+        ],
+        "category": "charcuterie",
+        "price": "17.50"
+    },
+    {
+        "title": "Cheese Lover’s Plate",
+        "ingredients": [
+            "goat cheese",
+            "manchego",
+            "blue cheese",
+            "fruit preserves",
+            "toasted baguette"
+        ],
+        "category": "charcuterie",
+        "price": "16.25"
+    },
+    {
+        "title": "Smoked Salmon Bites",
+        "ingredients": [
+            "smoked salmon",
+            "cream cheese",
+            "capers",
+            "cucumber slices"
+        ],
+        "category": "charcuterie",
+        "price": "14.75"
+    },
+    {
+        "title": "Italian Caprese Skewers",
+        "ingredients": [
+            "cherry tomatoes",
+            "mozzarella",
+            "basil",
+            "balsamic glaze"
+        ],
+        "category": "charcuterie",
+        "price": "12.50"
+    },
+    {
+        "title": "Mini Roast Beef Sliders",
+        "ingredients": [
+            "roast beef",
+            "cheddar",
+            "horseradish aioli",
+            "brioche slider buns"
+        ],
+        "category": "small sandwiches",
+        "price": "13.99"
+    },
+    {
+        "title": "Turkey and Cranberry Sliders",
+        "ingredients": [
+            "roast turkey",
+            "cranberry spread",
+            "swiss cheese",
+            "slider buns"
+        ],
+        "category": "small sandwiches",
+        "price": "12.99"
+    },
+    {
+        "title": "Prosciutto Panini Bites",
+        "ingredients": [
+            "prosciutto",
+            "fontina cheese",
+            "arugula",
+            "ciabatta"
+        ],
+        "category": "small sandwiches",
+        "price": "14.25"
+    },
+    {
+        "title": "Mini Lobster Rolls",
+        "ingredients": [
+            "lobster",
+            "light mayo",
+            "toasted brioche"
+        ],
+        "category": "small sandwiches",
+        "price": "18.50"
+    },
+    {
+        "title": "Smoked Chicken Salad Sliders",
+        "ingredients": [
+            "smoked chicken",
+            "grapes",
+            "celery",
+            "slider buns"
+        ],
+        "category": "small sandwiches",
+        "price": "13.50"
+    },
+    {
+        "title": "Greek Veggie Wrap",
+        "ingredients": [
+            "spinach wrap",
+            "hummus",
+            "cucumber",
+            "feta",
+            "olives"
+        ],
+        "category": "wraps",
+        "price": "11.25"
+    },
+    {
+        "title": "Chicken Caesar Wrap",
+        "ingredients": [
+            "flour tortilla",
+            "grilled chicken",
+            "romaine",
+            "parmesan",
+            "caesar dressing"
+        ],
+        "category": "wraps",
+        "price": "12.75"
+    },
+    {
+        "title": "Roast Veggie & Pesto Wrap",
+        "ingredients": [
+            "roasted zucchini",
+            "bell peppers",
+            "pesto",
+            "goat cheese"
+        ],
+        "category": "wraps",
+        "price": "11.99"
+    },
+    {
+        "title": "Smoked Salmon Wrap",
+        "ingredients": [
+            "spinach tortilla",
+            "smoked salmon",
+            "dill cream cheese",
+            "greens"
+        ],
+        "category": "wraps",
+        "price": "13.25"
+    },
+    {
+        "title": "Caprese Flatbread",
+        "ingredients": [
+            "flatbread",
+            "tomatoes",
+            "mozzarella",
+            "basil",
+            "balsamic glaze"
+        ],
+        "category": "flatbreads",
+        "price": "13.50"
+    },
+    {
+        "title": "Wild Mushroom Flatbread",
+        "ingredients": [
+            "flatbread",
+            "wild mushrooms",
+            "goat cheese",
+            "caramelized onions",
+            "thyme"
+        ],
+        "category": "flatbreads",
+        "price": "14.75"
+    },
+    {
+        "title": "BBQ Chicken Flatbread",
+        "ingredients": [
+            "flatbread",
+            "grilled chicken",
+            "BBQ sauce",
+            "mozzarella",
+            "cilantro"
+        ],
+        "category": "flatbreads",
+        "price": "14.50"
+    },
+    {
+        "title": "Fig and Prosciutto Flatbread",
+        "ingredients": [
+            "flatbread",
+            "fig jam",
+            "prosciutto",
+            "arugula",
+            "gorgonzola"
+        ],
+        "category": "flatbreads",
+        "price": "15.25"
+    },
+    {
+        "title": "Arugula and Pear Salad",
+        "ingredients": [
+            "arugula",
+            "pear slices",
+            "candied walnuts",
+            "gorgonzola",
+            "vinaigrette"
+        ],
+        "category": "salads",
+        "price": "12.99"
+    },
+    {
+        "title": "Mediterranean Couscous Salad",
+        "ingredients": [
+            "couscous",
+            "tomatoes",
+            "cucumber",
+            "feta",
+            "olive oil"
+        ],
+        "category": "salads",
+        "price": "11.50"
+    },
+    {
+        "title": "Chocolate Truffle Plate",
+        "ingredients": [
+            "dark chocolate truffles",
+            "cocoa powder",
+            "hazelnut cream"
+        ],
+        "category": "desserts",
+        "price": "8.75"
+    },
+    {
+        "title": "Mini Cheesecake Bites",
+        "ingredients": [
+            "cheesecake",
+            "berry compote",
+            "graham cracker crust"
+        ],
+        "category": "desserts",
+        "price": "9.25"
+    },
+    {
+        "title": "Macaron Sampler",
+        "ingredients": [
+            "almond flour cookies",
+            "buttercream",
+            "fruit fillings"
+        ],
+        "category": "desserts",
+        "price": "10.50"
+    },
+    {
+        "title": "Chef’s Pairing Plate",
+        "ingredients": [
+            "seasonal cheeses",
+            "artisan meats",
+            "seasonal fruit",
+            "house bread"
+        ],
+        "category": "specials",
+        "price": "market price"
+    },
+    {
+        "title": "Winemaker’s Flight",
+        "ingredients": [
+            "three curated wines",
+            "paired bites"
+        ],
+        "category": "specials",
+        "price": "market price"
+    }
+]

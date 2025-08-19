@@ -126,7 +126,7 @@ let config = [
         "fridayHours": "08:00AM - 10:00PM",
         "saturdayHours": "08:00AM - 10:00PM",
         "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
-        "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
+        "apiAddress": "/config/restaurantData.json",
         "navLinks": [
             "home",
             "about",
@@ -254,7 +254,7 @@ let config = [
         "fridayHours": "08:00AM - 10:00PM",
         "saturdayHours": "08:00AM - 10:00PM",
         "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
-        "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
+        "apiAddress": "/config/wineryRestaurantData.json",
         "navLinks": ["Home", "About", "Menu", "Contact"],
         "theme": "sandstone",
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",

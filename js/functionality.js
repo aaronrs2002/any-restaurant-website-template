@@ -1,5 +1,6 @@
 
 let bgImg = config[activeRestaurant].banners[Math.floor(Math.random() * config[activeRestaurant].banners.length)].img;
+let menu;
 console.group("bgImage: " + bgImg);
 let hoursStr = "<option value='closed'>Closed</option>";
 for (let i = 1; i < 13; i++) {
@@ -361,7 +362,7 @@ async function getMenu(url) {
     }
 }
 
-let menu;
+
 let categories = [];
 let categoryList = [];
 
@@ -390,33 +391,33 @@ async function start() {
 
 
     try {
-        const menu = await getMenu(urlStart);
+        menu = await getMenu(urlStart);
 
 
         let categoriesHTML = "";
         for (let i = 0; i < menu.length; i++) {
             categories.push({ category: menu[i].category, items: [] });
             if (categoryList.indexOf(menu[i].category) === -1) {
-                // categoriesHTML = categoriesHTML + `<button class='list-group-item list-group-item-action' onClick='selectCategory("${menu[i].category}")'>${menu[i].category}</button>`;
-                categoriesHTML = categoriesHTML + ` <a class="nav-link"  onClick='selectCategory("${menu[i].category}")' data-category='${menu[i].category}' href="#itemsTarget">${menu[i].category}</a>`
+                categoriesHTML = categoriesHTML + `<li class='list-group-item pointer' onClick='selectCategory("${menu[i].category}")'>${menu[i].category}<ul data-cattarget='${menu[i].category}'></ul></li>`;
+                // categoriesHTML = categoriesHTML + ` <a class="nav-link"  onClick='selectCategory("${menu[i].category}")' data-category='${menu[i].category}' href="#itemsTarget">${menu[i].category}</a>`
                 categoryList.push(menu[i].category);
             }
 
 
         }
 
-        for (let i = 0; i < menu.length; i++) {
-
-            for (let j = 0; j < categories.length; j++) {
-                if (categories[j].category === menu[i].category) {
-                    categories[j].items = [...categories[j].items, menu[i]]
-                }
-            }
-            // categories[categoryList.indexOf(menu[i].category)].items = [...categories[categoryList.indexOf(menu[i].category)].items, menu[i]]
-
-
-
-        }
+        /*  for (let i = 0; i < menu.length; i++) {
+  
+              for (let j = 0; j < categories.length; j++) {
+                  if (categories[j].category === menu[i].category) {
+                      categories[j].items = [...categories[j].items, menu[i]]
+                  }
+              }
+              // categories[categoryList.indexOf(menu[i].category)].items = [...categories[categoryList.indexOf(menu[i].category)].items, menu[i]]
+  
+  
+  
+          }*/
 
 
         document.getElementById("categories").innerHTML = categoriesHTML;
@@ -442,50 +443,68 @@ start()
 
 function selectCategory(selected) {
 
-
-    [].forEach.call(document.querySelectorAll("[data-category]"), (e) => {
-        e.classList.remove("active");
-    });
-    document.querySelector("[data-category='" + selected + "']").classList.add("active");
-
-
-    let itemsHTML = "<h1>" + selected + "</h1>";
-
-    let tempList = [];
-    for (let i = 0; i < categories.length; i++) {
-
-        if (categories[i].category === selected) {
-
-
-
-
-            for (j = 0; j < categories[i].items.length; j++) {
-
-                if (tempList.indexOf(categories[i].items[j].title) === -1) {
-                    //document.querySelector("[data-category]").innerHTML=
-
-
-                    let tempIngredients = "";
-                    for (let h = 0; h < categories[i].items[j].ingredients.length; h++) {
-                        tempIngredients = tempIngredients + "<li class='list-group-item'>" + categories[i].items[j].ingredients[h] + "</li>";
+    /* 
+      [].forEach.call(document.querySelectorAll("[data-category]"), (e) => {
+          e.classList.remove("active");
+      });
+      document.querySelector("[data-category='" + selected + "']").classList.add("active");
+  
+  
+      let itemsHTML = "<h1>" + selected + "</h1>";
+  
+     let tempList = [];
+        for (let i = 0; i < categories.length; i++) {
+    
+            if (categories[i].category === selected) {
+    
+    
+    
+    
+                for (j = 0; j < categories[i].items.length; j++) {
+    
+                    if (tempList.indexOf(categories[i].items[j].title) === -1) {
+                        //document.querySelector("[data-category]").innerHTML=
+    
+    
+                        let tempIngredients = "";
+                        for (let h = 0; h < categories[i].items[j].ingredients.length; h++) {
+                            tempIngredients = tempIngredients + "<li class='list-group-item'>" + categories[i].items[j].ingredients[h] + "</li>";
+                        }
+    
+    
+                        itemsHTML = itemsHTML + "<div><h3>" + categories[i].items[j].title + "</h3><div class='p-2'><p>" +
+                            categories[i].items[j].message + "</p><ul  class='list-group'>" + tempIngredients + "</ul></div></div >";
+    
+                        tempList.push(categories[i].items[j].title);
+    
                     }
-
-
-                    itemsHTML = itemsHTML + "<div><h3>" + categories[i].items[j].title + "</h3><div class='p-2'><p>" +
-                        categories[i].items[j].message + "</p><ul  class='list-group'>" + tempIngredients + "</ul></div></div >";
-
-                    tempList.push(categories[i].items[j].title);
-
+    
                 }
-
+    
+    
             }
+    
+        }
+    
+        document.getElementById("itemsTarget").innerHTML = itemsHTML;*/
 
 
+    let selectedCatStr = "";
+
+    for (let i = 0; i < menu.length; i++) {
+        if (menu[i].category === selected) {
+            selectedCatStr = selectedCatStr + "<li><ol class='list-group list-group-numbered py-2'><li>" + menu[i].title + " - " + menu[i].price + "</li><li>" + menu[i].ingredients + "</li></ol></li>";
+        }
+    }
+    [].forEach.call(document.querySelectorAll("[data-cattarget]"), (e) => {
+
+        if (e.dataset.cattarget !== selected) {
+            e.innerHTML = ""
+        } else {
+            e.innerHTML = selectedCatStr;
         }
 
-    }
-
-    document.getElementById("itemsTarget").innerHTML = itemsHTML;
+    });
 
 
 
