@@ -561,6 +561,19 @@ let tempMenuItems = [];
 
 
 
+const loadMenuItems = (data) => {
+
+
+    let menuStr = "<option value='default'>Select menu item to edit</option>";
+    for (let i = 0; i < data.length; i++) {
+        menuStr = menuStr + "<option value='" + i + "'>" + data[i].title + "</option>"
+    }
+
+    document.querySelector("select[name='menuItems']").innerHTML = menuStr
+
+}
+
+
 const updateMenuItem = (addBuld) => {
 
     console.log("tempIngredients.length: " + tempIngredients.length)
@@ -612,6 +625,7 @@ const updateMenuItem = (addBuld) => {
     console.log("JSON.stringify(tempMenuItems): " + JSON.stringify(tempMenuItems));
 
     localStorage.setItem("cmsMenu", JSON.stringify(tempMenuItems));
+    loadMenuItems(tempMenuItems);
 
     tempIngredients = [];
     document.querySelector("[name='foodTitle']").value = "";
@@ -1148,19 +1162,6 @@ const populateMenuItem = () => {
 }
 
 
-
-
-const loadMenuItems = (data) => {
-
-
-    let menuStr = "<option value='default'>Select menu item to edit</option>";
-    for (let i = 0; i < tempMenuItems.length; i++) {
-        menuStr = menuStr + "<option value='" + i + "'>" + tempMenuItems[i].title + "</option>"
-    }
-
-    document.querySelector("select[name='menuItems']").innerHTML = menuStr
-
-}
 
 
 
