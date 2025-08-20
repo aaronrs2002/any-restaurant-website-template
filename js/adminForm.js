@@ -421,37 +421,6 @@ function submitToLocal(whichArr) {
 
             break;
 
-        /*           <label>Restaurant Social Media Accounts</label>
-                                            <div><i><a href="https://fontawesome.com/v5/search"
-                                                        target="_blank">https://fontawesome.com/v5/search</a></i></div>
-                                            <input type="text" class="form-control" name="socialLink"
-                                                placeholder="Social media account address" />
-        
-                                            <input type="text" class="form-control" name="socialTheClass"
-                                                placeholder="Fount Awesome class" />
-                                            <input type="text" class="form-control" name="socialTitle"
-                                                placeholder="Socialmedia Account Title" />
-                                            <button class="form-conrol btn btn-success"
-                                                onClick="submitToLocal('socialMedia')">Submit
-                                                Social Media Acount</button>
-        
-                                            <div class="py-3"> <label>Social media accounts submitted:</label>
-                                                <ul id="socialMediaTarget">
-        
-        
-                                                        socialMedia: [
-                    { link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },
-                    { link: "https://github.com/aaronrs2002", theClass: "fab fa-github", title: "My Open Source Library" },
-                    { link: "https://www.youtube.com/@web-presence-developer", theClass: "fab fa-youtube", title: "Learn how to write web applications!" },
-                    { link: "https://www.instagram.com/aaronrs2002/", theClass: "fab fa-instagram", title: "Payoff from a multimedia degree." },
-                    { link: "https://aaronrs2002.github.io/task-master/?", theClass: "fas fa-network-wired", title: "Networked serverless web apps for Workflow Management and Accounting" },
-                    { link: "    https://aaronrs2002.github.io/rss-aggregator/?", theClass: "fas fa-rss-square", title: "Free News Aggregator. Grab any public RSS feed and display it here without advertising and without your boss tracking you." },
-        
-                    //{ link: "mailto:aaron@web-presence.biz", theClass: "far fa-paper-plane" }
-                    //    { title: "ticket management and accounting software by: Aaron Smith ", target: "_blank", url: "https://aaronrs2002.github.io/task-master/", iconClass: "fas fa-network-wired" },
-                ]
-        
-                                                */
 
         case "socialMedia":
 
@@ -948,7 +917,7 @@ if (tempRestaurant.saturdayHours) {
     let tempCloseMin = tempRestaurant.saturdayHours.substring(13, 15);
     let tempCloseAmPm = tempRestaurant.saturdayHours.substring(15, 17);
 
-    console.log("(tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm): " + (tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm))
+    //console.log("(tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm): " + (tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm))
     if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
         document.querySelector("select[name='saturdayOpenHr']").selectedIndex = 0;
         document.querySelector("select[name='saturdayOpenMin']").selectedIndex = 0;
@@ -1141,3 +1110,139 @@ const updateCRUD = (role) => {
 
 }
 
+const populateMenuItem = () => {
+
+    let whichItem = document.querySelector("select[name='menuItems']").value;
+    if (whichItem === "default") {
+        return false;
+    } else {
+        console.log("JSON.stringify(tempMenuItems[whichItem]): " + JSON.stringify(tempMenuItems[whichItem]));
+
+        document.querySelector("[name='foodTitle']").value = tempMenuItems[whichItem].title;
+        document.querySelector("[name='category']").value = tempMenuItems[whichItem].category;
+        document.querySelector("[name='price']").value = tempMenuItems[whichItem].price;
+
+
+        tempIngredients = tempMenuItems[whichItem].ingredients;
+        let ingredientStr = "";
+        for (let i = 0; i < tempIngredients.length; i++) {
+            ingredientStr = ingredientStr + `<span class='badge bg-secondary'><i class='fas fa-trash pointer' onClick="deleteIngredient(${i})"></i> - ${tempIngredients[i]}</span>`;
+
+
+            //
+            // `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
+
+        }
+        document.querySelector("[name='ingredient']").value = "";
+
+        document.getElementById("ingredientsTarget").innerHTML = ingredientStr;
+    }
+
+}
+
+
+
+
+const loadMenuItems = (data) => {
+
+
+    let menuStr = "<option value='default'>Select menu item to edit</option>";
+    for (let i = 0; i < tempMenuItems.length; i++) {
+        menuStr = menuStr + "<option value='" + i + "'>" + tempMenuItems[i].title + "</option>"
+    }
+
+    document.querySelector("select[name='menuItems']").innerHTML = menuStr
+
+}
+
+/*START UPLOAD DOWNLOAD FUNCTIONALITY*/
+
+
+function downloadData() {
+    let tempData = [];
+    if (localStorage.getItem("cmsMenu")) {
+        tempData = JSON.parse(localStorage.getItem("cmsMenu"));
+    }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(tempData, null, 2)], {
+        type: 'application/json'
+    }));
+    a.setAttribute("download", tempRestaurant.restaurantName + "_Menu.json");
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+
+//START FILE READER
+const fileReader = new FileReader();
+let file;
+function handleOnChange(event) {
+    if (event.target.files[0]) {
+        file = event.target.files[0];
+        console.log("event.target.files[0]: " + JSON.stringify(event.target.files[0]));
+        document.querySelector("#fileUpload").classList.remove("hide");
+        // document.querySelector("#fileMerge").classList.remove("hide");
+        globalAlert("alert-warning", `File selected. Select if you want to merge  with current data or not.`);
+    } else {
+        document.querySelector("#fileUpload").classList.add("hide");
+        // document.querySelector("#fileMerge").classList.add("hide");
+    }
+};
+
+
+
+
+
+function handleOnSubmit(event, type, merge) {
+    event.preventDefault();
+
+    if (file) {
+        fileReader.onload = function (event) {
+            const tempObj = event.target.result;
+
+            if (type === "json") {
+
+
+
+                if (merge === "default") {
+
+                    console.log("tempObj: " + tempObj);
+                    // localStorage.setItem("customDictionary", tempObj);    
+                    localStorage.setItem("cmsMenu", tempObj);
+                    console.log("(typeof tempObj): " + (typeof tempObj));
+                    tempMenuItems = JSON.parse(tempObj);
+
+                    loadMenuItems(tempMenuItems);
+
+                    // loadList();
+
+                } /*else {
+                    let tempTasks = [...JSON.parse(localStorage.getItem("customDictionary")), ...JSON.parse(tempObj)];
+
+
+                    localStorage.setItem("customDictionary", JSON.stringify(tempTasks));
+
+                    loadList();
+
+
+                }*/
+            }
+            else {
+                console.log("That wasn't json.")
+            }
+        };
+        fileReader.readAsText(file);
+    }
+    document.querySelector("input[type='file']").value = "";
+    document.querySelector("#fileUpload").classList.add("hide");
+    //document.querySelector("#fileMerge").classList.add("hide");
+    //  toggleEdit();
+
+    globalAlert("alert-success", "Your file was uploaded. The next word should be one you uploaded.");
+};
+
+if (localStorage.getItem("cmsMenu")) {
+    tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
+    loadMenuItems(tempMenuItems);
+}
