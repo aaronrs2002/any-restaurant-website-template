@@ -693,6 +693,8 @@ const deleteFoodItem = (whichItem) => {
     }
 
     tempMenuItems = tempObj;
+
+
     updateMenuItem("build");
 }
 
