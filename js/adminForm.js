@@ -1114,6 +1114,17 @@ const populateMenuItem = () => {
 
     let whichItem = document.querySelector("select[name='menuItems']").value;
     if (whichItem === "default") {
+
+        document.querySelector("[name='foodTitle']").value = "";
+        document.querySelector("[name='category']").value = "";
+        document.querySelector("[name='price']").value = "";
+
+
+        tempIngredients = [];
+
+        document.querySelector("[name='ingredient']").value = "";
+
+        document.getElementById("ingredientsTarget").innerHTML = "";
         return false;
     } else {
         console.log("JSON.stringify(tempMenuItems[whichItem]): " + JSON.stringify(tempMenuItems[whichItem]));
@@ -1127,10 +1138,6 @@ const populateMenuItem = () => {
         let ingredientStr = "";
         for (let i = 0; i < tempIngredients.length; i++) {
             ingredientStr = ingredientStr + `<span class='badge bg-secondary'><i class='fas fa-trash pointer' onClick="deleteIngredient(${i})"></i> - ${tempIngredients[i]}</span>`;
-
-
-            //
-            // `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
 
         }
         document.querySelector("[name='ingredient']").value = "";
@@ -1167,7 +1174,7 @@ function downloadData() {
     a.href = URL.createObjectURL(new Blob([JSON.stringify(tempData, null, 2)], {
         type: 'application/json'
     }));
-    a.setAttribute("download", tempRestaurant.restaurantName + "_Menu.json");
+    a.setAttribute("download", config[activeRestaurant].restaurantName.replaceAll(" ", "") + "_Menu.json");
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -1183,7 +1190,7 @@ function handleOnChange(event) {
         console.log("event.target.files[0]: " + JSON.stringify(event.target.files[0]));
         document.querySelector("#fileUpload").classList.remove("hide");
         // document.querySelector("#fileMerge").classList.remove("hide");
-        globalAlert("alert-warning", `File selected. Select if you want to merge  with current data or not.`);
+        globalAlert("alert-warning", `File selected.`);
     } else {
         document.querySelector("#fileUpload").classList.add("hide");
         // document.querySelector("#fileMerge").classList.add("hide");
