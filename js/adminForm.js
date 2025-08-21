@@ -561,18 +561,6 @@ let tempMenuItems = [];
 
 
 
-const loadMenuItems = (data) => {
-
-
-    let menuStr = "<option value='default'>Select menu item to edit</option>";
-    for (let i = 0; i < data.length; i++) {
-        menuStr = menuStr + "<option value='" + i + "'>" + data[i].title + "</option>"
-    }
-
-    document.querySelector("select[name='menuItems']").innerHTML = menuStr
-
-}
-
 
 const updateMenuItem = (addBuld) => {
 
@@ -955,17 +943,26 @@ if (tempRestaurant.saturdayHours) {
 
 }
 
+console.log("on load JSON.stringify(menu): " + JSON.stringify(menu));
 
 const populateFields = () => {
 
-    activeRestaurant = document.querySelector("[name='editRestaurant']").value;
+
+
+
+    activeRestaurantName = document.querySelector("[name='editRestaurant']").value;
     for (let i = 0; i < config.length; i++) {
-        if (activeRestaurant === config[i].restaurantName) {
+
+        if (activeRestaurantName === config[i].restaurantName) {
             tempRestaurant = config[i];
+            activeRestaurant = i;
+            runOnLoad(activeRestaurant);
+
+
         }
     }
 
-    if (activeRestaurant === "default") {
+    if (activeRestaurantName === "default") {
         globalAlert("alert-warning", "Select a restaurant please.");
         return false;
     } else {
@@ -973,7 +970,7 @@ const populateFields = () => {
             e.innerHTML = tempRestaurant.restaurantName;
         });
 
-
+        console.log("POPULATE FEILDS FOR: " + tempRestaurant.restaurantName);
         document.querySelector("[name='restaurantName']").value = tempRestaurant.restaurantName;
         document.querySelector("[name='googleID']").value = tempRestaurant.googleID;
         document.querySelector("[name='apiAddress']").value = tempRestaurant.apiAddress;
@@ -1114,17 +1111,34 @@ const updateCRUD = (role) => {
 
     if (role === "edit") {
 
+
         populateFields();
 
-
-
-
-
     }
-
+    document.querySelector("[name='foodTitle']").value = "";
+    document.querySelector("[name='ingredient']").value = "";
+    document.querySelector("[name='category']").value = "";
+    document.querySelector("[name='price']").value = "";
+    document.getElementById("ingredientsTarget").innerHTML = "";
     //  document.querySelector("[data-crud='" + role + "']").classList.remove("hide");
 
 }
+
+[].forEach.call(document.querySelectorAll("[data-crudbt]"), (e) => {
+
+    let tempRole = e.dataset.crudbt;
+    try {
+
+        if (document.querySelector(".active[data-crudbt='" + role + "']")) {
+            updateCRUD(tempRole);
+        }
+
+    } catch (error) {
+        console.log("Error: " + error);
+
+    }
+
+});
 
 const populateMenuItem = () => {
 
