@@ -1142,6 +1142,12 @@ const updateCRUD = (role) => {
 
 const populateMenuItem = () => {
 
+
+    if (localStorage.getItem("cmsMenu")) {
+        tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
+
+    }
+
     let whichItem = document.querySelector("select[name='menuItems']").value;
     if (whichItem === "default") {
 

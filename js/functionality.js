@@ -19,6 +19,7 @@ let categoryList = [];
 
 
 const loadMenuItems = (data) => {
+    localStorage.setItem("cmsMenu", JSON.stringify(data));
     try {
         if (document.querySelector("select[name='menuItems']")) {
             let menuStr = "<option value='default'>Select menu item to edit</option>";
