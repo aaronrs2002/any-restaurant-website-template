@@ -1123,13 +1123,72 @@ const updateCRUD = (role) => {
 
 
         populateFields();
+        document.querySelector("[name='foodTitle']").value = "";
+        document.querySelector("[name='ingredient']").value = "";
+        document.querySelector("[name='category']").value = "";
+        document.querySelector("[name='price']").value = "";
+        document.getElementById("ingredientsTarget").innerHTML = "";
+    }
+
+
+    if (role === "add") {
+
+
+        tempRestaurant = {
+            restaurantName: "",
+            sundayHours: "08:00AM - 10:00PM",
+            mondayHours: "08:00AM - 10:00PM",
+            tuesdayHours: "08:00AM - 10:00PM",
+            wednesdayHours: "08:00AM - 10:00PM",
+            thursdayHours: "08:00AM - 10:00PM",
+            fridayHours: "08:00AM - 10:00PM",
+            saturdayHours: "08:00AM - 11:30PM",
+            googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+            apiAddress: "",
+            navLinks: [],
+            theme: "",
+            banners: [],
+
+            about: "",
+            logoHTML: "",
+            media: [],
+            events: [],
+            blogAddress: "",
+            address: "",
+            phone: "",
+            email: "",
+            socialMedia: []
+
+        };
+
+        localStorage.removeItem("cmsMenu");
+        localStorage.removeItem("activeRestaurantData");
+
+        [].forEach.call(document.querySelectorAll("textarea"), (e) => {
+            e.value = "";
+        });
+
+        [].forEach.call(document.querySelectorAll("input[type='text']"), (e) => {
+            e.value = "";
+        });
+
+        [].forEach.call(document.querySelectorAll("select"), (e) => {
+            e.selectedIndex = 0;
+        });
+
+        document.getElementById("navLinksTarget").innerHTML = "";
+        document.getElementById("bannersTarget").innerHTML = "";
+        document.getElementById("mediaImagesTarget").innerHTML = "";
+        document.getElementById("mediaytIdsTarget").innerHTML = "";
+        document.getElementById("mediaHtmlTarget").innerHTML = "";
+        document.getElementById("mediaMapsTarget").innerHTML = "";
+        document.getElementById("eventsTarget").innerHTML = "";
+        document.getElementById("socialMediaTarget").innerHTML = "";
+
+        //mediaMapsTarget
 
     }
-    document.querySelector("[name='foodTitle']").value = "";
-    document.querySelector("[name='ingredient']").value = "";
-    document.querySelector("[name='category']").value = "";
-    document.querySelector("[name='price']").value = "";
-    document.getElementById("ingredientsTarget").innerHTML = "";
+
     //  document.querySelector("[data-crud='" + role + "']").classList.remove("hide");
 
 }
