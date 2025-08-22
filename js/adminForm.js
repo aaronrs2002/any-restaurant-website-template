@@ -576,7 +576,9 @@ const updateMenuItem = (addBuld) => {
 
     console.log("tempIngredients.length: " + tempIngredients.length)
 
-
+    if (localStorage.getItem("cmsMenu")) {
+        tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
+    }
 
 
     if (addBuld === "add") {
@@ -610,6 +612,8 @@ const updateMenuItem = (addBuld) => {
                 }
 
             }
+
+
 
 
         }
@@ -649,7 +653,6 @@ const updateMenuItem = (addBuld) => {
     document.querySelector("[name='price']").value = "";
 
 }
-
 
 
 
@@ -1137,12 +1140,14 @@ const updateCRUD = (role) => {
 
 
     if (role === "edit") {
-        tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
+        if (localStorage.getItem("cmsMenu")) {
+            tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
 
-        if ((typeof tempMenuItems)) {
-            globalAlert("alert-success", "tempMenu is a " + (typeof tempMenuItems))
-        } else {
-            globalAlert("alert-danger", "tempMenu is a " + (typeof tempMenuItems))
+        }
+
+        if ((typeof tempMenuItems) === "object") {
+
+            updateMenuItem("build");
         }
 
         populateFields();
@@ -1156,7 +1161,7 @@ const updateCRUD = (role) => {
 
     if (role === "add") {
         tempMenuItems = [];
-
+        document.getElementById("menuTarget").innerHTML = "";
         tempRestaurant = {
             restaurantName: "",
             sundayHours: "08:00AM - 10:00PM",
@@ -1236,6 +1241,21 @@ const updateCRUD = (role) => {
 
 });
 
+function clearFields() {
+    document.querySelector("[name='foodTitle']").value = "";
+    document.querySelector("[name='category']").value = "";
+    document.querySelector("[name='price']").value = "";
+
+
+    tempIngredients = [];
+
+    document.querySelector("[name='ingredient']").value = "";
+
+    document.getElementById("ingredientsTarget").innerHTML = "";
+    return false;
+
+}
+
 const populateMenuItem = () => {
 
 
@@ -1247,17 +1267,7 @@ const populateMenuItem = () => {
     let whichItem = document.querySelector("select[name='menuItems']").value;
     if (whichItem === "default") {
 
-        document.querySelector("[name='foodTitle']").value = "";
-        document.querySelector("[name='category']").value = "";
-        document.querySelector("[name='price']").value = "";
-
-
-        tempIngredients = [];
-
-        document.querySelector("[name='ingredient']").value = "";
-
-        document.getElementById("ingredientsTarget").innerHTML = "";
-        return false;
+        clearFields();
     } else {
         console.log("JSON.stringify(tempMenuItems[whichItem]): " + JSON.stringify(tempMenuItems[whichItem]));
 
