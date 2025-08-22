@@ -231,12 +231,6 @@ function deleteItem(whichNum, whichObj) {
 
 
 
-console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant));
-
-
-
-
-
 function submitToLocal(whichArr) {
 
     if (localStorage.getItem("activeRestaurantData")) {
@@ -627,10 +621,6 @@ const updateMenuItem = (addBuld) => {
         for (let j = 0; j < tempMenuItems[i].ingredients.length; j++) {
             tempIngredientsStr = tempIngredientsStr + "<span class='badge bg-secondary'>" + tempMenuItems[i].ingredients[j] + "</span>";
         }
-
-        console.log("tempIngredientsStr: " + tempIngredientsStr);
-
-
         menuStr = menuStr + "<li class='list-group-item'><ul><li>" + tempMenuItems[i].title + "</li><li>" + tempMenuItems[i].category + "</li><li>" + tempMenuItems[i].price + "</li><li>" + tempIngredientsStr + "</li><li><button class='btn btn-danger py-2' onClick='deleteFoodItem(" + i + ")'> <i class='fas fa-trash'></i> Delete Menu Item:  " + (1 + i) + "</button></li></ul></li>";
 
 
@@ -641,7 +631,6 @@ const updateMenuItem = (addBuld) => {
 
     document.getElementById("menuTarget").innerHTML = menuStr;
 
-    console.log("JSON.stringify(tempMenuItems): " + JSON.stringify(tempMenuItems));
 
     localStorage.setItem("cmsMenu", JSON.stringify(tempMenuItems));
     loadMenuItems(tempMenuItems);
@@ -718,6 +707,10 @@ const deleteFoodItem = (whichItem) => {
 
 const submitHours = () => {
 
+    if (localStorage.getItem("activeRestaurantData")) {
+        tempRestaurant = JSON.parse(localStorage.getItem("activeRestaurantData"));
+    }
+
 
     tempRestaurant.sundayHours = document.querySelector("select[name='sundayOpenHr']").value + ":" + document.querySelector("select[name='sundayOpenMin']").value + document.querySelector("select[name='sundayOpenAmPm']").value + " - " +
         document.querySelector("select[name='sundayCloseHr']").value + ":" + document.querySelector("select[name='sundayCloseMin']").value + document.querySelector("select[name='sundayCloseAmPm']").value;
@@ -753,227 +746,230 @@ const submitHours = () => {
 }
 
 /*onl load we need to set all the time select manes "08:00AM - 10:00PM"*/
-if (tempRestaurant.sundayHours) {
+const buildTimeMenus = () => {
 
-    let tempOpenHr = tempRestaurant.sundayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.sundayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.sundayHours.substring(5, 7);
+    if (tempRestaurant.sundayHours) {
+        console.log("tempRestaurant.sundayHours: " + tempRestaurant.sundayHours);
+        let tempOpenHr = tempRestaurant.sundayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.sundayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.sundayHours.substring(5, 7);
 
-    let tempCloseHr = tempRestaurant.sundayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.sundayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.sundayHours.substring(15, 17);
+        let tempCloseHr = tempRestaurant.sundayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.sundayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.sundayHours.substring(15, 17);
 
 
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='sundayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='sundayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='sundayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='sundayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='sundayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='sundayCloseAmPm']").selectedIndex = 0;
-    } else {
-        document.querySelector("select[name='sundayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='sundayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='sundayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='sundayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='sundayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='sundayCloseAmPm']").value = tempCloseAmPm;
+
+
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='sundayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='sundayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='sundayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='sundayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='sundayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='sundayCloseAmPm']").selectedIndex = 0;
+        } else {
+            document.querySelector("select[name='sundayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='sundayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='sundayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='sundayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='sundayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='sundayCloseAmPm']").value = tempCloseAmPm;
+        }
+
+
     }
 
+    if (tempRestaurant.mondayHours) {
 
-}
+        let tempOpenHr = tempRestaurant.mondayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.mondayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.mondayHours.substring(5, 7);
 
-if (tempRestaurant.mondayHours) {
-
-    let tempOpenHr = tempRestaurant.mondayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.mondayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.mondayHours.substring(5, 7);
-
-    let tempCloseHr = tempRestaurant.mondayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.mondayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.mondayHours.substring(15, 17);
+        let tempCloseHr = tempRestaurant.mondayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.mondayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.mondayHours.substring(15, 17);
 
 
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='mondayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='mondayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='mondayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='mondayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='mondayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='mondayCloseAmPm']").selectedIndex = 0;
-    } else {
-        document.querySelector("select[name='mondayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='mondayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='mondayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='mondayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='mondayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='mondayCloseAmPm']").value = tempCloseAmPm;
-    }
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='mondayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='mondayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='mondayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='mondayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='mondayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='mondayCloseAmPm']").selectedIndex = 0;
+        } else {
+            document.querySelector("select[name='mondayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='mondayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='mondayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='mondayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='mondayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='mondayCloseAmPm']").value = tempCloseAmPm;
+        }
 
-
-}
-
-
-if (tempRestaurant.tuesdayHours) {
-
-    let tempOpenHr = tempRestaurant.tuesdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.tuesdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.tuesdayHours.substring(5, 7);
-
-    let tempCloseHr = tempRestaurant.tuesdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.tuesdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.tuesdayHours.substring(15, 17);
-
-
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='tuesdayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='tuesdayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='tuesdayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='tuesdayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='tuesdayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='tuesdayCloseAmPm']").selectedIndex = 0;
-    } else {
-        document.querySelector("select[name='tuesdayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='tuesdayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='tuesdayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='tuesdayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='tuesdayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='tuesdayCloseAmPm']").value = tempCloseAmPm;
-    }
-
-
-
-}
-
-
-if (tempRestaurant.wednesdayHours) {
-
-    let tempOpenHr = tempRestaurant.wednesdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.wednesdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.wednesdayHours.substring(5, 7);
-
-    let tempCloseHr = tempRestaurant.wednesdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.wednesdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.wednesdayHours.substring(15, 17);
-
-
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='wednesdayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='wednesdayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='wednesdayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='wednesdayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='wednesdayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='wednesdayCloseAmPm']").selectedIndex = 0;
-    } else {
-
-        document.querySelector("select[name='wednesdayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='wednesdayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='wednesdayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='wednesdayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='wednesdayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='wednesdayCloseAmPm']").value = tempCloseAmPm;
-    }
-
-
-}
-
-
-if (tempRestaurant.thursdayHours) {
-
-    let tempOpenHr = tempRestaurant.thursdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.thursdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.thursdayHours.substring(5, 7);
-
-    let tempCloseHr = tempRestaurant.thursdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.thursdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.thursdayHours.substring(15, 17);
-
-
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='thursdayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='thursdayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='thursdayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='thursdayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='thursdayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='thursdayCloseAmPm']").selectedIndex = 0;
-    } else {
-        document.querySelector("select[name='thursdayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='thursdayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='thursdayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='thursdayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='thursdayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='thursdayCloseAmPm']").value = tempCloseAmPm;
-    }
-
-
-
-}
-
-
-if (tempRestaurant.fridayHours) {
-
-    let tempOpenHr = tempRestaurant.fridayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.fridayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.fridayHours.substring(5, 7);
-
-    let tempCloseHr = tempRestaurant.fridayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.fridayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.fridayHours.substring(15, 17);
-
-
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='fridayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='fridayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='fridayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='fridayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='fridayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='fridayCloseAmPm']").selectedIndex = 0;
-    } else {
-        document.querySelector("select[name='fridayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='fridayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='fridayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='fridayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='fridayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='fridayCloseAmPm']").value = tempCloseAmPm;
-    }
-
-
-
-}
-
-if (tempRestaurant.saturdayHours) {
-
-    let tempOpenHr = tempRestaurant.saturdayHours.substring(0, 2);
-    let tempOpenMin = tempRestaurant.saturdayHours.substring(3, 5);
-    let tempOpenAmPm = tempRestaurant.saturdayHours.substring(5, 7);
-
-    let tempCloseHr = tempRestaurant.saturdayHours.substring(10, 12);
-    let tempCloseMin = tempRestaurant.saturdayHours.substring(13, 15);
-    let tempCloseAmPm = tempRestaurant.saturdayHours.substring(15, 17);
-
-    //console.log("(tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm): " + (tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm))
-    if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("c") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
-        document.querySelector("select[name='saturdayOpenHr']").selectedIndex = 0;
-        document.querySelector("select[name='saturdayOpenMin']").selectedIndex = 0;
-        document.querySelector("select[name='saturdayOpenAmPm']").selectedIndex = 0;
-        document.querySelector("select[name='saturdayCloseHr']").selectedIndex = 0;
-        document.querySelector("select[name='saturdayCloseMin']").selectedIndex = 0;
-        document.querySelector("select[name='saturdayCloseAmPm']").selectedIndex = 0;
-    } else {
-        document.querySelector("select[name='saturdayOpenHr']").value = tempOpenHr;
-        document.querySelector("select[name='saturdayOpenMin']").value = tempOpenMin;
-        document.querySelector("select[name='saturdayOpenAmPm']").value = tempOpenAmPm;
-        document.querySelector("select[name='saturdayCloseHr']").value = tempCloseHr;
-        document.querySelector("select[name='saturdayCloseMin']").value = tempCloseMin;
-        document.querySelector("select[name='saturdayCloseAmPm']").value = tempCloseAmPm;
 
     }
 
 
+    if (tempRestaurant.tuesdayHours) {
 
+        let tempOpenHr = tempRestaurant.tuesdayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.tuesdayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.tuesdayHours.substring(5, 7);
+
+        let tempCloseHr = tempRestaurant.tuesdayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.tuesdayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.tuesdayHours.substring(15, 17);
+
+
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='tuesdayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='tuesdayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='tuesdayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='tuesdayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='tuesdayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='tuesdayCloseAmPm']").selectedIndex = 0;
+        } else {
+            document.querySelector("select[name='tuesdayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='tuesdayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='tuesdayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='tuesdayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='tuesdayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='tuesdayCloseAmPm']").value = tempCloseAmPm;
+        }
+
+
+
+    }
+
+
+    if (tempRestaurant.wednesdayHours) {
+
+        let tempOpenHr = tempRestaurant.wednesdayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.wednesdayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.wednesdayHours.substring(5, 7);
+
+        let tempCloseHr = tempRestaurant.wednesdayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.wednesdayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.wednesdayHours.substring(15, 17);
+
+
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='wednesdayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='wednesdayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='wednesdayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='wednesdayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='wednesdayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='wednesdayCloseAmPm']").selectedIndex = 0;
+        } else {
+
+            document.querySelector("select[name='wednesdayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='wednesdayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='wednesdayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='wednesdayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='wednesdayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='wednesdayCloseAmPm']").value = tempCloseAmPm;
+        }
+
+
+    }
+
+
+    if (tempRestaurant.thursdayHours) {
+
+        let tempOpenHr = tempRestaurant.thursdayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.thursdayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.thursdayHours.substring(5, 7);
+
+        let tempCloseHr = tempRestaurant.thursdayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.thursdayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.thursdayHours.substring(15, 17);
+
+
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='thursdayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='thursdayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='thursdayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='thursdayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='thursdayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='thursdayCloseAmPm']").selectedIndex = 0;
+        } else {
+            document.querySelector("select[name='thursdayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='thursdayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='thursdayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='thursdayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='thursdayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='thursdayCloseAmPm']").value = tempCloseAmPm;
+        }
+
+
+
+    }
+
+
+    if (tempRestaurant.fridayHours) {
+
+        let tempOpenHr = tempRestaurant.fridayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.fridayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.fridayHours.substring(5, 7);
+
+        let tempCloseHr = tempRestaurant.fridayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.fridayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.fridayHours.substring(15, 17);
+
+
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='fridayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='fridayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='fridayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='fridayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='fridayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='fridayCloseAmPm']").selectedIndex = 0;
+        } else {
+            document.querySelector("select[name='fridayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='fridayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='fridayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='fridayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='fridayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='fridayCloseAmPm']").value = tempCloseAmPm;
+        }
+
+
+
+    }
+
+    if (tempRestaurant.saturdayHours) {
+
+        let tempOpenHr = tempRestaurant.saturdayHours.substring(0, 2);
+        let tempOpenMin = tempRestaurant.saturdayHours.substring(3, 5);
+        let tempOpenAmPm = tempRestaurant.saturdayHours.substring(5, 7);
+
+        let tempCloseHr = tempRestaurant.saturdayHours.substring(10, 12);
+        let tempCloseMin = tempRestaurant.saturdayHours.substring(13, 15);
+        let tempCloseAmPm = tempRestaurant.saturdayHours.substring(15, 17);
+
+        //console.log("(tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm): " + (tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm))
+        if ((tempOpenHr + tempOpenMin + tempOpenAmPm + tempCloseHr + tempCloseMin + tempCloseAmPm).indexOf("C") !== -1) {/*'c'indicates that one of the select menus was set to closed*/
+            document.querySelector("select[name='saturdayOpenHr']").selectedIndex = 0;
+            document.querySelector("select[name='saturdayOpenMin']").selectedIndex = 0;
+            document.querySelector("select[name='saturdayOpenAmPm']").selectedIndex = 0;
+            document.querySelector("select[name='saturdayCloseHr']").selectedIndex = 0;
+            document.querySelector("select[name='saturdayCloseMin']").selectedIndex = 0;
+            document.querySelector("select[name='saturdayCloseAmPm']").selectedIndex = 0;
+        } else {
+            document.querySelector("select[name='saturdayOpenHr']").value = tempOpenHr;
+            document.querySelector("select[name='saturdayOpenMin']").value = tempOpenMin;
+            document.querySelector("select[name='saturdayOpenAmPm']").value = tempOpenAmPm;
+            document.querySelector("select[name='saturdayCloseHr']").value = tempCloseHr;
+            document.querySelector("select[name='saturdayCloseMin']").value = tempCloseMin;
+            document.querySelector("select[name='saturdayCloseAmPm']").value = tempCloseAmPm;
+
+        }
+
+
+
+    }
 }
-
-console.log("on load JSON.stringify(menu): " + JSON.stringify(menu));
 
 const populateFields = () => {
 
@@ -1151,6 +1147,7 @@ const updateCRUD = (role) => {
         }
 
         populateFields();
+        buildTimeMenus();
         document.querySelector("[name='foodTitle']").value = "";
         document.querySelector("[name='ingredient']").value = "";
         document.querySelector("[name='category']").value = "";
