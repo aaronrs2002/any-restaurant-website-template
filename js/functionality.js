@@ -247,13 +247,12 @@ const runOnLoad = () => {
                     categoryList.push(menu[i].category);
                 }
 
-
-                if (document.querySelector(".active[data-crudbt='edit']")) {
-                    loadMenuItems(menu);
-                    buildMenuTarget(data)
-                }
+            }
 
 
+            if (document.querySelector(".active[data-crudbt='edit']")) {
+                loadMenuItems(menu);
+                buildMenuTarget(data);
             }
 
             /*  for (let i = 0; i < menu.length; i++) {
