@@ -599,13 +599,16 @@ const updateMenuItem = (addBuld) => {
                 }
             }
             if (!replaced) {
-                tempMenuItems.push({
-                    title: document.querySelector("[name='foodTitle']").value,
-                    ingredients: tempIngredients,
-                    category: document.querySelector("[name='category']").value,
-                    price: document.querySelector("[name='price']").value
-                });
-                globalAlert("alert-success", document.querySelector("[name='foodTitle']").value + " added.");
+                if (document.querySelector("[name='foodTitle']").value !== "") {
+                    tempMenuItems.push({
+                        title: document.querySelector("[name='foodTitle']").value,
+                        ingredients: tempIngredients,
+                        category: document.querySelector("[name='category']").value,
+                        price: document.querySelector("[name='price']").value
+                    });
+                    globalAlert("alert-success", document.querySelector("[name='foodTitle']").value + " added.");
+                }
+
             }
 
 
@@ -1134,7 +1137,13 @@ const updateCRUD = (role) => {
 
 
     if (role === "edit") {
+        tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
 
+        if ((typeof tempMenuItems)) {
+            globalAlert("alert-success", "tempMenu is a " + (typeof tempMenuItems))
+        } else {
+            globalAlert("alert-danger", "tempMenu is a " + (typeof tempMenuItems))
+        }
 
         populateFields();
         document.querySelector("[name='foodTitle']").value = "";
@@ -1146,7 +1155,7 @@ const updateCRUD = (role) => {
 
 
     if (role === "add") {
-
+        tempMenuItems = [];
 
         tempRestaurant = {
             restaurantName: "",
@@ -1175,8 +1184,11 @@ const updateCRUD = (role) => {
 
         };
 
+
         localStorage.removeItem("cmsMenu");
         localStorage.removeItem("activeRestaurantData");
+
+
 
         [].forEach.call(document.querySelectorAll("textarea"), (e) => {
             e.value = "";
@@ -1198,6 +1210,7 @@ const updateCRUD = (role) => {
         document.getElementById("mediaMapsTarget").innerHTML = "";
         document.getElementById("eventsTarget").innerHTML = "";
         document.getElementById("socialMediaTarget").innerHTML = "";
+        document.getElementById("ingredientsTarget").innerHTML = "";
 
         //mediaMapsTarget
 
