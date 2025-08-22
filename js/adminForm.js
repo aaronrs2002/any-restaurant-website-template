@@ -587,13 +587,27 @@ const updateMenuItem = (addBuld) => {
             globalAlert("alert-danger", "You're missing some input fields.");
             return false;
         } else {
+            let replaced = false;
+            for (let i = 0; i < tempMenuItems.length; i++) {
+                if (tempMenuItems[i].title === document.querySelector("[name='foodTitle']").value) {
+                    tempMenuItems[i].title = document.querySelector("[name='foodTitle']").value,
+                        tempMenuItems[i].ingredients = tempIngredients,
+                        tempMenuItems[i].category = document.querySelector("[name='category']").value,
+                        tempMenuItems[i].price = document.querySelector("[name='price']").value;
+                    replaced = true;
+                    globalAlert("alert-success", document.querySelector("[name='foodTitle']").value + " updated.");
+                }
+            }
+            if (!replaced) {
+                tempMenuItems.push({
+                    title: document.querySelector("[name='foodTitle']").value,
+                    ingredients: tempIngredients,
+                    category: document.querySelector("[name='category']").value,
+                    price: document.querySelector("[name='price']").value
+                });
+                globalAlert("alert-success", document.querySelector("[name='foodTitle']").value + " added.");
+            }
 
-            tempMenuItems.push({
-                title: document.querySelector("[name='foodTitle']").value,
-                ingredients: tempIngredients,
-                category: document.querySelector("[name='category']").value,
-                price: document.querySelector("[name='price']").value
-            })
 
         }
     }
