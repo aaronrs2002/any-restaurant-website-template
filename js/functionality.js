@@ -15,7 +15,26 @@ let navHTML = "";
 let categories = [];
 let categoryList = [];
 
+function buildMenuTarget(data) {
 
+    let menuStr = "";
+    for (let i = 0; i < data.length; i++) {
+
+        let tempIngredientsStr = "";
+        for (let j = 0; j < data[i].ingredients.length; j++) {
+            tempIngredientsStr = tempIngredientsStr + "<span class='badge bg-secondary'>" + data[i].ingredients[j] + "</span>";
+        }
+        menuStr = menuStr + "<li class='list-group-item'><ul><li>" + data[i].title + "</li><li>" + data[i].category + "</li><li>" + data[i].price + "</li><li>" + tempIngredientsStr + "</li><li><button class='btn btn-danger py-2' onClick='deleteFoodItem(" + i + ")'> <i class='fas fa-trash'></i> Delete Menu Item:  " + (1 + i) + "</button></li></ul></li>";
+
+
+
+    }
+    if (document.getElementById("menuTarget")) {
+        document.getElementById("menuTarget").innerHTML = menuStr;
+    }
+
+
+}
 
 
 const loadMenuItems = (data) => {
@@ -231,6 +250,7 @@ const runOnLoad = () => {
 
                 if (document.querySelector(".active[data-crudbt='edit']")) {
                     loadMenuItems(menu);
+                    buildMenuTarget(data)
                 }
 
 
@@ -267,6 +287,7 @@ const runOnLoad = () => {
         } catch (error) {
             console.log("Error: " + error);
         }
+
     }
     start();
 

@@ -571,6 +571,7 @@ const updateMenuItem = (addBuld) => {
     console.log("tempIngredients.length: " + tempIngredients.length)
 
     if (localStorage.getItem("cmsMenu")) {
+        console.log("tempMenuItems: " + JSON.stringify(tempMenuItems));
         tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
     }
 
@@ -614,22 +615,8 @@ const updateMenuItem = (addBuld) => {
     }
 
 
-    let menuStr = "";
-    for (let i = 0; i < tempMenuItems.length; i++) {
 
-        let tempIngredientsStr = "";
-        for (let j = 0; j < tempMenuItems[i].ingredients.length; j++) {
-            tempIngredientsStr = tempIngredientsStr + "<span class='badge bg-secondary'>" + tempMenuItems[i].ingredients[j] + "</span>";
-        }
-        menuStr = menuStr + "<li class='list-group-item'><ul><li>" + tempMenuItems[i].title + "</li><li>" + tempMenuItems[i].category + "</li><li>" + tempMenuItems[i].price + "</li><li>" + tempIngredientsStr + "</li><li><button class='btn btn-danger py-2' onClick='deleteFoodItem(" + i + ")'> <i class='fas fa-trash'></i> Delete Menu Item:  " + (1 + i) + "</button></li></ul></li>";
-
-
-
-    }
-
-
-
-    document.getElementById("menuTarget").innerHTML = menuStr;
+    buildMenuTarget(tempMenuItems)
 
 
     localStorage.setItem("cmsMenu", JSON.stringify(tempMenuItems));
@@ -1106,6 +1093,16 @@ const populateFields = () => {
         // console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
         document.querySelector("#socialMediaTarget").innerHTML = tempSocialMediaHTML;
 
+        buildTimeMenus();
+        setTimeout(() => {
+            updateMenuItem("build");
+        }, 1000);
+
+
+
+
+
+
     }
 
 
@@ -1141,13 +1138,10 @@ const updateCRUD = (role) => {
 
         }
 
-        if ((typeof tempMenuItems) === "object") {
 
-            updateMenuItem("build");
-        }
 
         populateFields();
-        buildTimeMenus();
+
         document.querySelector("[name='foodTitle']").value = "";
         document.querySelector("[name='ingredient']").value = "";
         document.querySelector("[name='category']").value = "";
