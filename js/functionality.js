@@ -40,7 +40,7 @@ const loadMenuItems = (data) => {
 
 const runOnLoad = () => {
 
-
+    localStorage.setItem("activeRestaurantData", JSON.stringify(config[activeRestaurant]));
     document.querySelector("body[data-restaurant]").dataset.restaurant = activeRestaurant;
     document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
     [].forEach.call(document.querySelectorAll(".logoHTML"), (e) => {

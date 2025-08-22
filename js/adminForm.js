@@ -1,6 +1,4 @@
-let tempRestaurant =
-
-{
+let tempRestaurant = {
     restaurantName: "",
     sundayHours: "08:00AM - 10:00PM",
     mondayHours: "08:00AM - 10:00PM",
@@ -27,6 +25,10 @@ let tempRestaurant =
 
 };
 
+if (localStorage.getItem("activeRestaurantData")) {
+    tempRestaurant = JSON.parse(localStorage.getItem("activeRestaurantData"));
+}
+
 
 let editRestaurantStr = "";
 for (let i = 0; i < config.length; i++) {
@@ -34,6 +36,21 @@ for (let i = 0; i < config.length; i++) {
 }
 
 document.querySelector("[name='editRestaurant']").innerHTML = editRestaurantStr;
+
+
+const chooseRole = (role) => {
+    [].forEach.call(document.querySelectorAll("section"), (e) => {
+        e.classList.add("hide");
+    });
+    document.querySelector("section[data-section='" + role + "']").classList.remove("hide");
+
+
+    [].forEach.call(document.querySelectorAll("[data-func]"), (e) => {
+        e.classList.remove("active")
+    });
+    document.querySelector("[data-func='" + role + "']").classList.add("active");
+
+}
 
 function deleteItem(whichNum, whichObj) {
 
@@ -214,7 +231,7 @@ function deleteItem(whichNum, whichObj) {
 
 
 
-
+console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant));
 
 
 
@@ -222,6 +239,9 @@ function deleteItem(whichNum, whichObj) {
 
 function submitToLocal(whichArr) {
 
+    if (localStorage.getItem("activeRestaurantData")) {
+        tempRestaurant = JSON.parse(localStorage.getItem("activeRestaurantData"));
+    }
 
 
     //const multiArr = ['navLinks', "banners", "media", "events","socialMedia"];
@@ -440,12 +460,12 @@ function submitToLocal(whichArr) {
                 });
 
                 let tempSocialMediaHTML = "";
-                for (let i = 0; i < tempRestaurant[activeRestaurant].socialMedia.length; i++) {
-                    tempSocialMediaHTML = tempSocialMediaHTML + `<li class="list-group-item"><a class="p-2 text-primary"  href="${tempRestaurant[activeRestaurant].socialMedia[i].link + (tempRestaurant[activeRestaurant].socialMedia[i].link.indexOf("?") !== -1 ? gaParam : "")
-                        }" target="_blank" title="${tempRestaurant[activeRestaurant].socialMedia[i].title}" ><i class="${tempRestaurant[activeRestaurant].socialMedia[i].theClass
-                        } animated"  onmouseover="javascript:tadaRollover('${tempRestaurant[activeRestaurant].socialMedia[i].theClass
-                        }')" onmouseout="javascript:tadaRollout('${tempRestaurant[activeRestaurant].socialMedia[i].theClass
-                        }')" data-tada="${tempRestaurant[activeRestaurant].socialMedia[i].theClass
+                for (let i = 0; i < tempRestaurant.socialMedia.length; i++) {
+                    tempSocialMediaHTML = tempSocialMediaHTML + `<li class="list-group-item"><a class="p-2 text-primary"  href="${tempRestaurant.socialMedia[i].link + (tempRestaurant.socialMedia[i].link.indexOf("?") !== -1 ? gaParam : "")
+                        }" target="_blank" title="${tempRestaurant.socialMedia[i].title}" ><i class="${tempRestaurant.socialMedia[i].theClass
+                        } animated"  onmouseover="javascript:tadaRollover('${tempRestaurant.socialMedia[i].theClass
+                        }')" onmouseout="javascript:tadaRollout('${tempRestaurant.socialMedia[i].theClass
+                        }')" data-tada="${tempRestaurant.socialMedia[i].theClass
                         }"></i></a><button class='btn btn-danger' onClick=\"deleteItem('${i}','socialMedia')\" ><i class='fas fa-trash' ></i></button></li>`;
                 }
                 console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
@@ -459,6 +479,8 @@ function submitToLocal(whichArr) {
 
 
     }
+
+    localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 
 }
 
@@ -529,23 +551,11 @@ function submitRestaurant(role) {
     globalAlert("alert-success", role + " complete.");
     document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant);
     console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant));
+    localStorage.setItem("activeRestaurantData", JSON.srtringify(tempRestaurant));
 }
 
 
 
-const chooseRole = (role) => {
-    [].forEach.call(document.querySelectorAll("section"), (e) => {
-        e.classList.add("hide");
-    });
-    document.querySelector("section[data-section='" + role + "']").classList.remove("hide");
-
-
-    [].forEach.call(document.querySelectorAll("[data-func]"), (e) => {
-        e.classList.remove("active")
-    });
-    document.querySelector("[data-func='" + role + "']").classList.add("active");
-
-}
 
 
 
