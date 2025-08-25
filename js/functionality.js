@@ -145,7 +145,7 @@ const runOnLoad = () => {
     [].forEach.call(document.querySelectorAll("select.minutes"), (e) => {
         e.innerHTML = minutesStr;
     });
-
+    console.log("config[activeRestaurant].banners: " + config[activeRestaurant].banners)
     document.querySelector("body[data-restaurant]").style.backgroundImage = "url(" + config[activeRestaurant].banners[Math.floor(Math.random() * config[activeRestaurant].banners.length)].img + ")";
 
     if (document.querySelector(".contactMap")) {

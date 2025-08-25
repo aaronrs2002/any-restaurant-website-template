@@ -11,6 +11,7 @@ let tempRestaurant = {
     apiAddress: "",
     navLinks: [],
     theme: "",
+    homeImg: "",
     banners: [],
 
     about: "",
@@ -551,7 +552,7 @@ function submitRestaurant(role) {
     globalAlert("alert-success", role + " complete.");
     document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant);
     console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant));
-    localStorage.setItem("activeRestaurantData", JSON.srtringify(tempRestaurant));
+    localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 }
 
 

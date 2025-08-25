@@ -289,7 +289,102 @@ let config = [
         "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
         "email": "ieat@food.com",
         "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
-    }];
+    },
+    {
+        "restaurantName": "Ta Da",
+        "sundayHours": "08:00AM - 10:00PM",
+        "mondayHours": "08:00AM - 10:00PM",
+        "tuesdayHours": "08:00AM - 10:00PM",
+        "wednesdayHours": "08:00AM - 10:00PM",
+        "thursdayHours": "08:00AM - 10:00PM",
+        "fridayHours": "08:00AM - 10:00PM",
+        "saturdayHours": "08:00AM - 11:30PM",
+        "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+        "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
+        "navLinks": [
+            "History",
+            "About",
+            "Stuff",
+            "Reach Out"
+        ],
+        "theme": "sandstone",/*loaded the work "default"*/
+        "homeImg": "https://web-presence.biz/img/8.jpg",/*wasn't ncluded in the schema*/
+        "banners": [{ "img": "https://web-presence.biz/img/6.jpg", "bannerHTML": "" }],/*loaded none needs to be an object*/
+        "about": "<h4>This place is the best says Charlie Sheen!</h4><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
+        "logoHTML": "<img alt='web-presence logo' src='https://web-presence.biz/img/MA_Logo.png' class='img-fluid animated' width='100px' />",/*loaded none the letters only*/
+        "media": [
+            {
+                "type": "ytVideo",
+                "address": "MrsOwvHgW48"
+            },
+            {
+                "type": "ytVideo",
+                "address": "P-ml6DBINN4"
+            },
+            {
+                "type": "ytVideo",
+                "address": "f5M9lV9K5QA"
+            },
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczN3wxjCuIlIctnYKFq_FrhjOh62XCz3vknKnqrTloupVWgQp2_jmYYkZ2vUIFsJS5lfVyzcJEd9YtNC24XJx7y57j5ltx91zttH2cyTYRKIq3aUei-Y_znIBqCh7OM-opi1ZhrEHfwqt24eau5fOej11w=w640-h480-s-no-gm?authuser=0"
+            },
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczOqw9RkmM5z1B7iDuvJOsuVQK1kugsxB_ufDFGXbt5amPucSke4hEtV5Dnv7jfgsqNulQ3ZgDY_mILwMFIRjDQyhdK6HqfAGrrq2AWxrN2wlfujtnIGQIF0Q23oK796DeeU6uMpZZHl_WyvgqCxY42c7w=w1261-h946-s-no-gm?authuser=0"
+            },
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczPnVgFGfEhT3F49B8RK0Sb90244hDzaLLiOTRA8Dk57QBMYkB_Z8A4WXUJkZLNV1eGgCAuKYUp9d6U9DtpAIUz5cwcYI_uvfmp7lA37_JoUUFA_-o6mbioQ30_ucZaAiME_b4gHSg5-QvwZur5V3GFIjg=w1545-h869-s-no-gm?authuser=0"
+            }
+        ],
+        "events": [
+            {
+                "address": "1313 Allto Richardson, TX 75081",
+                "contact": "222-333-4444",
+                "dateTime": "8:00pm August 28, 2025",
+                "details": "Bring your messy head",
+                "title": "Free Haircut"
+            },
+            {
+                "address": "5608 Charleston Frisco, TX 75035",
+                "contact": "333-999-4444",
+                "dateTime": "9:00 am September 1, 2025",
+                "details": "Bring your appetite!",
+                "title": "Breakfast with Champions"
+            },
+            {
+                "address": "10815 Turtle Creek Ln Frisco, TX 75034",
+                "contact": "888-999-3434",
+                "dateTime": "8:00pm September 2, 2025",
+                "details": "Bring a Bibb.",
+                "title": "BBQ and Fun"
+            }
+        ],
+        "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
+        "address": "9430 E Paradise Dr Scottsdale, AZ 85260",
+        "phone": "123-444-7674",
+        "email": "food@yes.com",
+        "socialMedia": [
+            {
+                "link": "social",
+                "theClass": "fas fa-users",
+                "title": "test"
+            },
+            {
+                "link": "wrench.com",
+                "theClass": "fas fa-wrench",
+                "title": "wrench"
+            },
+            {
+                "link": "wine.com",
+                "theClass": "fas fa-wine-bottle",
+                "title": "winer"
+            }
+        ],
+
+    }
+];
 
 let activeRestaurant = 0;
 
