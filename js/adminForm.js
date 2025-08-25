@@ -25,8 +25,14 @@ let tempRestaurant = {
 
 };
 
-if (localStorage.getItem("activeRestaurantData")) {
+if (localStorage.getItem(".activeRestaurantData") && document.querySelector(".active[data-crudbt='add']")) {
     tempRestaurant = JSON.parse(localStorage.getItem("activeRestaurantData"));
+} else {
+    console.log("document.querySelector(active.[data-crudbt='add']): " + document.querySelector(".active[data-crudbt='add']"));
+
+    localStorage.removeItem("cmsMenu");
+    localStorage.removeItem("activeRestaurantData");
+
 }
 
 
@@ -957,6 +963,7 @@ const buildTimeMenus = () => {
 
     }
 }
+buildTimeMenus();
 
 const populateFields = () => {
 
