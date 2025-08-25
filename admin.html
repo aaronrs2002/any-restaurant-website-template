@@ -261,98 +261,128 @@
 
 
                             <li class="list-group-item">
-                                <label>Events Section:</label>
-                                <label>Address info for event</label>
-                                <input type="text" class="form-control" name="eventsAddress"
-                                    placeholder="Address info for event" />
-                            </li>
-                            <li class="list-group-item">
-                                <label>Contact info for event</label>
-                                <input type="text" class="form-control" name="eventsContact"
-                                    placeholder="Contact info for event" />
-                            </li>
-                            <li class="list-group-item">
-                                <label>Date and Time for event</label>
-                                <input type="text" class="form-control" name="eventsDateTime"
-                                    placeholder="Date and Time for event" />
-                            </li>
-                            <li class="list-group-item">
-                                <label>Title for event</label>
-                                <input type="text" class="form-control" name="eventsTitle"
-                                    placeholder="Title for event" />
-                            <li class="list-group-item">
-                                <label>Event details</label>
-                                <textarea class="form-control" name="eventsDetails" placeholder="Event details"
-                                    rows="5"></textarea>
-                            <li class="list-group-item">
-                                <button class="form-control btn btn-success" onClick="submitToLocal('events')">Submit
-                                    Event</button>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="py-3"> <label>Events submitted:</label>
-                                    <ul class="list-group" id="eventsTarget">
+                                <h5>Events Section:</h5>
+                                <ul>
+                                    <li> <label>Address info for event</label>
+                                        <input type="text" class="form-control" name="eventsAddress"
+                                            placeholder="Address info for event" />
+                                    </li>
+                                    <li>
+                                        <label>Contact info for event</label>
+                                        <input type="text" class="form-control" name="eventsContact"
+                                            placeholder="Contact info for event" />
+                                    </li>
+                                    <li> <label>Date and Time for event</label>
+                                        <input type="text" class="form-control" name="eventsDateTime"
+                                            placeholder="Date and Time for event" />
+                                    </li>
+                                    <li>
+                                        <label>Title for event</label>
+                                        <input type="text" class="form-control" name="eventsTitle"
+                                            placeholder="Title for event" />
+                                    </li>
+                                    <li>
+                                        <label>Event details</label>
+                                        <textarea class="form-control" name="eventsDetails" placeholder="Event details"
+                                            rows="5"></textarea>
+                                    </li>
+                                    <li>
+                                        <button class="form-control btn btn-success"
+                                            onClick="submitToLocal('events')">Submit
+                                            Event</button>
+                                    </li>
+                                    <li>
+                                        <div class="py-3"> <label>Events submitted:</label>
+                                            <ul class="list-group" id="eventsTarget">
 
-                                    </ul>
-                                </div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
 
-
-                                <hr />
-                            </li>
-                            </li>
-
-                            <li class="list-group-item">
-                                <label>Blog Address</label>
-                                <input type="text" name="blogAddress" class="form-control" placeholder="Blog Address" />
                             </li>
 
-                            <li class="list-group-item">
-                                <label>Restaurant Address</label>
-                                <input type="text" name="address" class="form-control"
-                                    placeholder="Restaurant Address" />
                             </li>
 
                             <li class="list-group-item">
-                                <label>Phone</label>
-                                <input type="text" name="phone" class="form-control" placeholder="Restaurant Phone" />
+                                <h5>Blog Address</h5>
+                                <ul>
+                                    <li> <input type="text" name="blogAddress" class="form-control"
+                                            placeholder="Blog Address" /></li>
+                                </ul>
+
                             </li>
 
                             <li class="list-group-item">
-                                <label>Restaurant Email</label>
-                                <input type="text" name="email" class="form-control" placeholder="Restaurant Email" />
+                                <h5>Restaurant Address</h5>
+                                <ul>
+                                    <li>
+                                        <input type="text" name="address" class="form-control"
+                                            placeholder="Restaurant Address" />
+                                    </li>
+                                </ul>
+
                             </li>
 
                             <li class="list-group-item">
-                                <label>Restaurant Social Media Accounts</label>
+                                <h5>Phone</h5>
+                                <ul>
+                                    <li>
+                                        <input type="text" name="phone" class="form-control"
+                                            placeholder="Restaurant Phone" />
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                            <li class="list-group-item">
+                                <h5>Restaurant Email</h5>
+                                <ul>
+                                    <li>
+                                        <input type="text" name="email" class="form-control"
+                                            placeholder="Restaurant Email" />
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                            <li class="list-group-item">
+
+                                <h5>Restaurant Social Media Accounts</h5>
                                 <div><i><a href="https://fontawesome.com/v5/search"
                                             target="_blank">https://fontawesome.com/v5/search</a></i></div>
-                            </li>
-                            <li class="list-group-item">
-                                <label>Social media account address</label>
-                                <input type="text" class="form-control" name="socialLink"
-                                    placeholder="Social media account address" />
-                            </li>
-                            <li class="list-group-item">
-                                <label>Font Awesome class</label>
-                                <input type="text" class="form-control" name="socialTheClass"
-                                    placeholder="Font Awesome class" />
-                            </li>
-                            <li class="list-group-item">
-                                <label>Socialmedia Account Title</label>
-                                <input type="text" class="form-control" name="socialTitle"
-                                    placeholder="Socialmedia Account Title" />
-                            </li>
-                            <li class="list-group-item">
-                                <button class="form-control btn btn-success"
-                                    onClick="submitToLocal('socialMedia')">Submit
-                                    Social Media Acount</button>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="py-3"> <label>Social media accounts submitted:</label>
-                                    <ul id="socialMediaTarget">
 
-                                    </ul>
-                                </div>
+                                <ul>
+                                    <li>
+                                        <label>Social media account address</label>
+                                        <input type="text" class="form-control" name="socialLink"
+                                            placeholder="Social media account address" />
+                                    </li>
+                                    <li>
+                                        <label>Font Awesome class</label>
+                                        <input type="text" class="form-control" name="socialTheClass"
+                                            placeholder="Font Awesome class" />
+                                    </li>
+                                    <li>
+                                        <label>Socialmedia Account Title</label>
+                                        <input type="text" class="form-control" name="socialTitle"
+                                            placeholder="Socialmedia Account Title" />
+                                    </li>
+                                    <li>
+                                        <button class="form-control btn btn-success"
+                                            onClick="submitToLocal('socialMedia')">Submit
+                                            Social Media Acount</button>
+                                    </li>
+                                    <li>
+                                        <div class="py-3"> <label>Social media accounts submitted:</label>
+                                            <ul id="socialMediaTarget">
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
+
 
                             <!--{ link: "https://www.linkedin.com/in/aaronrs2002", theClass: "fab fa-linkedin", title: "My Linkedin Profile" },-->
 
