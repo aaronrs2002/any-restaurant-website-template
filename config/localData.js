@@ -340,21 +340,21 @@ let config = [
         ],
         "events": [
             {
-                "address": "1313 Allto Richardson, TX 75081",
+                "address": "4980 Belt Line Rd #250, Dallas, TX 75254",
                 "contact": "222-333-4444",
                 "dateTime": "8:00pm August 28, 2025",
                 "details": "Bring your messy head",
                 "title": "Free Haircut"
             },
             {
-                "address": "5608 Charleston Frisco, TX 75035",
+                "address": "734 Stadium Dr, Arlington, TX 76011",
                 "contact": "333-999-4444",
                 "dateTime": "9:00 am September 1, 2025",
                 "details": "Bring your appetite!",
                 "title": "Breakfast with Champions"
             },
             {
-                "address": "10815 Turtle Creek Ln Frisco, TX 75034",
+                "address": "One Lincoln Financial Field Way, Philadelphia, PA 19148",
                 "contact": "888-999-3434",
                 "dateTime": "8:00pm September 2, 2025",
                 "details": "Bring a Bibb.",
@@ -362,7 +362,7 @@ let config = [
             }
         ],
         "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
-        "address": "9430 E Paradise Dr Scottsdale, AZ 85260",
+        "address": "1 ATT Way, Arlington, TX 76011",
         "phone": "123-444-7674",
         "email": "food@yes.com",
         "socialMedia": [
