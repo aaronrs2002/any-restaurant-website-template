@@ -307,11 +307,20 @@ let config = [
             "Stuff",
             "Reach Out"
         ],
-        "theme": "sandstone",/*loaded the work "default"*/
-        "homeImg": "https://web-presence.biz/img/8.jpg",/*wasn't ncluded in the schema*/
-        "banners": [{ "img": "https://web-presence.biz/img/6.jpg", "bannerHTML": "" }],/*loaded none needs to be an object*/
+        "theme": "sandstone",
+        "homeImg": "https://web-presence.biz/img/8.jpg",
+        "banners": [
+            {
+                "img": "https://web-presence.biz/img/6.jpg",
+                "bannerHTML": ""
+            },
+            {
+                "img": "https://web-presence.biz/img/18.jpg",
+                "bannerHTML": "image 18"
+            }
+        ],
         "about": "<h4>This place is the best says Charlie Sheen!</h4><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
-        "logoHTML": "<img alt='web-presence logo' src='https://web-presence.biz/img/MA_Logo.png' class='img-fluid animated' width='100px' />",/*loaded none the letters only*/
+        "logoHTML": "<img alt='web-presence logo' src='https://web-presence.biz/img/MA_Logo.png' class='img-fluid animated' width='100px' />",
         "media": [
             {
                 "type": "ytVideo",
@@ -372,17 +381,16 @@ let config = [
                 "title": "test"
             },
             {
-                "link": "wrench.com",
+                "link": "https://github.com/aaronrs2002/",
                 "theClass": "fas fa-wrench",
                 "title": "wrench"
             },
             {
-                "link": "wine.com",
+                "link": "https://github.com/aaronrs2002/",
                 "theClass": "fas fa-wine-bottle",
                 "title": "winer"
             }
-        ],
-
+        ]
     }
 ];
 
