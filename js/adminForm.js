@@ -575,10 +575,10 @@ let tempMenuItems = [];
 
 const updateMenuItem = (addBuld) => {
 
-    console.log("tempIngredients.length: " + tempIngredients.length)
+
 
     if (localStorage.getItem("cmsMenu")) {
-        console.log("tempMenuItems: " + JSON.stringify(tempMenuItems));
+
         tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
     }
 
@@ -1100,7 +1100,7 @@ const populateFields = () => {
         }
         // console.log("tempSocialMediaHTML: " + tempSocialMediaHTML);
         document.querySelector("#socialMediaTarget").innerHTML = tempSocialMediaHTML;
-
+        document.querySelector("[name='socialLink']").value
         buildTimeMenus();
         setTimeout(() => {
             updateMenuItem("build");

@@ -367,7 +367,7 @@ let config = [
         "email": "food@yes.com",
         "socialMedia": [
             {
-                "link": "social",
+                "link": "https://www.youtube.com/@web-presence-developer",
                 "theClass": "fas fa-users",
                 "title": "test"
             },
