@@ -252,7 +252,7 @@ const runOnLoad = () => {
 
             if (document.querySelector(".active[data-crudbt='edit']")) {
                 loadMenuItems(menu);
-                buildMenuTarget(data);
+                buildMenuTarget(menu);
             }
 
             /*  for (let i = 0; i < menu.length; i++) {

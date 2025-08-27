@@ -206,6 +206,8 @@ function deleteItem(whichNum, whichObj) {
             for (let i = 0; i < tempRestaurant.socialMedia.length; i++) {
                 if (i !== Number(whichNum)) {
                     tempObj.push(tempRestaurant.socialMedia[i])
+                } else {
+                    console.log("deleting socila media title " + tempRestaurant.socialMedia[i].title)
                 }
             }
 
@@ -228,7 +230,7 @@ function deleteItem(whichNum, whichObj) {
             break;
 
     }
-
+    localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 
 
 }
