@@ -15,7 +15,7 @@ let tempRestaurant = {
     banners: [],
 
     about: "",
-    logoHTML: "",
+    logoImg: "",
     media: [],
     events: [],
     blogAddress: "",
@@ -542,7 +542,7 @@ function submitRestaurant(role) {
         tempRestaurant.homeImg = document.querySelector("[name='homeImg']").value;
 
         tempRestaurant.about = document.querySelector("textarea[name='about']").value;
-        tempRestaurant.logoHTML = document.querySelector("textarea[name='logoHTML']").value;
+        tempRestaurant.logoImg = document.querySelector("[name='logoImg']").value;
         tempRestaurant.blogAddress = document.querySelector("[name='blogAddress']").value;
         tempRestaurant.address = document.querySelector("[name='address']").value;
         tempRestaurant.phone = document.querySelector("[name='phone']").value;
@@ -1000,7 +1000,7 @@ const populateFields = () => {
         document.querySelector("select[name='theme']").value = tempRestaurant.theme;
         document.querySelector("[name='homeImg']").value = tempRestaurant.homeImg;
         document.querySelector("textarea[name='about']").value = tempRestaurant.about;
-        document.querySelector("textarea[name='logoHTML']").value = tempRestaurant.logoHTML;
+        document.querySelector("[name='logoImg']").value = tempRestaurant.logoImg;
         document.querySelector("[name='blogAddress']").value = tempRestaurant.blogAddress;
         document.querySelector("[name='address']").value = tempRestaurant.address;
         document.querySelector("[name='phone']").value = tempRestaurant.phone;
@@ -1179,7 +1179,7 @@ const updateCRUD = (role) => {
             banners: [],
 
             about: "",
-            logoHTML: "",
+            logoImg: "",
             media: [],
             events: [],
             blogAddress: "",

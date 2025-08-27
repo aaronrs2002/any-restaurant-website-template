@@ -38,7 +38,7 @@ let config = [
   
   
           about: "<h3>We make the best food. Here is our story of three generations.</h3><p>That's why we put the sign up. Our Great Grandfather won these recipes in a poker hand. So enjoy...</p>",
-          logoHTML: `<h3><a href='#' onClick='linkSelected(0)' class="text-dark text-decoration-none"><i class="fas fa-fish"></i></a></h3>`,
+          logoImg: `<h3><a href='#' onClick='linkSelected(0)' class="text-dark text-decoration-none"><i class="fas fa-fish"></i></a></h3>`,
           media:
   
               [{
@@ -142,7 +142,7 @@ let config = [
             }
         ],
         "about": "<h3>We make the best food. Here is our story of three generations.</h3><p>That's why we put the sign up. Our Great Grandfather won these recipes in a poker hand. So enjoy...</p>",
-        "logoHTML": "<h3><a href='#' onClick='linkSelected(0)' class=\"text-dark text-decoration-none\"><i class=\"fas fa-fish\"></i></a></h3>",
+        "logoImg": "https://png.pngtree.com/template/20191024/ourmid/pngtree-fish-tail-logo-seafood-restaurant-image_322873.jpg",
         "media": [
             {
                 "type": "img",
@@ -260,7 +260,7 @@ let config = [
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
         "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
         "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
-        "logoHTML": "<i class='text-dark fas fa-wine-glass'></i>",
+        "logoImg": "https://img.freepik.com/premium-vector/wine-vector-logo-design_410429-8919.jpg",
         "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" },
 
         //uBk87-QdBCY
@@ -320,7 +320,7 @@ let config = [
             }
         ],
         "about": "<h4>This place is the best says Charlie Sheen!</h4><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
-        "logoHTML": "<img alt='web-presence logo' src='https://web-presence.biz/img/MA_Logo.png' class='img-fluid animated' width='100px' />",
+        "logoImg": "https://web-presence.biz/img/MA_Logo.png",
         "media": [
             {
                 "type": "ytVideo",

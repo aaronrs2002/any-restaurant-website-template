@@ -230,6 +230,12 @@ ul.inline {
     color: #ffffff !important;
 }
 
+.logoImg {
+
+    border-radius: 50px;
+    /* box-shadow: 0.0em 0.0em .1em .1em #cecdcd;*/
+}
+
 
 
 @media (max-width: 1024px) {

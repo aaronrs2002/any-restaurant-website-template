@@ -62,9 +62,10 @@ const runOnLoad = () => {
     localStorage.setItem("activeRestaurantData", JSON.stringify(config[activeRestaurant]));
     document.querySelector("body[data-restaurant]").dataset.restaurant = activeRestaurant;
     document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
-    [].forEach.call(document.querySelectorAll(".logoHTML"), (e) => {
+    [].forEach.call(document.querySelectorAll(".logoImg"), (e) => {
         let logoCurrentHTML = e.innerHTML;
-        e.innerHTML = config[activeRestaurant].logoHTML + logoCurrentHTML;
+        e.setAttribute("src", config[activeRestaurant].logoImg);
+        e.setAttribute("alt", config[activeRestaurant].restaurantName);
 
     });
 
@@ -166,7 +167,7 @@ const runOnLoad = () => {
 
 
     [].forEach.call(document.querySelectorAll("[data-address]"), (e) => {
-        e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[activeRestaurant].address) + "/'><i class='fas fa-home'></i> " + config[activeRestaurant].address + "</a>";
+        e.innerHTML = "<a class='px-4' target='_blank' href='https://www.google.com/maps/place/" + encodeURIComponent(config[activeRestaurant].address) + "/'>" + config[activeRestaurant].address + "</a>";
     });
     [].forEach.call(document.querySelectorAll("[data-phone]"), (e) => {
         e.innerHTML = " <a class='px-4'href='tel:" + config[activeRestaurant].phone + "'><i class='fas fa-phone'></i>  " + config[activeRestaurant].phone + "</a>";
