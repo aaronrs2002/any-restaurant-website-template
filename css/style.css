@@ -252,6 +252,8 @@ ul.inline {
         font-size: 3.5rem !important
     }
 
-
+    nav .logoImg {
+        display: none;
+    }
 
 }
