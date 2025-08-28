@@ -234,13 +234,17 @@ ul.inline {
 
     border-radius: 50px;
 
-    /* box-shadow: 0.0em 0.0em .1em .1em #cecdcd;*/
+}
+
+body[data-restaurant="1"] .logoImg {
+    box-shadow: 0.0em 0.0em .1em .1em #8f8f8f;
 }
 
 [data-section] .logoImg {
 
     margin-top: -40px;
     margin-bottom: 20px;
+
 }
 
 
