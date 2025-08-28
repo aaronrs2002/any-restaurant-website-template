@@ -307,7 +307,7 @@ let config = [
             "Stuff",
             "Reach Out"
         ],
-        "theme": "sandstone",
+        "theme": "superhero",
         "homeImg": "https://web-presence.biz/img/8.jpg",
         "banners": [
             {
