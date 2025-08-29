@@ -1319,7 +1319,7 @@ function downloadData(whichContent) {
     a.href = URL.createObjectURL(new Blob([JSON.stringify(tempData, null, 2)], {
         type: 'application/json'
     }));
-    a.setAttribute("download", config[activeRestaurant].restaurantName.replaceAll(" ", "") + "_Menu.json");
+    a.setAttribute("download", config[activeRestaurant].restaurantName.replaceAll(" ", "") + "_" + whichContent + ".json");
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
