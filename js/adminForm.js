@@ -1297,11 +1297,24 @@ const populateMenuItem = () => {
 /*START UPLOAD DOWNLOAD FUNCTIONALITY*/
 
 
-function downloadData() {
+function downloadData(whichContent) {
     let tempData = [];
-    if (localStorage.getItem("cmsMenu")) {
-        tempData = JSON.parse(localStorage.getItem("cmsMenu"));
+    if (whichContent === "menu") {
+        if (localStorage.getItem("cmsMenu")) {
+            tempData = JSON.parse(localStorage.getItem("cmsMenu"));
+        } else {
+            globalAlert("alert-warning", "No menu available.");
+            return false;
+        }
+    } else {
+        if (localStorage.getItem("activeRestaurantData")) {
+            tempData = JSON.parse(localStorage.getItem("activeRestaurantData"));
+        } else {
+            globalAlert("alert-warning", "No Website data available.");
+            return false;
+        }
     }
+
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([JSON.stringify(tempData, null, 2)], {
         type: 'application/json'
@@ -1333,7 +1346,7 @@ function handleOnChange(event) {
 
 
 
-function handleOnSubmit(event, type, merge) {
+function handleOnSubmit(event, type, data) {
     event.preventDefault();
 
     if (file) {
@@ -1344,7 +1357,7 @@ function handleOnSubmit(event, type, merge) {
 
 
 
-                if (merge === "default") {
+                if (data === "menu") {
 
                     console.log("tempObj: " + tempObj);
                     // localStorage.setItem("customDictionary", tempObj);    
@@ -1354,18 +1367,13 @@ function handleOnSubmit(event, type, merge) {
 
                     loadMenuItems(tempMenuItems);
 
-                    // loadList();
-
-                } /*else {
-                    let tempTasks = [...JSON.parse(localStorage.getItem("customDictionary")), ...JSON.parse(tempObj)];
 
 
-                    localStorage.setItem("customDictionary", JSON.stringify(tempTasks));
+                } else {
+                    localStorage.setItem("activeRestaurantData", tempObj);
+                    runOnLoad(tempObj);
 
-                    loadList();
-
-
-                }*/
+                }
             }
             else {
                 console.log("That wasn't json.")

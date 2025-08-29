@@ -407,6 +407,49 @@
 
                     </div>
                     <div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="d-grid gap-2  py-2">
+                                    <button class="btn btn-light" onClick="javascript:downloadData('content');"><i
+                                            class="fas fa-file-download"></i>
+                                        Download Website Content</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 py-2">
+                                <div class="d-grid gap-2">
+
+
+
+                                    <label class="custom-file-upload btn btn-light">
+                                        <input type="file" name="importFile" accept=".json"
+                                            onChange="javascript:handleOnChange(event)" />
+                                        <i class="fa fa-cloud-upload"></i> Select a file to
+                                        upload
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="d-grid gap-2  py-2">
+                                    <button id="fileUpload" class="btn btn-success hide"
+                                        onClick="javascript:handleOnSubmit(event, 'json','content')"><i
+                                            class="fas fa-file-upload"></i>
+                                        Upload New Data</button>
+                                </div>
+                                <!--  <div class="d-grid gap-2  py-2">
+                                                                                                <button id="fileMerge" class="btn btn-warning hide"
+                                                                                                    onClick="javascript:handleOnSubmit(event, 'json','merge')"><i
+                                                                                                        class="fas fa-file-upload"></i>
+                                                                                                    Merge with current data</button>
+                                                                                            </div>-->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
                         <pre><code id="JSON_Target"></code></div></pre>
                     </div>
 
@@ -760,6 +803,7 @@
                                 </div>
                             </li>
 
+
                             <li class="list-group-item">
                                 <div id="menuTarget"></div>
                             </li>
@@ -772,7 +816,7 @@
 
                     <div class="col-md-6">
                         <div class="d-grid gap-2  py-2">
-                            <button class="btn btn-light" onClick="javascript:downloadData();"><i
+                            <button class="btn btn-light" onClick="javascript:downloadData('menu');"><i
                                     class="fas fa-file-download"></i>
                                 Download</button>
                         </div>
@@ -793,7 +837,7 @@
                     <div class="col-md-12">
                         <div class="d-grid gap-2  py-2">
                             <button id="fileUpload" class="btn btn-success hide"
-                                onClick="javascript:handleOnSubmit(event, 'json','default')"><i
+                                onClick="javascript:handleOnSubmit(event, 'json','menu')"><i
                                     class="fas fa-file-upload"></i>
                                 Upload New Data</button>
                         </div>
