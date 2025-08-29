@@ -1333,11 +1333,18 @@ function handleOnChange(event) {
     if (event.target.files[0]) {
         file = event.target.files[0];
         console.log("event.target.files[0]: " + JSON.stringify(event.target.files[0]));
-        document.querySelector("#fileUpload").classList.remove("hide");
+
+        [].forEach.call(document.querySelectorAll("[data-toggle='fileUpload']"), (e) => {
+            e.classList.remove("hide");
+        })
+        // document.querySelector("#fileUpload").classList.remove("hide");
         // document.querySelector("#fileMerge").classList.remove("hide");
         globalAlert("alert-warning", `File selected.`);
     } else {
-        document.querySelector("#fileUpload").classList.add("hide");
+        [].forEach.call(document.querySelectorAll("[data-toggle='fileUpload']"), (e) => {
+            e.classList.add("hide");
+        })
+        // document.querySelector("#fileUpload").classList.add("hide");
         // document.querySelector("#fileMerge").classList.add("hide");
     }
 };
@@ -1366,7 +1373,7 @@ function handleOnSubmit(event, type, data) {
                     tempMenuItems = JSON.parse(tempObj);
 
                     loadMenuItems(tempMenuItems);
-
+                    buildMenuTarget(tempMenuItems);
 
 
                 } else {
@@ -1382,7 +1389,10 @@ function handleOnSubmit(event, type, data) {
         fileReader.readAsText(file);
     }
     document.querySelector("input[type='file']").value = "";
-    document.querySelector("#fileUpload").classList.add("hide");
+    [].forEach.call(document.querySelectorAll("[data-toggle='fileUpload']"), (e) => {
+        e.classList.add("hide");
+    })
+    // document.querySelector("#fileUpload").classList.add("hide");
     //document.querySelector("#fileMerge").classList.add("hide");
     //  toggleEdit();
 
