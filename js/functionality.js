@@ -494,7 +494,19 @@ function selectCategory(selected) {
 
     for (let i = 0; i < menu.length; i++) {
         if (menu[i].category === selected) {
-            selectedCatStr = selectedCatStr + "<li><ol class='list-group list-group-numbered py-2'><li>" + menu[i].title + " - " + menu[i].price + "</li><li>" + menu[i].ingredients + "</li></ol></li>";
+
+
+            let ingredientStr = "";
+            for (let j = 0; j < menu[i].ingredients.length; j++) {
+                ingredientStr = ingredientStr + `<span class='badge bg-secondary'> ${menu[i].ingredients[j]}</span>`;
+
+
+
+            }
+
+
+
+            selectedCatStr = selectedCatStr + "<li><ol class='list-group list-group-numbered py-2'><li>" + menu[i].title + " - " + menu[i].price + "</li><li>" + ingredientStr + "</li></ol></li>";
         }
     }
     [].forEach.call(document.querySelectorAll("[data-cattarget]"), (e) => {
