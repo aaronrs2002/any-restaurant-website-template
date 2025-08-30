@@ -1376,11 +1376,35 @@ function handleOnSubmit(event, type, data) {
                     buildMenuTarget(tempMenuItems);
 
 
-                } else {
-                    localStorage.setItem("activeRestaurantData", tempObj);
+                } /*else {
+                    console.log("tempObj: " + tempObj);
+
+                    if (tempObj.restaurantName) {
+                        console.log("We have a name: " + tempObj.restaurantName);
+                    } else {
+                        globalAlert("alert-warning", "This data is not reconizable");
+                        return false;
+                    }
+                    config.push(tempObj);
+
+
+
+                    let editRestaurantStr = "";
+                    for (let i = 0; i < config.length; i++) {
+                        editRestaurantStr = editRestaurantStr + "<option value='" + config[i].restaurantName + "'>" + config[i].restaurantName + "</option>"
+                    }
+
+                    document.querySelector("[name='editRestaurant']").innerHTML = editRestaurantStr;
+
+                    globalAlert("alert-success", "Select your upload restaurnt from the select menu.")
+
+
+                    console.log("JSON.stringify(content): " + JSON.stringify(tempObj));
+                    localStorage.setItem("activeRestaurantData", JSON.stringify(tempObj));
                     runOnLoad(tempObj);
 
-                }
+
+                }*/
             }
             else {
                 console.log("That wasn't json.")
