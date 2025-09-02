@@ -28,6 +28,12 @@ body {
 
 .nav {
     padding-bottom: 5rem;
+
+}
+
+
+nav {
+    max-height: 85px;
 }
 
 /*START EVENTS CSS*/
@@ -230,9 +236,11 @@ ul.inline {
     color: #ffffff !important;
 }
 
+
 .logoImg {
 
     border-radius: 50px;
+    margin-top: 25px;
 
 }
 
