@@ -9,6 +9,13 @@ https://aaronrs2002.github.io/any-restaurant-website-template/
 Restaurant number 2:
 https://aaronrs2002.github.io/any-restaurant-website-template/?activeRestaurant=1&
 
+Restaurant number 3:
+https://aaronrs2002.github.io/any-restaurant-website-template/?activeRestaurant=3&
+
+
+Restaurant Admin:
+https://aaronrs2002.github.io/any-restaurant-website-template/admin.html
+
 
 
 Youtube tutorial playlist:
