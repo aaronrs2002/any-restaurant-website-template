@@ -331,7 +331,7 @@ function submitToLocal(whichArr) {
 
 
                 );
-                console.log("JSON.stringify(tempRestaurant.media): " + JSON.stringify(tempRestaurant.media));
+
 
                 /*
                 
