@@ -200,7 +200,7 @@ let config = [
                 "bannerHTML": ""
             }
         ],
-        "about": "<h4>This place is the best says Charlie Sheen!</h4><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
+        "about": "<h4>Steak</h4><p> steak is a cut of meat sliced across muscle fibers, sometimes including a bone. It is normally grilled or fried, and can be diced or cooked in sauce.</p><p>Steaks are most commonly cut from cattle (beefsteak), but can also be cut from bison, buffalo, camel, goat, horse, kangaroo,[1][2] sheep, ostrich, pigs, turkey, and deer, as well as various types of fish, especially salmon and large fish such as swordfish, shark, and marlin. Some cured meat, such as gammon, is commonly served as steak. Some cuts are categorized as steaks not because they are cut across the muscle fibers, but because they are relatively thin and cooked over a grill, such as skirt steak and flank steak.</p><p>Grilled portobello mushroom may be called mushroom steak, and similarly for other vegetarian dishes.[3] Imitation steak is a food product that is formed into a steak shape from various pieces of meat. Grilled fruits such as watermelon have been used as vegetarian steak alternatives.</p><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
         "logoImg": "https://web-presence.biz/img/MA_Logo.png",
         "media": [
             {
