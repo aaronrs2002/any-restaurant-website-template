@@ -230,6 +230,8 @@ function deleteItem(whichNum, whichObj) {
             break;
 
     }
+
+    console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant))
     localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 
 
@@ -266,7 +268,7 @@ function submitToLocal(whichArr) {
                 }
                 document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
                 document.querySelector("[name='navLinks']").value = "";
-                return false;
+
             } else {
                 globalAlert("alert-danger", "What name would you like for your top navigation link?");
                 return false;
@@ -302,7 +304,7 @@ function submitToLocal(whichArr) {
                 document.querySelector("[name='bannersImg']").value = "";
                 document.querySelector("[name='bannersHTML']").value = "";
                 document.getElementById("bannersTarget").innerHTML = bannersArrHTML;
-                return false;
+
             } else {
                 globalAlert("alert-danger", "What name would you like for your banner img?");
                 return false;
@@ -392,7 +394,7 @@ function submitToLocal(whichArr) {
 
                 document.querySelector("[name='mediaAddress']").value = "";
 
-                return false;
+
             } else {
                 globalAlert("alert-danger", "What name would you like for your banner img?");
                 return false;
@@ -441,7 +443,6 @@ function submitToLocal(whichArr) {
 
 
 
-
             break;
 
 
@@ -482,7 +483,7 @@ function submitToLocal(whichArr) {
 
 
     }
-
+    console.log(" JSON.stringify(tempRestaurant)); " + JSON.stringify(tempRestaurant));
     localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 
 }
