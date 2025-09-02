@@ -1,5 +1,38 @@
 
 
+let activeRestaurant = 0;
+
+/*SPLIT PARAMS*/
+(window.location + "?")
+    .split("?")[1]
+    .split("&")
+    .forEach(function (pair) {
+        pair = (pair + "=").split("=").map(decodeURIComponent);
+        if (pair[0].length) {
+
+            // paramvals[pair[0]] = pair[1];
+            if (pair[0] === "activeRestaurant") {
+                activeRestaurant = pair[1];
+                console.log("which activeRestaurant: " + activeRestaurant);
+            }
+            /* themeVal[pair[0]] = pair[1];
+             if (pair[0] === "theme") {
+ 
+                 const themeFromUrl = "https://bootswatch.com/5/" + pair[1] + "/bootstrap.css";
+ 
+                 document.getElementById("themedStyle").setAttribute("href", themeFromUrl);
+                 localStorage.setItem("theme", pair[1]);
+             }
+             if (pair[0] === "balance") {
+                 localStorage.setItem("balance", pair[1].replace("#", ""));
+ 
+             }*/
+        }
+    });
+
+
+
+
 /*START THEMES*/
 const themesList = ["Spacelab", "United", "Slate", "Cerulean", "Darkly", "Litera", "Materia", "Sandstone", "Superhero", "Cosmo", "Flatly", "Lumen", "Minty", "Simplex", "Solar", "Cyborg", "Journal", "Lux", "Pulse", "Sketchy", "Yeti", "Morph", "Quartz", "Vapor", "Zephyr"];
 let chosenTheme;

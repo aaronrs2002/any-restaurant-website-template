@@ -125,197 +125,158 @@ let config = [
             }
         ]
     }
-    , {
-        "restaurantName": "Wine Luxury",
-        "sundayHours": "Closed",
-        "mondayHours": "09:00AM - 10:00PM",
-        "tuesdayHours": "08:00AM - 10:00PM",
-        "wednesdayHours": "08:00AM - 10:00PM",
-        "thursdayHours": "08:00AM - 10:00PM",
-        "fridayHours": "08:00AM - 10:00PM",
-        "saturdayHours": "08:00AM - 10:00PM",
-        "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
-        "apiAddress": "config/wineryRestaurantData.json",
-        "navLinks": ["Home", "About", "Menu", "Contact"],
-        "theme": "sandstone",
-        "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
-        "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
-        "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
-        "logoImg": "https://img.freepik.com/premium-vector/wine-vector-logo-design_410429-8919.jpg",
-        "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" },
-
-        //uBk87-QdBCY
-        { "type": "ytVideo", "address": "uBk87-QdBCY" },
-        { "type": "ytVideo", "address": "9l8TJwfHbdE" },
-
-        { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
-            "type": "html",
-            "address": "Welcome one and all"
-        },
-        { "type": "map", "address": "1060 W Addison Chicago, IL" },
-        {
-            "type": "html",
-            "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
-        }],
-        "events": [{
-            "address": "123 Main St",
-            "contact": "654 - 669 -0092",
-            "dateTime": "Tuesday August 7th at Noon",
-            "details": "Bring scissors",
-            "title": "Free Haircuts"
-        },
-        {
-            "address": "123 Elm",
-            "contact": "559 - 887 - 8978",
-            "dateTime": "November 7th 3:00pm",
-            "details": "Bring sauce", "title": "BBQ"
-        }],
-        "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
-        "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
-        "email": "ieat@food.com",
-        "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
-    },
-    {
-        "restaurantName": "Ta Da",
-        "sundayHours": "08:00AM - 10:00PM",
-        "mondayHours": "08:00AM - 10:00PM",
-        "tuesdayHours": "08:00AM - 10:00PM",
-        "wednesdayHours": "08:00AM - 10:00PM",
-        "thursdayHours": "08:00AM - 10:00PM",
-        "fridayHours": "08:00AM - 10:00PM",
-        "saturdayHours": "08:00AM - 11:30PM",
-        "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
-        "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
-        "navLinks": [
-            "Home",
-            "About",
-            "Stuff",
-            "Reach Out"
-        ],
-        "theme": "superhero",
-        "homeImg": "https://web-presence.biz/img/8.jpg",
-        "banners": [
-            {
-                "img": "https://web-presence.biz/img/6.jpg",
-                "bannerHTML": ""
-            }
-        ],
-        "about": "<h4>Steak</h4><p> steak is a cut of meat sliced across muscle fibers, sometimes including a bone. It is normally grilled or fried, and can be diced or cooked in sauce.</p><p>Steaks are most commonly cut from cattle (beefsteak), but can also be cut from bison, buffalo, camel, goat, horse, kangaroo,[1][2] sheep, ostrich, pigs, turkey, and deer, as well as various types of fish, especially salmon and large fish such as swordfish, shark, and marlin. Some cured meat, such as gammon, is commonly served as steak. Some cuts are categorized as steaks not because they are cut across the muscle fibers, but because they are relatively thin and cooked over a grill, such as skirt steak and flank steak.</p><p>Grilled portobello mushroom may be called mushroom steak, and similarly for other vegetarian dishes.[3] Imitation steak is a food product that is formed into a steak shape from various pieces of meat. Grilled fruits such as watermelon have been used as vegetarian steak alternatives.</p><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
-        "logoImg": "https://web-presence.biz/img/MA_Logo.png",
-        "media": [
-            {
-                "type": "ytVideo",
-                "address": "MrsOwvHgW48"
-            },
-            {
-                "type": "ytVideo",
-                "address": "P-ml6DBINN4"
-            },
-            {
-                "type": "ytVideo",
-                "address": "f5M9lV9K5QA"
-            },
-            {
-                "type": "img",
-                "address": "https://lh3.googleusercontent.com/pw/AP1GczN3wxjCuIlIctnYKFq_FrhjOh62XCz3vknKnqrTloupVWgQp2_jmYYkZ2vUIFsJS5lfVyzcJEd9YtNC24XJx7y57j5ltx91zttH2cyTYRKIq3aUei-Y_znIBqCh7OM-opi1ZhrEHfwqt24eau5fOej11w=w640-h480-s-no-gm?authuser=0"
-            },
-            {
-                "type": "img",
-                "address": "https://lh3.googleusercontent.com/pw/AP1GczOqw9RkmM5z1B7iDuvJOsuVQK1kugsxB_ufDFGXbt5amPucSke4hEtV5Dnv7jfgsqNulQ3ZgDY_mILwMFIRjDQyhdK6HqfAGrrq2AWxrN2wlfujtnIGQIF0Q23oK796DeeU6uMpZZHl_WyvgqCxY42c7w=w1261-h946-s-no-gm?authuser=0"
-            },
-            {
-                "type": "img",
-                "address": "https://lh3.googleusercontent.com/pw/AP1GczPnVgFGfEhT3F49B8RK0Sb90244hDzaLLiOTRA8Dk57QBMYkB_Z8A4WXUJkZLNV1eGgCAuKYUp9d6U9DtpAIUz5cwcYI_uvfmp7lA37_JoUUFA_-o6mbioQ30_ucZaAiME_b4gHSg5-QvwZur5V3GFIjg=w1545-h869-s-no-gm?authuser=0"
-            },
-            {
-                "type": "html",
-                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
-            }
-        ],
-        "events": [
-            {
-                "address": "4980 Belt Line Rd #250, Dallas, TX 75254",
-                "contact": "222-333-4444",
-                "dateTime": "8:00pm August 28, 2025",
-                "details": "Bring your messy head",
-                "title": "Free Haircut"
-            },
-            {
-                "address": "734 Stadium Dr, Arlington, TX 76011",
-                "contact": "333-999-4444",
-                "dateTime": "9:00 am September 1, 2025",
-                "details": "Bring your appetite!",
-                "title": "Breakfast with Champions"
-            },
-            {
-                "address": "One Lincoln Financial Field Way, Philadelphia, PA 19148",
-                "contact": "888-999-3434",
-                "dateTime": "8:00pm September 2, 2025",
-                "details": "Bring a Bibb.",
-                "title": "BBQ and Fun"
-            }
-        ],
-        "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
-        "address": "1 ATT Way, Arlington, TX 76011",
-        "phone": "123-444-7674",
-        "email": "food@yes.com",
-        "socialMedia": [
-            {
-                "link": "https://www.youtube.com/@web-presence-developer",
-                "theClass": "fas fa-users",
-                "title": "test"
-            },
-            {
-                "link": "https://github.com/aaronrs2002/",
-                "theClass": "fas fa-wrench",
-                "title": "wrench"
-            },
-            {
-                "link": "https://github.com/aaronrs2002/",
-                "theClass": "fas fa-wine-bottle",
-                "title": "winer"
-            }
-        ]
-    }
+    /*  , {
+          "restaurantName": "Wine Luxury",
+          "sundayHours": "Closed",
+          "mondayHours": "09:00AM - 10:00PM",
+          "tuesdayHours": "08:00AM - 10:00PM",
+          "wednesdayHours": "08:00AM - 10:00PM",
+          "thursdayHours": "08:00AM - 10:00PM",
+          "fridayHours": "08:00AM - 10:00PM",
+          "saturdayHours": "08:00AM - 10:00PM",
+          "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+          "apiAddress": "config/wineryRestaurantData.json",
+          "navLinks": ["Home", "About", "Menu", "Contact"],
+          "theme": "sandstone",
+          "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
+          "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
+          "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
+          "logoImg": "https://img.freepik.com/premium-vector/wine-vector-logo-design_410429-8919.jpg",
+          "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" },
+  
+          //uBk87-QdBCY
+          { "type": "ytVideo", "address": "uBk87-QdBCY" },
+          { "type": "ytVideo", "address": "9l8TJwfHbdE" },
+  
+          { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
+              "type": "html",
+              "address": "Welcome one and all"
+          },
+          { "type": "map", "address": "1060 W Addison Chicago, IL" },
+          {
+              "type": "html",
+              "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
+          }],
+          "events": [{
+              "address": "123 Main St",
+              "contact": "654 - 669 -0092",
+              "dateTime": "Tuesday August 7th at Noon",
+              "details": "Bring scissors",
+              "title": "Free Haircuts"
+          },
+          {
+              "address": "123 Elm",
+              "contact": "559 - 887 - 8978",
+              "dateTime": "November 7th 3:00pm",
+              "details": "Bring sauce", "title": "BBQ"
+          }],
+          "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
+          "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
+          "email": "ieat@food.com",
+          "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
+      },
+      {
+          "restaurantName": "Ta Da",
+          "sundayHours": "08:00AM - 10:00PM",
+          "mondayHours": "08:00AM - 10:00PM",
+          "tuesdayHours": "08:00AM - 10:00PM",
+          "wednesdayHours": "08:00AM - 10:00PM",
+          "thursdayHours": "08:00AM - 10:00PM",
+          "fridayHours": "08:00AM - 10:00PM",
+          "saturdayHours": "08:00AM - 11:30PM",
+          "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+          "apiAddress": "https://aaronrs2002.github.io/any-restaurant-website-template/config/restaurantData.json",
+          "navLinks": [
+              "Home",
+              "About",
+              "Stuff",
+              "Reach Out"
+          ],
+          "theme": "superhero",
+          "homeImg": "https://web-presence.biz/img/8.jpg",
+          "banners": [
+              {
+                  "img": "https://web-presence.biz/img/6.jpg",
+                  "bannerHTML": ""
+              }
+          ],
+          "about": "<h4>Steak</h4><p> steak is a cut of meat sliced across muscle fibers, sometimes including a bone. It is normally grilled or fried, and can be diced or cooked in sauce.</p><p>Steaks are most commonly cut from cattle (beefsteak), but can also be cut from bison, buffalo, camel, goat, horse, kangaroo,[1][2] sheep, ostrich, pigs, turkey, and deer, as well as various types of fish, especially salmon and large fish such as swordfish, shark, and marlin. Some cured meat, such as gammon, is commonly served as steak. Some cuts are categorized as steaks not because they are cut across the muscle fibers, but because they are relatively thin and cooked over a grill, such as skirt steak and flank steak.</p><p>Grilled portobello mushroom may be called mushroom steak, and similarly for other vegetarian dishes.[3] Imitation steak is a food product that is formed into a steak shape from various pieces of meat. Grilled fruits such as watermelon have been used as vegetarian steak alternatives.</p><img src='https://lh3.googleusercontent.com/pw/AP1GczPiS3Z_t3iQDzBuaSmmZNRKUp4LWVgjK3JPXCLbcUvgX87fpPrM1FECLFyXB_DlgvMNY4kZkroV3mHu5MfflnPygu1ct8LWOy9Nr8QAqOd1C-RS1JL5jDEdyN1pj2DZUriAJesKMYs1ohoLxXj0O-Rp3w=w1545-h869-s-no-gm?authuser=0' class='img-fluid'/>",
+          "logoImg": "https://web-presence.biz/img/MA_Logo.png",
+          "media": [
+              {
+                  "type": "ytVideo",
+                  "address": "MrsOwvHgW48"
+              },
+              {
+                  "type": "ytVideo",
+                  "address": "P-ml6DBINN4"
+              },
+              {
+                  "type": "ytVideo",
+                  "address": "f5M9lV9K5QA"
+              },
+              {
+                  "type": "img",
+                  "address": "https://lh3.googleusercontent.com/pw/AP1GczN3wxjCuIlIctnYKFq_FrhjOh62XCz3vknKnqrTloupVWgQp2_jmYYkZ2vUIFsJS5lfVyzcJEd9YtNC24XJx7y57j5ltx91zttH2cyTYRKIq3aUei-Y_znIBqCh7OM-opi1ZhrEHfwqt24eau5fOej11w=w640-h480-s-no-gm?authuser=0"
+              },
+              {
+                  "type": "img",
+                  "address": "https://lh3.googleusercontent.com/pw/AP1GczOqw9RkmM5z1B7iDuvJOsuVQK1kugsxB_ufDFGXbt5amPucSke4hEtV5Dnv7jfgsqNulQ3ZgDY_mILwMFIRjDQyhdK6HqfAGrrq2AWxrN2wlfujtnIGQIF0Q23oK796DeeU6uMpZZHl_WyvgqCxY42c7w=w1261-h946-s-no-gm?authuser=0"
+              },
+              {
+                  "type": "img",
+                  "address": "https://lh3.googleusercontent.com/pw/AP1GczPnVgFGfEhT3F49B8RK0Sb90244hDzaLLiOTRA8Dk57QBMYkB_Z8A4WXUJkZLNV1eGgCAuKYUp9d6U9DtpAIUz5cwcYI_uvfmp7lA37_JoUUFA_-o6mbioQ30_ucZaAiME_b4gHSg5-QvwZur5V3GFIjg=w1545-h869-s-no-gm?authuser=0"
+              },
+              {
+                  "type": "html",
+                  "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
+              }
+          ],
+          "events": [
+              {
+                  "address": "4980 Belt Line Rd #250, Dallas, TX 75254",
+                  "contact": "222-333-4444",
+                  "dateTime": "8:00pm August 28, 2025",
+                  "details": "Bring your messy head",
+                  "title": "Free Haircut"
+              },
+              {
+                  "address": "734 Stadium Dr, Arlington, TX 76011",
+                  "contact": "333-999-4444",
+                  "dateTime": "9:00 am September 1, 2025",
+                  "details": "Bring your appetite!",
+                  "title": "Breakfast with Champions"
+              },
+              {
+                  "address": "One Lincoln Financial Field Way, Philadelphia, PA 19148",
+                  "contact": "888-999-3434",
+                  "dateTime": "8:00pm September 2, 2025",
+                  "details": "Bring a Bibb.",
+                  "title": "BBQ and Fun"
+              }
+          ],
+          "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
+          "address": "1 ATT Way, Arlington, TX 76011",
+          "phone": "123-444-7674",
+          "email": "food@yes.com",
+          "socialMedia": [
+              {
+                  "link": "https://www.youtube.com/@web-presence-developer",
+                  "theClass": "fas fa-users",
+                  "title": "test"
+              },
+              {
+                  "link": "https://github.com/aaronrs2002/",
+                  "theClass": "fas fa-wrench",
+                  "title": "wrench"
+              },
+              {
+                  "link": "https://github.com/aaronrs2002/",
+                  "theClass": "fas fa-wine-bottle",
+                  "title": "winer"
+              }
+          ]
+      }*/
 ];
 
 
-
-
-let activeRestaurant = 0;
-
-/*SPLIT PARAMS*/
-(window.location + "?")
-    .split("?")[1]
-    .split("&")
-    .forEach(function (pair) {
-        pair = (pair + "=").split("=").map(decodeURIComponent);
-        if (pair[0].length) {
-
-            // paramvals[pair[0]] = pair[1];
-            if (pair[0] === "activeRestaurant") {
-                activeRestaurant = pair[1];
-                console.log("which activeRestaurant: " + activeRestaurant);
-            }
-            /* themeVal[pair[0]] = pair[1];
-             if (pair[0] === "theme") {
- 
-                 const themeFromUrl = "https://bootswatch.com/5/" + pair[1] + "/bootstrap.css";
- 
-                 document.getElementById("themedStyle").setAttribute("href", themeFromUrl);
-                 localStorage.setItem("theme", pair[1]);
-             }
-             if (pair[0] === "balance") {
-                 localStorage.setItem("balance", pair[1].replace("#", ""));
- 
-             }*/
-        }
-    });
-
-
-/*
-<div class='input-group mb-3'>
-<button class='btn btn-primary' >Sumbit email</button>
-<input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' >
-</div>
-*/
