@@ -267,6 +267,10 @@ body[data-restaurant="1"] .logoImg {
 
 @media (max-width:768px) {
 
+    nav {
+        max-height: inherit;
+    }
+
     [data-restaurant] .restaurantNameTarget {
         font-size: 3.5rem !important
     }
