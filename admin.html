@@ -406,19 +406,19 @@
                         </div>
 
                     </div>
-                    <div>
 
 
-                        <div class="row">
 
-                            <div class="col-md-12 hide" data-crud="edit">
-                                <div class="d-grid gap-2  py-2">
-                                    <button class="btn btn-light" onClick="javascript:downloadData('content');"><i
-                                            class="fas fa-file-download"></i>
-                                        Download Website Content</button>
-                                </div>
+                    <div class="row">
+
+                        <div class="col-md-12 hide" data-crud="edit">
+                            <div class="d-grid gap-2  py-2">
+                                <button class="btn btn-light" onClick="javascript:downloadData('content');"><i
+                                        class="fas fa-file-download"></i>
+                                    Download Website Content</button>
                             </div>
-                            <!--  <div class="col-md-12 py-2" data-crud="add">
+                        </div>
+                        <!--  <div class="col-md-12 py-2" data-crud="add">
                                 <div class="d-grid gap-2">
 
 
@@ -442,10 +442,19 @@
 
                             </div>-->
 
-                        </div>
                     </div>
-                    <div>
-                        <pre><code id="JSON_Target"></code></div></pre>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <pre><code id="JSON_Target"></code></div></pre>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-warning btn-block py-2 hide" data-toggle="clearCode"
+                                onClick="clearCode()">Clear JSON
+                                code</button>
+                        </div>
+
+
                     </div>
 
                 </div>

@@ -553,6 +553,7 @@ function submitRestaurant(role) {
 
     globalAlert("alert-success", role + " complete.");
     document.getElementById("JSON_Target").innerHTML = JSON.stringify(tempRestaurant);
+    document.querySelector("[data-toggle='clearCode']").classList.remove("hide");
     console.log("JSON.stringify(tempRestaurant): " + JSON.stringify(tempRestaurant));
     localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 }
@@ -1426,4 +1427,11 @@ function handleOnSubmit(event, type, data) {
 if (localStorage.getItem("cmsMenu")) {
     tempMenuItems = JSON.parse(localStorage.getItem("cmsMenu"));
     loadMenuItems(tempMenuItems);
+}
+
+
+
+const clearCode = () => {
+    document.getElementById("JSON_Target").innerHTML = "";
+    document.querySelector("[data-toggle='clearCode']").classList.add("hide");
 }
