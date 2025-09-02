@@ -62,7 +62,7 @@ let config = [
             },
             {
                 "type": "html",
-                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder=''Submit your email address to be added to our newsletter' > </div></div>"
+                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
             }
         ],
         "events": [
@@ -155,7 +155,7 @@ let config = [
         { "type": "map", "address": "1060 W Addison Chicago, IL" },
         {
             "type": "html",
-            "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder=''Submit your email address to be added to our newsletter' > </div></div>"
+            "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
         }],
         "events": [{
             "address": "123 Main St",
@@ -229,7 +229,7 @@ let config = [
             },
             {
                 "type": "html",
-                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder=''Submit your email address to be added to our newsletter' > </div></div>"
+                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
             }
         ],
         "events": [
@@ -316,6 +316,6 @@ let activeRestaurant = 0;
 /*
 <div class='input-group mb-3'>
 <button class='btn btn-primary' >Sumbit email</button>
-<input type='text' class='form-control' placeholder=''Submit your email address to be added to our newsletter' >
+<input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' >
 </div>
 */
