@@ -125,7 +125,98 @@ let config = [
             }
         ]
     }
+    ,
 
+    {
+        "restaurantName": "Wine Luxury",
+        "sundayHours": "09:00AM - 10:00PM",
+        "mondayHours": "08:00AM - 10:00PM",
+        "tuesdayHours": "08:00AM - 10:00PM",
+        "wednesdayHours": "08:00AM - 10:00PM",
+        "thursdayHours": "08:00AM - 10:00PM",
+        "fridayHours": "08:00AM - 10:00PM",
+        "saturdayHours": "08:00AM - 11:30PM",
+        "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+        "apiAddress": "config/wineryRestaurantData.json",
+        "navLinks": [
+            "Home",
+            "About",
+            "Menu",
+            "Contact"
+        ],
+        "theme": "sandstone",
+        "banners": [
+            {
+                "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0",
+                "bannerHTML": ""
+            }
+        ],
+        "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
+        "logoImg": "https://img.freepik.com/premium-vector/wine-vector-logo-design_410429-8919.jpg",
+        "media": [
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0"
+            },
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0"
+            },
+            {
+                "type": "ytVideo",
+                "address": "uBk87-QdBCY"
+            },
+            {
+                "type": "ytVideo",
+                "address": "9l8TJwfHbdE"
+            },
+            {
+                "type": "ytVideo",
+                "address": "dY_zzPxBxFA"
+            },
+            {
+                "type": "html",
+                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
+            },
+            {
+                "type": "map",
+                "address": "1060 W Addison Chicago, IL"
+            }
+        ],
+        "events": [
+            {
+                "address": "123 Main StDallas, TX",
+                "contact": "654 - 669 -009",
+                "dateTime": "Tuesday August 7th at Noon",
+                "details": "Bring scissors",
+                "title": "Free Haircuts"
+            },
+            {
+                "address": "123 Elm st Dallas, TX",
+                "contact": "559 - 887 - 8978",
+                "dateTime": "November 7th 3:00pm",
+                "details": "Bring sauce",
+                "title": "BBQ"
+            }
+        ],
+        "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
+        "address": "1 ATT Way, Arlington, TX 76011",
+        "phone": "555-999-0909",
+        "email": "ieat@food.com",
+        "socialMedia": [
+            {
+                "link": "https://travel.com",
+                "theClass": "fas fa-briefcase",
+                "title": "travel"
+            },
+            {
+                "link": "https://Phoenixframework.com",
+                "theClass": "fab fa-phoenix-framework",
+                "title": "Phoenixframework"
+            }
+        ],
+        "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm"
+    }
 ];
 
 
