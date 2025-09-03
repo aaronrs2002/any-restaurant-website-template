@@ -747,7 +747,7 @@ const submitHours = () => {
 const buildTimeMenus = () => {
 
     if (tempRestaurant.sundayHours) {
-        console.log("tempRestaurant.sundayHours: " + tempRestaurant.sundayHours);
+        console.log("tempRestaurant.sundayHours from buildTimeMenus(): " + tempRestaurant.sundayHours);
         let tempOpenHr = tempRestaurant.sundayHours.substring(0, 2);
         let tempOpenMin = tempRestaurant.sundayHours.substring(3, 5);
         let tempOpenAmPm = tempRestaurant.sundayHours.substring(5, 7);
@@ -1219,6 +1219,7 @@ const updateCRUD = (role) => {
         document.getElementById("eventsTarget").innerHTML = "";
         document.getElementById("socialMediaTarget").innerHTML = "";
         document.getElementById("ingredientsTarget").innerHTML = "";
+        buildTimeMenus();
 
         //mediaMapsTarget
 
@@ -1312,7 +1313,7 @@ function downloadData(whichContent) {
         if (localStorage.getItem("activeRestaurantData")) {
             tempData = JSON.parse(localStorage.getItem("activeRestaurantData"));
         } else {
-            globalAlert("alert-warning", "No Website data available.");
+            globalAlert("alert-warning", "No Website data available. Enter and Submit Restaurant Data. Then Download it.");
             return false;
         }
     }
@@ -1321,7 +1322,7 @@ function downloadData(whichContent) {
     a.href = URL.createObjectURL(new Blob([JSON.stringify(tempData, null, 2)], {
         type: 'application/json'
     }));
-    a.setAttribute("download", config[activeRestaurant].restaurantName.replaceAll(" ", "") + "_" + whichContent + ".json");
+    a.setAttribute("download", "localData_" + whichContent + ".json");
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
