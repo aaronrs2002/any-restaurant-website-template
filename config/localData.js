@@ -1,5 +1,7 @@
 let config = [
 
+    /*START JSON DATA HERE */
+
     {
         "restaurantName": "Seafood Wholesale",
         "sundayHours": "Closed",
@@ -342,6 +344,9 @@ let config = [
             }
         ]
     }
+
+
+    /*END JSON DATA HERE */
 ];
 
 
