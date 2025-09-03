@@ -740,6 +740,7 @@ const submitHours = () => {
     console.log(" tempRestaurant.thursdayHours: " + tempRestaurant.thursdayHours);
     console.log(" tempRestaurant.fridayHours: " + tempRestaurant.fridayHours);
     console.log(" tempRestaurant.saturdayHours: " + tempRestaurant.saturdayHours);
+    globalAlert("alert-success", "Hours saved.")
 
 }
 
