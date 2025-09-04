@@ -7,7 +7,7 @@ let tempRestaurant = {
     thursdayHours: "08:00AM - 10:00PM",
     fridayHours: "08:00AM - 10:00PM",
     saturdayHours: "08:00AM - 11:30PM",
-    googleID: "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
+    googleID: "",
     apiAddress: "",
     navLinks: [],
     theme: "",
