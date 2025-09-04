@@ -34,18 +34,12 @@ let config = [
             },
             {
                 "type": "img",
-                "address": "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0"
-            },
-            {
-                "type": "img",
                 "address": "https://lh3.googleusercontent.com/pw/AP1GczN68rRrz0QzpdsLqa9x1P-9ztHm2pgzsRqnwaGeqwTrMDKaMRbp1ORK3xBE-Ju7GrdycZCj76CKZABz8T-BtHGn-oHae-gmsyvg5pkLFM4DdKtjMeLyXW2pd3aFvayTRvBUX8dVKLn2QaAjW7khOh3q9w=w1428-h967-s-no-gm?authuser=0"
             },
             {
                 "type": "img",
                 "address": "https://i.ytimg.com/vi/2Kgmr5sXNhk/hqdefault.jpg"
             },
-
-            //https://openweathermap.org/img/wn/04d@2x.png
             {
                 "type": "ytVideo",
                 "address": "1Lw8QvlMfBY"
