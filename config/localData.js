@@ -88,7 +88,7 @@ let config = [
                 "title": "Main Event – Playtime for our January Angel!"
             }
         ],
-        "blogAddress": "https://our-basset-hounds.blogspot.com/feeds/posts/default?alt=rss",
+        "blogAddress": "https://www.dallasobserver.com/dallas/Rss.xml",
         "address": "1060 W. Addison Ave. Chicago Il",
         "phone": "555-222-3434",
         "email": "fake@email.com",
