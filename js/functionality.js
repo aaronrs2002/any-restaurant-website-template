@@ -755,6 +755,9 @@ function submitRestaurant() {
 
 
 
-
+const newsLetter = () => {
+    globalAlert("alert-warning", "I appreciate your interest.However, this restaurant does not exist. This is an example.");
+    return false;
+}
 
 
