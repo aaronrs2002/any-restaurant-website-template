@@ -627,7 +627,7 @@ function setImageActive(num) {
         e.classList.remove("active");
     });
     document.querySelector("[data-image='" + num + "']").classList.add("active");
-    document.getElementById("imageCounter").innerHTML = (1 + num) + "/" + parseInt(imageAddresses.length) + " - " + imageAddresses[num].substring(imageAddresses[num].lastIndexOf("/"), imageAddresses[num].indexOf("."));
+    document.getElementById("imageCounter").innerHTML = (1 + num) + "/" + parseInt(imageAddresses.length) + " - " + imageAddresses[num].substring(imageAddresses[num].lastIndexOf("/") + 1, imageAddresses[num].lastIndexOf("/") + 25)
     document.getElementById("imageCarouselTarget").setAttribute("src", imageAddresses[num]);
 }
 
