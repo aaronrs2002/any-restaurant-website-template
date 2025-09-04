@@ -182,14 +182,14 @@ let config = [
             "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
         }],
         "events": [{
-            "address": "123 Main St",
+            "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
             "contact": "654 - 669 -0092",
             "dateTime": "Tuesday August 7th at Noon",
             "details": "Bring scissors",
             "title": "Free Haircuts"
         },
         {
-            "address": "123 Elm",
+            "address": "8545 South Emerald Drive Tempe, AZ 85284",
             "contact": "559 - 887 - 8978",
             "dateTime": "November 7th 3:00pm",
             "details": "Bring sauce", "title": "BBQ"
