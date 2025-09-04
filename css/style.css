@@ -272,7 +272,7 @@ body[data-restaurant="1"] .logoImg {
     }
 
     [data-restaurant] .restaurantNameTarget {
-        font-size: 3.1rem !important
+        font-size: 3.0rem !important
     }
 
     nav .logoImg {
