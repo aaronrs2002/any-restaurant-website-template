@@ -30,11 +30,11 @@ let config = [
         "media": [
             {
                 "type": "img",
-                "address": "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0"
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczM691Hs3g0LF4M8gElkgHUsSuBI50TVvn-qugARj_BSRuYJt1zgiTag9xyMXivDV8KzPnq-1OW5cznEmeuyZO9mphD0qfAkLUv7YiXalw8hJofAs2Ib0d8cH_j4YgjiXWgWiAXgFK0YZJvR0-RZf4BuVQ=w1437-h967-s-no-gm?authuser=0"
             },
             {
                 "type": "img",
-                "address": "https://lh3.googleusercontent.com/pw/AP1GczM691Hs3g0LF4M8gElkgHUsSuBI50TVvn-qugARj_BSRuYJt1zgiTag9xyMXivDV8KzPnq-1OW5cznEmeuyZO9mphD0qfAkLUv7YiXalw8hJofAs2Ib0d8cH_j4YgjiXWgWiAXgFK0YZJvR0-RZf4BuVQ=w1437-h967-s-no-gm?authuser=0"
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczMb0049t_cbpMtkVENokZYwW48GYULguC1WkT0l9InMhqZtMjyIHShNpNaRiR0cHw2ZkIxZD9vgdeuQ1Cn3NrOtLy9SRvgeiXlF0ZpAGr7BuEv7zXmxve7KLkPNlcRfBOadEQt8y8O4DM3SatF297FCfQ=w1724-h967-s-no-gm?authuser=0"
             },
             {
                 "type": "img",
