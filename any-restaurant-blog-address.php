@@ -1,6 +1,6 @@
 <?php
 
-header('Access-Control-Allow-Origin: https://aaronrs2002.github.io');
+header('Access-Control-Allow-Origin: YOUR DOMAIN HERE');
 
 
 header('Access-Control-Allow-Methods: GET');
