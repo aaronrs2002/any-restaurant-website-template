@@ -91,7 +91,7 @@ let config = [
         "blogAddress": "https://our-basset-hounds.blogspot.com/feeds/posts/default?alt=rss",
         "address": "1060 W. Addison Ave. Chicago Il",
         "phone": "555-222-3434",
-        "email": "info@eat.com",
+        "email": "fake@email.com",
         "socialMedia": [
             {
                 "link": "https://www.linkedin.com/in/aaronrs2002",
@@ -196,7 +196,7 @@ let config = [
         }],
         "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
         "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
-        "email": "ieat@food.com",
+        "email": "fake@email.com",
         "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
     },
 
@@ -347,7 +347,7 @@ let config = [
         "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
         "address": "1 ATT Way, Arlington, TX 76011",
         "phone": "123-444-7674",
-        "email": "food@yes.com",
+        "email": "fake@email.com",
         "socialMedia": [
             {
                 "link": "https://www.youtube.com/@web-presence-developer",
