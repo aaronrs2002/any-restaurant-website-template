@@ -16,6 +16,7 @@ let navHTML = "";
 let categories = [];
 let categoryList = [];
 
+
 function buildMenuTarget(data) {
 
     let menuStr = "";
@@ -335,9 +336,10 @@ function linkSelected(whichLink) {
     document.querySelector(".nav-link[data-id='" + whichLink + "']").classList.add("active");
     document.querySelector("title").innerHTML = config[activeRestaurant].navLinks[whichLink];
 
-    toggleMobileNav();
-
-
+    if (document.querySelector("nav .navbar-collapse.show")) {
+        document.querySelector("nav .navbar-collapse.show").classList.remove("show");
+        document.querySelector("nav .navbar-collapse").classList.add("collapse");
+    }
 
 }
 
@@ -736,7 +738,7 @@ if (document.querySelector("[data-admin='true']")) {
 }
 
 
-function showCategoryMenu() {
+/*function showCategoryMenu() {
     try {
 
         if (document.querySelector("#menuNavbar.show")) {
@@ -750,7 +752,7 @@ function showCategoryMenu() {
         console.log("error: " + error);
 
     }
-}
+}*/
 
 
 function submitRestaurant() {
