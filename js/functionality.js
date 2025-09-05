@@ -319,7 +319,7 @@ const toggleMobileNav = () => {
 
 
 function linkSelected(whichLink) {
-    localStorage.setItem("activePage", whichLink);
+    sessionStorage.setItem("activePage", whichLink);
     [].forEach.call(document.querySelectorAll(".nav-link[data-id]"), (e) => {
         e.classList.remove("active");
     });
@@ -343,10 +343,10 @@ function linkSelected(whichLink) {
 
 }
 
-if (localStorage.getItem("activePage") && document.querySelector("[data-admin='false']")) {
+if (sessionStorage.getItem("activePage") && document.querySelector("[data-admin='false']")) {
 
-    linkSelected(localStorage.getItem("activePage"));
-    console.log("gor to page " + localStorage.getItem("activePage"));
+    linkSelected(sessionStorage.getItem("activePage"));
+    console.log("gor to page " + sessionStorage.getItem("activePage"));
 
 
 }
