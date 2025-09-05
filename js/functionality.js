@@ -343,9 +343,12 @@ function linkSelected(whichLink) {
 
 }
 
-if (localStorage.getItem("activePage")) {
+if (localStorage.getItem("activePage") && document.querySelector("[data-admin='false']")) {
+
     linkSelected(localStorage.getItem("activePage"));
     console.log("gor to page " + localStorage.getItem("activePage"));
+
+
 }
 
 
