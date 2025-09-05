@@ -180,7 +180,7 @@ let config = [
         { "type": "map", "address": "1060 W Addison Chicago, IL" },
         {
             "type": "html",
-            "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
+            "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' onClick='newsLetter()'>Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
         }],
         "events": [{
             "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
@@ -319,7 +319,7 @@ let config = [
             },
             {
                 "type": "html",
-                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' >Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
+                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' onClick='newsLetter()'>Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
             }
         ],
         "events": [
