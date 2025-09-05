@@ -318,6 +318,7 @@ const toggleMobileNav = () => {
 
 
 function linkSelected(whichLink) {
+    localStorage.setItem("activePage", whichLink);
     [].forEach.call(document.querySelectorAll(".nav-link[data-id]"), (e) => {
         e.classList.remove("active");
     });
@@ -340,7 +341,10 @@ function linkSelected(whichLink) {
 
 }
 
-
+if (localStorage.getItem("activePage")) {
+    linkSelected(localStorage.getItem("activePage"));
+    console.log("gor to page " + localStorage.getItem("activePage"));
+}
 
 
 function viewPosts(direction) {
