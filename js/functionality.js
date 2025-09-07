@@ -120,6 +120,37 @@ const runOnLoad = () => {
     [].forEach.call(document.querySelectorAll("[data-saturday]"), (e) => {
         e.innerHTML = config[activeRestaurant].saturdayHours;
     });
+    //alt tags too
+    [].forEach.call(document.querySelectorAll("[data-altsunday]"), (e) => {
+        //e.innerHTML = config[activeRestaurant].sundayHours;
+        e.setAttribute("alt", config[activeRestaurant].sundayHours);
+    });
+    [].forEach.call(document.querySelectorAll("[data-altmonday]"), (e) => {
+        //  e.innerHTML = config[activeRestaurant].mondayHours;
+        e.setAttribute("alt", config[activeRestaurant].mondayHours);
+    });
+    [].forEach.call(document.querySelectorAll("[data-alttuesday]"), (e) => {
+        //e.innerHTML = config[activeRestaurant].tuesdayHours;
+        e.setAttribute("alt", config[activeRestaurant].tuesdayHours);
+    });
+    [].forEach.call(document.querySelectorAll("[data-altwednesday]"), (e) => {
+        // e.innerHTML = config[activeRestaurant].wednesdayHours;
+        e.setAttribute("alt", config[activeRestaurant].wednesdayHours);
+    });
+
+    [].forEach.call(document.querySelectorAll("[data-altthursday]"), (e) => {
+        // e.innerHTML = config[activeRestaurant].thursdayHours;
+        e.setAttribute("alt", config[activeRestaurant].thursdayHours);
+    });
+
+    [].forEach.call(document.querySelectorAll("[data-altfriday]"), (e) => {
+        // e.innerHTML = config[activeRestaurant].fridayHours;
+        e.setAttribute("alt", config[activeRestaurant].fridayHours);
+    });
+
+    [].forEach.call(document.querySelectorAll("[data-altsaturday]"), (e) => {
+        e.setAttribute("alt", config[activeRestaurant].saturdayHours);
+    });
 
     //   <link href="https://bootswatch.com/5/spacelab/bootstrap.css" rel="stylesheet" id="themedStyle">
 
