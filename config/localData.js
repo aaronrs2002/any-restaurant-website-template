@@ -89,7 +89,7 @@ let config = [
                 "title": "Main Event – Playtime for our January Angel!"
             }
         ],
-        "blogAddress": "https://www.dallasobserver.com/dallas/Rss.xml",
+        "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
         "address": "1060 W. Addison Ave. Chicago Il",
         "phone": "555-222-3434",
         "email": "fake@email.com",
