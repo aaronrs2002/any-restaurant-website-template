@@ -89,7 +89,7 @@ let config = [
                 "title": "Main Event – Playtime for our January Angel!"
             }
         ],
-        "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
+        "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
         "address": "1060 W. Addison Ave. Chicago Il",
         "phone": "555-222-3434",
         "email": "fake@email.com",
@@ -195,7 +195,7 @@ let config = [
             "dateTime": "November 7th 3:00pm",
             "details": "Bring sauce", "title": "BBQ"
         }],
-        "blogAddress": "https://www.phoenixnewtimes.com/phoenix/Rss.xml?id=ThingsToDo",
+        "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
         "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
         "email": "fake@email.com",
         "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
