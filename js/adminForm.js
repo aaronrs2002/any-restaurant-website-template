@@ -22,7 +22,8 @@ let tempRestaurant = {
     address: "",
     phone: "",
     email: "",
-    socialMedia: []
+    socialMedia: [],
+    extraPages: []
 
 };
 
