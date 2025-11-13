@@ -15,7 +15,8 @@ let config = [
             "home",
             "about",
             "menu",
-            "contact"
+            "contact",
+            "plus"
         ],
         "theme": "cyborg",
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczO_2Hh4_yQLYVcDGv9vP69cL_iujb7SH0C0sfgymSW7GgDjwZGdHrOfS00AvNTz-Rn2d1Ef_alGOVSbBnVe0Y-xxHKO4YZfbYknsn6cL5v1lYpbQCNhlzne3IAOks2ekLXDrq0-PTdwHA5WjZUGPH6P5g=w1385-h932-s-no-gm?authuser=0",
@@ -48,7 +49,6 @@ let config = [
                 "type": "ytVideo",
                 "address": "MrsOwvHgW48"
             },
-
             {
                 "type": "ytVideo",
                 "address": "P6W8kwmwcno"
@@ -124,10 +124,14 @@ let config = [
                 "theClass": "fas fa-rss-square",
                 "title": "Free News Aggregator. Grab any public RSS feed and display it here without advertising and without your boss tracking you."
             }
+        ],
+        "extraPages": [
+            {
+                "name": "plus",
+                "content": "<div class='col-md-12'><h1>Extra Page</h1><p>This is a page generated outside of the standard template. </p><p>This functionality shows that you can add as many pages as you would like and add HTML to their content.</div>\n<div class='col-md-12'><img src='https://web-presence.biz/img/MA_Logo.png'/></div>"
+            }
         ]
     },
-
-
 
 
 
@@ -161,51 +165,98 @@ let config = [
         "saturdayHours": "08:00AM - 10:00PM",
         "googleID": "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I",
         "apiAddress": "config/wineryRestaurantData.json",
-        "navLinks": ["Home", "About", "Menu", "Contact"],
+        "navLinks": [
+            "Home",
+            "About",
+            "Menu",
+            "Contact",
+            "checkup",
+            "more"
+        ],
         "theme": "sandstone",
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
-        "banners": [{ "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0", "bannerHTML": "" }],
+        "banners": [
+            {
+                "img": "https://lh3.googleusercontent.com/pw/AP1GczPm2-gymWgpcECOw1svWwozGfIdNzZjGuremqTKKtpI44mDCozrjk3kXOLXhJNQ5EYifabhyY-ezKTjh8DegtNOpb1VbHZ-j1vYGio02g86YyXMINGZ75V3vl_SiMl3Org7HNiswK0kUwwjFvROdijG_g=w932-h932-s-no-gm?authuser=0",
+                "bannerHTML": ""
+            }
+        ],
         "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
         "logoImg": "https://img.freepik.com/premium-vector/wine-vector-logo-design_410429-8919.jpg",
-        "media": [{ "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0" }, { "type": "img", "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0" },
-
-        //uBk87-QdBCY
-        { "type": "ytVideo", "address": "uBk87-QdBCY" },
-        { "type": "ytVideo", "address": "9l8TJwfHbdE" },
-
-        { "type": "ytVideo", "address": "dY_zzPxBxFA" }, {
-            "type": "html",
-            "address": "Welcome one and all"
-        },
-        { "type": "map", "address": "1060 W Addison Chicago, IL" },
-        {
-            "type": "html",
-            "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' onClick='newsLetter()'>Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
-        }],
-        "events": [{
-            "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
-            "contact": "654 - 669 -0092",
-            "dateTime": "Tuesday August 7th at Noon",
-            "details": "Bring scissors",
-            "title": "Free Haircuts"
-        },
-        {
-            "address": "8545 South Emerald Drive Tempe, AZ 85284",
-            "contact": "559 - 887 - 8978",
-            "dateTime": "November 7th 3:00pm",
-            "details": "Bring sauce", "title": "BBQ"
-        }],
+        "media": [
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczPMH8Wf8qCFXlAS-iagH_tpcKp47dmOXl-HL7hxu7rsJUfxkKyHF8NNTlq927XibBKveFkCv3CAlvU-xv4eAvxMR3cO4So9nbtWFv9EaAINb37OjE0EPBhpKSjMuqt83zTMYEocW0Sr_xhja7zq7UTScg=w1372-h932-s-no-gm?authuser=0"
+            },
+            {
+                "type": "img",
+                "address": "https://lh3.googleusercontent.com/pw/AP1GczN2pjg6tojMmjo9wfApYH30E5RC6bfyu4DcNJZjwf6OiccSzLU5eyI_qE6z3HH3n66jjMymVpxbtfjpvZOiHs6hVnjGEN9BSZxDRLXpNjQEcADbxc0oInugf-Z5RKuJb2XrliNmxk3XGLCk7QbckKm8Yg=w1243-h932-s-no-gm?authuser=0"
+            },
+            {
+                "type": "ytVideo",
+                "address": "uBk87-QdBCY"
+            },
+            {
+                "type": "ytVideo",
+                "address": "9l8TJwfHbdE"
+            },
+            {
+                "type": "ytVideo",
+                "address": "dY_zzPxBxFA"
+            },
+            {
+                "type": "html",
+                "address": "Welcome one and all"
+            },
+            {
+                "type": "map",
+                "address": "1060 W Addison Chicago, IL"
+            },
+            {
+                "type": "html",
+                "address": "<div><label>Sign up for our news Letter</label><div class='input-group mb-3'>   <button class='btn btn-primary' onClick='newsLetter()'>Sumbit email</button>   <input type='text' class='form-control' placeholder='Submit your email address to be added to our newsletter' > </div></div>"
+            }
+        ],
+        "events": [
+            {
+                "address": "4025 E Chandler Blvd unit 46 Phoenix AZ 85048",
+                "contact": "654 - 669 -0092",
+                "dateTime": "Tuesday August 7th at Noon",
+                "details": "Bring scissors",
+                "title": "Free Haircuts"
+            },
+            {
+                "address": "8545 South Emerald Drive Tempe, AZ 85284",
+                "contact": "559 - 887 - 8978",
+                "dateTime": "November 7th 3:00pm",
+                "details": "Bring sauce",
+                "title": "BBQ"
+            }
+        ],
         "blogAddress": "https://aaronrstst.blogspot.com/feeds/posts/default?alt=rss",
-        "address": "1 ATT Way, Arlington, TX 76011", "phone": "555-999-0909",
+        "address": "1 ATT Way, Arlington, TX 76011",
+        "phone": "555-999-0909",
         "email": "fake@email.com",
-        "socialMedia": [{ "link": "travel.com", "theClass": "fas fa-briefcase", "title": "travel" }, { "link": "Phoenixframework.com", "theClass": "fab fa-phoenix-framework", "title": "Phoenixframework" }]
-    },
-
-
-
-
-
-
+        "socialMedia": [
+            {
+                "link": "travel.com",
+                "theClass": "fas fa-briefcase",
+                "title": "travel"
+            },
+            {
+                "link": "Phoenixframework.com",
+                "theClass": "fab fa-phoenix-framework",
+                "title": "Phoenixframework"
+            }
+        ],
+        "extraPages": [
+            {
+                "name": "plus",
+                "content": "<div class='col-md-12'><h1>Extra Page</h1><p>This is a page generated outside of the standard template. </p><p>This functionality shows that you can add as many pages as you would like and add HTML to their content.</div>\n<div class='col-md-12'><img src='https://web-presence.biz/img/MA_Logo.png'/></div>"
+            }
+        ]
+    }
+    ,
 
 
 
@@ -364,6 +415,12 @@ let config = [
                 "link": "https://github.com/aaronrs2002/",
                 "theClass": "fas fa-wine-bottle",
                 "title": "winer"
+            }
+        ],
+        "extraPages": [
+            {
+                "name": "plus",
+                "content": "<div class='col-md-12'><h1>Extra Page</h1><p>This is a page generated outside of the standard template. </p><p>This functionality shows that you can add as many pages as you would like and add HTML to their content.</div>\n<div class='col-md-12'><img src='https://web-presence.biz/img/MA_Logo.png'/></div>"
             }
         ]
     }

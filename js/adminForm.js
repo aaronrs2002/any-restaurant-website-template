@@ -263,9 +263,16 @@ function submitToLocal(whichArr) {
                 tempRestaurant.navLinks.push(document.querySelector("[name='navLinks']").value);
                 console.log("tempRestaurant.navLinks: " + tempRestaurant.navLinks);
                 let navLinkArrHTML = "";
+                let extraPagesHTML = "";
                 for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
                     navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
+                    if (i > 3) {
+                        extraPagesHTML = extraPagesHTML + "<li><label>Custom &#34;" + tempRestaurant.navLinks[i] + "&#34; page HTML</label> <textarea  class='form-control extraPage' name='" + tempRestaurant.navLinks[i] + "' rows='5'></textarea></li>";
+                    }
+
                 }
+                document.getElementById("extraPages").innerHTML = extraPagesHTML;
+
                 document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
                 document.querySelector("[name='navLinks']").value = "";
 
@@ -483,7 +490,7 @@ function submitToLocal(whichArr) {
 
 
     }
-    console.log(" JSON.stringify(tempRestaurant)); " + JSON.stringify(tempRestaurant));
+
     localStorage.setItem("activeRestaurantData", JSON.stringify(tempRestaurant));
 
 }
@@ -534,6 +541,23 @@ function submitRestaurant(role) {
         globalAlert("alert-danger", "There are field with no information.");
         return false;
     } else {
+
+        let etraPgsObj = [];
+        [].forEach.call(document.querySelectorAll("textarea.extraPage"), (e) => {
+
+            etraPgsObj.push({
+                "name": e.name, "content": document.querySelector("textarea.extraPage[name='" + e.name + "']").value
+            });
+
+        })
+
+        tempRestaurant.extraPages = etraPgsObj;
+
+        console.log("JSON.stringify(etraPgsObj): " + JSON.stringify(etraPgsObj));
+
+
+
+
         tempRestaurant.restaurantName = document.querySelector("[name='restaurantName']").value;
 
 
@@ -548,6 +572,9 @@ function submitRestaurant(role) {
         tempRestaurant.address = document.querySelector("[name='address']").value;
         tempRestaurant.phone = document.querySelector("[name='phone']").value;
         tempRestaurant.email = document.querySelector("[name='email']").value;
+
+
+
     }
 
 
@@ -1015,11 +1042,16 @@ const populateFields = () => {
         document.querySelector("#navLinksTarget").innerHTML = "";
 
         let navLinkArrHTML = "";
-
+        let extraPagesHTML = "";
 
         for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
             navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
+            if (i > 3) {
+                extraPagesHTML = extraPagesHTML + "<li><label>Custom &#34;" + tempRestaurant.navLinks[i] + "&#34; page HTML</label> <textarea  class='extraPage form-control' name='" + tempRestaurant.navLinks[i] + "' rows='5'></textarea></li>";
+            }
+
         }
+        document.getElementById("extraPages").innerHTML = extraPagesHTML;
         document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
 
         /*start banners*/

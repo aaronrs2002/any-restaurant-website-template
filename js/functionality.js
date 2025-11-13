@@ -218,6 +218,33 @@ const runOnLoad = () => {
             active = "active";
         }
         navHTML = navHTML + "<li class='nav-item'><a href='#' data-id='" + i + "' class='nav-link " + active + "' onClick='linkSelected(" + i + ")'>" + config[activeRestaurant].navLinks[i] + "</a></li>";
+
+        if (i > 3) {
+            /*START BUILDING NEW HTML SECTION */
+
+            if (document.querySelector("body[data-admin='false']")) {
+
+
+
+                const tabContainer = document.querySelector('main.container');
+
+                // Create the section element
+                const tabSection = document.createElement('section');
+
+                // Add a specific class
+                tabSection.classList.add('hide');//hide card p-4
+                tabSection.classList.add('card');
+                tabSection.classList.add('p-4');
+
+                // Set data attributes
+                tabSection.dataset.section = i;
+
+                tabContainer.appendChild(tabSection);
+
+                document.querySelector("[data-section='" + i + "']").innerHTML = "<div class='row'><div class='col-md-4'><h2 data-navlink='" + i + "'>" + config[activeRestaurant].navLinks[i]
+                    + "</h2></div><div class='col-md-4 pt-1 d-flex justify-content-center'><img src='https://png.pngtree.com/template/20191024/ourmid/pngtree-fish-tail-logo-seafood-restaurant-image_322873.jpg' class='logoImg img-fluid' width='100' alt='" + config[activeRestaurant].restaurantName + "'></div><div class='col-md-4'></div><div class='row' data-extrapage='" + config[activeRestaurant].navLinks[i] + "'>" + config[activeRestaurant].extraPages[i - 4].content + "</div></div>";
+            }
+        }
     }
 
     if (document.querySelector("#navLinkTarget")) {
