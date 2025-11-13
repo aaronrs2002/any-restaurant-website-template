@@ -171,7 +171,7 @@ let config = [
             "Menu",
             "Contact",
             "checkup",
-            "more"
+
         ],
         "theme": "sandstone",
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm",
@@ -251,7 +251,7 @@ let config = [
         ],
         "extraPages": [
             {
-                "name": "plus",
+                "name": "checkup",
                 "content": "<div class='col-md-12'><h1>Extra Page</h1><p>This is a page generated outside of the standard template. </p><p>This functionality shows that you can add as many pages as you would like and add HTML to their content.</p></div>\n<div class='col-md-12'><img src='https://web-presence.biz/img/MA_Logo.png'/></div>"
             }
         ]
@@ -331,7 +331,8 @@ let config = [
             "Home",
             "About",
             "Stuff",
-            "Reach Out"
+            "Reach Out",
+            "plus"
         ],
         "theme": "superhero",
         "homeImg": "https://web-presence.biz/img/8.jpg",
