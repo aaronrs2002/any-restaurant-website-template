@@ -70,24 +70,36 @@ function deleteItem(whichNum, whichObj) {
     switch (whichObj) {
 
         case "navLinks":
-
+            let extraPgTemp = []
 
 
             for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
 
                 if (i !== whichNum) {
                     tempObj.push(tempRestaurant.navLinks[i]);
+                    extraPgTemp.push(tempRestaurant.extraPages[i])
                 }
 
             }
+
+            tempRestaurant.extraPages = extraPgTemp;
+            console.log("JSON.stringify(extraPgTemp): " + JSON.stringify(extraPgTemp))
             document.querySelector("#navLinksTarget").innerHTML = "";
+            document.querySelector("#extraPages").innerHTML = "";
 
             let navLinkArrHTML = "";
+            let extraPagesHTML = "";
 
             tempRestaurant.navLinks = tempObj;
             for (let i = 0; i < tempRestaurant.navLinks.length; i++) {
                 navLinkArrHTML = navLinkArrHTML + `<span class='badge  bg-secondary'><i class='fas fa-trash pointer' onClick="deleteItem(${i},'navLinks')"></i> - ${tempRestaurant.navLinks[i]}</span>`;
+                if (i > 3) {
+
+
+                    extraPagesHTML = extraPagesHTML + "<li><label>Custom &#34;" + tempRestaurant.navLinks[i] + "&#34; page HTML</label> <textarea  class='extraPage form-control' name='" + tempRestaurant.navLinks[i] + "' rows='5'></textarea></li>";
+                }
             }
+            document.querySelector("#extraPages").innerHTML = extraPagesHTML;
             document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
 
 
