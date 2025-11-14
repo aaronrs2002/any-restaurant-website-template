@@ -1067,6 +1067,14 @@ const populateFields = () => {
         document.getElementById("extraPages").innerHTML = extraPagesHTML;
         document.querySelector("#navLinksTarget").innerHTML = navLinkArrHTML;
 
+        for (let i = 0; i < tempRestaurant.extraPages.length; i++) {
+            if (document.querySelector(".extraPage[name='" + tempRestaurant.extraPages[i].name + "']")) {
+                document.querySelector(".extraPage[name='" + tempRestaurant.extraPages[i].name + "']").innerHTML = tempRestaurant.extraPages[i].content;
+            }
+
+        }
+
+
         /*start banners*/
 
         // console.log("tempRestaurant.banners: " + JSON.stringify(tempRestaurant.banners));
