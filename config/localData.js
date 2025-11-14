@@ -131,14 +131,6 @@ let config = [
             {
                 "name": "plus",
                 "content": "<div class='col-md-12'><h1>Extra Page</h1><p>This is a page generated outside of the standard template. </p><p>This functionality shows that you can add as many pages as you would like and add HTML to their content.</p></div><div class='col-md-12'><img src='https://web-presence.biz/img/MA_Logo.png'/></div>"
-            },
-            {
-                "name": "new",
-                "content": "<p>Page extra here named new</p>"
-            },
-            {
-                "name": "again",
-                "content": "<p>Page extra here named again</p>"
             }
         ]
     },
