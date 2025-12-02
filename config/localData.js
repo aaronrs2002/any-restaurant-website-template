@@ -17,8 +17,6 @@ let config = [
             "menu",
             "contact",
             "plus",
-            "new",
-            "again"
         ],
         "theme": "cyborg",
         "homeImg": "https://lh3.googleusercontent.com/pw/AP1GczO_2Hh4_yQLYVcDGv9vP69cL_iujb7SH0C0sfgymSW7GgDjwZGdHrOfS00AvNTz-Rn2d1Ef_alGOVSbBnVe0Y-xxHKO4YZfbYknsn6cL5v1lYpbQCNhlzne3IAOks2ekLXDrq0-PTdwHA5WjZUGPH6P5g=w1385-h932-s-no-gm?authuser=0",

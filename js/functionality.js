@@ -68,7 +68,7 @@ const runOnLoad = () => {
     localStorage.setItem("activeRestaurantData", JSON.stringify(config[activeRestaurant]));
     document.querySelector("body[data-restaurant]").dataset.restaurant = activeRestaurant;
     document.querySelector("#themedStyle").setAttribute("href", "https://bootswatch.com/5/" + config[activeRestaurant].theme + "/bootstrap.css");
-    console.log("JSON.stringify(config[activeRestaurant]): " + JSON.stringify(config[activeRestaurant]));
+
     [].forEach.call(document.querySelectorAll(".logoImg"), (e) => {
         let logoCurrentHTML = e.innerHTML;
         e.setAttribute("src", config[activeRestaurant].logoImg);
@@ -243,11 +243,17 @@ const runOnLoad = () => {
 
                 tabContainer.appendChild(tabSection);
 
-                console.log("JSON.stringify(config[activeRestaurant].extraPages[i]): " + JSON.stringify(config[activeRestaurant].extraPages[i]));
-                console.log("config[activeRestaurant].navLinks[i]: " + config[activeRestaurant].navLinks[i]);
+
+                let whichExtraPage = 0;
+                for (let j = 0; j < config[activeRestaurant].extraPages.length; j++) {
+                    console.log("config[activeRestaurant].extraPages[j].name: " + config[activeRestaurant].extraPages[j].name);
+                    if (config[activeRestaurant].navLinks[i] === config[activeRestaurant].extraPages[j].name) {
+                        whichExtraPage = j;
+                    }
+                }
 
                 document.querySelector("[data-section='" + i + "']").innerHTML = "<div class='row'><div class='col-md-4'><h2 data-navlink='" + i + "'>" + config[activeRestaurant].navLinks[i]
-                    + "</h2></div><div class='col-md-4 pt-1 d-flex justify-content-center'><img src='" + config[activeRestaurant].logoImg + "' class='logoImg img-fluid' width='100' alt='" + config[activeRestaurant].restaurantName + "'></div><div class='col-md-4'></div><div class='row' data-extrapage='" + config[activeRestaurant].navLinks[i] + "'>" + config[activeRestaurant].extraPages[i - 4].content + "</div></div>";
+                    + "</h2></div><div class='col-md-4 pt-1 d-flex justify-content-center'><img src='" + config[activeRestaurant].logoImg + "' class='logoImg img-fluid' width='100' alt='" + config[activeRestaurant].restaurantName + "'></div><div class='col-md-4'></div><div class='row' data-extrapage='" + config[activeRestaurant].navLinks[i] + "'>" + config[activeRestaurant].extraPages[whichExtraPage].content + "</div></div>";
             }
         }
     }
