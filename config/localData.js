@@ -27,7 +27,7 @@ let config = [
             }
         ],
         "about": "<h3>We make the best food. Here is our story of three generations.</h3><p>That's why we put the sign up. Our Great Grandfather won these recipes in a poker hand. So enjoy...</p>",
-        "logoImg": "https://png.pngtree.com/template/20191024/ourmid/pngtree-fish-tail-logo-seafood-restaurant-image_322873.jpg",
+        "logoImg": "img/seafoodLogo.jpg",
         "media": [
             {
                 "type": "img",
@@ -161,7 +161,7 @@ let config = [
             }
         ],
         "about": "<div><p>A winery is a building or property that produces wine, or a business involved in the cultivation and production of wine, such as a wine company.[1] Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. Wineries may have existed as long as 8,000 years ago.</p><hr/><img src='https://lh3.googleusercontent.com/pw/AP1GczPckBTuE-UXqZtnDi-RgCSPArUIH3-ednuh_PhazhizjO3ciwvZOOtAxVDWXLZhTq-CJ6Rby6pB3SBYJf5uWL_o8Ye6mpCc-C9ZWrijnDqsKZ-QQEecGttsaroFl5GhNuYNHzhTHAANzBfibUbhvOAV5Q=w1280-h457-s-no-gm' style='width:100%; height:auto;' /></div>",
-        "logoImg": "https://img.freepik.com/premium-vector/wine-vector-logo-design_410429-8919.jpg",
+        "logoImg": "img/wineLogo.jpg",
         "media": [
             {
                 "type": "img",
